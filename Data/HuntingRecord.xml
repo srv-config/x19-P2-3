@@ -87,6 +87,7 @@
 		<Map Index="138" Name="Ignis Volcano" />
 		<Map Index="140" Name="Bloody Tarkan" />
 		<Map Index="141" Name="Tormenta Island" />
+		<Map Index="142" Name="Twisted Karutan" />
 	</MapIncluded>
 	<MonstersExcluded> <!-- Monsters excluded from hunting records -->
 		<Monster Index="413" Name="Gold Rabbit" />

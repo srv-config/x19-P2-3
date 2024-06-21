@@ -836,9 +836,9 @@
 		<Formula ID="52" Data="(249+((15+%d)/2)^2)" /> <!-- ItemLevel -->
 		<Formula ID="53" Data="(6+((%d/10)*1.9)^1.5)" /> <!-- ItemLevel -->
 		<Formula ID="54" Data="(6+((%d/10)*1.6)^1.49)" /> <!-- ItemLevel -->
-		<Formula ID="55" Data="%d*0" /> <!-- ItemLevel -->
+		<Formula ID="55" Data="(2+((3.9+%d)/2)^1.5)" /> <!-- ItemLevel -->
 		<Formula ID="56" Data="((7+(%d/10))^3.9)" /> <!-- ItemLevel -->
-		<Formula ID="57" Data="((6.7+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="57" Data="((6.5+(%d/10))^4.2)" /> <!-- ItemLevel -->
 		<Formula ID="58" Data="((5.8+(%d/10))^4.2)" /> <!-- ItemLevel -->
 		<Formula ID="59" Data="((4.9+(0.5*%d))^1.72)" /> <!-- ItemLevel -->
 		<Formula ID="60" Data="((6.4+(%d/10))^4)" /> <!-- ItemLevel -->
@@ -857,6 +857,9 @@
 		<Formula ID="10" Data="(((%d*5)+198)/1.8)" /> <!-- ItemLevel -->
 		<Formula ID="11" Data="(((%d*5)+185)/1)" /> <!-- ItemLevel -->
 		<Formula ID="12" Data="(((%d*6)+80)/1)" /> <!-- ItemLevel -->
+		<Formula ID="13" Data="(((%d*5)+230)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="14" Data="(((%d*5)+215)/1)" /> <!-- ItemLevel -->
+		<Formula ID="15" Data="(((%d*6)+90)/1)" /> <!-- ItemLevel -->
 	</Earrings>
 	<Group11>
 		<Formula ID="0" Data="0" /> <!-- empty -->
@@ -1185,6 +1188,8 @@
 		<Formula ID="281" Data="(25+%d*25)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
 		<Formula ID="282" Data="(15+%d*15)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
 		<Formula ID="283" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.59+100)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="284" Data="%d*1" /> <!-- -->
+		<Formula ID="285" Data="%d*1000000" /> <!-- -->
 	</AbilityTree>
 	<PetItem>
 		<Formula ID="0" Data="50" /> <!-- None -->
@@ -1203,7 +1208,7 @@
 		<Formula ID="13" Data="(%d+%f+%f)*(((%d+%d)*0)+1)*(1+(%f/100))" /> <!--  -->
 		<Formula ID="14" Data="(%d+%f+%f)*(((%d+%d)*0)+1)*(1+(%f/100))" /> <!--  -->
 		<Formula ID="15" Data="1+((%d+%d)*0)" /> <!--  -->
-		<Formula ID="16" Data="%d*0+10" /> <!--  -->
+		<Formula ID="16" Data="(%d*0)+50" /> <!--  -->
 		<Formula ID="17" Data="0.5" /> <!--  -->
 		<Formula ID="18" Data="0.5" /> <!--  -->
 		<Formula ID="19" Data="(250+(%d/20)+(%d/20))/100" /> <!--  -->

@@ -194,4 +194,7 @@
 <!-- Tormenta Island -->
 	<Skill MonsterIndex="944" Type0="0" Unit0="164" Type1="0" Unit1="164" Type2="0" Unit2="164" Type3="0" Unit3="164" Type4="0" Unit4="164" Type5="0" Unit5="164" Type6="0" Unit6="164" Type7="0" Unit7="164" Type8="0" Unit8="164" Type9="0" Unit9="164" Name="Storm Fiend" />
 	<Skill MonsterIndex="947" Type0="0" Unit0="164" Type1="0" Unit1="164" Type2="0" Unit2="164" Type3="0" Unit3="164" Type4="0" Unit4="164" Type5="0" Unit5="164" Type6="0" Unit6="164" Type7="0" Unit7="164" Type8="0" Unit8="164" Type9="0" Unit9="164" Name="(Elite) Storm Fiend" />
+<!-- Twisted Karutan -->
+	<Skill MonsterIndex="944" Type0="0" Unit0="165" Type1="0" Unit1="165" Type2="0" Unit2="165" Type3="0" Unit3="165" Type4="0" Unit4="165" Type5="0" Unit5="165" Type6="0" Unit6="165" Type7="0" Unit7="165" Type8="0" Unit8="165" Type9="0" Unit9="165" Name="Twisted Condra" />
+	<Skill MonsterIndex="947" Type0="0" Unit0="165" Type1="0" Unit1="165" Type2="0" Unit2="165" Type3="0" Unit3="165" Type4="0" Unit4="165" Type5="0" Unit5="165" Type6="0" Unit6="165" Type7="0" Unit7="165" Type8="0" Unit8="165" Type9="0" Unit9="165" Name="(Elite) Twisted Condra" />
 </MonsterSkill>

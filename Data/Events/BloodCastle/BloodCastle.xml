@@ -87,12 +87,12 @@
 
 	<EntryLevel>
 		<Castle Level="0" MinLevel="50" MaxLevel="399" /> <!-- Blood Castle 1 -->
-		<Castle Level="1" MinLevel="400" MaxLevel="599" /> <!-- Blood Castle 2 -->
-		<Castle Level="2" MinLevel="600" MaxLevel="699" /> <!-- Blood Castle 3 -->
-		<Castle Level="3" MinLevel="700" MaxLevel="799" /> <!-- Blood Castle 4 -->
-		<Castle Level="4" MinLevel="800" MaxLevel="899" /> <!-- Blood Castle 5 -->
-		<Castle Level="5" MinLevel="900" MaxLevel="999" /> <!-- Blood Castle 6 -->
-		<Castle Level="6" MinLevel="1000" MaxLevel="MAX" /> <!-- Blood Castle 7 -->
+		<Castle Level="1" MinLevel="400" MaxLevel="799" /> <!-- Blood Castle 2 -->
+		<Castle Level="2" MinLevel="800" MaxLevel="899" /> <!-- Blood Castle 3 -->
+		<Castle Level="3" MinLevel="900" MaxLevel="1099" /> <!-- Blood Castle 4 -->
+		<Castle Level="4" MinLevel="1100" MaxLevel="1299" /> <!-- Blood Castle 5 -->
+		<Castle Level="5" MinLevel="1300" MaxLevel="1499" /> <!-- Blood Castle 6 -->
+		<Castle Level="6" MinLevel="1500" MaxLevel="MAX" /> <!-- Blood Castle 7 -->
 	</EntryLevel>
 
 	<EventSettings>

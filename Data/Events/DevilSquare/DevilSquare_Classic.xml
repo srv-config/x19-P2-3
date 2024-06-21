@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -99,12 +99,12 @@
 	
 	<EntryLevel>
 		<Square Level="0" MinLevel="50" MaxLevel="399" /> <!-- Devil Square 1 -->
-		<Square Level="1" MinLevel="400" MaxLevel="599" /> <!-- Devil Square 2 -->
-		<Square Level="2" MinLevel="600" MaxLevel="699" /> <!-- Devil Square 3 -->
-		<Square Level="3" MinLevel="700" MaxLevel="799" /> <!-- Devil Square 4 -->
-		<Square Level="4" MinLevel="800" MaxLevel="899" /> <!-- Devil Square 5 -->
-		<Square Level="5" MinLevel="900" MaxLevel="999" /> <!-- Devil Square 6 -->
-		<Square Level="6" MinLevel="1000" MaxLevel="MAX" /> <!-- Devil Square 7 -->
+		<Square Level="1" MinLevel="400" MaxLevel="799" /> <!-- Devil Square 2 -->
+		<Square Level="2" MinLevel="800" MaxLevel="899" /> <!-- Devil Square 3 -->
+		<Square Level="3" MinLevel="900" MaxLevel="1099" /> <!-- Devil Square 4 -->
+		<Square Level="4" MinLevel="1100" MaxLevel="1299" /> <!-- Devil Square 5 -->
+		<Square Level="5" MinLevel="1300" MaxLevel="1499" /> <!-- Devil Square 6 -->
+		<Square Level="6" MinLevel="1500" MaxLevel="MAX" /> <!-- Devil Square 7 -->
 	</EntryLevel>
 	
 	<MonsterAppearanceSettings>

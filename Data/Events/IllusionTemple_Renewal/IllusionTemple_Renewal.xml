@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -53,10 +53,10 @@
 	</Schedule>
 
 	<EntryLevel>
-		<Temple Level="0" MinLevel="180" MaxLevel="399" /> <!-- Illussion Temple 1 -->
-		<Temple Level="1" MinLevel="400" MaxLevel="599" /> <!-- Illussion Temple 2 -->
-		<Temple Level="2" MinLevel="600" MaxLevel="799" /> <!-- Illussion Temple 3 -->
-		<Temple Level="3" MinLevel="800" MaxLevel="999" /> <!-- Illussion Temple 4 -->
-		<Temple Level="4" MinLevel="1000" MaxLevel="MAX" /> <!-- Illussion Temple 5 -->
+		<Temple Level="0" MinLevel="180" MaxLevel="399" /> <!-- Illusion Temple 1 -->
+		<Temple Level="1" MinLevel="400" MaxLevel="799" /> <!-- Illusion Temple 2 -->
+		<Temple Level="2" MinLevel="800" MaxLevel="1299" /> <!-- Illusion Temple 3 -->
+		<Temple Level="3" MinLevel="1300" MaxLevel="1499" /> <!-- Illusion Temple 4 -->
+		<Temple Level="4" MinLevel="1500" MaxLevel="MAX" /> <!-- Illusion Temple 5 -->
 	</EntryLevel>
 </IllusionTempleRenewal>

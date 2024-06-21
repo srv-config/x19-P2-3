@@ -51,7 +51,7 @@
 //	EventID: ID of event item bag type defined in ItemBagScript.lua
 //	HP: Value of health to set for specified monster
 //	DamageMin: Value of minimum damage to set for specified monster
-//	DamageMax: Value of maxumum damage to set for specified monster
+//	DamageMax: Value of maximum damage to set for specified monster
 //	Defense: Value of defense to set for specified monster
 //	AttackRate: Value of Attack Rate to set for specified monster
 //	DefenseRate: Value of Defense Rate to set for specified monster
@@ -61,8 +61,11 @@
 //
 // ### MonsterGroupRegenSystem::SpawnSettings::Group ###
 //	Index: Index of Group number, references to setting from GroupSettings section
+//	RegenType:
+//		~ 0: Regen based on scheduled time
+//		~ 1: Regen based on time span
 //
-// ### MonsterGroupRegenSystem::SpawnSettings::Group::Spawn ###
+// ### MonsterGroupRegenSystem::SpawnSettings::Group::Spawn ### - RegenType 0
 //	DayOfMonth: Day of month the spawn will run on, 1-31 or -1 for any day
 //	DayOfWeek: Day of a week the spawn will run on:
 //		~ 0: Sunday
@@ -76,6 +79,19 @@
 //	Hour: Start hour for the spawn, 0-23
 //	Minute: Start minute for the spawn, 0-59
 //	AppearanceRate: Chance to process specified spawn, expressed in percent, 0-100
+//
+// ### MonsterGroupRegenSystem::SpawnSettings::Group::Spawn ### - RegenType 1
+//	RegenMinHour: Minimum number of hours
+//	RegenMinMinute: Minimum number of minutes
+//	RegenMinSecond: Minimum number of seconds
+//	RegenMaxHour: Maximum number of hours
+//	RegenMaxMinute: Maximum number of minutes
+//	RegenMaxSecond: Maximum number of second
+//	AppearanceRate: Chance to process specified spawn, expressed in percent, 0-100
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The system sets minimum and maximum time span the monster will be spawned after
+//~~ being killed. The actual spawn time will be randomized from the defined time span.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
@@ -102,8 +118,9 @@
 	</MonsterSettings>
  
 	<SpawnSettings>
-		<Group Index="0">
-			<Spawn DayOfMonth="-1" DayOfWeek="-1" Hour="11" Minute="8" AppearanceRate="100" />
+		<Group Index="0" RegenType="0">
+			<Spawn DayOfMonth="-1" DayOfWeek="-1" Hour="11" Minute="8" AppearanceRate="100" /> <!-- Regen Type 0 -->
+			<Spawn RegenMinHour="18" RegenMinMinute="0" RegenMinSecond="0" RegenMaxHour="24" RegenMaxMinute="0" RegenMaxSecond="0" AppearanceRate="100" /> <!-- Regen Type 1 -->
 		</Group> 
 	</SpawnSettings>
 </MonsterGroupRegenSystem>

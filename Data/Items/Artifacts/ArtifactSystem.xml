@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2022 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -22,7 +22,7 @@
 //	NameTextID: ID of text in Text.txt, used by Game Client)
 //
 // ### ArtifactSystem::ArtifactItem::Item ###
-//	MapID: ID of artifact map the artefact definitions points to, check ID attribute of ArtifactMap::Map section
+//	MapID: ID of artifact map the artifact definitions points to, check ID attribute of ArtifactMap::Map section
 //	Type: Unique number defining attribute type
 //	Unk1: 
 //	Cat: Category of artifact item, see ItemList.xml
@@ -30,7 +30,7 @@
 //	Rate: Chance rate of getting artifact of specific type, total rate is sum of all rates in a column
 //
 // ### ArtifactSystem::OptionSelect::Select ###
-//	MapID: ID of artifact map the artefact definitions points to, check ID attribute of ArtifactMap::Map section
+//	MapID: ID of artifact map the artifact definitions points to, check ID attribute of ArtifactMap::Map section
 //	ArtifactType: Type of artifact the setting points to, see ArtifactItem::Item::Type attribute
 //	OptionSetIDX (1-3): Index of options set assigned to the artifact type/entry, check ArtifactOption.xml :: OptionBaseValue::OptionSet::Index attribute, 0 if not assigned
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,10 +48,25 @@
 //	ItemCatX (1-3): Category of item required for the mix, see ItemList.xml
 //	ItemIndexX (1-3): Index of item required for the mix, see ItemList.xml
 //	ItemCountX (1-3): Count of required items
+//	ReqMoney: Money amount required for the mix, Zen
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ Changes of mix setting require modification of mix.bmd on game client side
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ArtifactSystem::GradeUpgradeMix ###
+//	Enable: Whether or not, enable grade upgrade event, 0/1
+//
+// ### ArtifactSystem::GradeUpgradeMix::Upgrade ###
+//	ReqGrade: Input item (Cat/Index 1) required grade, 1-8
+//	MapID: ID of artifact map the mix definitions points to, check ID attribute of ArtifactMap::Map section
+//	SuccessRate: Success rate for the mix, n/1000000
+//	ItemCatX (1-3): Category of item required for the mix, see ItemList.xml
+//	ItemIndexX (1-3): Index of item required for the mix, see ItemList.xml
+//	ItemCountX (1-3): Count of required items
 //	ReqMoney: Money amount required for the mix, Zen
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes of mix setting require modification of mix.bmd on game client side
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
@@ -60,17 +75,15 @@
 	<ArtifactMap>
 		<Map ID="0"	FullSetOptionIndex="28" FragmentCat="20" FragmentIndex="95" MapSlotFile="Spider_Slot" MapItemFile="Spider_Artifact" NameTextID="6084" />
 	</ArtifactMap>
-
 	<ArtifactItem>
-		<Item MapID="0" Type="1" Unk1="1" Cat="20" Index="96" Rate="217120" />
-		<Item MapID="0" Type="2" Unk1="2" Cat="20" Index="97" Rate="208000" />
-		<Item MapID="0" Type="3" Unk1="3" Cat="20" Index="98" Rate="168000" />
-		<Item MapID="0" Type="4" Unk1="4" Cat="20" Index="99" Rate="168000" />
-		<Item MapID="0" Type="5" Unk1="5" Cat="20" Index="100" Rate="19200" />
-		<Item MapID="0" Type="6" Unk1="6" Cat="20" Index="101" Rate="19200" />
-		<Item MapID="0" Type="7" Unk1="6" Cat="20" Index="102" Rate="480" />
+		<Item MapID="0" Type="1" Unk1="1" Cat="20" Index="96" Rate="189980" />
+		<Item MapID="0" Type="2" Unk1="2" Cat="20" Index="97" Rate="182000" />
+		<Item MapID="0" Type="3" Unk1="3" Cat="20" Index="98" Rate="147000" />
+		<Item MapID="0" Type="4" Unk1="4" Cat="20" Index="99" Rate="147000" />
+		<Item MapID="0" Type="5" Unk1="5" Cat="20" Index="100" Rate="16800" />
+		<Item MapID="0" Type="6" Unk1="6" Cat="20" Index="101" Rate="16800" />
+		<Item MapID="0" Type="7" Unk1="6" Cat="20" Index="102" Rate="420" />
 	</ArtifactItem>
-
 	<OptionSelect>
 		<Select MapID="0" ArtifactType="1" OptionSetID1="1" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
 		<Select MapID="0" ArtifactType="1" OptionSetID1="2" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
@@ -103,8 +116,7 @@
 		<Select MapID="0" ArtifactType="7" OptionSetID1="31" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
 		<Select MapID="0" ArtifactType="7" OptionSetID1="32" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
 		<Select MapID="0" ArtifactType="7" OptionSetID1="34" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
-	</OptionSelect>										
-	
+	</OptionSelect>											
 	<EnhancementMix>
 		<Enhance ReqLevel="0" SuccessRate="1000000" ItemCat1="20" ItemIndex1="94" ItemCount1="1" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="1000000" />
 		<Enhance ReqLevel="1" SuccessRate="1000000" ItemCat1="20" ItemIndex1="94" ItemCount1="3" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="1500000" />
@@ -122,4 +134,14 @@
 		<Enhance ReqLevel="13" SuccessRate="750000" ItemCat1="20" ItemIndex1="94" ItemCount1="27" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="7500000" />
 		<Enhance ReqLevel="14" SuccessRate="600000" ItemCat1="20" ItemIndex1="94" ItemCount1="29" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="8000000" />
 	</EnhancementMix>
+	<GradeUpgradeMix Enable="1">
+		<Upgrade ReqGrade="1" MapID="0" SuccessRate="900000" ItemCat1="20" ItemIndex1="94" ItemCount1="20" ItemCat2="-1" ItemIndex2="-1" ItemCount2="-1" ItemCat3="-1" ItemIndex3="-1" ItemCount3="-1" ReqMoney="10000000" />
+		<Upgrade ReqGrade="2" MapID="0" SuccessRate="850000" ItemCat1="20" ItemIndex1="94" ItemCount1="25" ItemCat2="-1" ItemIndex2="-1" ItemCount2="-1" ItemCat3="-1" ItemIndex3="-1" ItemCount3="-1" ReqMoney="10000000" />
+		<Upgrade ReqGrade="3" MapID="0" SuccessRate="800000" ItemCat1="20" ItemIndex1="94" ItemCount1="30" ItemCat2="-1" ItemIndex2="-1" ItemCount2="-1" ItemCat3="-1" ItemIndex3="-1" ItemCount3="-1" ReqMoney="10000000" />
+		<Upgrade ReqGrade="4" MapID="0" SuccessRate="750000" ItemCat1="20" ItemIndex1="94" ItemCount1="35" ItemCat2="-1" ItemIndex2="-1" ItemCount2="-1" ItemCat3="-1" ItemIndex3="-1" ItemCount3="-1" ReqMoney="10000000" />
+		<Upgrade ReqGrade="5" MapID="0" SuccessRate="700000" ItemCat1="20" ItemIndex1="94" ItemCount1="40" ItemCat2="-1" ItemIndex2="-1" ItemCount2="-1" ItemCat3="-1" ItemIndex3="-1" ItemCount3="-1" ReqMoney="10000000" />
+		<Upgrade ReqGrade="6" MapID="0" SuccessRate="650000" ItemCat1="20" ItemIndex1="94" ItemCount1="45" ItemCat2="-1" ItemIndex2="-1" ItemCount2="-1" ItemCat3="-1" ItemIndex3="-1" ItemCount3="-1" ReqMoney="10000000" />
+		<Upgrade ReqGrade="7" MapID="0" SuccessRate="600000" ItemCat1="20" ItemIndex1="94" ItemCount1="50" ItemCat2="-1" ItemIndex2="-1" ItemCount2="-1" ItemCat3="-1" ItemIndex3="-1" ItemCount3="-1" ReqMoney="10000000" />
+		<Upgrade ReqGrade="8" MapID="0" SuccessRate="400000" ItemCat1="20" ItemIndex1="94" ItemCount1="55" ItemCat2="-1" ItemIndex2="-1" ItemCount2="-1" ItemCat3="-1" ItemIndex3="-1" ItemCount3="-1" ReqMoney="10000000" />
+	</GradeUpgradeMix>
 </ArtifactSystem>
