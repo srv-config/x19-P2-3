@@ -1,0 +1,73 @@
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MonsterMapItemDrop::DropItem ###
+//	MonsterID: Index of monster to drop item from, see MonsterList.xml, every monster may be defined multiple times in the files
+//	MonsterElement:
+//		~ 0: no element
+//		~ 1: Fire element
+//		~ 2: Water element
+//		~ 3: Earth element
+//		~ 4: Wind element
+//		~ 5: Darkness element
+//		~ -1: Any or no element
+//
+//	PlayerMinReset: Minimum reset of player, -1 for any
+//	PlayerMaxReset: Maximum reset of player, -1 for any
+//	PlayerMinLevel: Minimum level of player, -1 for any
+//	PlayerMaxLevel: Maximum level of player, -1 for any
+//	Cat: Category of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	MinLevel: Minimum item level to drop, 0-15
+//	MaxLevel: Maximum item level to drop, 0-15
+//	Durability: durability of item to drop, 0 indicates automatically generated valid durability
+//	Skill:
+//		~ -1: random, based on ItemSkillRate/ExcItemSkillRate setting from ItemDropControl.ini
+//		~ 0: no skill
+//		~ 1: with skill
+//
+//	Luck:
+//		~ -1: random, based on ItemLuckRate/ExcItemLuckRate setting from ItemDropControl.ini
+//		~ 0: no luck
+//		~ 1: with luck
+//
+//	Option:
+//		~ -1: random, up to 16 or 28, depending on server setting
+//		~ -2: official and original option selection, complex to explain, depending on many aspects, max option value for this setting is +12, applies to excellent items, pendants and rings
+//		~ 0: no option
+//		~ 1,2,3,4,5,6,7: with specified option (+4,+8,+12,+16,+20,+24,+28), check ItemDropRateControl.xml::OptionDropMode for more info
+//
+//	Exc:
+//		-1: no exc option
+//		-2: random count of random options (based on rates from ExcellentOptions.xml)
+//		-3; X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
+//		-10: A draw of bonus and excellent options set from MasteryExcOptions.xml. If used, the skill and luck attributes from this file are ignored, see referred file for further details.
+//		X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//
+//	Element:
+//		~ 0: No Elemental
+//		~ 1: Fire
+//		~ 2: Water
+//		~ 3: Earth
+//		~ 4: Wind
+//		~ 5: Darkness
+//		~ -1: Use PentagramItemDropRate.xml
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If exc item has been drawn a skill and luck are drawn on basis of ExcItemLuckRate and ExcItemSkillRate from ItemDropRateControl.ini, otherwise ItemLuckRate and ItemSkillRate are used.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	SocketCount: Minimum and maximum socket count of item to drop, 1-5, usage: min;max, 0 to use SocketSystem.xml rates, for pentagram a rate of sockets from PentagramItemDropRate.xml are used
+//	Duration: Allows to drop expiable item, seconds (not every item is suitable for period items system, please test before putting on live server)
+//	Rate: Item drop rate, max value for individual item is 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of all Rates in file should not exceed total of 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->

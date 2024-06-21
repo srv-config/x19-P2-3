@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### EventMapPoint::EntryDailyLimit::Event ###
+//	Type: Event type
+//		~ 0: Chaos Castle
+//		~ 1: Blood Castle
+//		~ 2: Devil's Square
+//		~ 3: Imperial Fort
+//		~ 5: Illusion Temple
+//		~ 6: Doppelganger
+//		~ 7: Boss Battle Together
+//
+//	Count: Maximum daily entries count
+//
+// ### EventMapPoint::RewardCondition::Point ###
+//	Min: Minimum point for actual range rule to apply for the reward
+//	Max: Maximum point for actual range rule to apply for the reward
+//	ItemCat: Reward tem category, see ItemList.xml
+//	ItemIndex: Reward tem index, see ItemList.xml
+//
+// ### EventMapPoint::RewardItemCount::Event ###
+//	Level: Level of event floor, 0-6
+//	CC: Number of mastery boxes to reward to Chaos Castle event at specified level
+//	BC: Number of mastery boxes to reward to Blood Castle event at specified level
+//	DS: Number of mastery boxes to reward to Devil Square event at specified level
+//	DG: Number of mastery boxes to reward to Doppelganger event at specified level
+//	IT: Number of mastery boxes to reward to Illusion Temple event at specified level
+
+// ### EventMapPoint::PointsReward::Event ###
+//	Type: Event type
+//		~ 0: Chaos Castle
+//		~ 1: Blood Castle
+//		~ 2: Devil's Square
+//		~ 3: Imperial Fort (Mon-Sat)
+//		~ 4: Imperial Fort (Sun)
+//		~ 5: Illusion Temple
+//		~ 6: Doppelganger
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Attributes of each event type represent count of contribution points to reward for specified action, e.g. PlayerKill, see attributes names
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<EventMapPoint>
+	<EntryDailyLimit>
+		<Event Type="0" Count="4" Name="Chaos Castle" />
+		<Event Type="1" Count="4" Name="Blood Castle" />
+		<Event Type="2" Count="4" Name="Devil's Square" />
+		<Event Type="3" Count="4" Name="Imperial Fort" />
+		<Event Type="5" Count="1" Name="Illusion Temple" />
+		<Event Type="6" Count="4" Name="Doppelganger" />
+		<Event Type="7" Count="1" Name="Boss Battle Together" />
+	</EntryDailyLimit>
+	
+	<RewardCondition>
+		<Point Min="100" Max="400" ItemCat="14" ItemIndex="282" />
+		<Point Min="401" Max="800" ItemCat="14" ItemIndex="283" />
+		<Point Min="801" Max="MAX" ItemCat="14" ItemIndex="284" />
+	</RewardCondition>
+	
+	<RewardItemCount>
+		<Event Level="0" CC="0" BC="0" DS="0" DG="0" IT="0" />
+		<Event Level="1" CC="1" BC="1" DS="1" DG="1" IT="1" />
+		<Event Level="2" CC="1" BC="1" DS="1" DG="1" IT="2" />
+		<Event Level="3" CC="1" BC="1" DS="1" DG="1" IT="2" />
+		<Event Level="4" CC="2" BC="2" DS="2" DG="2" IT="2" />
+		<Event Level="5" CC="2" BC="2" DS="2" DG="2" IT="-1" />
+		<Event Level="6" CC="2" BC="2" DS="2" DG="2" IT="-1" />
+	</RewardItemCount>
+	
+	<PointsReward>
+		<Event Type="0" MonsterKill="13" PlayerKill="50" Winning="99" Name="Chaos Castle" />
+		<Event Type="1" CommonMonsterKill="5" BossMonsterKill="20" GateDestroy="100" StoneDestroy="200" Name="Blood Castle" />
+		<Event Type="2" MonsterKill="1" RankingPlace1="200" RankingPlace2="150" RankingPlace3="100" Name="Devil's Square" />
+		<Event Type="3" MonsterKill="45" BossKill="100" Name="Imperial Fort (Mon-Sat)" />
+		<Event Type="4" MonsterKill="22" BossKill="100" Name="Imperial Fort (Sun)" />
+		<Event Type="5" StatueNeutralize="50" StatueDestroy="30" PlayerKill="10" Winning="200" Name="Illusion Temple" />
+		<Event Type="6" MonsterKill="2" PlayerKill="10" IceWalkerKill="100" Winning="200" Name="Doppelganger" />
+	</PointsReward>
+</EventMapPoint>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file need to be reflected on game client side in ParticleLevelUp.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### AbilityCardLevelUp::Card ###
+//	Type:
+//		~ 1: Skill Card
+//		~ 2: Option Card
+//		~ 3: Elite Card
+//
+// ### AbilityCardLevelUp::Card::Upgrade ###
+//	InitialLevel: Card level required for upgrade, 0-4
+//	ReqCardCount: Number of cards of same type and option required for the upgrade
+//	ReqMoney: Required money, Zen
+//	ReqItemCat: Category of required additional item
+//	ReqItemIndex: Category of required additional item
+//	ReqItemCount: Number of required additional items
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<AbilityCardLevelUp>
+	<Card Type="1"> <!-- Skill Card -->
+		<Upgrade InitialLevel="0" ReqCardCount="1" ReqMoney="50000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="10" />
+		<Upgrade InitialLevel="1" ReqCardCount="1" ReqMoney="75000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="20" />
+		<Upgrade InitialLevel="2" ReqCardCount="1" ReqMoney="100000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="30" />
+		<Upgrade InitialLevel="3" ReqCardCount="1" ReqMoney="125000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="40" />
+		<Upgrade InitialLevel="4" ReqCardCount="2" ReqMoney="150000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="50" />
+	</Card>
+	<Card Type="2"> <!-- Option Card -->
+		<Upgrade InitialLevel="0" ReqCardCount="2" ReqMoney="5000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="1" />
+		<Upgrade InitialLevel="1" ReqCardCount="2" ReqMoney="7500000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="2" />
+		<Upgrade InitialLevel="2" ReqCardCount="2" ReqMoney="10000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="3" />
+		<Upgrade InitialLevel="3" ReqCardCount="3" ReqMoney="12500000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="4" />
+		<Upgrade InitialLevel="4" ReqCardCount="3" ReqMoney="15000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="5" />
+	</Card>
+	<Card Type="3"> <!-- Elite Card -->
+		<Upgrade InitialLevel="0" ReqCardCount="2" ReqMoney="25000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="5" />
+		<Upgrade InitialLevel="1" ReqCardCount="2" ReqMoney="37500000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="10" />
+		<Upgrade InitialLevel="2" ReqCardCount="2" ReqMoney="50000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="15" />
+		<Upgrade InitialLevel="3" ReqCardCount="3" ReqMoney="62500000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="20" />
+		<Upgrade InitialLevel="4" ReqCardCount="3" ReqMoney="75000000" ReqItemCat="20" ReqItemIndex="239" ReqItemCount="25" />
+	</Card>	
+</AbilityCardLevelUp>			

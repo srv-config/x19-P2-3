@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~ For detailed explanation of the bags system refer to ### Item Bags System Description ###.txt included in \Data\ItemBags\
+-->
+
+<ItemBag>
+<BagConfig Name="Item_(14,380,0)_Seed_Capsule_(Ice)" ItemRate="8000" SetItemRate="0" SetItemCount="1" MasterySetItemInclude="0" MoneyDrop="1000" IsPentagramForBeginnersDrop="0" PartyDropRate="0" PartyOneDropOnly="0" PartyShareType="0" BagUseEffect="-1" BagUseRate="10000" />
+<SummonBook Enable="0" DropRate="0" ItemCat="0" ItemIndex="0" />
+<AddCoin Enable="0" CoinType="0" CoinValue="0" PlayerMinLevel="1" PlayerMaxLevel="MAX" PlayerMinReset="0" PlayerMaxReset="MAX" />
+<Ruud GainRate="0" MinValue="0" MaxValue="0" PlayerMinLevel="1" PlayerMaxLevel="MAX" PlayerMinReset="0" PlayerMaxReset="MAX" />
+
+<DropSection UseMode="-1" DisplayName="Section 1">
+	<DropAllow DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" PlayerMinLevel="1" PlayerMaxLevel="MAX" PlayerMinReset="0" PlayerMaxReset="MAX" MapNumber="-1">
+		<Drop Rate="7500" Type="0" Count="1">
+			<Item Cat="12" Index="102" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" />
+		</Drop>
+		<Drop Rate="2500" Type="0" Count="1">
+			<Item Cat="12" Index="401" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" />
+		</Drop>
+		<Drop Rate="200" Type="0" Count="1">	
+			<Item Cat="0" Index="26" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Flameberge -->
+			<Item Cat="0" Index="27" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Sword Breaker -->
+			<Item Cat="0" Index="28" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Rune Bastard Sword -->
+			<Item Cat="0" Index="52" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Pantera Claws -->
+			<Item Cat="2" Index="16" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Frost Mace -->
+			<Item Cat="2" Index="17" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Absolute Scepter -->
+			<Item Cat="3" Index="22" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Rectuus Lance -->
+			<Item Cat="4" Index="23" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Dark Stinger -->
+			<Item Cat="5" Index="20" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Eternal Wing Stick -->
+			<Item Cat="5" Index="30" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Deadly Staff -->
+			<Item Cat="5" Index="31" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Inberial Staff -->
+			<Item Cat="6" Index="17" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Crimson Glory -->
+			<Item Cat="6" Index="18" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Salamander Shield -->
+			<Item Cat="6" Index="19" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Frost Barrier -->
+			<Item Cat="6" Index="20" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Guardian Shield -->
+			<Item Cat="6" Index="40" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Grace Shield -->
+			<Item Cat="7" Index="44" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Eternal Wing Helm -->
+			<Item Cat="7" Index="45" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Titan Helm -->
+			<Item Cat="7" Index="46" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Brave Helm -->
+			<Item Cat="7" Index="49" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Seraphim Helm -->
+			<Item Cat="7" Index="50" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Divine Helm -->
+			<Item Cat="7" Index="51" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Royal Mask -->
+			<Item Cat="7" Index="52" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Hades Helm -->
+			<Item Cat="7" Index="146" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Tigris Helm -->
+			<Item Cat="7" Index="148" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Grace Helm -->
+			<Item Cat="8" Index="44" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Eternal Wing Armor -->
+			<Item Cat="8" Index="45" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Titan Armor -->
+			<Item Cat="8" Index="46" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Brave Armor -->
+			<Item Cat="8" Index="47" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Phantom Armor -->
+			<Item Cat="8" Index="48" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Destroy Armor -->
+			<Item Cat="8" Index="49" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Seraphim Armor -->
+			<Item Cat="8" Index="50" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Divine Armor -->
+			<Item Cat="8" Index="51" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Royal Armor -->
+			<Item Cat="8" Index="52" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Hades Armor -->
+			<Item Cat="8" Index="146" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Tigris Armor -->
+			<Item Cat="8" Index="148" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Grace Armor -->
+			<Item Cat="9" Index="44" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Eternal Wing Pants -->
+			<Item Cat="9" Index="45" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Titan Pants -->
+			<Item Cat="9" Index="46" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Brave Pants -->
+			<Item Cat="9" Index="47" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Phantom Pants -->
+			<Item Cat="9" Index="48" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Destroy Pants -->
+			<Item Cat="9" Index="49" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Seraphim Pants -->
+			<Item Cat="9" Index="50" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Divine Pants -->
+			<Item Cat="9" Index="51" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Royal Pants -->
+			<Item Cat="9" Index="52" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Hades Pants -->
+			<Item Cat="9" Index="146" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Tigris Pants -->
+			<Item Cat="9" Index="148" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Grace Pants -->
+			<Item Cat="10" Index="44" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Eternal Wing Gloves -->
+			<Item Cat="10" Index="45" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Titan Gloves -->
+			<Item Cat="10" Index="46" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Brave Gloves -->
+			<Item Cat="10" Index="47" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Phantom Gloves -->
+			<Item Cat="10" Index="48" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Destroy Gloves -->
+			<Item Cat="10" Index="49" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Seraphim Gloves -->
+			<Item Cat="10" Index="50" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Divine Gloves -->
+			<Item Cat="10" Index="51" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Royal Gloves -->
+			<Item Cat="10" Index="52" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Hades Gloves -->
+			<Item Cat="10" Index="148" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Grace Gloves -->
+			<Item Cat="11" Index="44" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Eternal Wing Boots -->
+			<Item Cat="11" Index="45" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Titan Boots -->
+			<Item Cat="11" Index="46" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Brave Boots -->
+			<Item Cat="11" Index="47" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Phantom Boots -->
+			<Item Cat="11" Index="48" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Destroy Boots -->
+			<Item Cat="11" Index="49" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Seraphim Boots -->
+			<Item Cat="11" Index="50" ItemMinLevel="0" ItemMaxLevel="0" Sakill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Divine Boots -->
+			<Item Cat="11" Index="51" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Royal Boots -->
+			<Item Cat="11" Index="52" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Hades Boots -->
+			<Item Cat="11" Index="146" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Tigris Boots -->
+			<Item Cat="11" Index="148" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="1" Option="0" Exc="-1" SetItem="0" SocketCount="5" ElementalItem="0" /> <!-- Grace Boots -->
+		</Drop>
+	</DropAllow>
+</DropSection>
+</ItemBag>

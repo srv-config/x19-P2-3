@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MonsterSoulConversion ###
+//	WeeklyPurchasesNumber: Maximum number the converter can be purchased a week
+//
+// ### MonsterSoulConversion::WeeklyReset ###
+//	Day: Day of a week:
+//	0: Sunday
+//	1: Monday
+//	2: Tuesday
+//	3: Wednesday
+//	4: Thursday
+//	5: Friday
+//	6: Saturday
+//	Hour: Hour of reset, 0-23
+//	Minute: Minute of reset, 0-59
+//	Second: Second of reset, 0-59
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ IMPORTANT: Change the reset time settings only while server is down for maintenance
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MonsterSoulConversion::ConverterSettings::Converter ###
+//	Level: Converter level, 1-5
+//	Cat: Category of converter, see ItemList.xml
+//	Index: Index of Converter, see ItemList.xml
+//	ReqSoulNumber:
+//
+// ### MonsterSoulConversion::MonsterSettings::Converter ###
+//	Level: Converter level, 1-5
+//
+// ### MonsterSoulConversion::MonsterSettings::Converter::Area ###
+//	ID: Unique ID of area
+//	MapNumber: Number of map
+//	MonsterIndex: Index of monster, see MonsterList.xml
+//	ReqSoulNumber: 
+//	DropRate: Drop rate, 1/1000000
+//	Name: Area name, used for loggin and in-file description
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MonsterSoulConversion WeeklyPurchasesNumber="3">
+<WeeklyReset Day="4" Hour="10" Minute="30" Second="0" />
+
+	<ConverterSettings>
+		<Converter Level="1" Cat="14" Index="460" ReqSoulNumber="2"/>
+		<Converter Level="2" Cat="14" Index="461" ReqSoulNumber="2"/>
+		<Converter Level="3" Cat="14" Index="462" ReqSoulNumber="2"/>
+		<Converter Level="4" Cat="14" Index="463" ReqSoulNumber="2"/>
+		<Converter Level="5" Cat="14" Index="464" ReqSoulNumber="2"/>
+	</ConverterSettings>
+
+	<MonsterSettings>
+		<Converter Level="1">
+			<Area ID="0"  MapNumber="91" MonsterIndex="586" ReqSoulNumber="500" DropRate="450000" Name="Acheron" />
+			<Area ID="1"  MapNumber="91" MonsterIndex="587" ReqSoulNumber="500" DropRate="450000" Name="Acheron" />
+			<Area ID="2"  MapNumber="91" MonsterIndex="588" ReqSoulNumber="500" DropRate="450000" Name="Acheron" />
+			<Area ID="3"  MapNumber="91" MonsterIndex="589" ReqSoulNumber="500" DropRate="450000" Name="Acheron" />
+			<Area ID="4"  MapNumber="91" MonsterIndex="590" ReqSoulNumber="500" DropRate="450000" Name="Acheron" />
+			<Area ID="5"  MapNumber="91" MonsterIndex="591" ReqSoulNumber="500" DropRate="450000" Name="Acheron" />
+			<Area ID="6"  MapNumber="63" MonsterIndex="480" ReqSoulNumber="500" DropRate="450000" Name="Vulcanus" />
+			<Area ID="7"  MapNumber="63" MonsterIndex="482" ReqSoulNumber="500" DropRate="450000" Name="Vulcanus" />
+			<Area ID="8"  MapNumber="63" MonsterIndex="484" ReqSoulNumber="500" DropRate="450000" Name="Vulcanus" />
+			<Area ID="9"  MapNumber="63" MonsterIndex="486" ReqSoulNumber="500" DropRate="450000" Name="Vulcanus" />
+			<Area ID="10" MapNumber="63" MonsterIndex="487" ReqSoulNumber="500" DropRate="450000" Name="Vulcanus" />
+			<Area ID="11" MapNumber="63" MonsterIndex="489" ReqSoulNumber="500" DropRate="450000" Name="Vulcanus" />
+			<Area ID="12" MapNumber="63" MonsterIndex="490" ReqSoulNumber="500" DropRate="450000" Name="Vulcanus" />
+			<Area ID="13" MapNumber="29" MonsterIndex="271" ReqSoulNumber="500" DropRate="450000" Name="Kalima 6" />
+			<Area ID="14" MapNumber="29" MonsterIndex="272" ReqSoulNumber="500" DropRate="450000" Name="Kalima 6" />
+			<Area ID="15" MapNumber="29" MonsterIndex="270" ReqSoulNumber="500" DropRate="450000" Name="Kalima 6" />
+			<Area ID="16" MapNumber="29" MonsterIndex="268" ReqSoulNumber="500" DropRate="450000" Name="Kalima 6" />
+			<Area ID="17" MapNumber="29" MonsterIndex="273" ReqSoulNumber="500" DropRate="450000" Name="Kalima 6" />
+			<Area ID="18" MapNumber="29" MonsterIndex="269" ReqSoulNumber="500" DropRate="450000" Name="Kalima 6" />
+			<Area ID="19" MapNumber="29" MonsterIndex="274" ReqSoulNumber="500" DropRate="450000" Name="Kalima 6" />
+			<Area ID="20" MapNumber="36" MonsterIndex="331" ReqSoulNumber="500" DropRate="450000" Name="Kalima 7" />
+			<Area ID="21" MapNumber="36" MonsterIndex="332" ReqSoulNumber="500" DropRate="450000" Name="Kalima 7" />
+			<Area ID="22" MapNumber="36" MonsterIndex="333" ReqSoulNumber="500" DropRate="450000" Name="Kalima 7" />
+			<Area ID="23" MapNumber="36" MonsterIndex="334" ReqSoulNumber="500" DropRate="450000" Name="Kalima 7" />
+			<Area ID="24" MapNumber="36" MonsterIndex="335" ReqSoulNumber="500" DropRate="450000" Name="Kalima 7" />
+			<Area ID="25" MapNumber="36" MonsterIndex="336" ReqSoulNumber="500" DropRate="450000" Name="Kalima 7" />
+			<Area ID="26" MapNumber="36" MonsterIndex="337" ReqSoulNumber="500" DropRate="450000" Name="Kalima 7" />
+			<Area ID="27" MapNumber="33" MonsterIndex="308" ReqSoulNumber="500" DropRate="450000" Name="Aida" />
+			<Area ID="28" MapNumber="33" MonsterIndex="307" ReqSoulNumber="500" DropRate="450000" Name="Aida" />
+			<Area ID="29" MapNumber="33" MonsterIndex="306" ReqSoulNumber="500" DropRate="450000" Name="Aida" />
+			<Area ID="30" MapNumber="33" MonsterIndex="305" ReqSoulNumber="500" DropRate="450000" Name="Aida" />
+		</Converter>
+		<Converter Level="2">
+			<Area ID="0" MapNumber="37" MonsterIndex="553" ReqSoulNumber="500" DropRate="450000" Name="Kanturu Ruins" />
+			<Area ID="1" MapNumber="37" MonsterIndex="554" ReqSoulNumber="500" DropRate="450000" Name="Kanturu Ruins" />
+			<Area ID="2" MapNumber="37" MonsterIndex="555" ReqSoulNumber="500" DropRate="450000" Name="Kanturu Ruins" />
+			<Area ID="3" MapNumber="37" MonsterIndex="556" ReqSoulNumber="500" DropRate="450000" Name="Kanturu Ruins" />
+			<Area ID="4" MapNumber="81" MonsterIndex="571" ReqSoulNumber="500" DropRate="450000" Name="Karutan 2" />
+			<Area ID="5" MapNumber="81" MonsterIndex="572" ReqSoulNumber="500" DropRate="450000" Name="Karutan 2" />
+			<Area ID="6" MapNumber="81" MonsterIndex="575" ReqSoulNumber="500" DropRate="450000" Name="Karutan 2" />
+			<Area ID="7" MapNumber="81" MonsterIndex="576" ReqSoulNumber="500" DropRate="450000" Name="Karutan 2" />
+			<Area ID="8" MapNumber="57" MonsterIndex="562" ReqSoulNumber="500" DropRate="450000" Name="Raklion" />
+			<Area ID="9" MapNumber="57" MonsterIndex="563" ReqSoulNumber="500" DropRate="450000" Name="Raklion" />
+			<Area ID="10" MapNumber="57" MonsterIndex="564" ReqSoulNumber="500" DropRate="450000" Name="Raklion" />
+			<Area ID="11" MapNumber="57" MonsterIndex="565" ReqSoulNumber="500" DropRate="450000" Name="Raklion" />
+			<Area ID="12" MapNumber="56" MonsterIndex="557" ReqSoulNumber="500" DropRate="450000" Name="Swamp of Calmness" />
+			<Area ID="13" MapNumber="56" MonsterIndex="558" ReqSoulNumber="500" DropRate="450000" Name="Swamp of Calmness" />
+			<Area ID="14" MapNumber="56" MonsterIndex="559" ReqSoulNumber="500" DropRate="450000" Name="Swamp of Calmness" />
+			<Area ID="15" MapNumber="112" MonsterIndex="730" ReqSoulNumber="500" DropRate="450000" Name="Ferea" />
+			<Area ID="16" MapNumber="112" MonsterIndex="731" ReqSoulNumber="500" DropRate="450000" Name="Ferea" />
+			<Area ID="17" MapNumber="112" MonsterIndex="732" ReqSoulNumber="500" DropRate="450000" Name="Ferea" />
+		</Converter>
+		<Converter Level="3">
+			<Area ID="0" MapNumber="113" MonsterIndex="743" ReqSoulNumber="500" DropRate="450000" Name="Nixie Lake" />
+			<Area ID="1" MapNumber="113" MonsterIndex="744" ReqSoulNumber="500" DropRate="450000" Name="Nixie Lake" />
+			<Area ID="2" MapNumber="113" MonsterIndex="745" ReqSoulNumber="500" DropRate="450000" Name="Nixie Lake" />
+			<Area ID="3" MapNumber="116" MonsterIndex="767" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 1" />
+			<Area ID="4" MapNumber="116" MonsterIndex="770" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 1" />
+			<Area ID="5" MapNumber="117" MonsterIndex="771" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 2" />
+			<Area ID="6" MapNumber="117" MonsterIndex="772" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 2" />
+			<Area ID="7" MapNumber="118" MonsterIndex="768" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 3" />
+			<Area ID="8" MapNumber="118" MonsterIndex="773" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 3" />
+		</Converter>
+		<Converter Level="4">
+			<Area ID="0" MapNumber="119" MonsterIndex="769" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 4" />
+			<Area ID="1" MapNumber="119" MonsterIndex="774" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 4" />
+			<Area ID="2" MapNumber="120" MonsterIndex="775" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 5" />
+			<Area ID="3" MapNumber="120" MonsterIndex="776" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 5" />
+			<Area ID="4" MapNumber="120" MonsterIndex="777" ReqSoulNumber="500" DropRate="450000" Name="Deep Dungeon 5" />
+			<Area ID="5" MapNumber="122" MonsterIndex="786" ReqSoulNumber="500" DropRate="450000" Name="Swamp of Darkness" />
+			<Area ID="6" MapNumber="122" MonsterIndex="787" ReqSoulNumber="500" DropRate="450000" Name="Swamp of Darkness" />
+			<Area ID="7" MapNumber="122" MonsterIndex="788" ReqSoulNumber="500" DropRate="450000" Name="Swamp of Darkness" />
+			<Area ID="8" MapNumber="122" MonsterIndex="789" ReqSoulNumber="500" DropRate="450000" Name="Swamp of Darkness" />
+		</Converter>
+		<Converter Level="5">
+			<Area ID="0" MapNumber="123" MonsterIndex="810" ReqSoulNumber="500" DropRate="450000" Name="Kubera Mine" />
+			<Area ID="1" MapNumber="123" MonsterIndex="811" ReqSoulNumber="500" DropRate="450000" Name="Kubera Mine" />
+			<Area ID="2" MapNumber="123" MonsterIndex="812" ReqSoulNumber="500" DropRate="450000" Name="Kubera Mine" />
+			<Area ID="3" MapNumber="123" MonsterIndex="813" ReqSoulNumber="500" DropRate="450000" Name="Kubera Mine" />
+			<Area ID="4" MapNumber="123" MonsterIndex="814" ReqSoulNumber="500" DropRate="450000" Name="Kubera Mine" />
+			<Area ID="5" MapNumber="123" MonsterIndex="815" ReqSoulNumber="500" DropRate="450000" Name="Kubera Mine" />
+			<Area ID="6" MapNumber="123" MonsterIndex="816" ReqSoulNumber="500" DropRate="450000" Name="Kubera Mine" />
+		</Converter>
+	</MonsterSettings>
+</MonsterSoulConversion>

@@ -1,0 +1,10 @@
+########################################################
+################## Game Server Types ###################
+########################################################
+
+1) GameServer_R - Regular Game server for Common Game Play
+2) GameSevrer_A - Arca Server, handles Arca Battle Event
+3) GameServer_C - Siege Server, handles Castle Siege and CryWolf Events
+4) GameServer_M - Market Server, handles Loren Market and Event Square Maps, Chaos Castle Survival, Illusion Temple Renewal, Blood Castle, Chaos Castle, Devil Square Events
+5) GameServer_I - Instance server, handles Labyrinth of Dimension event and forth class quest
+6) GameServer_B - BattleCore Server, handles all Battle Core events, requires dedicated Data and Join Servers

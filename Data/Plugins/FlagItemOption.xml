@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### FlagItemOption ###
+//	Enable: Disables or enables flags shop at Guild Master NPC
+//	
+// ### FlagItemOption::Flag ###
+//	Cat: Category of flag item
+//	Index: Index of flag item
+//	BonusExp: Exp bonus added by flag
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Bonus is added to final experience multiplier.
+//~~ By default exp bonus text is not displayed on item tool-tip.
+//~~ To add it edit: itemtooltip.bmd and itemtooltiptext.bmd
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Custom flag items can be only added under category 20 and must use KindA = 22 and KindB = 82 or 83
+//~~ To add custom flag it is required to edit:
+//~~
+//~~	CLIENT:
+//~~	 ~ item.bmd
+//~~	 ~ itemtooltip.bmd
+//~~	 ~ itemtooltiptext.bmd
+//~~	 ~ ItemTRSData.txt (Lang.mpr)
+//~~
+//~~	SRVER:
+//~~	 ~ ItemList.xml
+//~~	 ~ FlagItemOption.xml
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+<FlagItemOption Enable="1">
+	<Flag Cat="20" Index="0" ExpBonus="0.0" />
+	<Flag Cat="20" Index="1" ExpBonus="0.0" />
+	<Flag Cat="20" Index="2" ExpBonus="0.0" />
+	<Flag Cat="20" Index="3" ExpBonus="0.0" />
+	<Flag Cat="20" Index="4" ExpBonus="0.0" />
+	<Flag Cat="20" Index="5" ExpBonus="0.0" />
+	<Flag Cat="20" Index="6" ExpBonus="0.0" />
+	<Flag Cat="20" Index="7" ExpBonus="0.0" />
+	<Flag Cat="20" Index="8" ExpBonus="0.0" />
+	<Flag Cat="20" Index="9" ExpBonus="0.0" />
+	<Flag Cat="20" Index="10" ExpBonus="0.0" />
+	<Flag Cat="20" Index="11" ExpBonus="0.0" />
+	<Flag Cat="20" Index="12" ExpBonus="0.0" />
+	<Flag Cat="20" Index="13" ExpBonus="0.0" />
+	<Flag Cat="20" Index="14" ExpBonus="0.0" />
+	<Flag Cat="20" Index="15" ExpBonus="0.0" />
+	<Flag Cat="20" Index="16" ExpBonus="0.0" />
+	<Flag Cat="20" Index="17" ExpBonus="0.0" />
+	<Flag Cat="20" Index="18" ExpBonus="0.0" />
+	<Flag Cat="20" Index="19" ExpBonus="0.0" />
+	<Flag Cat="20" Index="20" ExpBonus="0.0" />
+	<Flag Cat="20" Index="21" ExpBonus="0.0" />
+	<Flag Cat="20" Index="22" ExpBonus="0.0" />
+	<Flag Cat="20" Index="23" ExpBonus="0.0" />
+	<Flag Cat="20" Index="24" ExpBonus="0.0" />
+	<Flag Cat="20" Index="25" ExpBonus="0.0" />
+	<Flag Cat="20" Index="26" ExpBonus="0.0" />
+	<Flag Cat="20" Index="27" ExpBonus="0.0" />
+	<Flag Cat="20" Index="28" ExpBonus="0.0" />
+	<Flag Cat="20" Index="29" ExpBonus="0.0" />
+	<Flag Cat="20" Index="30" ExpBonus="0.0" />
+	<Flag Cat="20" Index="31" ExpBonus="0.0" />
+	<Flag Cat="20" Index="32" ExpBonus="0.0" />
+	<Flag Cat="20" Index="33" ExpBonus="0.0" />
+	<Flag Cat="20" Index="34" ExpBonus="0.0" />
+	<Flag Cat="20" Index="35" ExpBonus="0.0" />
+	<Flag Cat="20" Index="36" ExpBonus="0.0" />
+	<Flag Cat="20" Index="37" ExpBonus="0.0" />
+	<Flag Cat="20" Index="38" ExpBonus="0.0" />
+</FlagItemOption>

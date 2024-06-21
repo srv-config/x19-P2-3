@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ImperialGuardian::Map ###
+//	Day: Day of the event cycle the monsters applies to:
+//		~ 0: Sunday
+//		~ 1: Monday
+//		~ 2: Tuesday
+//		~ 3: Wednesday
+//		~ 4: Thursday
+//		~ 5: Friday
+//		~ 6: Saturday
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Upon entry to selected event level the monsters are drawn randomly among available days
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Description: Used for in-file description and log purpose
+//
+// ### ImperialGuardian::Map::Spawn ###
+//	Index: Index of the monster to spawn, refer to MonsterLisr.xml
+//	StartX: Coordinate X to spawn the monster at, 1-255
+//	StartY: Coordinate Y to spawn the monster at, 1-255
+//	Dir: Direction the monster looks at after spawn:
+//		~ 1: South-West
+//		~ 2: South
+//		~ 3: South-East
+//		~ 4: East
+//		~ 5: North-East
+//		~ 6: North
+//		~ 7: North-West
+//		~ 8: West
+//		~ -1: Random
+//	Zone: The event area the monsters spawn at, 0-3
+//		~ 0: Starting Point
+//		~ 1: Combat Area
+//		~ 2: Warp Zone
+//		~ 3: Final Zone
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<ImperialGuardian>
+	<Map Day="1" Description="Monday"> <!-- AKA Map 69 -->
+	<!-- Monsters -->
+		<Spawn Index="520" StartX="225" StartY="40" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="232" StartY="40" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="239" StartY="40" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="225" StartY="48" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="232" StartY="48" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="239" StartY="48" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="512" StartX="232" StartY="45" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="187" StartY="21" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="185" StartY="26" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="187" StartY="31" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="179" StartY="19" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="177" StartY="26" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="179" StartY="33" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="513" StartX="173" StartY="26" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="174" StartY="89" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="186" StartY="90" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="180" StartY="91" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="508" StartX="180" StartY="95" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="174" StartY="95" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="178" StartY="95" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="186" StartY="95" Dir="1" Zone="2" /> <!-- -->
+	<!-- Bosses -->
+		<Spawn Index="525" StartX="234" StartY=" 28" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="216" StartY=" 80" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="524" StartX="233" StartY=" 55" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="194" StartY=" 25" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="154" StartY=" 53" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="524" StartX="166" StartY=" 26" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="180" StartY=" 79" Dir="1" Zone="2" /> <!-- -->
+	</Map>
+
+	<Map Day="4" Description="Thursday"> <!-- AKA Map 69 -->
+	<!-- Monsters -->
+		<Spawn Index="520" StartX="225" StartY="40" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="232" StartY="40" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="239" StartY="40" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="225" StartY="48" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="232" StartY="48" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="239" StartY="48" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="512" StartX="232" StartY="45" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="187" StartY="21" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="185" StartY="26" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="187" StartY="31" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="179" StartY="19" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="177" StartY="26" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="179" StartY="33" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="513" StartX="173" StartY="26" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="174" StartY="89" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="186" StartY="90" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="180" StartY="91" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="511" StartX="180" StartY="95" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="174" StartY="95" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="178" StartY="95" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="186" StartY="95" Dir="1" Zone="2" /> <!-- -->
+	<!-- Bosses -->
+		<Spawn Index="525" StartX="234" StartY="28" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="216" StartY="80" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="524" StartX="233" StartY="55" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="194" StartY="25" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="154" StartY="53" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="524" StartX="166" StartY="26" Dir="3" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="180" StartY="79" Dir="1" Zone="2" /> <!-- -->
+	</Map>
+
+	<Map Day="2" Description="Tuesday"> <!-- AKA Map 70 -->
+	<!-- Monsters -->
+		<Spawn Index="520" StartX="66" StartY="59" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="64" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="66" StartY="70" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="56" StartY="58" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="56" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="56" StartY="71" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="514" StartX="59" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="32" StartY="99" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="42" StartY="99" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="38" StartY="101" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="33" StartY="107" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="44" StartY="107" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="39" StartY="110" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="515" StartX="38" StartY="106" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="98" StartY="107" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="96" StartY="112" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="98" StartY="117" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="93" StartY="105" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="92" StartY="112" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="93" StartY="118" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="509" StartX="89" StartY="111" Dir="3" Zone="2" /> <!-- -->
+	<!-- Bosses -->
+		<Spawn Index="525" StartX="75" StartY="67" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="19" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="524" StartX="50" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="37" StartY="93" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="55" StartY="154" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="524" StartX="41" StartY="117" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="107" StartY="112" Dir="3" Zone="2" /> <!-- -->
+	</Map>
+
+	<Map Day="5" Description="Friday"> <!-- AKA Map 70 -->
+	<!-- Monsters -->
+		<Spawn Index="520" StartX="66" StartY="59" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="64" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="66" StartY="70" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="56" StartY="58" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="56" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="56" StartY="71" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="514" StartX="59" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="32" StartY="99" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="42" StartY="99" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="38" StartY="101" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="33" StartY="107" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="44" StartY="107" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="39" StartY="110" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="515" StartX="38" StartY="106" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="98" StartY="107" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="96" StartY="112" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="98" StartY="117" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="93" StartY="105" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="92" StartY="112" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="93" StartY="118" Dir="3" Zone="2" /> <!-- -->
+		<Spawn Index="507" StartX="89" StartY="111" Dir="3" Zone="2" /> <!-- -->
+	<!-- Bosses -->
+		<Spawn Index="525" StartX="75" StartY="67" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="19" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="524" StartX="50" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="37" StartY="93" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="55" StartY="154" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="524" StartX="41" StartY="117" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="107" StartY="112" Dir="3" Zone="2" /> <!-- -->
+	</Map>
+
+	<Map Day="3" Description="Wednesday"> <!-- AKA Map 71 -->
+	<!-- Monsters -->
+		<Spawn Index="520" StartX="132" StartY="185" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="131" StartY="192" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="132" StartY="199" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="126" StartY="185" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="124" StartY="192" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="126" StartY="199" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="516" StartX="127" StartY="192" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="217" StartY="140" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="228" StartY="140" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="222" StartY="142" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="218" StartY="148" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="222" StartY="152" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="227" StartY="148" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="517" StartX="222" StartY="147" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="162" StartY="226" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="166" StartY="228" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="171" StartY="226" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="161" StartY="231" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="164" StartY="233" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="171" StartY="233" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="510" StartX="166" StartY="233" Dir="1" Zone="2" /> <!-- -->
+	<!-- Bosses -->
+		<Spawn Index="525" StartX="146" StartY="191" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="89" StartY="195" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="524" StartX="119" StartY="192" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="222" StartY="134" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="223" StartY="193" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="524" StartX="222" StartY="160" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="167" StartY="217" Dir="1" Zone="2" /> <!-- -->
+	</Map>
+
+	<Map Day="6" Description="Saturday"> <!-- AKA Map 71 -->
+	<!-- Monsters -->
+		<Spawn Index="520" StartX="132" StartY="185" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="131" StartY="192" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="520" StartX="132" StartY="199" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="126" StartY="185" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="124" StartY="192" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="126" StartY="199" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="516" StartX="127" StartY="192" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="217" StartY="140" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="228" StartY="140" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="222" StartY="142" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="218" StartY="148" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="222" StartY="152" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="227" StartY="148" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="517" StartX="222" StartY="147" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="162" StartY="226" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="166" StartY="228" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="171" StartY="226" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="161" StartY="231" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="164" StartY="233" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="171" StartY="233" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="506" StartX="166" StartY="233" Dir="1" Zone="2" /> <!-- -->
+	<!-- Bosses -->
+		<Spawn Index="525" StartX="146" StartY="191" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="89" StartY="195" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="524" StartX="119" StartY="192" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="525" StartX="222" StartY="134" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="223" StartY="193" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="524" StartX="222" StartY="160" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="525" StartX="167" StartY="217" Dir="1" Zone="2" /> <!-- -->
+	</Map>
+	
+	<Map Day="0" Description="Sunday"> <!-- AKA Map 70 -->
+	<!-- Monsters -->								
+		<Spawn Index="518" StartX="64" StartY="65" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="64" StartY="69" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="64" StartY="73" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="61" StartY="64" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="61" StartY="69" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="519" StartX="61" StartY="74" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="521" StartX="55" StartY="71" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="521" StartX="55" StartY="66" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="521" StartX="54" StartY="68" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="507" StartX="57" StartY="69" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="518" StartX="29" StartY="186" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="34" StartY="187" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="39" StartY="186" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="34" StartY="194" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="29" StartY="192" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="519" StartX="39" StartY="192" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="26" StartY="191" Dir="2" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="32" StartY="195" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="521" StartX="39" StartY="196" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="506" StartX="36" StartY="191" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="518" StartX="173" StartY="129" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="518" StartX="170" StartY="133" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="518" StartX="173" StartY="137" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="181" StartY="129" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="181" StartY="133" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="519" StartX="181" StartY="137" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="184" StartY="129" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="184" StartY="133" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="184" StartY="137" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="505" StartX="177" StartY="133" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="521" StartX="183" StartY="29" Dir="3" Zone="3" /> <!-- -->
+		<Spawn Index="521" StartX="183" StartY="21" Dir="3" Zone="3" /> <!-- -->
+		<Spawn Index="521" StartX="187" StartY="32" Dir="1" Zone="3" /> <!-- -->
+		<Spawn Index="521" StartX="187" StartY="20" Dir="5" Zone="3" /> <!-- -->
+		<Spawn Index="518" StartX="192" StartY="31" Dir="3" Zone="3" /> <!-- -->
+		<Spawn Index="518" StartX="192" StartY="21" Dir="3" Zone="3" /> <!-- -->
+		<Spawn Index="518" StartX="194" StartY="26" Dir="3" Zone="3" /> <!-- -->
+		<Spawn Index="519" StartX="189" StartY="21" Dir="3" Zone="3" /> <!-- -->
+		<Spawn Index="519" StartX="189" StartY="26" Dir="3" Zone="3" /> <!-- -->
+		<Spawn Index="519" StartX="189" StartY="31" Dir="3" Zone="3" /> <!-- -->
+		<Spawn Index="504" StartX="183" StartY="24" Dir="3" Zone="3" /> <!-- -->
+	<!-- Bosses -->
+		<Spawn Index="528" StartX="81" StartY="69" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="528" StartX="32" StartY="90" Dir="1" Zone="0" /> <!-- -->
+		<Spawn Index="527" StartX="50" StartY="69" Dir="3" Zone="0" /> <!-- -->
+		<Spawn Index="528" StartX="34" StartY="176" Dir="1" Zone="1" /> <!-- -->
+		<Spawn Index="528" StartX="69" StartY="166" Dir="5" Zone="1" /> <!-- -->
+		<Spawn Index="527" StartX="52" StartY="191" Dir="7" Zone="1" /> <!-- -->
+		<Spawn Index="528" StartX="156" StartY="132" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="528" StartX="224" StartY="159" Dir="1" Zone="2" /> <!-- -->
+		<Spawn Index="527" StartX="197" StartY="132" Dir="7" Zone="2" /> <!-- -->
+		<Spawn Index="528" StartX="214" StartY="24" Dir="3" Zone="3" /> <!-- -->
+	</Map>
+</ImperialGuardian>

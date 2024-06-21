@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MonsterRegenSpanTime::Monster ###
+//	Index: Monster index, see MonsterList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Only monsters originally spawned by MonsterSpawn.xml can be used with this system
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	RegenMinHour: Minimum number of hours
+//	RegenMinMinute: Minimum number of minutes
+//	RegenMinSecond: Minimum number of seconds
+//	RegenMaxHour: Maximum number of hours
+//	RegenMaxMinute: Maximum number of minutes
+//	RegenMaxSecond: Maximum number of second
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The system sets minimum and maximum time span the monster will be spawned after
+//~~ being killed. The actual spawn time will be randomized from the defined time span.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MonsterRegenSpanTime>
+	<!-- 
+	<Monster Index="275" RegenMinHour="18" RegenMinMinute="0" RegenMinSecond="0" RegenMaxHour="24" RegenMaxMinute="0" RegenMaxSecond="0" />
+	<Monster Index="673" RegenMinHour="18" RegenMinMinute="0" RegenMinSecond="0" RegenMaxHour="24" RegenMaxMinute="0" RegenMaxSecond="0" />
+	<Monster Index="716" RegenMinHour="18" RegenMinMinute="0" RegenMinSecond="0" RegenMaxHour="24" RegenMaxMinute="0" RegenMaxSecond="0" />
+	-->
+</MonsterRegenSpanTime>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### HideAndSeek ###
+//	Enable: Deactivates or activates the event, 0/1
+//	FireWorks: Enables fireworks effect upon finding the NPC
+//	MaxRounds: Max number of rounds for the event
+//
+// ### HideAndSeek::ActiveDay ###
+//	Sun: Enables event on Sunday, 0/1
+//	Mon: Enables event on Monday, 0/1
+//	Tue: Enables event on Tuesday, 0/1
+//	Wed: Enables event on Wednesday, 0/1
+//	Thu: Enables event on Thursday, 0/1
+//	Fri: Enables event on Friday, 0/1
+//	Sat: Enables event on Saturday, 0/1
+//
+// ### HideAndSeek::Schedule ###
+//	NextRoundTime: Time between rounds, minutes
+//	EndTime: Time after the first round the event is closed and NPC removed from the map, minutes
+//
+// ### HideAndSeek::Schedule::Start ###
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//
+// ### HideAndSeek::Rounds::Round ###
+//	Number: Round number, starting from 1, number of defined rounds must be equal to value defined in MaxRounds attribute
+//	Time: Round duration, minutes
+//	ItemBagID: Item bag ID to issue reward from, bags must be defined in ItemBagsScript.lua
+//
+// ### HideAndSeek::Locations::Map ###
+//	Number: Map number for first set of locations to spawn NPC at
+//	NPCType: NPC Index, see MonsterList.xml
+//
+// ### HideAndSeek::Locations::Map::Spawn ###
+//	StartX: Start x coordinate to spawn NPC at
+//	StartY: Start Y coordinate to spawn NPC at
+//	EndX: End x coordinate to spawn NPC at
+//	EndY: End Y coordinate to spawn NPC at
+//	Dir: Direction the NPC looks at after spawn
+//		~ 0: Central
+//		~ 1: South-West
+//		~ 2: South
+//		~ 3: South-East
+//		~ 4: East
+//		~ 5: North-East
+//		~ 6: North
+//		~ 7: North-West
+//		~ 8: West
+//		~ -1: Random
+//
+// ### HideAndSeek::Locations::Map::Spawn:Hint ###
+//	ID: Unique ID of the hint, starting from 0 per spawn section
+//	Text: Text to display as a hint
+//	DisplayTime: Time (minute) of the round to display the hint
+//
+// ### HideAndSeek::Strings ###
+//	ID: Unique String ID
+//	Text: Text to display
+//	
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<HideAndSeek Enable="0" FireWorks="1" MaxRounds="3">
+			
+	<Schedule NextRoundTime="1" EndTime="1">
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="10" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="14" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="18" Minute="0" Second="-1" />
+	</Schedule>
+	
+	<Rounds>
+		<Round Number="1" Time="8" ItemBagID="500" />
+		<Round Number="2" Time="8" ItemBagID="501" />
+		<Round Number="3" Time="8" ItemBagID="502" />
+	</Rounds>
+	
+	<Locations>
+		<Map Number="0" NPCType="258"> <!-- Lorencia -->
+			<Spawn StartX="7" StartY="47" EndX="7" EndY="47" Dir="-1">
+				<Hint ID="0" Text="H&amp;S Hint: Becoming cold.." DisplayTime="3" />
+				<Hint ID="1" Text="H&amp;S Hint: Starts snowing.." DisplayTime="6" />
+			</Spawn>
+			
+			<Spawn StartX="17" StartY="128" EndX="17" EndY="128" Dir="-1">
+				<Hint ID="0" Text="H&amp;S Hint: Where the river flows.." DisplayTime="3" />
+				<Hint ID="1" Text="H&amp;S Hint: Pour water over the mill!" DisplayTime="6" />
+			</Spawn>
+		</Map>
+		
+		<Map Number="1" NPCType="258"> <!-- Noria -->
+			<Spawn StartX="185" StartY="128" EndX="185" EndY="128" Dir="-1">
+				<Hint ID="0" Text="H&amp;S Hint: Under a tree.." DisplayTime="3" />
+				<Hint ID="1" Text="H&amp;S Hint: Feeling sweet smell.." DisplayTime="6" />
+			</Spawn>
+			
+			<Spawn StartX="14" StartY="19" EndX="14" EndY="19" Dir="-1">
+				<Hint ID="0" Text="H&amp;S Hint: At the edge of meadow.." DisplayTime="3" />
+				<Hint ID="1" Text="H&amp;S Hint: In the old elf' village.." DisplayTime="6" />
+			</Spawn>
+		</Map>
+		
+		<Map Number="2" NPCType="258"> <!-- Devias -->
+			<Spawn StartX="174" StartY="44" EndX="174" EndY="44" Dir="-1">
+				<Hint ID="0" Text="Getting some blessing.." DisplayTime="3" />
+				<Hint ID="1" Text="Blessing on the west is stronger!" DisplayTime="6" />
+			</Spawn>
+			
+			<Spawn StartX="232" StartY="221" EndX="232" EndY="221" Dir="-1">
+				<Hint ID="0" Text="H&amp;S Hint: ..the assistant" DisplayTime="3" />
+				<Hint ID="1" Text="H&amp;S Hint: Purple-pink is his color.." DisplayTime="6" />
+			</Spawn>
+		</Map>
+	</Locations>
+	
+	<Strings>
+		<String ID="0" Text="Hide And Seek will start after %d minutes" />
+		<String ID="1" Text="Hide And Seek Round %d started!" />
+		<String ID="2" Text="Find a NPC in %s to get a reward! Time Limit: %d minutes" />
+		<String ID="3" Text="%s found hidden NPC and got reward!" />
+		<String ID="4" Text="Hide And Seek Round %d will end after %d minutes" />
+		<String ID="5" Text="Hide And Seek is over!" />	
+		<String ID="6" Text="No one found me in a proper time!" />
+		<String ID="7" Text="You are too late, %s found me first!" />
+		<String ID="8" Text="You got me! This is your reward!" />
+		<String ID="9" Text="You already got your reward." />
+		<String ID="10" Text="Round over - no one found hidded NPC" />
+		<String ID="11" Text="Next round will start after %d minutes" />
+	</Strings>
+</HideAndSeek>

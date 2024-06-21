@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The system gives additional chance of getting extra item drop if equipping required item.
+//~~ Whether it fails of suceeed the drop of an item it will process to next drop system in hierarchy.
+//~~ It means that monster may give a drop of two or more items.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MonsterDropCondition::ConditionTable ###
+//	Index: Index of a condition table
+//	ItemKindA: KindA of required item, -1 if not applies
+//	ItemKindB: KindB of required item, -1 if not applies
+//	ItemType: Type of required item, -1 if not applies
+//		1: Normal item
+//		2: Socket item
+//		3: 380 item
+//		4: Lucky item
+//		5: Event item
+//		6: Absolute weapon
+//		7: Chaos weapon
+//		8: Blessed Absolute weapon
+//	ItemCat: Category of required item, -1 if not applies
+//	ItemIndex: Index of required item, -1 if not applies
+//	ItemLevel: Level of required item, 0 if not applies
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Item attributes such as KindA, KindB, Type, Category and Index can be checked in ItemList.xml
+//~~ Usage explanation:
+//~~ Only one condition at a time. If e.g. table condition Item Cat, Index, Level are configured then "Kind" and "Type" checks must stay disabled
+//~~ System allows definition of multiple tables, however total count of Conditions per all tables is 100.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MonsterDropCondition::ConditionTable::Condition ###
+//	MonsterIndex: Index of a monster to drop item from, see MonsterList.xml
+//	ItemCat: Category of item to drop
+//	ItemIndex: Index of item to drop
+//	ItemLevel: Level of item to drop
+//	DropRate: Chance rate of getting the item drop, n/1000000
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Specified monster index can be defined once only per single Condition table.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MonsterDropCondition>
+	<ConditionTable Index="0" ItemKindA="-1" ItemKindB="-1" ItemType="6" ItemCat="-1" ItemIndex="-1" ItemLevel="0">
+		<Condition MonsterIndex="275" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Kundun -->
+		<Condition MonsterIndex="459" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Selupan -->
+		<Condition MonsterIndex="361" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Nightmare -->
+		<Condition MonsterIndex="673" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Lord Silvester -->
+		<Condition MonsterIndex="716" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Core McGriffy -->
+		<Condition MonsterIndex="734" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Lord of Ferea -->
+		<Condition MonsterIndex="746" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Nix -->
+		<Condition MonsterIndex="794" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Lord of Darkness -->
+	</ConditionTable>
+</MonsterDropCondition>

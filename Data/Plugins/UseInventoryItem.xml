@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// UseInventoryItemis a tiny extension letting you add new usable items like Hawk Figurine, Charm, Talismans or Horsehoe, etc.,ItemKindB = 47
+// You may also bind a Buff Effect from BuffEffectManager.xml to the item., bind options from ItemOptionSystem_Exc.xml plugin or ItemOptionManager.xml
+
+//
+// ### UseItemSystem ###
+//	Enabled: Deactivates or activates the system, 0/1
+//	MaxConcurrentUse: Number of items of same kind that can be worn at the same time
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Player may wear just one item of a type at the same time, while he can wear MaxConcurrentUse of different items at the same time
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	ErrorMessage: Error message if exceeding MaxConcurrentUse
+//	ErrorMessage2: Error message when same item kind is already active
+//
+// ### UseItemSystem::Item ###
+//	Cat: Category of item
+//	Index: Index of item
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<UseItemSystem Enabled="1" MaxConcurrentUse="1" ErrorMessage="Max allowed to wear at the same time: %d statues" ErrorMessage2="You already have this item active">
+	<Item Cat="19" Index="190" />
+	<Item Cat="19" Index="191" />
+	<Item Cat="19" Index="192" />
+	<Item Cat="19" Index="193" />
+	<Item Cat="19" Index="194" />
+</UseItemSystem>

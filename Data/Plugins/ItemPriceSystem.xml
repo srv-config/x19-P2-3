@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~ Changes to the file must be reflected on game client side and encrypted to .bmd using ToolKit Lite or Premium "IGC File Enc/Dec (XML)" tool, \Data\Local\ItemPriceSystem.bmd
+//
+// ### ItemPriceSystem ###
+//	Password: 
+//
+// ### ItemPriceSystem::ItemSell ###
+//	Enable: Deactivates or activates item sell price override, 0/1
+//	SellOptionSpec:
+//		~ 0: Accepts excellent items with any option type but minimum number defined in ExcOption attribute
+//		~ 1: Accepts excellent items of specified options IDs, if defined, 0/1
+//
+// ### ItemPriceSystem::ItemSell::Item ###
+//	Cat: Category of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	Level: Level of item, 0-15 or -1 for any
+//	CoinType:
+//		~ 0: WCoin
+//		~ 1: Goblin Point
+//		~ 2: Zen
+//		~ 3: Ruud
+//	CoinValue: Value of selected coin type
+//	SetOption: Is ancient item, 0/1
+//	SetTier: Tier of ancient item to check
+//		~ 0: No Tier
+//		~ 1: Tier I
+//		~ 2: Tier II
+//
+//	ExcOption: Minimum number of excellent options
+//	ExcCode: X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ By adding item to the list, it will be sold in regular shop for defined Coin Type instead of Zen unless set so
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ItemPriceSystem::ItemBuy ###
+//	Enable: Deactivates or activates item buy price override, 0/1
+//
+// ### ItemPriceSystem::ItemBuy::Item ###
+//	Cat: Category of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	ItemMinLevel: Minimum level of item, 0-15
+//	ItemMaxLevel: Maximum level of item 0-15
+//	CoinType:
+//	~ 0: WCoin
+//	~ 1: Goblin Point
+//	~ 2: Zen
+//	~ 3: Ruud
+//
+//	CoinValue: Value of selected coin type
+//
+// ### ItemPriceSystem::Strings::String ###
+//	Id: Unique string ID
+//	Text: Text to display
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ItemPriceSystem Password="WErt$4t3">
+	<ItemSell Enable="0" SellOptionSpec="1">
+		<Item Cat="0" Index="2" Level="-1" CoinType="3" CoinValue="50" ExcOption="1" ExcCode="0;1;2;" />
+		<Item Cat="14" Index="13" Level="-1" CoinType="0" CoinValue="50" SetOption="0" SetTier="0" ExcOption="0" ExcCode="" />
+	</ItemSell>
+	
+	<ItemBuy Enable="0">
+		<Item Cat="0" Index="14" ItemMinLevel="0" ItemMaxLevel="0" CoinType="1" CoinValue="160000"/>
+	</ItemBuy>
+	
+	<Strings>
+		<String Id="0" Text="WCoin" />
+		<String Id="1" Text="GP" />
+		<String Id="2" Text="Zen" />
+		<String Id="3" Text="Ruud" />
+		<String Id="4" Text="Selling Price: %d %s" />
+		<String Id="5" Text="Buying Price: %d %s" />
+	</Strings>
+</ItemPriceSystem>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+//	Exc:
+//		Excellent Options:
+//			-1: No exc option
+//			-2: Random count of random options (based on rates from ExcellentOptions.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
+//			X;X;X;X;X;X;X;X;X: Defines excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//		Grade Options (4th Wings):
+//			-1: No grade option
+//			-2: Random count of random options (based on rates from ItemGradeOption.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of grade options, max 4 (options selection based on rates from ItemGradeOption.xml)
+//			ID1;LV1;ID2;LV2;ID3;LV3;ID4;LV4: Defines grade option index and option level, the 'IDX' is grade option index and LVX is grade option level based on Index and GradeXVal (0-9) from ItemGradeOption.xml, maximum 4 options can be defined
+//		Guardian Items:
+//			-1: No option
+//			-2;X: Random count of random options (based on rates from GuardianItemOption.xml), the 'X' takes value 0 or 1, determining whether to generate random elite option or not
+//			-3;X;Y: Specified count of random options, the 'X' defines count of options, max 4, the 'Y' takes value 0 or 1, determining whether to generate random elite option or not
+//			X;X;X;X;Y: Defines specific options, the 'X' is guardian regular option index from GuardianItemOption.xml::OptionList section, maximum 4 options can be defined, -1 if not applies, the Y is elite option index from GuardianItemOption.xml::EliteOptionList, must be defined as 5th argument, -1 if not applies
+//
+// type reward 0 - item, 1 - money, 2 - ruud
+// ItemDurability is optional attribute
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+<MonsterSoulReward>
+	<Converter Level="1">
+		<Category Number="1">
+			<RewardKind Number="0">
+				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="371" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+			</RewardKind>
+		</Category>
+		<Category Number="2">
+			<RewardKind Number="0">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="371" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+			</RewardKind>
+		</Category>
+	</Converter>
+	<Converter Level="2">
+		<Category Number="1">
+			<RewardKind Number="0">
+				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="371" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+			</RewardKind>
+		</Category>
+		<Category Number="2">
+			<RewardKind Number="0">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="371" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+			</RewardKind>
+		</Category>
+	</Converter>
+	<Converter Level="3">
+		<Category Number="1">
+			<RewardKind Number="0">
+				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+			</RewardKind>
+		</Category>
+		<Category Number="2">
+			<RewardKind Number="0">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+			</RewardKind>
+		</Category>
+	</Converter>
+	<Converter Level="4">
+		<Category Number="1">
+			<RewardKind Number="0">
+				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+			</RewardKind>
+		</Category>
+		<Category Number="2">
+			<RewardKind Number="0">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+			</RewardKind>
+		</Category>
+	</Converter>
+	<Converter Level="5">
+		<Category Number="1">
+			<RewardKind Number="0">
+				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+			</RewardKind>
+		</Category>
+		<Category Number="2">
+			<RewardKind Number="0">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+			</RewardKind>
+		</Category>
+		<Category Number="3">
+			<RewardKind Number="0">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+			</RewardKind>
+			<RewardKind Number="1">
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+			</RewardKind>
+		</Category>
+	</Converter>
+</MonsterSoulReward>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file require changes on game client side in:
+//~~ MUPassInfo.txt, MUPassMissionText.txt, MUPassReward.txt, MUPassRewardText.txt, MUPassBuffoption.txt being part of Lang.mpr
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### SeasonPass ###
+//	Enable: Deactivates or activates the system, 0/1
+//	MasteryHornMaxDropPerDay: Maximum number of Mastery Horn Crystals (20,126-133) of each type that can be collected daily
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ WARNING: The currently used daily limit is not stored in database and will reset upon game server restart
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	FreeUserSeasonPass: Season Pass type non-vip player starts with
+//		~ 0: Free Pass
+//		~ 1: Gold Pass
+//		~ 2: Premium Pass
+//
+//	VipUserSeasonPass: Season Pass type non-vip player starts with
+//		~ 0: Free Pass
+//		~ 1: Gold Pass
+//		~ 2: Premium Pass
+//
+// ### SeasonPass::PassInfo::Pass ###
+//	ID: Unique ID of each pass cycle, starting from 1
+//	StartDate: Start date and time of the pass, format: yyyy-MM-dd HH:mm
+//	EndDate: End date and time of the pass, format: yyyy-MM-dd HH:mm
+//
+// ### SeasonPass::ExpTable::Exp ###
+//	Level: Level of pass, currently 1-20
+//	Exp: Pass Exp required to achieve specific level, each next level must be configured with higher value of exp required than previous one
+//
+// ### SeasonPass::MissionInfo::Mission ###
+//	Type: Type of mission, unique, as defined in the section
+//	GainExp: Value of exp completion of specific mission increases pass exp by
+//	ReqAmount: Requirement of specific mission task, e.g. number of seconds to use Helper or number of monsters to kill
+//	MaxStep: Maximum daily number specific mission can be repeated
+//	Name: Name of a mission
+//
+// ### SeasonPass::RewardInfo::Reward ###
+//	ID: Unique ID of reward, starting from 0
+//	Type: Type of reward
+//		~ 0: Buff
+//		~ 1: Item
+//	BuffNumber: Index of buff, 411-415, check BuffEffectManager.xml
+//	ItemCat: Category of reward item, check ItemList.xml, for buff reward type 0 set -1
+//	ItemIndex: Index of reward item, check ItemList.xml, for buff reward type 0 set -1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ For better player experience, change of reward items may require modification of game client UI of reward items
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	
+//	ItemDurability: Durability of reward item, if set to 0 the durability will be taken from ItemList.xml, for buff reward type 0 set -1 
+//	PassType: Type of pass reward applies to
+//		~ -1: Used for buff rewards
+//		~ 0: MU Pass
+//		~ 1: Gold Pass
+//		~ 2: Premium Pass
+//
+// ### SeasonPass::RewardList::Pass ###
+//	Type: Type of pass reward applies to
+//		~ 0: MU Pass
+//		~ 1: Gold Pass
+//		~ 2: Premium Pass
+//
+// ### SeasonPass::RewardList::Pass::Reward ###
+//	PassLevel: Level of pass the reward applies to, 1-20
+//	IDX(1-6): ID of reward (defined in RewardInfo section) to assign to specific pass level, maximum 6 rewards, -1 if not applies
+//
+// ### SeasonPass::BuffOption::Buff ###
+//	Number: Index of buff, 411-415, check BuffEffectManager.xml
+//	ValueX(1-20): Value of buff at specific pass level
+//
+// ### MasteryHornCrystalDrop ###
+//	Denominator: A figure that represents the total value the success of the drop is expressed, e.g. n/x where x = denominator and n is chance achieved from season pass buffs
+//
+// ### MasteryHornCrystalDrop::Item ###
+//	Cat: Category of mastery horn crystal item, see ItemList.xml
+//	Index: Index of mastery horn crystal item, see ItemList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Mastery Horn Crystal Cat and Index must stay defined as by default
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	MapNumber: Map numbers to drop the mastery horn crystals items on, maximum 10 maps per item, separate with semicolon, -1 to disable drop
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+<SeasonPass Enable="1" MasteryHornMaxDropPerDay="100" FreeUserSeasonPass="0" VipUserSeasonPass="1">
+	<PassInfo>
+		<Pass ID="1" StartDate="2023-04-25 08:30" EndDate="2023-06-01 08:30" />
+		<Pass ID="2" StartDate="2023-06-01 08:30" EndDate="2023-06-29 08:30" />
+		<Pass ID="3" StartDate="2023-07-06 08:30" EndDate="2023-08-03 08:30" />
+		<Pass ID="4" StartDate="2023-08-03 08:30" EndDate="2023-08-31 08:30" />
+		<Pass ID="5" StartDate="2023-09-07 08:30" EndDate="2023-10-05 08:30" />
+		<Pass ID="6" StartDate="2023-10-05 08:30" EndDate="2023-11-02 08:30" />
+		<Pass ID="7" StartDate="2023-11-02 08:30" EndDate="2023-11-30 08:30" />
+		<Pass ID="8" StartDate="2023-12-07 08:30" EndDate="2024-01-04 08:30" />
+		<Pass ID="9" StartDate="2024-01-04 08:30" EndDate="2024-02-01 08:30" />
+		<Pass ID="10" StartDate="2024-02-01 08:30" EndDate="2024-02-29 08:30" />
+		<Pass ID="11" StartDate="2024-03-07 08:30" EndDate="2024-04-04 08:30" />
+		<Pass ID="12" StartDate="2024-04-04 08:30" EndDate="2024-05-02 08:30" />
+		<Pass ID="13" StartDate="2024-05-02 08:30" EndDate="2024-05-30 08:30" />
+		<Pass ID="14" StartDate="2024-05-30 08:30" EndDate="2024-06-27 08:30" />
+		<Pass ID="15" StartDate="2024-07-04 08:30" EndDate="2024-08-01 08:30" />
+		<Pass ID="16" StartDate="2024-08-01 08:30" EndDate="2024-08-29 08:30" />
+		<Pass ID="17" StartDate="2024-09-05 08:30" EndDate="2024-10-03 08:30" />
+		<Pass ID="18" StartDate="2024-10-10 08:30" EndDate="2024-11-07 08:30" />
+		<Pass ID="19" StartDate="2024-11-07 08:30" EndDate="2024-12-05 08:30" />
+		<Pass ID="20" StartDate="2024-12-05 08:30" EndDate="2025-01-02 08:30" />
+	</PassInfo>
+	<ExpTable>
+		<Exp Level="1" Amount="100" />
+		<Exp Level="2" Amount="300" />
+		<Exp Level="3" Amount="600" />
+		<Exp Level="4" Amount="900" />
+		<Exp Level="5" Amount="1200" />
+		<Exp Level="6" Amount="1500" />
+		<Exp Level="7" Amount="1800" />
+		<Exp Level="8" Amount="2100" />
+		<Exp Level="9" Amount="2400" />
+		<Exp Level="10" Amount="2700" />
+		<Exp Level="11" Amount="3000" />
+		<Exp Level="12" Amount="3300" />
+		<Exp Level="13" Amount="3600" />
+		<Exp Level="14" Amount="3900" />
+		<Exp Level="15" Amount="4200" />
+		<Exp Level="16" Amount="4500" />
+		<Exp Level="17" Amount="4800" />
+		<Exp Level="18" Amount="5100" />
+		<Exp Level="19" Amount="5500" />
+		<Exp Level="20" Amount="6000" />
+	</ExpTable>
+	<MissionInfo>
+		<Mission Type="0" GainExp="5" ReqAmount="2160" MaxStep="10" Name="Use MuHelper for %s seconds" />
+		<Mission Type="1" GainExp="5" ReqAmount="1700" MaxStep="7" Name="Kill %s monsters in the hunting ground" />
+		<Mission Type="2" GainExp="5" ReqAmount="100000" MaxStep="5" Name="Use %s MP  by use of skill" />
+		<Mission Type="3" GainExp="5" ReqAmount="15" MaxStep="3" Name="Use %s potion items" />
+		<Mission Type="4" GainExp="7" ReqAmount="6" MaxStep="3" Name="Use %s buff items" />
+		<Mission Type="5" GainExp="7" ReqAmount="1" MaxStep="1" Name="Repair the Tempest Muun %s times" />
+		<Mission Type="6" GainExp="10" ReqAmount="1" MaxStep="1" Name="Repair Guardian %s times" />
+		<Mission Type="7" GainExp="7" ReqAmount="5" MaxStep="1" Name="Repair equipment items %s times" />
+		<Mission Type="8" GainExp="7" ReqAmount="1" MaxStep="1" Name="Buy %s items from Personal Shop" />
+		<Mission Type="9" GainExp="5" ReqAmount="1" MaxStep="1" Name="Request and gain %s more friends" />
+		<Mission Type="10" GainExp="5" ReqAmount="3" MaxStep="1" Name="Send %s letters to your friends" />
+		<Mission Type="11" GainExp="15" ReqAmount="1" MaxStep="1" Name="Leveling up my character %s" />
+		<Mission Type="12" GainExp="15" ReqAmount="1" MaxStep="1" Name="Disassemble items for %s times" />
+		<Mission Type="13" GainExp="5" ReqAmount="1" MaxStep="3" Name="Combine successfully Soul Potion for %s times" />
+		<Mission Type="14" GainExp="10" ReqAmount="1" MaxStep="1" Name="Clear Varca event" />
+		<Mission Type="15" GainExp="10" ReqAmount="1000000" MaxStep="1" Name="Achieve 1 million damage in the Boss Battle Together event" />
+		<Mission Type="16" GainExp="10" ReqAmount="1" MaxStep="1" Name="Enter Chaos Castle for %s times" />
+		<Mission Type="17" GainExp="10" ReqAmount="1" MaxStep="1" Name="Enter Blood Castle for %s times" />
+		<Mission Type="18" GainExp="10" ReqAmount="1" MaxStep="1" Name="Enter Devil's Square for %s times" />
+		<Mission Type="19" GainExp="50" ReqAmount="1" MaxStep="1" Name="Find and kill the White Mage" />
+		<Mission Type="20" GainExp="10" ReqAmount="1" MaxStep="1" Name="Participate and success in the Battle of CryWolf" />
+		<Mission Type="21" GainExp="10" ReqAmount="1" MaxStep="1" Name="Participate in the Battle of CryWolf" />
+		<Mission Type="22" GainExp="10" ReqAmount="1" MaxStep="1" Name="Use Three Vacancy Box for %s times" />
+		<Mission Type="23" GainExp="5" ReqAmount="3" MaxStep="1" Name="Use Pandora Pick for %s times" />
+		<Mission Type="24" GainExp="5" ReqAmount="1" MaxStep="1" Name="Acquire from drop %s Jewel of Bless" />
+	</MissionInfo>
+	<RewardInfo>
+		<Reward ID="0" Type="0"	BuffNumber="411" ItemCat="-1" ItemIndex="-1" ItemDurability="-1" PassType="0" />
+		<Reward ID="1" Type="0"	BuffNumber="414" ItemCat="-1" ItemIndex="-1" ItemDurability="-1" PassType="1" />
+		<Reward ID="2" Type="0"	BuffNumber="412" ItemCat="-1" ItemIndex="-1" ItemDurability="-1" PassType="2" />
+		<Reward ID="3" Type="0"	BuffNumber="413" ItemCat="-1" ItemIndex="-1" ItemDurability="-1" PassType="2" />
+		<Reward ID="4" Type="0"	BuffNumber="415" ItemCat="-1" ItemIndex="-1" ItemDurability="-1" PassType="2" />
+		<Reward ID="5" Type="1"	BuffNumber="-1"	ItemCat="14" ItemIndex="371" ItemDurability="3" PassType="-1" />
+		<Reward ID="6" Type="1"	BuffNumber="-1"	ItemCat="14" ItemIndex="371" ItemDurability="5" PassType="-1" />
+		<Reward ID="7" Type="1"	BuffNumber="-1"	ItemCat="14" ItemIndex="42"	ItemDurability="5" PassType="-1" />
+		<Reward ID="8" Type="1"	BuffNumber="-1"	ItemCat="20" ItemIndex="125" ItemDurability="0" PassType="-1" />
+		<Reward ID="9" Type="1"	BuffNumber="-1"	ItemCat="16" ItemIndex="510" ItemDurability="0" PassType="-1" />
+		<Reward ID="10" Type="1" BuffNumber="-1" ItemCat="20" ItemIndex="120" ItemDurability="5" PassType="-1" />
+		<Reward ID="11" Type="1" BuffNumber="-1" ItemCat="20" ItemIndex="121" ItemDurability="0" PassType="-1" />
+		<Reward ID="12" Type="1" BuffNumber="-1" ItemCat="20" ItemIndex="144" ItemDurability="0" PassType="-1" />
+		<Reward ID="13" Type="1" BuffNumber="-1" ItemCat="20" ItemIndex="147" ItemDurability="0" PassType="-1" />
+	</RewardInfo>
+	<RewardList>
+		<Pass Type="0">
+			<Reward PassLevel="1" ID1="0" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="2" ID1="-1" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="3" ID1="0" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="4" ID1="-1" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="5" ID1="0" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="6" ID1="-1" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="7" ID1="0" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="8" ID1="-1" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="9" ID1="0" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="10" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="11" ID1="0" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="12" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="13" ID1="0" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="14" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="15" ID1="0" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="16" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="17" ID1="0" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="18" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="19" ID1="0" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="20" ID1="-1"	ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+		</Pass>
+		<Pass Type="1">
+			<Reward PassLevel="1" ID1="1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="2" ID1="-1" ID2="-1"	ID3="-1" ID4="10" ID5="-1" ID6="-1" />
+			<Reward PassLevel="3" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="4" ID1="-1" ID2="-1"	ID3="7" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="5" ID1="1" ID2="5" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="6" ID1="-1" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="7" ID1="-1" ID2="-1" ID3="-1" ID4="10" ID5="-1" ID6="-1" />
+			<Reward PassLevel="8" ID1="-1" ID2="-1"	ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="9" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="10" ID1="1" ID2="5" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="11" ID1="-1" ID2="-1" ID3="7" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="12" ID1="-1" ID2="-1" ID3="-1" ID4="10" ID5="-1" ID6="-1" />
+			<Reward PassLevel="13" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="14" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="15" ID1="1" ID2="5" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="16" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="17" ID1="-1" ID2="-1" ID3="-1" ID4="10" ID5="-1" ID6="-1" />
+			<Reward PassLevel="18" ID1="-1" ID2="-1" ID3="7" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="19" ID1="-1" ID2="-1" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="20" ID1="1" ID2="5" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+		</Pass>
+		<Pass Type="2">
+			<Reward PassLevel="1" ID1="2" ID2="4" ID3="3" ID4="12" ID5="13" ID6="-1" />
+			<Reward PassLevel="2" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="5" ID6="-1" />
+			<Reward PassLevel="3" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="4" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="6" ID6="-1" />
+			<Reward PassLevel="5" ID1="2" ID2="4" ID3="3" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="6" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="5" ID6="-1" />
+			<Reward PassLevel="7" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="8" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="6" ID6="-1" />
+			<Reward PassLevel="9" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="10" ID1="2" ID2="4" ID3="3" ID4="-1" ID5="5" ID6="-1" />
+			<Reward PassLevel="11" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="12" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="6" ID6="-1" />
+			<Reward PassLevel="13" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="14" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="5" ID6="-1" />
+			<Reward PassLevel="15" ID1="2" ID2="4" ID3="3" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="16" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="6" ID6="-1" />
+			<Reward PassLevel="17" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="18" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="5" ID6="-1" />
+			<Reward PassLevel="19" ID1="2" ID2="4" ID3="-1" ID4="-1" ID5="-1" ID6="-1" />
+			<Reward PassLevel="20" ID1="2" ID2="4" ID3="3" ID4="6" ID5="8" ID6="11" />
+		</Pass>
+	</RewardList>
+	<BuffOption>
+		<Buff Number="411" Value1="30" Value2="30"	Value3="60"	Value4="60"	Value5="90"	Value6="90"	Value7="120" Value8="120" Value9="150" Value10="150" Value11="180" Value12="180" Value13="210" Value14="210" Value15="240" Value16="240" Value17="270" Value18="270" Value19="300" Value20="300" />
+		<Buff Number="412" Value1="2000" Value2="4000" Value3="6000" Value4="8000" Value5="10000" Value6="12000" Value7="14000" Value8="16000" Value9="18000" Value10="20000" Value11="23000" Value12="26000" Value13="29000" Value14="32000" Value15="35000" Value16="38000" Value17="41000" Value18="44000" Value19="47000" Value20="50000" />
+		<Buff Number="413" Value1="2" Value2="2" Value3="2"	Value4="2" Value5="4" Value6="4" Value7="4" Value8="4" Value9="4" Value10="8" Value11="8" Value12="8" Value13="8" Value14="8" Value15="12" Value16="12" Value17="12" Value18="12" Value19="12" Value20="20" />
+		<Buff Number="414" Value1="2" Value2="2" Value3="2"	Value4="2" Value5="4" Value6="4" Value7="4" Value8="4" Value9="4" Value10="6" Value11="6" Value12="6" Value13="6" Value14="6" Value15="8" Value16="8" Value17="8" Value18="8" Value19="8" Value20="10" />
+		<Buff Number="415" Value1="5" Value2="10" Value3="15" Value4="20" Value5="25" Value6="30" Value7="35" Value8="40" Value9="45" Value10="50" Value11="55" Value12="60" Value13="65" Value14="70" Value15="75" Value16="80" Value17="85" Value18="90" Value19="95" Value20="100" />
+	</BuffOption>
+	<MasteryHornCrystalDrop Denominator="100000">
+		<Item Cat="20" Index="126" MapNumber="113" />
+		<Item Cat="20" Index="127" MapNumber="122" />
+		<Item Cat="20" Index="128" MapNumber="123;124;125;126;127" />
+		<Item Cat="20" Index="129" MapNumber="131" />
+		<Item Cat="20" Index="130" MapNumber="133" />
+		<Item Cat="20" Index="131" MapNumber="136" />
+		<Item Cat="20" Index="131" MapNumber="138" />
+		<Item Cat="20" Index="133" MapNumber="-1" />
+	</MasteryHornCrystalDrop>
+</SeasonPass>	

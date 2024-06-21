@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ IMPORTANT: The event must have its monsters defined only in ChaosCastle_Monster.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ChaosCastle ###
+//	Enable: Enabled or Disables the event, 0/10
+//	MinPlayer: Minimum player participating the event to start it
+//	AllowDarkLordSpirit: Whether or not, allow entry by Dark Lord while having Spirits equipped, 0/1
+//
+// ### ChaosCastle::Time ###
+//	StartIn: Time to start Chaos Castle from open time, minutes
+//	Duration: Duration of the event, minutes
+//	TownSpawn: Time to move players to town after completing the event, minutes
+//
+// ### ChaosCastle::Schedule:Start ###
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//
+//	Hour: Start hour of the event, 0-23
+//	Minute: Start minute of the event, 0-59
+//	Second: Second to start the event, -1 if not applies
+//
+// ### ChaosCastle::EntryLevel::Castle ###
+//	Level: Level of the event the the configuration applies to
+//	MinLevel: Minimum level of player to allow entry to specified event level
+//	MaxLevel: Maximum level of player to allow entry to specified event level
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If MAX is used as value for MaxLevel attribute then the attribute is being set to sum of MaxNormalLevel and MaxMasterLevel from Common.ini
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ChaosCastle::RewardExpSettings::Castle ###
+//	Level: Level of the event, starts counting from 0
+//	Multiplier: Multiplier of reward exp (received after completing the event)
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ChaosCastle Enable="1" MinPlayer="1" AllowDarkLordSpirit="1">
+	<Time StartIn="5" Duration="10" TownSpawn="1" />
+	
+	<Schedule>
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="1" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="15" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="17" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="19" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="21" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="23" Minute="0" Second="-1" />
+	</Schedule>
+	
+	<EntryLevel>
+		<Castle Level="0" MinLevel="50" MaxLevel="399" /> <!-- Chaos Castle 1 -->
+		<Castle Level="1" MinLevel="400" MaxLevel="599" /> <!-- Chaos Castle 2 -->
+		<Castle Level="2" MinLevel="600" MaxLevel="699" /> <!-- Chaos Castle 3 -->
+		<Castle Level="3" MinLevel="700" MaxLevel="799" /> <!-- Chaos Castle 4 -->
+		<Castle Level="4" MinLevel="800" MaxLevel="899" /> <!-- Chaos Castle 5 -->
+		<Castle Level="5" MinLevel="900" MaxLevel="999" /> <!-- Chaos Castle 6 -->
+		<Castle Level="6" MinLevel="1000" MaxLevel="MAX" /> <!-- Chaos Castle 7 -->
+	</EntryLevel>
+
+	<RewardExpSettings>
+		<Castle Level="0" Multiplier="1.0" /> <!-- Chaos Castle 1 -->
+		<Castle Level="1" Multiplier="1.0" /> <!-- Chaos Castle 2 -->
+		<Castle Level="2" Multiplier="1.0" /> <!-- Chaos Castle 3 -->
+		<Castle Level="3" Multiplier="1.0" /> <!-- Chaos Castle 4 -->
+		<Castle Level="4" Multiplier="1.0" /> <!-- Chaos Castle 5 -->
+		<Castle Level="5" Multiplier="1.0" /> <!-- Chaos Castle 6 -->
+		<Castle Level="6" Multiplier="1.0" /> <!-- Chaos Castle 7 -->
+	</RewardExpSettings>
+</ChaosCastle>

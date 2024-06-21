@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ File configuration must match client side, Lang.mpr -> HuntingRecord.txt
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### HuntingRecord ###
+//	Enable: Activates or deactivates the system, 0/1
+//
+// ### HuntingRecord::MapIncluded::Map ###
+//	Index: Map index, see MapList.xml
+//	Name: Name of map, used for logging and description purpose only
+//
+// ### HuntingRecord::MonstersExcluded::Monster ###
+//	Index: Monster index, see MonsterList.xml
+//	Name: Name of monster, used for logging and description purpose only
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<HuntingRecord Enable="1">
+	<MapIncluded> <!-- Maps the system is active for -->
+		<Map Index="0" Name="Lorencia" />
+		<Map Index="3" Name="Noria" />
+		<Map Index="51" Name="Elbeland" />
+		<Map Index="2" Name="Devias" />
+		<Map Index="1" Name="Dungeon" />
+		<Map Index="7" Name="Atlans" />
+		<Map Index="4" Name="Lost Tower" />
+		<Map Index="8" Name="Tarkan" />
+		<Map Index="112" Name="Ferea" />
+		<Map Index="33" Name="Aida" />
+		<Map Index="10" Name="Icarus" />
+		<Map Index="37" Name="Kanturu Ruins" />
+		<Map Index="38" Name="Kanturu Relics" />
+		<Map Index="80" Name="Karutan1" />
+		<Map Index="81" Name="Karutan2" />
+		<Map Index="57" Name="Raklion" />
+		<Map Index="113" Name="Nixie Lake" />
+		<Map Index="56" Name="Swamp of Calmness" />
+		<Map Index="91" Name="Acheron" />
+		<Map Index="95" Name="Debenter" />
+		<Map Index="100" Name="Uruk Mountain" />
+		<Map Index="110" Name="Nars" />
+		<Map Index="63" Name="Vulcanus" />
+		<Map Index="24" Name="Kalima1" />
+		<Map Index="25" Name="Kalima2" />
+		<Map Index="26" Name="Kalima3" />
+		<Map Index="27" Name="Kalima4" />
+		<Map Index="28" Name="Kalima5" />
+		<Map Index="29" Name="Kalima6" />
+		<Map Index="36" Name="Kalima7" />
+		<Map Index="34" Name="Crywolf" />
+		<Map Index="31" Name="Land of Trials" />
+		<Map Index="114" Name="labyrinth of Dimension" />
+		<Map Index="115" Name="labyrinth of Dimension" />
+		<Map Index="116" Name="Deep Dungeon 1" />
+		<Map Index="117" Name="Deep Dungeon 2" />
+		<Map Index="118" Name="Deep Dungeon 3" />
+		<Map Index="119" Name="Deep Dungeon 4" />
+		<Map Index="120" Name="Deep Dungeon 5" />
+		<Map Index="122" Name="Swamp of Darkness" />
+		<Map Index="123" Name="Kubera" />
+		<Map Index="124" Name="Kubera" />
+		<Map Index="125" Name="Kubera" />
+		<Map Index="126" Name="Kubera" />
+		<Map Index="127" Name="Kubera" />
+		<Map Index="128" Name="Abyssal Atlans 1" />
+		<Map Index="129" Name="Abyssal Atlans 2" />
+		<Map Index="130" Name="Abyssal Atlans 3" />
+		<Map Index="131" Name="Scorched Canyon" />
+		<Map Index="132" Name="Red Smoke Icarus" />
+		<Map Index="133" Name="Arenil Temple" />
+		<Map Index="134" Name="Gray Aida" />
+		<Map Index="135" Name="Old Kethhotum" />
+		<Map Index="136" Name="Blaze Kethhotum" />
+		<Map Index="137" Name="Kanturu Undergrounds" />
+		<Map Index="138" Name="Ignis Volcano" />
+		<Map Index="140" Name="Bloody Tarkan" />
+		<Map Index="141" Name="Tormenta Island" />
+	</MapIncluded>
+	<MonstersExcluded> <!-- Monsters excluded from hunting records -->
+		<Monster Index="413" Name="Gold Rabbit" />
+		<Monster Index="463" Name="Fire Flame Ghost" />
+		<Monster Index="466" Name="Cursed Goblins" />
+		<Monster Index="476" Name="Cursed Santa" />
+		<Monster Index="647" Name="Green Snake (Green)" />
+		<Monster Index="648" Name="Green Snake (Yellow)" />
+		<Monster Index="649" Name="Green Snake (Purple)" />
+		<Monster Index="650" Name="Green Snake (Red)" />
+		<Monster Index="652" Name="Golden Goblin" />
+		<Monster Index="653" Name="Golden Titan" />
+		<Monster Index="654" Name="Golden Tantalos" />
+		<Monster Index="655" Name="Golden Erohim" />
+		<Monster Index="656" Name="Golden Hell Maine" />
+		<Monster Index="657" Name="Golden Kundun" />
+		<Monster Index="674" Name="Moon Rabbit" />
+		<Monster Index="675" Name="Pouch of Blessing" />
+		<Monster Index="676" Name="Fire Flame Ghost" />
+		<Monster Index="677" Name="Golden Goblin" />
+		<Monster Index="681" Name="Evomon" />
+		<Monster Index="690" Name="Special Evomon" />
+		<Monster Index="691" Name="New Year Horse (Green)" />
+		<Monster Index="692" Name="New Year Horse (Yellow)" />
+		<Monster Index="693" Name="New Year Horse (Brown)" />
+		<Monster Index="694" Name="New Year Horse (Blue)" />
+		<Monster Index="726" Name="Green Sheep" />
+		<Monster Index="727" Name="White Sheep" />
+		<Monster Index="728" Name="Purple Sheep" />
+		<Monster Index="729" Name="Red Sheep" />
+		<Monster Index="739" Name="Green Monkey" />
+		<Monster Index="740" Name="White Monkey" />
+		<Monster Index="741" Name="Purple Monkey" />
+		<Monster Index="742" Name="Red Monkey" />
+		<Monster Index="759" Name="Green Rooster" />
+		<Monster Index="760" Name="White Rooster" />
+		<Monster Index="761" Name="Purple Rooster" />
+		<Monster Index="762" Name="Red Rooster" />
+		<Monster Index="795" Name="Puppy (Green)" />
+		<Monster Index="796" Name="Puppy (White)" />
+		<Monster Index="797" Name="Puppy (Purple)" />
+		<Monster Index="798" Name="Puppy (Yellow)" />
+	</MonstersExcluded>
+</HuntingRecord>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ItemOptionSystem ###
+//	Enabled: Deactivates or activates the system: 0/1
+//	Password: A password used by ToolKit ServerInfo (XML) editor to encode the file, max 8 characters
+//
+// ### ItemOptionSystem::Items::Item ###
+//	Cat: Group of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	MinLevel: Minimum level of item to qualify it for the option
+//	SocketCount: Minimum count of sockets of item to qualify it for the option
+//	OptionIndex:
+//		~ 0: Total amount of HP is reduced to half, (Probability %)
+//		~ 1: Attack speed is reduced to half, (Probability %)
+//		~ 2: Freeze the enemy for 5 seconds, (Probability %)
+//		~ 3: Stun enemy for 3 seconds, (Probability %)
+//		~ 4: Auto Combo Hurt, There's a chance to strike with Combo Hurt, (Probability %) 
+//		~ 5: Double damage, (Probability %)
+//		~ 6: Increased attack power, (Probability %)
+//		~ 7: Increase in total blood volume, (Probability %)
+//		~ 8: Increased defenses, (Probability %)
+//		~ 9: Damage Reduction, (Probability %)
+//		~ 10: AG Stats Increase
+//		~ 11: One-shot Monster, (Probability %)
+//		~ 12: One-shot PVP, (Probability %)
+//		~ 13: Rebound damage, (Probability %)
+//		~ 14: Five seconds to impact, Poison rebound Ineffective, (Probability %)
+//		~ 15: Being attacked, fully restored to life, (Probability %)
+//		~ 16: When attacked （PVP）, remain invisible for 3 seconds, (Probability %)
+//		~ 17: When attacked, the victim dies instantly (PVP), (Probability %)
+//		~ 18: When attacked, 10% of the target's current blood loss (PVP), (Probability %)
+//		~ 19: When attacked,Rebound total damage probability (PVP), (Probability %)
+//		~ 20: Excellent Damage Resistance, (Probability %), 1-100
+//		~ 21: Critical Damage Resistance, (Probability %), 1-100
+//		~ 22: Double Damage, Resistance, (Probability %), 1-100
+//		~ 23: Increases chance of True Damage Resistance, (Probability %), 1-100
+//		~ 24: Increases Combo damage, (Probability %)
+//		~ 25: Absorb PVP damage, (Probability %)
+//		~ 26: Excellent Damage probability increased, (Probability %)
+//		~ 27: Critical Damage probability increased, (Probability %)
+//		~ 28: Chance of True Damage probability increased, (Probability %)
+//		~ 29: Triples the chance of injury, (Probability %)
+//		~ 30: Three times the chance of damage resistance, (Probability %)
+//		~ 31: Become invincible after being attacked for %d seconds
+//		~ 32: Blind enemy for %d seconds
+//		~ 33: Increase all stats
+//		~ 34: Ignore SD
+//		~ 35: Increase Skill Damage
+//		~ 36: Empty
+//		~ 37: Increase Attack Success Rate
+//		~ 38: Increase SD Resistance, 1-100
+//		~ 39: Stun Resistance, 1-100
+//		~ 40: Combo Damage Decrease
+//		~ 41: Triple Damage Damage Increase
+//		~ 42: Elemental Damage Increase
+//		~ 43: Elemental Defense Increase
+//		~ 46: Stun 4th Tree
+//		~ 47: Nothing
+//		~ 48: Total invincibility
+//		~ 49: Increase chaos mix rate +%
+//		~ 50: Increase Exp +%
+//		~ 51: Increase Item Drop rate +%
+//	OptionValue: Value to apply the option with
+//	OptionProbability: Probability to apply the option on item, 0-100
+//	Ancient:
+//		-1: Any item, either none and ancient
+//		0: No ancient items only
+//		1: Ancient items only
+//
+//	Excellent: Minimum excellent options the item has to apply new option
+//
+// ### ItemOptionSystem::Socket::Item ###
+//	Cat: Group of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	MinLevel: Minimum level of item to qualify it for the option
+//	OptionIndex: Same list applies as in "ItemOptionSystem::Items::Item" section
+//	OptionValue: Value to apply the option with
+//	OptionProbability: Probability to apply the option on item, 0-100
+//	SeedMinLevel: Minimum level of seed to qualify the item
+//	SeedMaxLevel: Maximum level of seed to qualify the item
+//	SeedCountFire: Number of Fire Seeds
+//	SeedCountWater: Number of Water Seeds
+//	SeedCountIce: Number of Ice Seeds
+//	SeedCountWind: Number of Wind Seeds
+//	SeedCountLight: Number of Light Seeds
+//	SeedCountEarth: Number of Earth Seeds
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ System applies static (defined) options to items meeting certain criteria upon equipment.
+//~~ Any static option defined in the file should be manually added to ItemToolTip.bmd so it can be displayed
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ItemOptionSystem Enabled="0" Password="WErt$4t3">
+	<Notices PrintRequirementNotice="1" ColorID="10">
+		<Strings>
+			<String Index="0" Text=" (Rq " />
+		</Strings>
+		<Requirements>
+			<Req Index="0" Text=" Lv >= +%d"/>
+			<Req Index="1" Text=" Anc %d" />
+			<Req Index="2" Text=" Exc Cnt >= %d" />
+			<Req Index="3" Text=" Sckt >= %d" />
+		</Requirements>
+	</Notices>
+	<Items>
+		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="0" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
+		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="1" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
+		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="2" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
+		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="3" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
+		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="4" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
+		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="5" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
+		<Item Cat="5" Index="10" MinLevel="15" SocketCount="0" OptionIndex="6" OptionValue="5" OptionProbability="100" Ancient="-1" Excellent="1" />
+		<Item Cat="4" Index="40" MinLevel="5" SocketCount="0" OptionIndex="4" OptionValue="10000" OptionProbability="100" Ancient="-1" Excellent="0" />
+		<Item Cat="13" Index="37" MinLevel="0" SocketCount="0" OptionIndex="7" OptionValue="1000" OptionProbability="0" Ancient="-1" Excellent="0" /> 
+	</Items>
+    <Socket>
+        <Item Cat="19" Index="190" MinLevel="0" MaxLevel="15" OptionIndex="0" OptionValue="5" OptionProbability="100" SeedMinLevel="0" SeedMaxLevel="5" SeedCountFire="1" SeedCountWater="1" SeedCountIce="0" SeedCountWind="1" SeedCountLight="0" SeedCountEarth="0" />
+    </Socket>
+	<OptionText>
+		<Text OptionId="0" ColorID="6" Title="Max HP is reduced by %d%% (Chance %d%%)" />
+		<Text OptionId="1" ColorID="7" Title="Attack speed is reduced by %d%% (Chance %d%%)" />
+		<Text OptionId="2" ColorID="8" Title="Freeze the enemy for %d seconds (Chance %d%%)" />
+		<Text OptionId="3" ColorID="9" Title="Stun enemy for %d seconds (Chance %d%%)" />
+		<Text OptionId="4" ColorID="10" Title="Auto Combo (Chance %d%%)" />
+		<Text OptionId="5" ColorID="11" Title="Double DMG chance +%d" />
+		<Text OptionId="6" ColorID="6" Title="Increased attack power +%d%%" />
+		<Text OptionId="7" ColorID="6" Title="Max HP +%d" />
+		<Text OptionId="8" ColorID="6" Title="Increased Defense +%d" />
+		<Text OptionId="9" ColorID="6" Title="DMG Reduction +%d%%" />
+		<Text OptionId="10" ColorID="6" Title="Max AG Increase +%d" />
+		<Text OptionId="11" ColorID="6" Title="One-shot Monster (Chance %d/10000)" />
+		<Text OptionId="12" ColorID="6" Title="One-shot PVP (Chance %d/10000)" />
+		<Text OptionId="13" ColorID="6" Title="Reflect DMG +%d%%" />
+		<Text OptionId="14" ColorID="6" Title="Poison Target for %d seconds (Chance %d%%)" />
+		<Text OptionId="15" ColorID="6" Title="Recover Full HP when attacked (Chance %d%%)" />
+		<Text OptionId="16" ColorID="6" Title="(PVP) Become Invisible for %d seconds when attacked (Chance %d%%)" />
+		<Text OptionId="17" ColorID="6" Title="(PVP) Instant kill the attacker while being attacked (Chance %d%%)" />
+		<Text OptionId="18" ColorID="6" Title="(PVP) When Attacked Target lose %d%% Current HP (chance %d%%)" />
+		<Text OptionId="19" ColorID="6" Title="(PVP) Rebound Full DMG when Attacked (Chance %d/10000)" />
+		<Text OptionId="20" ColorID="6" Title="Excellent DMG Resistance +%d" />
+		<Text OptionId="21" ColorID="6" Title="Critical DMG Resistance +%d" />
+		<Text OptionId="22" ColorID="6" Title="Double DMG Resistance +%d" />
+		<Text OptionId="23" ColorID="6" Title="True DMG Resistance +%d" />
+		<Text OptionId="24" ColorID="6" Title="Combo DMG Increase +%d%%" />
+		<Text OptionId="25" ColorID="6" Title="Absorb PVP DMG +%d%%" />
+		<Text OptionId="26" ColorID="6" Title="Increase Excellent DMG Rate +%d%%" />
+		<Text OptionId="27" ColorID="6" Title="Increase Critical DMG Rate +%d%%" />
+		<Text OptionId="28" ColorID="6" Title="True DMG Chance +%d%%" />
+		<Text OptionId="29" ColorID="6" Title="Triple DMG Chance +%d%%" />	
+		<Text OptionId="30" ColorID="6" Title="Triple DMG Resistance +%d%%" />
+		<Text OptionId="31" ColorID="6" Title="Become invincible for %d seconds when attacked (Chance %d%%)" />
+		<Text OptionId="32" ColorID="6" Title="Blind enemy for %d seconds (Chance %d%%)" />
+		<Text OptionId="33" ColorID="6" Title="Increase all stats +%d" />
+		<Text OptionId="34" ColorID="6" Title="Ignore SD +%d%%" />
+		<Text OptionId="35" ColorID="6" Title="Increase Skill DMG +%d%%" />
+		<Text OptionId="36" ColorID="6" Title="Empty" />
+		<Text OptionId="37" ColorID="6" Title="Increase Attack Success Rate +%d" />
+		<Text OptionId="38" ColorID="6" Title="Increase SD Resistance +%d%%" />
+		<Text OptionId="39" ColorID="6" Title="Stun Resistance +%d%%" />	
+		<Text OptionId="40" ColorID="6" Title="Incoming Combo DMG Reduce +%d%%" />
+		<Text OptionId="41" ColorID="6" Title="Triple DMG Increase +%d%%" />
+		<Text OptionId="42" ColorID="6" Title="Elemental DMG Increase +%d%%" />
+		<Text OptionId="43" ColorID="6" Title="Elemental DEF Increase +%d%%" />
+		<Text OptionId="44" ColorID="6" Title="Empty" />
+		<Text OptionId="45" ColorID="6" Title="Empty" />
+		<Text OptionId="46" ColorID="6" Title="Stun 4th Tree for %d seconds (Chance %d%%) " />	
+		<Text OptionId="47" ColorID="6" Title="Empty" />
+		<Text OptionId="48" ColorID="6" Title="Become invincible" />		
+		<Text OptionId="49" ColorID="6" Title="Increase Chaos Mix Rate +%d%%" />	
+		<Text OptionId="50" ColorID="6" Title="Increase Exp +%d%%" />	
+		<Text OptionId="51" ColorID="6" Title="Increase Item drop Rate +%d%%" />		
+	</OptionText>
+</ItemOptionSystem>

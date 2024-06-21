@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2020 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### SocketSystem ###
+//	TotalWeaponSocketLimit: Maximum count of socket slots that can be equipped along with all used items
+//
+// ### SocketSystem::SocketMix::Cost ###
+//	ExtractSeedMoney: Cost in Zen for extracting Seed
+//	SeedSphereComposite: Cost in Zen for Seed Sphere Composite
+//	SetSeedSphere: Cost in Zen for setting Seed Sphere
+//	RemoveSeedSphere: Cost in Zen for removing seed sphere
+//
+// ### SocketSystem::SocketMix::SuccessRate ###
+//	RemoveSeedSphere: Success Rate to remove Seed Sphere, 0-100
+//
+// ### SocketSystem::SocketRateSettings::Socket ### - one hand weapons only
+//	CatID: ID of category, see ItemList.xml
+//	Count1: Success rate for 1 slot, n/10000, can be 0
+//	Count2: Success rate for 2 slots, n/10000, can be 0
+//	Count3: Success rate for 3 slots, n/10000, can be 0
+//	Count4: Success rate for 4 slots, n/10000, can be 0
+//	Count5: Success rate for 5 slots, n/10000, can be 0
+//
+// ### SocketSystem::SocketRateSettings::TwoHandWeapons ### - two hands weapons only
+//	Count1: Success rate for 1 slot, n/10000, can be 0
+//	Count2: Success rate for 2 slots, n/10000, can be 0
+//	Count3: Success rate for 3 slots, n/10000, can be 0
+//	Count4: Success rate for 4 slots, n/10000, can be 0
+//	Count5: Success rate for 5 slots, n/10000, can be 0
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<SocketSystem TotalWeaponSocketLimit="6">
+	<SocketMix>
+		<Cost ExtractSeedMoney="1000000" SeedSphereComposite="1000000" SetSeedSphere="1000000" RemoveSeedSphere="1000000" />
+		<SuccessRate RemoveSeedSphere="90" />
+	</SocketMix>
+	
+	<SocketRateSettings>
+		<Socket CatID="0" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Swords -->
+		<Socket CatID="1" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Axes -->
+		<Socket CatID="2" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Maces -->
+		<Socket CatID="3" Count1="4000" Count2="2000" Count3="1500" Count4="300" Count5="150" /> <!-- Spears -->
+		<Socket CatID="4" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Bows & Cross Bows -->
+		<Socket CatID="5" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Staffs -->
+		<Socket CatID="6" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Shield -->
+		<Socket CatID="7" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Helmets -->
+		<Socket CatID="8" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Armors -->
+		<Socket CatID="9" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Pants -->
+		<Socket CatID="10" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Gloves -->
+		<Socket CatID="11" Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" /> <!-- Boots -->
+		<Socket CatID="20" Count1="7000" Count2="2500" Count3="500" Count4="0" Count5="0" /> <!-- Necklaces -->
+		
+		<TwoHandWeapons Count1="6000" Count2="4000" Count3="3000" Count4="1500" Count5="750" />
+	</SocketRateSettings>
+</SocketSystem>

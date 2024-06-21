@@ -1,0 +1,47 @@
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### Shop::Tab ###
+//	Id: Index of shop tab, 1-5
+//
+// ### Shop::Item ###
+//	Cat: Category of an item - refer to ItemList.xml
+//	Index: Index of an item - refer to ItemList.xml
+//	Level: Level of an item, 0-15
+//	Durability: Durability of an item, 0-255 - NOTE: some Items max durability is lower than maximum possible of 255
+//	Skill: Apply skill to item, 0/1
+//	Luck: Apply Luck on item, 0/1
+//	Option: 0-7 (Opt * 4, example, Opt -> 7 * 4 = Item Option +28
+//	Exc:
+//		Excellent Options:
+//			-1: No exc option
+//			X;X;X;X;X;X;X;X;X: Defines excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//		Grade Options (4th Wings):
+//			-1: No grade option
+//			ID1;LV1;ID2;LV2;ID3;LV3;ID4;LV4: Defines grade option index and option level, the 'IDX' is grade option index and LVX is grade option level based on Index and GradeXVal (0-9) from ItemGradeOption.xml, maximum 4 options can be defined
+//		Guardian Items:
+//			-1: No option
+//			X;X;X;X;Y: Defines specific options, the 'X' is guardian regular option index from GuardianItemOption.xml::OptionList section, maximum 4 options can be defined, -1 if not applies, the Y is elite option index from GuardianItemOption.xml::EliteOptionList, must be defined as 5th argument, -1 if not applies
+//		Artifact Items:
+//			-1: No Option
+//			-2: Random options set (based on rates from ArtifactSystem.xml)
+//			X1;Y1;X2;Y2;X3;Y3: X is OptionType value from ArtifactOption.xml, -1 if not applies, Y is value index, 1~10, referring to ValueX of selected option, -1 if not applies
+//
+//	SetItem (item must be added to set items (ancients), otherwise option will be ignored:
+//		~ 0:  No Ancient
+//		~ 5:  First Set type (+5 Stamina)
+//		~ 6:  Second Set type (+5 Stamina)
+//		~ 9:  First Set type (+10 Stamina)
+//		~ 10: Second Set type (+10 Stamina)
+//	SocketCount: Count of Sockets for socket item, values: 0-5
+//	Elemental: Element type for elemental items: 0 ~ no Elemental Attribute, 1 ~ Fire, 2 ~ Water, 3 ~ Earth, 4 ~ Wind, 5 ~ Darkness
+//	Serial: Generate serial for the shop item, 0/1
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->

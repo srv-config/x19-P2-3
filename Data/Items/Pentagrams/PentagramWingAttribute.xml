@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~ Changes to this file will require modification of WingAttribute.txt (Lang.mpr), section 0-2
+// ### PentagramSystem::ErrtelAddSucessRate ###
+//	LevelX: Chance rate of adding elemental option to the wings depending of Errtel level, n/100
+//
+// ### PentagramSystem::MainOption ###
+//	ValueX: Value of main option at specified level
+//	Name: Name of option, used for description and logging purpose
+//
+// ### PentagramSystem::AdditionalOptions ###
+//	ApplyChanceRate: Chance of getting additional option, n/10000
+//
+// ### PentagramSystem::AdditionalOptions::Option ###
+//	Index: Unique, infile option index
+//	Rate: Chance rate of getting specified option, total is sum of all rates, cannoot exceed 2147483647
+//	ValueX: Value of the option at specified level
+//	Name: Name of option, used for description and logging purpose
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<PentagramSystem>
+	<ErrtelAddSucessRate Level0="1" Level1="2" Level2="3" Level3="5" Level4="15" Level5="25" Level6="40" Level7="50" Level8="60" Level9="75" Level10="90" />
+	<MainOption Value0="25" Value1="35" Value2="45" Value3="55" Value4="65" Value5="75" Value6="85" Value7="96" Value8="107" Value9="118" Value10="130" Value11="142" Value12="154" Value13="167" Value14="180" Value15="193" Name="Elemental Defense Increase" />      
+
+	<AdditionalOptions ApplyChanceRate="750">          
+		<Option Index="0" Rate="130000" Value0="20" Value1="23" Value2="27" Value3="32" Value4="38" Value5="45" Value6="53" Value7="62" Value8="72" Value9="83" Value10="95" Value11="108" Value12="122" Value13="137" Value14="153" Value15="170" Name="Elemental Damage Increase" />
+		<Option Index="1" Rate="130000" Value0="5" Value1="10" Value2="15" Value3="20" Value4="26" Value5="32" Value6="38" Value7="45" Value8="52" Value9="59" Value10="67" Value11="75" Value12="84" Value13="93" Value14="104" Value15="125" Name="Elemental Attack Success Rate Increase" />
+		<Option Index="2" Rate="130000" Value0="5" Value1="10" Value2="15" Value3="20" Value4="26" Value5="32" Value6="38" Value7="45" Value8="52" Value9="59" Value10="67" Value11="75" Value12="84" Value13="93" Value14="104" Value15="125" Name="Elemental Defense Success Rate Increase" />
+		<Option Index="3" Rate="80000" Value0="30" Value1="34" Value2="39" Value3="45" Value4="52" Value5="60" Value6="69" Value7="79" Value8="90" Value9="102" Value10="115" Value11="129" Value12="144" Value13="160" Value14="177" Value15="195" Name="Elemental Damage (II) Increase" />
+		<Option Index="4" Rate="130000" Value0="4" Value1="6" Value2="8" Value3="10" Value4="13" Value5="16" Value6="19" Value7="23" Value8="27" Value9="31" Value10="36" Value11="41" Value12="46" Value13="52" Value14="58" Value15="64" Name="Elemental Defense (II) Increase" />
+		<Option Index="5" Rate="80000" Value0="10" Value1="15" Value2="25" Value3="35" Value4="46" Value5="57" Value6="68" Value7="80" Value8="92" Value9="104" Value10="117" Value11="130" Value12="144" Value13="158" Value14="174" Value15="200" Name="Elemental Attack Success Rate (II) Increase" />
+		<Option Index="6" Rate="80000" Value0="10" Value1="15" Value2="25" Value3="35" Value4="46" Value5="57" Value6="68" Value7="80" Value8="92" Value9="104" Value10="117" Value11="130" Value12="144" Value13="158" Value14="174" Value15="200" Name="Elemental Defense Success Rate (II) Increase" /> 
+	</AdditionalOptions>  
+</PentagramSystem>        

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file must be reflected in MuunAddOption.bmd on Game Client side
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ### MuunSystem::Option ###
+//	Index: Index of additional option
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Index does not have to be unique, therefore Player Min/Max conditions should be defined ascending way, as first meeting requirement of will be applied
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	PlayerMinLevel: Minimum player level to apply the option effect
+//	PlayerMaxLevel: Maximum player level to apply the option effect, if "MAX" or -1 are used then the maximum level is set to sum of MaxNormalLevel and MaxMasterLevel from Common.ini
+//	Type: Method of applying the add option
+//		~ 1: Multiplier (*) operator
+//		~ 2: Add (+) Operator
+//		~ 3: Use defined value
+//
+//	Value0: Value of the option for Evolved Muuns
+//	Value1~5: Value of option for non~evolved Muuns at specific levels 1~5
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->										
+
+<MuunSystem>	
+	<Option Index="0" PlayerMinLevel="1" PlayerMaxLevel="MAX" Type="1" Value0="10" Value1="10" Value1="10" Value3="10" Value4="10" Value5="10" />
+	<Option Index="1" PlayerMinLevel="1" PlayerMaxLevel="MAX" Type="1" Value0="15" Value1="15" Value1="15" Value3="15" Value4="15" Value5="15" />
+	<Option Index="2" PlayerMinLevel="1" PlayerMaxLevel="MAX" Type="1" Value0="20" Value1="20" Value1="20" Value3="20" Value4="20" Value5="20" />
+	<Option Index="3" PlayerMinLevel="1" PlayerMaxLevel="MAX" Type="1" Value0="5" Value1="5" Value1="5" Value3="5" Value4="5" Value5="5" />
+	<Option Index="4" PlayerMinLevel="1" PlayerMaxLevel="MAX" Type="2" Value0="250" Value1="250" Value1="250" Value3="250" Value4="250" Value5="250" />
+	<Option Index="5" PlayerMinLevel="1" PlayerMaxLevel="MAX" Type="3" Value0="2" Value1="2" Value1="2" Value3="2" Value4="2" Value5="2" />
+	<Option Index="6" PlayerMinLevel="1" PlayerMaxLevel="MAX" Type="3" Value0="3" Value1="3" Value1="3" Value3="3" Value4="3" Value5="3" />
+	<Option Index="7" PlayerMinLevel="1" PlayerMaxLevel="400" Type="1" Value0="20" Value1="5" Value1="7" Value3="9" Value4="11" Value5="13" />
+	<Option Index="7" PlayerMinLevel="401" PlayerMaxLevel="800" Type="1" Value0="20" Value1="5" Value1="7" Value3="9" Value4="11" Value5="13" />
+	<Option Index="7" PlayerMinLevel="801" PlayerMaxLevel="MAX" Type="1" Value0="20" Value1="5" Value1="7" Value3="9" Value4="11" Value5="13" />
+</MuunSystem>

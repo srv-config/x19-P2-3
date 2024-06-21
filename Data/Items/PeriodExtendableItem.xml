@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Modification of the file requires changes to PeriodExtendableItem(kor).txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### PeriodExtendableItem::Item ###
+//	ID: Entry number
+//	Cat: Category of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	Name: Name of item, used for in-file description purpose
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<PeriodExtendableItem> <!-- List of items that are allowed for period extension -->
+	<Item ID="0" Cat="13" Index="64" Name="Demon" />
+	<Item ID="1" Cat="13" Index="65" Name="Spirit of Guardian" />
+	<Item ID="2" Cat="13" Index="80" Name="Pet Panda" />
+	<Item ID="3" Cat="13" Index="106" Name="Pet Unicorn" />
+	<Item ID="4" Cat="13" Index="123" Name="Pet Skeleton" />
+	<Item ID="5" Cat="13" Index="113" Name="Ruby Necklace" />
+	<Item ID="6" Cat="13" Index="114" Name="Emerald Necklace" />
+	<Item ID="7" Cat="13" Index="115" Name="Sapphire Necklace" />
+	<Item ID="8" Cat="13" Index="20" Name="Wizards Ring" />
+	<Item ID="9" Cat="13" Index="39" Name="EliteTransfer Skeleton Ring" />
+	<Item ID="10" Cat="13" Index="76" Name="Panda Ring" />
+	<Item ID="11" Cat="13" Index="77" Name="Brown Panda Ring" />
+	<Item ID="12" Cat="13" Index="78" Name="Pink Panda Ring" />
+	<Item ID="13" Cat="13" Index="107" Name="Lethal Wizard's Ring" />
+	<Item ID="14" Cat="13" Index="109" Name="Sapphire Ring" />
+	<Item ID="15" Cat="13" Index="110" Name="Ruby Ring" />
+	<Item ID="16" Cat="13" Index="111" Name="Topaz Ring" />
+	<Item ID="17" Cat="13" Index="112" Name="Amethyst Ring" />
+	<Item ID="18" Cat="13" Index="122" Name="Skeleton Transformation Ring" />
+	<Item ID="19" Cat="13" Index="163" Name="Robot Knight Ring" />
+	<Item ID="20" Cat="13" Index="164" Name="Mini Robot Ring" />
+	<Item ID="21" Cat="13" Index="165" Name="Great Heavenly Mage Ring" />
+	<Item ID="22" Cat="13" Index="166" Name="Brown Panda Ring" />
+	<Item ID="23" Cat="13" Index="472" Name="[PC] Skeleton Transform Ring" />
+	<Item ID="24" Cat="13" Index="473" Name="[PC] Robot Knight Ring" />
+	<Item ID="25" Cat="13" Index="474" Name="[PC] Mini Robot Ring" />
+	<Item ID="26" Cat="13" Index="475" Name="[PC] Great Heavenly Mage Ring" />
+	<Item ID="27" Cat="13" Index="128" Name="Hawk Figurine" />
+	<Item ID="28" Cat="13" Index="129" Name="Goat Figurine" />
+	<Item ID="29" Cat="13" Index="130" Name="Oak Charm" />
+	<Item ID="30" Cat="13" Index="131" Name="Maple Charm" />
+	<Item ID="31" Cat="13" Index="132" Name="Golden Oak Charm" />
+	<Item ID="32" Cat="13" Index="133" Name="Golden Maple Charm" />
+	<Item ID="33" Cat="13" Index="134" Name="Worn Horseshoe" />
+	<Item ID="34" Cat="13" Index="177" Name="Talisman of Ascension I" />
+	<Item ID="35" Cat="13" Index="178" Name="Talisman of Ascension II" />
+	<Item ID="36" Cat="13" Index="179" Name="Talisman of Ascension III" />
+	<Item ID="37" Cat="13" Index="476" Name="[PC] Talisman of Ascension II" />
+	<Item ID="38" Cat="12" Index="267" Name="Wings of Angel and Devil" />
+	<Item ID="39" Cat="12" Index="266" Name="Wings of Conqueror" />
+	<Item ID="40" Cat="12" Index="130" Name="Small Cape of Lord" />
+	<Item ID="41" Cat="12" Index="131" Name="Small Wing of Curse" />
+	<Item ID="42" Cat="12" Index="132" Name="Small Wings of Elf" />
+	<Item ID="43" Cat="12" Index="133" Name="Small Wings of Heaven" />
+	<Item ID="44" Cat="12" Index="134" Name="Small Wings of Satan" />
+	<Item ID="45" Cat="12" Index="135" Name="Little Warrior's Cloak" />
+	<Item ID="46" Cat="12" Index="278" Name="Small Cloak of Limit" />
+	<Item ID="47" Cat="12" Index="283" Name="[PC] Wings of Angel and Devil" />
+	<Item ID="48" Cat="12" Index="284" Name="[PC] Cloak of Death" />
+	<Item ID="49" Cat="12" Index="285" Name="[PC] Wings of Chaos" />
+	<Item ID="50" Cat="12" Index="286" Name="[PC] Wings of Magic" />
+	<Item ID="51" Cat="12" Index="287" Name="[PC] Wings of Life" />
+	<Item ID="52" Cat="13" Index="469" Name="[PC] Panda Pet" />
+	<Item ID="53" Cat="13" Index="470" Name="[PC] Skeleton Pet" />
+	<Item ID="54" Cat="13" Index="268" Name="Dark Transformation Ring" />
+	<Item ID="55" Cat="12" Index="449" Name="Earring of Rage (L)" />
+	<Item ID="56" Cat="12" Index="480" Name="Wings of Power" />
+	<Item ID="57" Cat="12" Index="154" Name="Small White Cloak" />
+	<Item ID="58" Cat="12" Index="457" Name="Rage Earring (R)" />
+</PeriodExtendableItem>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//	HuntPoint system is an mixture of PVP and PVE addition to the MU Online Game. The purpose of this system is to add ability for players
+//	to improve their character by accomplishing special tasks and battle each other for more points.
+//	Once the Hunt Point system is activated, the player Receives special buff with a tool-tip.
+//	Tooltip that contains information of player ability improvements that are gained by the Hunt Point system and its current HuntPoints/Inactive points.
+//	Every player starts by default with 2500 HuntPoints. They can be spent by killing monsters on predefined maps for each of the ability.
+//	Once player moves to the configured map he can hover the Special hunt point Buff and the information of ability that can be improved in this map will be displayed.
+//	The players can use /huntbattle command to be moved to special PVP area defined by server administrator. In this area anyone who joins can fight each other to steal their points.
+//	HuntPoint system resets each week and transforms part of old points into Inactive points so the leaders of last week will have slight advantage until he loses it by failing battles.
+//	The abilities can be slightly boosted by completing range of quests defined in this file.
+//	Player can cancel one quest and start another if he decides to change his strategy to improve another ability
+//	Data about Players, their huntpoints and boosts are stored in MuOnline DB. IGC_HuntPoint table 
+//
+// ### HuntPointSystem ###
+//	Enabled = Enable/Disable system
+//
+// ### HuntPointSystem::General ###
+//	GSCodeActive: Active game server codes for the system to be working (Syntax code,code,code)
+//	MonsterDivInactive: How many monsters have to kill to apply points from Inactive Hunt-Points to Buff (Example 3 monsters to consume 1 Inactive point)
+//	MonsterDivActive: How many monsters have to kill to apply points from normal HuntPoints (Example 10 monsters to consume 1 Hunt-Point)
+//	BuffRaffleDiv: Raffle divisor
+//	BuffPercentSubAdd: Value to subtract/add to next buff
+//	BuffRaffleAfterMaxMonster: Continue raffle after max monster is done
+//	StarterhuntPoint: Base hunt-points
+//	MaxDayMonsterPerVip: Max Daily monsters per VIP type
+//	WeekMonsterCount: How many monsters per week one can kill to gain points
+//	WeekTransformPercent: How many percent of HuntPoints will be transformed to Inactive points per week
+//	HuntPointMaps: Hunting grounds for monsters that lets you spend points
+//	AttMapTime: 
+//
+// ### HuntPointSystem::BuffSettings ###
+//	AllowUp: Allow to enchant this buff
+//	EffectType: Unused
+//	HuntDiv: Divisor from formula (how much effect is given based on hunt point %)
+//	Max: Max value of effect
+//	IsPercent: Whether or not, treat the value as percent, 0/1
+//	MinWorkPercent: Minimum Hunt Percent to activate buff
+//	MinLevel: Minimum level to work
+//	MinMasterLevel: Minimum master level to work
+//	MinReset: Minimum reset to work
+//	MinMasterReset: Minimum Grand Reset to work
+//
+// ### HuntPointSystem::Battle::General ###
+//	CommandSwitch: Is /huntbattle command active
+//	MinLevel: Minimum level to participate in battle
+//	MinMasterLevel: Minimum Master level to participate in battle
+//	MinReset: Minimum Reset to participate in battle.
+//	MinMasterReset: Minimum Grand reset to participate in Battle
+//	MinHunts: Minimum hunt point to join
+//	RenewBattle: Renew battle after death
+//	InvisibleTime: Duration of invisibility upon joining the battle
+//	RemovePkTime: Remove PK Time duration
+//	RemoveTime: Remove player from battle time
+//	DeathHuntPercent: How many percent of HuntPoints will be lost after death
+//	ExitHuntPercent: Penalty for fleeing the event
+//	ReceiveInactivePercent: Inactive point transfer percent
+//	BuffPercent: Buff transfer percent
+//	AllowSameGuildBattle: Disables or enables attack of same guild members, 0/1
+//	CancelBuffList: List of buffs to be removed from player upon joining battle
+//
+// ### HuntPointSystem::Battle::AreasSettings ###
+//	Defines multiple areas where battle of hunt can take place between players, it is selected randomly
+//
+// ### HuntPointSystem::ItemQuest ###
+//	Enabled: Is Quest System enabled
+//	MaxBuffs: How many quests can be completed by one character until he must cancel one
+//
+// ### HuntPointSystem::ItemQuest::Item ###
+//	Name: Quest name (used by command and to print info)
+//	MinReset: Minimum resets to start quest
+//	Items: ItemCategory * 512 + Item Index (from ItemList), separated by coma, 5 items per quest to be collected) Quest is completed by command only when all items are located in inventory, the items are removed after completing quest and the reward is given
+//
+// ### HuntPointSystem::ItemQuest::Item::Points::Point ### 
+//	Id: Which Buff will be improved (from <BuffSettings>
+//	Points: Bonus value to be given to the buff
+//
+// ### HuntPointSystem::ItemQuest::Item::Language::Text ###
+//	Id: Unique text ID
+//	Text: Text to display
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+//
+-->
+
+<HuntPointSystem Enabled="1">
+	<General GSCodeActive="0,2,3,19" 
+	MonsterDivInactive="3" 
+	MonsterDivActive="10" 
+	BuffRaffleDiv="10"
+	BuffPercentSubAdd="0.1" 
+	BuffRaffleAfterMaxMonster="1"
+	StarterhuntPoint = "2500"
+	MaxDayMonsterPerVip = "5000,10000,15000,1000"
+	WeekMonsterCount="5000"
+	WeekTransformPercent="5"
+	HuntPointMaps="33,10,38,7,8,37,57,80"
+	AttMapTime="12"
+	ResetWeekly="1"
+	/>
+	
+	<BuffSettings>
+		<Buff Id="0" Name="Defense" AllowUp="1" EffectType="3" HuntDiv="4" Max="65000" IsPercent="0" MinWorkPercent="2" MinLevel="1" MinMasterLevel="0" MinReset="0" MinMasterReset="0" />
+		<Buff Id="1" Name="Mana" AllowUp="1" EffectType="5" HuntDiv="1" Max="65000" IsPercent="0" MinWorkPercent="2" MinLevel="1" MinMasterLevel="0" MinReset="0" MinMasterReset="0" />
+		<Buff Id="2" Name="HP" AllowUp="1" EffectType="4" HuntDiv="1"	Max="65000" IsPercent="0" MinWorkPercent="2" MinLevel="1" MinMasterLevel="0" MinReset="0" MinMasterReset="0" />
+		<Buff Id="3" Name="HP Recovery" AllowUp="1" EffectType="53" HuntDiv="2000" Max="100" IsPercent="1" MinWorkPercent="2" MinLevel="1" MinMasterLevel="0" MinReset="0" MinMasterReset="0" />
+		<Buff Id="4" Name="Damage" AllowUp="1" EffectType="14" HuntDiv="5" Max="100" IsPercent="1" MinWorkPercent="2" MinLevel="1" MinMasterLevel="0" MinReset="0" MinMasterReset="0" />
+		<Buff Id="5" Name="Wizardry" AllowUp="1" EffectType="15" HuntDiv="2" Max="65000" IsPercent="0" MinWorkPercent="2" MinLevel="1" MinMasterLevel="0" MinReset="0" MinMasterReset="0" />
+		<Buff Id="6" Name="Critical Damage" AllowUp="1" EffectType="55" HuntDiv="1000" Max="100" IsPercent="1" MinWorkPercent="2" MinLevel="1" MinMasterLevel="0" MinReset="0" MinMasterReset="0" />
+		<Buff Id="7" Name="Excellent Damage" AllowUp="1" EffectType="56" HuntDiv="1000" Max="100" IsPercent="1" MinWorkPercent="2" MinLevel="1" MinMasterLevel="0" MinReset="0" MinMasterReset="0" />
+	</BuffSettings>
+
+	<Battle Enabled="1">
+		<General CommandSwitch="1"
+		MinLevel="1"
+		MinMasterLevel="0"
+		MinReset="0"
+		MinMasterReset="0"
+		MinHunts="500"
+		RenewBattle="0"
+		InvisibleTime="30"
+		RemovePkTime="30"
+		RemoveTime="50"
+		DeathHuntPercent="3"
+		ExitHuntPercent="5"
+		ReceiveInactivePercent="70"
+		BuffPercent="2"
+		AllowSameGuildBattle="0"
+		CancelBuffList="1,2,3,4,5,6,8,9,71,76,77,81,82,129,130,131,135,136,138,139,140,142,143,148,149,150,151,152,153,154,155,161,162,163,216,217,218,219,220,221,222,223,224,225,226,246,293,294,295,296,298,299" />	
+		<AreasSettings>
+			<Area Id="0" Map="6" X1="42" X2="52" Y1="52" Y2="61" />
+			<Area Id="0" Map="6" X1="42" X2="52" Y1="52" Y2="61" />
+			<Area Id="0" Map="6" X1="42" X2="52" Y1="52" Y2="61" />
+		</AreasSettings>		
+	</Battle>
+	
+	<ItemQuest Enabled="1" MaxBuffs="5">
+		<List>
+			<Item Id="0" Name="Swords" MinReset="75" Items="1,11,15,16,25">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="1" Name="Axes" MinReset="75" Items="513,514,515,516,517">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="2" Name="Scepters" MinReset="75" Items="1032,1033,1034,1035,1039">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="3" Name="Crossbows" MinReset="75" Items="2058,2061,2062,2064,2067">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="4" Name="Staffs" MinReset="75" Items="2564,2565,2566,2568,2569">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="5" Name="Shields" MinReset="75" Items="3075,3079,3085,3088,3093">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="6" Name="GrandSoul" MinReset="75" Items="3602,4114,4626,5138,5650">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="7" Name="DarkSteel" MinReset="75" Items="3611,4123,4635,5147,5659">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="8" Name="RedSpirit" MinReset="75" Items="3608,4120,4632,5144,5656">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="9" Name="GreatDragon" MinReset="75" Items="3605,4117,4629,5141,5653">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="10" Name="Wind" MinReset="75" Items="3596,4108,4620,5132,5644">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="11" Name="Adamantine" MinReset="75" Items="3610,4122,4634,5146,5658">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="12" Name="HolySpirit" MinReset="75" Items="3603,4115,4627,5139,5651">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="13" Name="Eclipse" MinReset="75" Items="3619,4131,4643,5155,5667">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="14" Name="BlackDragon" MinReset="75" Items="3600,4112,4624,5136,5648">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>
+			<Item Id="15" Name="RedDragon" MinReset="75" Items="3585,4097,4609,5121,5633">
+				<Points>
+					<Point Id="0" Reward="0" />
+					<Point Id="1" Reward="0" />
+					<Point Id="2" Reward="4000" />
+					<Point Id="3" Reward="0" />
+					<Point Id="4" Reward="0" />
+					<Point Id="5" Reward="0" />
+					<Point Id="6" Reward="3" />
+					<Point Id="7" Reward="0" />
+				</Points>
+			</Item>			
+		</List>
+	</ItemQuest>
+	
+	<Language>
+		<Text Id="0" Text=" [HuntPoint] %s: %.1f%%" />
+		<Text Id="1" Text=" [HuntPoint] Hunts: %d" />
+		<Text Id="2" Text=" [HuntPoint] Inactive: %d" />
+		<Text Id="3" Text=" You were removed from the event because you are below the Hunts minimum." />
+		<Text Id="4" Text=" Character is Offline or does not exist" />
+		<Text Id="5" Text=" HuntPoints: %d | Inactive: %d" />
+		<Text Id="6" Text=" HuntPoints: %d, Inactive: %d, Monsters: %d/%d, Exp:" />
+		<Text Id="7" Text=" +%d[QUEST]" />
+		<Text Id="8" Text=" - >> |UP|" />
+		<Text Id="9" Text=" [Hunting] Monsters: %d | Weekly: %d%%" />
+		<Text Id="10" Text=" Quest item information:" />
+		<Text Id="11" Text=" Combinations completed(%d-%d)" />
+		<Text Id="12" Text=" Available item quest combinations:" />
+		<Text Id="13" Text=" [%d] Resets" />
+		<Text Id="14" Text="  > %s - Completed" />
+		<Text Id="15" Text=" remove" />
+		<Text Id="16" Text=" Enter the name of the item you want to remove." />
+		<Text Id="17" Text=" You dont own this quest." />
+		<Text Id="18" Text=" Quest [%s] Removed" />
+		<Text Id="19" Text=" You've reached the limit of quests you can complete." />
+		<Text Id="20" Text=" Quest not found" />
+		<Text Id="21" Text=" You already finished this quest." />
+		<Text Id="22" Text=" You need to have %d Resets or more." />
+		<Text Id="23" Text=" You need the following items to complete this quest" />
+		<Text Id="24" Text=" - Not found" />
+		<Text Id="25" Text=" Quest finished" />
+		<Text Id="26" Text=" You cannot use the command from here." />
+		<Text Id="27" Text=" You are already inside event." />
+		<Text Id="28" Text=" You do not meet the minimum requirements." />
+		<Text Id="29" Text=" [Battle] %s [%s] has joined!" />
+		<Text Id="30" Text=" [Battle] %s has joined!" />
+		<Text Id="31" Text=" [Battle] Inactive points conquered: %d." />
+		<Text Id="32" Text=" [Battle] you ran away from the event and lost %d HuntPoints" />
+		<Text Id="33" Text=" [Battle] you received %d Inactive points" />
+		<Text Id="34" Text=" [Battle] Server consumed %d HuntPoints." />
+		<Text Id="35" Text=" [Battle] %s fled the event. " />
+		<Text Id="36" Text=" [Killed] %s %s >> %s %s" />
+		<Text Id="37" Text=" [Battle] you lost %d HuntPoints." />
+		<Text Id="38" Text=" [BATTLE] you received %d Inactive points." />
+		<Text Id="39" Text=" %s | Battle Buff: %d%% added" />
+		<Text Id="40" Text=" [Battle]: Go!" />
+		<Text Id="41" Text=" [Battle]: %d" />
+		<Text Id="42" Text=" You can now leave the event!" />
+		<Text Id="43" Text=" Hunt Point Bonus" />
+		<Text Id="44" Text=" Inactive Points" />
+		<Text Id="45" Text=" Hunt Points" />
+		<Text Id="46" Text=" Leaving the game is not possible during Battle!" />
+	</Language>
+</HuntPointSystem>

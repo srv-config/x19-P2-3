@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### EventItemDrop::DropItem ###
+//	EventType: Specified events can be enabled using EventitemDrop.ini
+//		~ 0: Ribbon Box
+//		~ 1: Chocolate Box
+//		~ 2: Candy Box
+//		~ 3: Christmas Star
+//		~ 4: Firecracker
+//		~ 5: Heart of Love
+//		~ 6: Medals
+//		~ 7: Halloween
+//		~ 8: Cherry Blossom
+//		~ 9: Lucky Coin
+//		~ 10: Star of Christmas
+//		~ 11: Sealed Box
+//		~ 12: Card Deck (at least one of following events must be also enabled: MuRummy, Bomb Game, Jewel Bingo, Numeric BaseBall)
+//		~ 13: Summon Scroll
+//		~ 14: Evolution Monster
+//		~ 15: Remedy of Love
+//		~ 16: Gem of Secret
+//		~ 17: Box of Luck
+//		~ 18: Elemental Symbol
+//		~ 19: Magic Solution
+//		~ 20: Box of Heaven
+//		~ 21: Maple Play Box
+//
+//	MonsterID: Index of a monster, -1 for any, see MonsterList.xml
+//	MonsterMinLevel: Minimum level of monster, -1 for any
+//	MonsterMaxLevel: Maximum level of monster, -1 for any
+//	PlayerMinReset: Minimum reset of player, -1 for any
+//	PlayerMaxReset: Maximum reset of player, -1 for any
+//	PlayerMinLevel: Minimum level of player, -1 for any
+//	PlayerMaxLevel: Maximum level of player, -1 for any
+//	Cat: Category of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	MinLevel: Minimum item level to drop, 0-15
+//	MaxLevel: Maximum item level to drop, 0-15
+//	Durability: durability of item to drop, 0 indicates automatically generated valid durability
+//	Rate: Item drop rate, max individual rate is 1000000
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<EventItemDrop>
+  <DropItem EventType="0" MonsterID="-1" MonsterMinLevel="30" MonsterMaxLevel="74" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="12" Index="32" MinLevel="0" MaxLevel="0" Durability="0" Rate="10000" Name="Box of Red Ribbon" />
+  <DropItem EventType="0" MonsterID="-1" MonsterMinLevel="75" MonsterMaxLevel="99" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="12" Index="33" MinLevel="0" MaxLevel="0" Durability="0" Rate="6000" Name="Box of Green Ribbon" />
+  <DropItem EventType="0" MonsterID="-1" MonsterMinLevel="100" MonsterMaxLevel="200" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="12" Index="34" MinLevel="0" MaxLevel="0" Durability="0" Rate="2000" Name="Box of Blue Ribbon" />
+  <DropItem EventType="0" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="13" Index="41" MinLevel="0" MaxLevel="0" Durability="0" Rate="10000" Name="Transfer Christmas Ring" />
+  <DropItem EventType="1" MonsterID="-1" MonsterMinLevel="12" MonsterMaxLevel="69" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="32" MinLevel="0" MaxLevel="0" Durability="0" Rate="1000" Name="Pink Chocolate Box" />
+  <DropItem EventType="1" MonsterID="-1" MonsterMinLevel="70" MonsterMaxLevel="100" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="33" MinLevel="0" MaxLevel="0" Durability="0" Rate="1000" Name="Red Chocolate Box" />
+  <DropItem EventType="1" MonsterID="-1" MonsterMinLevel="101" MonsterMaxLevel="137" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="34" MinLevel="0" MaxLevel="0" Durability="0" Rate="1000" Name="Blue Chocolate Box" />
+  <DropItem EventType="2" MonsterID="-1" MonsterMinLevel="12" MonsterMaxLevel="69" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="32" MinLevel="1" MaxLevel="1" Durability="0" Rate="12000" Name="Pink Chocolate Box" />
+  <DropItem EventType="2" MonsterID="-1" MonsterMinLevel="70" MonsterMaxLevel="100" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="33" MinLevel="1" MaxLevel="1" Durability="0" Rate="12000" Name="Red Chocolate Box" />
+  <DropItem EventType="2" MonsterID="-1" MonsterMinLevel="101" MonsterMaxLevel="148" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="34" MinLevel="1" MaxLevel="1" Durability="0" Rate="12000" Name="Blue Chocolate Box" />
+  <DropItem EventType="3" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="51" MinLevel="0" MaxLevel="0" Durability="0" Rate="2000" Name="Christmas Star" />
+  <DropItem EventType="4" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="63" MinLevel="0" MaxLevel="0" Durability="0" Rate="10000" Name="Firecracker" />
+  <DropItem EventType="5" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="11" MinLevel="3" MaxLevel="3" Durability="0" Rate="10000" Name="Box of Luck" />
+  <DropItem EventType="6" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="11" MinLevel="6" MaxLevel="6" Durability="0" Rate="500000" Name="Box of Luck" />
+  <DropItem EventType="6" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="11" MinLevel="5" MaxLevel="5" Durability="0" Rate="500000" Name="Box of Luck" />
+  <DropItem EventType="7" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="45" MinLevel="0" MaxLevel="0" Durability="0" Rate="50000" Name="Pumpkin of Luck" />
+  <DropItem EventType="8" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="84" MinLevel="0" MaxLevel="0" Durability="0" Rate="80000" Name="Cherry Blossom Play-Box" />
+  <DropItem EventType="9" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="100" MinLevel="0" MaxLevel="0" Durability="0" Rate="0" Name="Lucky Coin" />
+  <DropItem EventType="10" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="11" MinLevel="2" MaxLevel="2" Durability="0" Rate="0" Name="Box of Luck" />
+  <DropItem EventType="11" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="121" MinLevel="0" MaxLevel="0" Durability="0" Rate="3000" Name="Sealed Golden Box" />
+  <DropItem EventType="11" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="122" MinLevel="0" MaxLevel="0" Durability="0" Rate="5000" Name="Sealed Silver Box" />
+  <DropItem EventType="12" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="215" MinLevel="0" MaxLevel="0" Durability="0" Rate="50000" Name="Card Piece" />
+  <DropItem EventType="12" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="277" MinLevel="0" MaxLevel="0" Durability="0" Rate="0" Name="Special Card" />
+  <DropItem EventType="13" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="210" MinLevel="0" MaxLevel="0" Durability="0" Rate="20000" Name="Summon Scroll (Lv1)" />
+  <DropItem EventType="14" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="278" MinLevel="0" MaxLevel="0" Durability="0" Rate="70000" Name="Piece of Summoning Scroll" />
+  <DropItem EventType="15" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="20" MinLevel="1" MaxLevel="1" Durability="0" Rate="0" Name="Remedy of Love" />
+  <DropItem EventType="16" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="12" Index="26" MinLevel="0" MaxLevel="0" Durability="0" Rate="0" Name="Gem of Secret" />
+  <DropItem EventType="17" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="11" MinLevel="0" MaxLevel="0" Durability="0" Rate="500000" Name="Box of Luck" />
+  <DropItem EventType="18" MonsterID="743" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="346" MinLevel="0" MaxLevel="0" Durability="0" Rate="3000" Name="Fire Symbol" />
+  <DropItem EventType="18" MonsterID="744" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="346" MinLevel="0" MaxLevel="0" Durability="0" Rate="3000" Name="Fire Symbol" />
+  <DropItem EventType="18" MonsterID="745" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="346" MinLevel="0" MaxLevel="0" Durability="0" Rate="3000" Name="Fire Symbol" />
+  <DropItem EventType="19" MonsterID="-1" MonsterMinLevel="78" MonsterMaxLevel="94" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="12" Index="446" MinLevel="0" MaxLevel="0" Durability="0" Rate="2000" Name="Lock Magic Bell" />
+  <DropItem EventType="19" MonsterID="-1" MonsterMinLevel="95" MonsterMaxLevel="117" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="12" Index="447" MinLevel="0" MaxLevel="0" Durability="0" Rate="2000" Name="Condor Magical Drops" />
+  <DropItem EventType="19" MonsterID="-1" MonsterMinLevel="118" MonsterMaxLevel="300" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="12" Index="448" MinLevel="0" MaxLevel="0" Durability="0" Rate="2000" Name="Garuda Magical Bell" />
+  <DropItem EventType="20" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="11" MinLevel="7" MaxLevel="0" Durability="0" Rate="500000" Name="Box of Luck" />
+  <DropItem EventType="21" MonsterID="-1" MonsterMinLevel="-1" MonsterMaxLevel="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="503" MinLevel="0" MaxLevel="0" Durability="0" Rate="80000" Name="Maple Play Box" />
+</EventItemDrop>

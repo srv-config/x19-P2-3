@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ IMPORTANT: The event must have its monsters defined only in DevilSquare_Classic_Monsters.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### DevilSquare_Classic ###
+//	Enable: Allow to activate or disable the event, 0/1
+//	MaxPlayerPerRoom: Maximum players count that can participate each event level in a single cycle
+//
+// ### DevilSquare_Classic::Time ###
+//	Close: Time to close the event after notification period, seconds
+//	ToOpen: Time to open the event from notification moment, minutes
+//	PlayDuration: Duration of the event, minutes
+//
+// ### DevilSquare_Classic::Schedule::Start ###
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//
+// ### DevilSquare_Classic::EntryLevel::Square ###
+//	Level: Level of the event the the configuration applies to
+//	MinLevel: Minimum level of player to allow entry to specified event level
+//	MaxLevel: Maximum level of player to allow entry to specified event level, max is currently 800
+//
+// ### DevilSquare_Classic::MonsterAppearanceSettings::Square ###
+//	Level: Level of the event the the configuration applies to
+//	MonsterIndex: Index of monster to spawn, see MonsterList.xml
+//	SpawnStartTime: Time of the event (minute) the monster will START spawning at
+//	SpawnEndTime: Time of the event (minute) the monster will STOP spawning at
+//	Name: Name of the monster, used for logging and in-file description purpose
+//
+// ### DevilSquare_Classic::BossAppearanceSettings::Square ###
+//	Level: Level of the event the the configuration applies to
+//	MonsterIndex: Index of monster to spawn, see MonsterList.xml
+//	SpawnTime: Time of the event (minute) the monster will spawn at
+//	StartX: Start X Coordinate the monster will spawn at, must be higher than StartY
+//	StartY: Start Y Coordinate the monster will spawn at, must be lower than StartX
+//	EndX: End X Coordinate the monster will spawn at, must be higher than EndY 
+//	EndY: End Y Coordinate the monster will spawn at, must be lower than EndX
+//	Name: Name of the monster, used for logging and in-file description purpose
+//
+// ### DevilSquare_Classic::RankingBonusSettings::Square ###
+//	Level: Level of the event the the configuration applies to
+//	RankingPlace: Ranking place definition, max 4 per event level, configuration starts from 0
+//	ExpBonus: Exp reward to apply for winning the event at specified place
+//	ZenBonus: Zen reward to apply for winning the event at specified place
+//
+// ### DevilSquare_Classic::RewardExpSettings::Square ###
+//	Level: Level of the event the the configuration applies to
+//	Multiplier: Multiplier of reward exp (received after completing the event)
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<DevilSquare_Classic Enable="1" MaxPlayerPerRoom="15">
+	<Time Close="35" ToOpen="1" PlayDuration="20" />
+
+	<Schedule>
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="3" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="3" Minute="50" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="5" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="7" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="9" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="11" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="13" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="15" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="17" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="19" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="21" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="21" Minute="50" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="22" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="22" Minute="50" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="23" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="23" Minute="50" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="0" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="0" Minute="50" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="1" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="1" Minute="50" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="2" Minute="20" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="2" Minute="50" Second="-1" />
+	</Schedule>
+	
+	<EntryLevel>
+		<Square Level="0" MinLevel="50" MaxLevel="399" /> <!-- Devil Square 1 -->
+		<Square Level="1" MinLevel="400" MaxLevel="599" /> <!-- Devil Square 2 -->
+		<Square Level="2" MinLevel="600" MaxLevel="699" /> <!-- Devil Square 3 -->
+		<Square Level="3" MinLevel="700" MaxLevel="799" /> <!-- Devil Square 4 -->
+		<Square Level="4" MinLevel="800" MaxLevel="899" /> <!-- Devil Square 5 -->
+		<Square Level="5" MinLevel="900" MaxLevel="999" /> <!-- Devil Square 6 -->
+		<Square Level="6" MinLevel="1000" MaxLevel="MAX" /> <!-- Devil Square 7 -->
+	</EntryLevel>
+	
+	<MonsterAppearanceSettings>
+	<!-- Devil Square 1 -->
+		<Square Level="0" MonsterIndex="286" SpawnStartTime="0" SpawnEndTime="7" Name="Archer" />
+		<Square Level="0" MonsterIndex="72" SpawnStartTime="0" SpawnEndTime="7" Name="Phantom Knight" />
+		<Square Level="0" MonsterIndex="118" SpawnStartTime="5" SpawnEndTime="14" Name="Magic Skeleton 4" />
+		<Square Level="0" MonsterIndex="123" SpawnStartTime="5" SpawnEndTime="14" Name="Red Skeleton Knight 5" />
+		<Square Level="0" MonsterIndex="121" SpawnStartTime="12" SpawnEndTime="20" Name="Dark Skull Soldier 5" />
+	<!-- Devil Square 2 -->
+		<Square Level="1" MonsterIndex="463" SpawnStartTime="0" SpawnEndTime="7" Name="Fire Flame Ghost" />
+		<Square Level="1" MonsterIndex="348" SpawnStartTime="0" SpawnEndTime="7" Name="Tanker" />
+		<Square Level="1" MonsterIndex="341" SpawnStartTime="5" SpawnEndTime="14" Name="Soram" />
+		<Square Level="1" MonsterIndex="439" SpawnStartTime="5" SpawnEndTime="14" Name="Dreadfear" />
+		<Square Level="1" MonsterIndex="439" SpawnStartTime="12" SpawnEndTime="20" Name="Dreadfear" />
+	<!-- Devil Square 3 -->
+		<Square Level="2" MonsterIndex="732" SpawnStartTime="0" SpawnEndTime="7" Name="Ferea Fighter" />
+		<Square Level="2" MonsterIndex="779" SpawnStartTime="0" SpawnEndTime="7" Name="Blood Soldier" />
+		<Square Level="2" MonsterIndex="738" SpawnStartTime="5" SpawnEndTime="14" Name="Ferea Fighter" />
+		<Square Level="2" MonsterIndex="780" SpawnStartTime="5" SpawnEndTime="14" Name="Necron" />
+		<Square Level="2" MonsterIndex="783" SpawnStartTime="12" SpawnEndTime="20" Name="Sapi Queen" />
+		<Square Level="2" MonsterIndex="785" SpawnStartTime="12" SpawnEndTime="20" Name="Dark Iron Knight" />
+	<!-- Devil Square 4 -->
+		<Square Level="3" MonsterIndex="743" SpawnStartTime="0" SpawnEndTime="7" Name="Paraca" />
+		<Square Level="3" MonsterIndex="770" SpawnStartTime="0" SpawnEndTime="7" Name="Deep Dungeon Larva" />
+		<Square Level="3" MonsterIndex="771" SpawnStartTime="5" SpawnEndTime="14" Name="Deep Dungeon Cyclops" />
+		<Square Level="3" MonsterIndex="744" SpawnStartTime="5" SpawnEndTime="14" Name="Vasuki" />
+		<Square Level="3" MonsterIndex="745" SpawnStartTime="12" SpawnEndTime="20" Name="Bass" />
+		<Square Level="3" MonsterIndex="773" SpawnStartTime="12" SpawnEndTime="20" Name="Deep Dungeon Hellhound" />
+	<!-- Devil Square 5 -->
+		<Square Level="4" MonsterIndex="776" SpawnStartTime="0" SpawnEndTime="7" Name="Deep Dungeon Poison Bull Fighter" />
+		<Square Level="4" MonsterIndex="786" SpawnStartTime="0" SpawnEndTime="7" Name="Swamp Ent" />
+		<Square Level="4" MonsterIndex="769" SpawnStartTime="5" SpawnEndTime="14" Name="Deep Dungeon Chief Skeleton" />
+		<Square Level="4" MonsterIndex="768" SpawnStartTime="5" SpawnEndTime="14" Name="Deep Dungeon Chief Skeleton Archer" />
+		<Square Level="4" MonsterIndex="789" SpawnStartTime="12" SpawnEndTime="20" Name="Mutantile" />
+		<Square Level="4" MonsterIndex="810" SpawnStartTime="12" SpawnEndTime="20" Name="Mine Digger" />
+	<!-- Devil Square 6 -->
+		<Square Level="5" MonsterIndex="737" SpawnStartTime="0" SpawnEndTime="7" Name="Ferea Archer" />
+		<Square Level="5" MonsterIndex="772" SpawnStartTime="0" SpawnEndTime="7" Name="Deep Dungeon Ghost" />
+		<Square Level="5" MonsterIndex="811" SpawnStartTime="5" SpawnEndTime="14" Name="Mine Carrier" />
+		<Square Level="5" MonsterIndex="814" SpawnStartTime="5" SpawnEndTime="14" Name="Dead Digger" />
+		<Square Level="5" MonsterIndex="784" SpawnStartTime="12" SpawnEndTime="20" Name="Ice Napin" />
+		<Square Level="5" MonsterIndex="815" SpawnStartTime="12" SpawnEndTime="20" Name="Dead Shoveler" />
+	<!-- Devil Square 7 -->
+		<Square Level="6" MonsterIndex="845" SpawnStartTime="0" SpawnEndTime="7" Name="Scorched Warrior" />
+		<Square Level="6" MonsterIndex="771" SpawnStartTime="0" SpawnEndTime="7" Name="Deep Dungeon Cyclops" />
+		<Square Level="6" MonsterIndex="846" SpawnStartTime="5" SpawnEndTime="14" Name="Scorched Assasin" />
+		<Square Level="6" MonsterIndex="777" SpawnStartTime="5" SpawnEndTime="14" Name="Deep Dungeon Dark Knight" />
+		<Square Level="6" MonsterIndex="779" SpawnStartTime="12" SpawnEndTime="20" Name="Blood Soldier" />
+		<Square Level="6" MonsterIndex="854" SpawnStartTime="12" SpawnEndTime="20" Name="Scorched Wizard" />
+	</MonsterAppearanceSettings>
+
+	<BossAppearanceSettings>
+	<!-- Devil Square 1 -->
+		<Square Level="0" MonsterIndex="141" SpawnTime="15" StartX="119" StartY="80" EndX="150" EndY="115" Name="Giant Ogre 7" />
+		<Square Level="0" MonsterIndex="141" SpawnTime="15" StartX="119" StartY="80" EndX="150" EndY="115" Name="Giant Ogre 7" />
+		<Square Level="0" MonsterIndex="141" SpawnTime="15" StartX="119" StartY="80" EndX="150" EndY="115" Name="Giant Ogre 7" />
+		<Square Level="0" MonsterIndex="141" SpawnTime="15" StartX="119" StartY="80" EndX="150" EndY="115" Name="Giant Ogre 7" />
+		<Square Level="0" MonsterIndex="141" SpawnTime="15" StartX="119" StartY="80" EndX="150" EndY="115" Name="Giant Ogre 7" />
+	<!-- Devil Square 2 -->
+		<Square Level="1" MonsterIndex="267" SpawnTime="15" StartX="121" StartY="152" EndX="151" EndY="184" Name="Illusion of Kundun 5" />
+		<Square Level="1" MonsterIndex="267" SpawnTime="15" StartX="121" StartY="152" EndX="151" EndY="184" Name="Illusion of Kundun 5" />
+		<Square Level="1" MonsterIndex="267" SpawnTime="15" StartX="121" StartY="152" EndX="151" EndY="184" Name="Illusion of Kundun 5" />
+		<Square Level="1" MonsterIndex="267" SpawnTime="15" StartX="121" StartY="152" EndX="151" EndY="184" Name="Illusion of Kundun 5" />
+		<Square Level="1" MonsterIndex="267" SpawnTime="15" StartX="121" StartY="152" EndX="151" EndY="184" Name="Illusion of Kundun 5" />
+	<!-- Devil Square 3 -->
+		<Square Level="2" MonsterIndex="641" SpawnTime="15" StartX="49" StartY="138" EndX="79" EndY="173" Name="Cursed Muff" />
+		<Square Level="2" MonsterIndex="641" SpawnTime="15" StartX="49" StartY="138" EndX="79" EndY="173" Name="Cursed Muff" />
+		<Square Level="2" MonsterIndex="641" SpawnTime="15" StartX="49" StartY="138" EndX="79" EndY="173" Name="Cursed Muff" />
+		<Square Level="2" MonsterIndex="641" SpawnTime="15" StartX="49" StartY="138" EndX="79" EndY="173" Name="Cursed Muff" />
+		<Square Level="2" MonsterIndex="641" SpawnTime="15" StartX="49" StartY="138" EndX="79" EndY="173" Name="Cursed Muff" />
+	<!-- Devil Square 4 -->
+		<Square Level="3" MonsterIndex="781" SpawnTime="15" StartX="53" StartY="74" EndX="83" EndY="109" Name="Balram" />
+		<Square Level="3" MonsterIndex="781" SpawnTime="15" StartX="53" StartY="74" EndX="83" EndY="109" Name="Balram" />
+		<Square Level="3" MonsterIndex="781" SpawnTime="15" StartX="53" StartY="74" EndX="83" EndY="109" Name="Balram" />
+		<Square Level="3" MonsterIndex="781" SpawnTime="15" StartX="53" StartY="74" EndX="83" EndY="109" Name="Balram" />
+		<Square Level="3" MonsterIndex="781" SpawnTime="15" StartX="53" StartY="74" EndX="83" EndY="109" Name="Balram" />
+	<!-- Devil Square 5 -->
+		<Square Level="4" MonsterIndex="790" SpawnTime="15" StartX="120" StartY="80" EndX="150" EndY="115" Name="Swamp Monster" />
+		<Square Level="4" MonsterIndex="790" SpawnTime="15" StartX="120" StartY="80" EndX="150" EndY="115" Name="Swamp Monster" />
+		<Square Level="4" MonsterIndex="790" SpawnTime="15" StartX="120" StartY="80" EndX="150" EndY="115" Name="Swamp Monster" />
+		<Square Level="4" MonsterIndex="790" SpawnTime="15" StartX="120" StartY="80" EndX="150" EndY="115" Name="Swamp Monster" />
+		<Square Level="4" MonsterIndex="790" SpawnTime="15" StartX="120" StartY="80" EndX="150" EndY="115" Name="Swamp Monster" />
+	<!-- Devil Square 6 -->
+		<Square Level="5" MonsterIndex="778" SpawnTime="15" StartX="122" StartY="152" EndX="151" EndY="184" Name="Deep Dungeon Gorgon" />
+		<Square Level="5" MonsterIndex="778" SpawnTime="15" StartX="122" StartY="152" EndX="151" EndY="184" Name="Deep Dungeon Gorgon" />
+		<Square Level="5" MonsterIndex="778" SpawnTime="15" StartX="122" StartY="152" EndX="151" EndY="184" Name="Deep Dungeon Gorgon" />
+		<Square Level="5" MonsterIndex="778" SpawnTime="15" StartX="122" StartY="152" EndX="151" EndY="184" Name="Deep Dungeon Gorgon" />
+		<Square Level="5" MonsterIndex="778" SpawnTime="15" StartX="122" StartY="152" EndX="151" EndY="184" Name="Deep Dungeon Gorgon" />
+	<!-- Devil Square 7 -->
+		<Square Level="6" MonsterIndex="816" SpawnTime="15" StartX="50" StartY="138" EndX="79" EndY="173" Name="Dead Porter" />
+		<Square Level="6" MonsterIndex="816" SpawnTime="15" StartX="50" StartY="138" EndX="79" EndY="173" Name="Dead Porter" />
+		<Square Level="6" MonsterIndex="816" SpawnTime="15" StartX="50" StartY="138" EndX="79" EndY="173" Name="Dead Porter" />
+		<Square Level="6" MonsterIndex="816" SpawnTime="15" StartX="50" StartY="138" EndX="79" EndY="173" Name="Dead Porter" />
+		<Square Level="6" MonsterIndex="816" SpawnTime="15" StartX="50" StartY="138" EndX="79" EndY="173" Name="Dead Porter" />
+	</BossAppearanceSettings>
+
+	<RankingBonusSettings>
+	<!-- Devil Square 1 -->
+		<Square Level="0" RankingPlace="0" ExpBonus="6000" ZenBonus="30000" />
+		<Square Level="0" RankingPlace="1" ExpBonus="4000" ZenBonus="25000" />
+		<Square Level="0" RankingPlace="2" ExpBonus="2000" ZenBonus="20000" />
+		<Square Level="0" RankingPlace="3" ExpBonus="1000" ZenBonus="15000" />
+	<!-- Devil Square 2 -->
+		<Square Level="1" RankingPlace="0" ExpBonus="8000" ZenBonus="40000" />
+		<Square Level="1" RankingPlace="1" ExpBonus="6000" ZenBonus="35000" />
+		<Square Level="1" RankingPlace="2" ExpBonus="4000" ZenBonus="30000" />
+		<Square Level="1" RankingPlace="3" ExpBonus="2000" ZenBonus="25000" />
+	<!-- Devil Square 3 -->
+		<Square Level="2" RankingPlace="0" ExpBonus="10000" ZenBonus="50000" />
+		<Square Level="2" RankingPlace="1" ExpBonus="8000" ZenBonus="45000" />
+		<Square Level="2" RankingPlace="2" ExpBonus="6000" ZenBonus="40000" />
+		<Square Level="2" RankingPlace="3" ExpBonus="4000" ZenBonus="35000" />
+	<!-- Devil Square 4 -->
+		<Square Level="3" RankingPlace="0" ExpBonus="20000" ZenBonus="60000" />
+		<Square Level="3" RankingPlace="1" ExpBonus="10000" ZenBonus="55000" />
+		<Square Level="3" RankingPlace="2" ExpBonus="8000" ZenBonus="50000" />
+		<Square Level="3" RankingPlace="3" ExpBonus="6000" ZenBonus="45000" />
+	<!-- Devil Square 5 -->
+		<Square Level="4" RankingPlace="0" ExpBonus="22000" ZenBonus="70000" />
+		<Square Level="4" RankingPlace="1" ExpBonus="20000" ZenBonus="65000" />
+		<Square Level="4" RankingPlace="2" ExpBonus="10000" ZenBonus="60000" />
+		<Square Level="4" RankingPlace="3" ExpBonus="8000" ZenBonus="55000" />
+	<!-- Devil Square 6 -->
+		<Square Level="5" RankingPlace="0" ExpBonus="24000" ZenBonus="80000" />
+		<Square Level="5" RankingPlace="1" ExpBonus="22000" ZenBonus="75000" />
+		<Square Level="5" RankingPlace="2" ExpBonus="20000" ZenBonus="70000" />
+		<Square Level="5" RankingPlace="3" ExpBonus="10000" ZenBonus="65000" />
+	<!-- Devil Square 7 -->
+		<Square Level="6" RankingPlace="0" ExpBonus="26000" ZenBonus="150000" />
+		<Square Level="6" RankingPlace="1" ExpBonus="24000" ZenBonus="140000" />
+		<Square Level="6" RankingPlace="2" ExpBonus="22000" ZenBonus="120000" />
+		<Square Level="6" RankingPlace="3" ExpBonus="20000" ZenBonus="90000" />
+	</RankingBonusSettings>
+
+	<RewardExpSettings>
+		<Square Level="0" Multiplier="1.0" /> <!-- Devil Square 1 -->
+		<Square Level="1" Multiplier="1.0" /> <!-- Devil Square 2 -->
+		<Square Level="2" Multiplier="1.0" /> <!-- Devil Square 3 -->
+		<Square Level="3" Multiplier="1.0" /> <!-- Devil Square 4 -->
+		<Square Level="4" Multiplier="1.0" /> <!-- Devil Square 5 -->
+		<Square Level="5" Multiplier="1.0" /> <!-- Devil Square 6 -->
+		<Square Level="6" Multiplier="1.0" /> <!-- Devil Square 7 -->
+	</RewardExpSettings>
+</DevilSquare_Classic>

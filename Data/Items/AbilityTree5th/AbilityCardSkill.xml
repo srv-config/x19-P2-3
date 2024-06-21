@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file need to be reflected on game client side in ParticleSkill.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### AbilityCardSkill::Class ###
+//	ID: Character class type
+//		~ 0: DW
+//		~ 1: DK
+//		~ 2: ELF
+//		~ 3: MG
+//		~ 4: DL
+//		~ 5: SU
+//		~ 6: RF
+//		~ 7: GL
+//		~ 8: RW
+//		~ 9: SLA 
+//		~ 10: GC
+//		~ 11: LW
+//		~ 12: LM
+//		~ 13: IK
+//
+// ### AbilityCardSkill::Class::Skill ###
+//	ID: Base (normal) skill ID, see SkillList.xml
+//	ItemCat: Category of assigned skill card 
+//	ItemIndex: Index of assigned skill card 
+//	SkillIndex: 5th skill index, see SkillList.xml
+//	ReqSkill: Index of required 4th skill
+//	StaticOptionIndex: Index of static option assigned to skill card
+//		~ 0: Attack Count Increase
+//		~ 1: Attack Attack Speed
+//		~ 2: Attack Range Increase
+//		~ 3: Add Splash Damage
+//		~ 4: Reduce Target Defense
+//
+//	StaticOptionValue: Base value of assigned static option
+//	FormulaID: Formula ID for the assigned option, refers to FormulaData.xml::FormulaData::AbilityTree
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<AbilityCardSkill>
+	<Class ID="0"> <!-- DW -->
+		<Skill ID="0" ItemCat="20" ItemIndex="165" SkillIndex="2037" ReqSkill="1076" StaticOptionIndex="1" StaticOptionValue="15" FormulaID="3" />
+	</Class>
+	<Class ID="1"> <!-- DK -->
+		<Skill ID="3" ItemCat="20" ItemIndex="168" SkillIndex="2040" ReqSkill="1203" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="6" />
+		<Skill ID="6" ItemCat="20" ItemIndex="171" SkillIndex="2043" ReqSkill="1202" StaticOptionIndex="1" StaticOptionValue="15" FormulaID="9" />
+	</Class>
+	<Class ID="2"> <!-- ELF -->
+		<Skill ID="7" ItemCat="20" ItemIndex="172" SkillIndex="2044" ReqSkill="1222" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="10" />
+		<Skill ID="10" ItemCat="20" ItemIndex="175" SkillIndex="2047" ReqSkill="1223" StaticOptionIndex="1" StaticOptionValue="15" FormulaID="13" />
+	</Class>
+	<Class ID="3"> <!-- MG -->
+		<Skill ID="12" ItemCat="20" ItemIndex="177" SkillIndex="2049" ReqSkill="1214" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="15" />
+		<Skill ID="14" ItemCat="20" ItemIndex="179" SkillIndex="2051" ReqSkill="1215" StaticOptionIndex="3" StaticOptionValue="1" FormulaID="17" />
+	</Class>
+	<Class ID="4"> <!-- DL -->
+		<Skill ID="17" ItemCat="20" ItemIndex="182" SkillIndex="2054" ReqSkill="1099" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="20" />
+		<Skill ID="18" ItemCat="20" ItemIndex="246" SkillIndex="2096" ReqSkill="1240" StaticOptionIndex="3" StaticOptionValue="1" FormulaID="283" />
+	</Class>
+	<Class ID="5"> <!-- SU -->
+		<Skill ID="21" ItemCat="20" ItemIndex="186" SkillIndex="2058" ReqSkill="1102" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="24" />
+		<Skill ID="23" ItemCat="20" ItemIndex="188" SkillIndex="2060" ReqSkill="1155" StaticOptionIndex="3" StaticOptionValue="1" FormulaID="26" />
+	</Class>
+	<Class ID="6"> <!-- RF -->
+		<Skill ID="24" ItemCat="20" ItemIndex="189" SkillIndex="2061" ReqSkill="1113" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="27" />
+		<Skill ID="26" ItemCat="20" ItemIndex="191" SkillIndex="2063" ReqSkill="1147" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="29" />
+	</Class>
+	<Class ID="7"> <!-- GL -->
+		<Skill ID="28" ItemCat="20" ItemIndex="193" SkillIndex="2065" ReqSkill="1235" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="31" />
+		<Skill ID="30" ItemCat="20" ItemIndex="234" SkillIndex="2089" ReqSkill="1236" StaticOptionIndex="1" StaticOptionValue="15" FormulaID="33" />
+	</Class>
+	<Class ID="8"> <!-- RW -->
+		<Skill ID="32" ItemCat="20" ItemIndex="196" SkillIndex="2068" ReqSkill="1150" StaticOptionIndex="1" StaticOptionValue="15" FormulaID="35" />
+	</Class>
+	<Class ID="9"> <!-- SLA -->
+		<Skill ID="35" ItemCat="20" ItemIndex="199" SkillIndex="2071" ReqSkill="1160" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="38" />
+	</Class>
+	<Class ID="10"> <!-- GC -->
+		<Skill ID="37" ItemCat="20" ItemIndex="201" SkillIndex="2073" ReqSkill="1213" StaticOptionIndex="1" StaticOptionValue="15" FormulaID="40" />
+	</Class>
+	<Class ID="11"> <!-- LW -->
+		<Skill ID="41" ItemCat="20" ItemIndex="208" SkillIndex="2080" ReqSkill="1216" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="47" />
+	</Class>
+	<Class ID="12"> <!-- LM -->
+		<Skill ID="43" ItemCat="20" ItemIndex="204" SkillIndex="2076" ReqSkill="1219" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="43" />
+	</Class>
+	<Class ID="13"> <!-- IK -->
+		<Skill ID="46" ItemCat="20" ItemIndex="210" SkillIndex="2082" ReqSkill="1233" StaticOptionIndex="2" StaticOptionValue="1" FormulaID="49" />
+	</Class>
+</AbilityCardSkill>

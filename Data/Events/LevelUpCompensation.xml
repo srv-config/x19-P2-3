@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### LevelUpCompensation ###
+//	Enable: Deactivates or activates the system, 0/1
+//	IgnoreResets: If set to 1 then reward will be issued only once at reset 0
+//
+//	### LevelUpCompensation::Compensation ###
+//	Level: Total level the player is rewarded for upon reaching it
+//	StartDate: Start date and time the reward will start being issues, format: yyyy-MM-dd HH:mm
+//	EndDate: Start date and time the reward will start being issues, format: yyyy-MM-dd HH:mm
+//	DW, DK, ELF, MG, DL, SU, RF, GL, RW, SLA, GC, LW, LM, IK: Character class the reward rule applies to, 0/1
+//
+//	### LevelUpCompensation::Compensation::Item ###
+//	Cat: Category of reward item, see Itemlist.xml
+//	Index: Index of reward item, see Itemlist.xml
+//	Level: Level of reward item, 0/15
+//	Durability: Durability of reward item, 0-255, if set to 0 the durability will be set to item default
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ System support multiple "Compensation" section to be defined
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<LevelUpCompensation Enable="0" IgnoreResets="0">
+	<Compensation Level="1600" StartDate="2023-10-01 00:00" EndDate="2023-12-31 23:59" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1">
+		<Item Cat="16" Index="169" Level="1" Durability="0" />
+	</Compensation>
+</LevelUpCompensation>

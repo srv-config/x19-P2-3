@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2021 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### PentagramSystem::ErrtelSetOptionList::Option ###
+//	Index: Unique index of option
+//	Name: Option name
+//
+// ### PentagramSystem::ErrtelSetOption::Set ###
+//	ID: Unique ID of set options
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Options active for two set parts
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Set2OptionIndex_1: Option index
+//	Set2OptionValue_1: Option Value
+//	Set2OptionIndex_2: Option index
+//	Set2OptionValue_2: Option Value
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Options active for three set parts
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Set3OptionIndex_1: Option index
+//	Set3OptionValue_1: Option Value
+//	Set3OptionIndex_2: Option index
+//	Set3OptionValue_2: Option Value
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Options active for four set parts
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Set4OptionIndex_1: Option index
+//	Set4OptionValue_1: Option Value
+//	Set4OptionIndex_2: Option index
+//	Set4OptionValue_2: Option Value
+//	Name: Set options name
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Option index to be taken from ErrtelSetOptionList section
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### PentagramSystem::ErrtelSetOptionType::Errtel ###
+//	Cat: Item category of mastery errtel
+//	Index: Item Index of mastery errtel
+//	SetOptionID1: ID of first available set option, -1 if not applies
+//	Rate1: Chance rate for SetOptionID1, n/1000000
+//	SetOptionID2: ID of second available set option, -1 if not applies
+//	Rate2: Chance rate for SetOptionID2, n/1000000
+//	SetOptionID3: ID of third available set option, -1 if not applies
+//	Rate2: Chance rate for SetOptionID3, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ SetOptionIDX to be taken from ErrtelSetOption section
+//~~ Sum of all SetOptionIDX must be qual to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<PentagramSystem>
+	<ErrtelSetOptionList>
+		<Option Index="0" Name="Elemental Attack Power Increase %d" />
+		<Option Index="1" Name="Elemental Defense Increase %d" />
+		<Option Index="2" Name="Maximum Attack Power Increase %d" />
+		<Option Index="3" Name="Defense Increase %d" />
+		<Option Index="4" Name="Elemental Base Defense Increase %d" />
+		<Option Index="5" Name="Elemental Damage Increase %d" />
+		<Option Index="6" Name="Attack Power Increase %d" />
+		<Option Index="7" Name="Wizardry Power Increase %d" />
+		<Option Index="8" Name="Attack/Wizardrty Power Increase %d" />
+		<Option Index="9" Name="Wizardry/Curse Attack Power Increase %d" />
+	</ErrtelSetOptionList>
+
+	<ErrtelSetOption>
+		<Set ID="0" Set2OptionIndex_1="0" Set2OptionValue_1="40" Set2OptionIndex_2="-1" Set2OptionValue_2="-1" Set3OptionIndex_1="-1" Set3OptionValue_1="-1" Set3OptionIndex_2="-1" Set3OptionValue_2="-1" Set4OptionIndex_1="2" Set4OptionValue_1="60" Set4OptionIndex_2="5" Set4OptionValue_2="100" Name="Fighting Spirit" />
+		<Set ID="1" Set2OptionIndex_1="1" Set2OptionValue_1="30" Set2OptionIndex_2="-1" Set2OptionValue_2="-1" Set3OptionIndex_1="-1" Set3OptionValue_1="-1" Set3OptionIndex_2="-1" Set3OptionValue_2="-1" Set4OptionIndex_1="3" Set4OptionValue_1="45" Set4OptionIndex_2="4" Set4OptionValue_2="20" Name="Passionate" />
+	</ErrtelSetOption>
+
+	<ErrtelSetOptionType UpgradeSetOptionRate="10000">
+		<Errtel Cat="12" Index="505" SetOptionID1="0" Rate1="500000" SetOptionID2="1" Rate2="500000" SetOptionID3="-1" Rate3="-1" />
+		<Errtel Cat="12" Index="506" SetOptionID1="0" Rate1="500000" SetOptionID2="1" Rate2="500000" SetOptionID3="-1" Rate3="-1" />
+		<Errtel Cat="12" Index="507" SetOptionID1="0" Rate1="500000" SetOptionID2="1" Rate2="500000" SetOptionID3="-1" Rate3="-1" />
+		<Errtel Cat="12" Index="508" SetOptionID1="0" Rate1="500000" SetOptionID2="1" Rate2="500000" SetOptionID3="-1" Rate3="-1" />
+	</ErrtelSetOptionType>
+</PentagramSystem>

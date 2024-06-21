@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ItemSettings::ExpPotions ###
+//	NormalExpPotionXExp: Experience added by Normal Exp Potions (14,269-272)
+//	MasterExpPotionXExp: Experience added by Master Exp Potions (14,273-280)
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+<ItemSettings>
+	<ExpPotions 
+		NormalExpPotion1Exp="3000000" 
+		NormalExpPotion2Exp="5000000" 
+		NormalExpPotion3Exp="8000000" 
+		NormalExpPotion4Exp="10000000" 
+		MasterExpPotion1Exp="10000000"
+		MasterExpPotion2Exp="20000000"
+		MasterExpPotion3Exp="30000000"
+		MasterExpPotion4Exp="40000000"
+		MasterExpPotion5Exp="50000000"
+		MasterExpPotion6Exp="100000000" />
+</ItemSettings>

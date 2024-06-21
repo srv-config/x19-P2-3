@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ File defines Teleport Locations for NPCs used within MuQuest system
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ### QuestNPCTeleport ###
+//	TeleportTime: Interval on basis of which the NPCs change their location, seconds
+//
+// ### QuestNPCTeleport::NPC ###
+//	Type: NPC number the configuration applies to
+//		~ 229: Marlon
+//		~ 568: Wandering Merchant Zyro
+//
+// ### QuestNPCTeleport::NPC::Position ###
+//	MapNumber: target map number to teleport to
+//	X: The X coordinate to warp the NPC to
+//	Y: The Y coordinate to warp the NPC to
+//	Dir: Direction the NPC looks at after spawn
+//		~ 0: Central
+//		~ 1: South-West
+//		~ 2: South
+//		~ 3: South-East
+//		~ 4: East
+//		~ 5: North-East
+//		~ 6: North
+//		~ 7: North-West
+//		~ 8: West
+//		~ -1: Random
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<QuestNPCTeleport TeleportTime="900">
+	<NPC Type="229">
+		<Position MapNumber="2" X="198" Y="47" Dir="2" />
+		<Position MapNumber="0" X="137" Y="87" Dir="1" />
+		<Position MapNumber="3" X="169" Y="89" Dir="2" />
+		<Position MapNumber="7" X="17" Y="25" Dir="2" />
+	</NPC>
+	<NPC Type="568">
+		<Position MapNumber="51" X="55" Y="199" Dir="2" />
+		<Position MapNumber="0" X="131" Y="138" Dir="2" />
+		<Position MapNumber="3" X="186" Y="109" Dir="2" />
+		<Position MapNumber="2" X="226" Y="52" Dir="2" />
+	</NPC>
+</QuestNPCTeleport>

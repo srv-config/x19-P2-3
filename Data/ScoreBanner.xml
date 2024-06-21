@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================										
+//
+// ### ScoreBanner ###
+//	Enable: Enabled display of score banners, 0/1
+//
+// ### ScoreBanner::ScoreDisplay::Event ###
+//	Type: Type of event to display banner for
+//		~ 0: MuRummy
+//		~ 1: Reserved (unused)
+//		~ 2: EvoMon
+//		~ 3: Count (unused)
+//
+//	SubType: Sub-type of event of event type to display banner for, applies to banner Type 2 (EvoMon) only
+//		~ 0: Maximum Level
+//		~ 1: Kill Count
+//		~ 2: EvoMon Damage
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ScoreBanner Enable="1">
+	<ScoreDisplay>
+		<Event Type="2" SubType="0" />
+	</ScoreDisplay>
+</ScoreBanner>

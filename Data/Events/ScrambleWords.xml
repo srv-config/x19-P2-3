@@ -1,0 +1,90 @@
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ScrambleWords::Event ###
+//	Enable: Activate or deactivates the event, 0/1
+//	TimeToStartMinutes: Notify time befoe event starts, minutes
+//	MaxEventTimeMinutes: Maximum event time in case of inactivity, minutes
+//	NotifyWinner: Displays a message about round winner
+//
+// ### ScrambleWords::ChatMessage ###
+//	Enable: If enabled the words typed by the player participating the event will be visible in general chat by all players
+//	Red: Color Code (R)
+//	Green: Color Code (G)
+//	Blue: Color Code (B)
+//
+// ### ScrambleWords::Schedule::Start ###
+//	Hour: Event start hour, 0-23
+//	Minute: Event start minute, 0-59
+//
+// ### ScrambleWords::WordsList::Difficulty ###
+//	RoundsCount: Number rounds (words) in specific difficulty
+//	ScrambleType: Type of mixing letters in a word
+//		~ 0: Backward spelling
+//		~ 1: Mixed letters
+//	
+//	ItemBagID: ID of event item bag type defined in ItemBagScript.lua, reward is being issued to Gremory Case
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ System allows to define unlimited number of difficulties by following in-file example pattern, order of difficulties in file determines difficulty level
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ScrambleWords::WordsList::Difficulty::Word ###
+//	Data: A word to guess, no spaces or special characters for now
+//	Hint: A hint that will be displayed for linked word
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ For answer command check Commands.ini: /scramble <word>
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+<ScrambleWords>
+	<Event Enable="1" TimeToStartMinutes="1" MaxEventTimeMinutes="15" NotifyWinner="1" />
+	<ChatMessage Enable="1" Red="45" Green="15" Blue="175" />
+	
+	<Schedule>
+		<Start Hour="10" Minute="0" />
+		<Start Hour="12" Minute="0" />
+		<Start Hour="15" Minute="0" />
+		<Start Hour="18" Minute="0" />
+		<Start Hour="23" Minute="0" />
+	</Schedule>
+	
+	<WordsList>
+		<Difficulty RoundsCount="4" ScrambleType="0" ItemBagID="400">
+			<Word Data="scramble" Hint="" />
+			<Word Data="alcohol" Hint="" />
+			<Word Data="programmer" Hint="" />
+			<Word Data="calculator" Hint="" />
+			<Word Data="computer" Hint="" />
+			<Word Data="spaghetti" Hint="" />
+			<Word Data="camera" Hint="" />
+			<Word Data="mobile" Hint="" />
+			<Word Data="bible" Hint="" />
+			<Word Data="lighter" Hint="" />
+			<Word Data="cinema" Hint="" />
+			<Word Data="forest" Hint="" />
+		</Difficulty>
+		
+		<Difficulty RoundsCount="4" ScrambleType="1" ItemBagID="401">
+			<Word Data="difficulty" Hint="" />
+			<Word Data="laser" Hint="" />
+			<Word Data="island" Hint="" />
+			<Word Data="romeo" Hint="" />
+			<Word Data="universe" Hint="" />
+			<Word Data="pillow" Hint="" />
+			<Word Data="starship" Hint="" />
+			<Word Data="original" Hint="" />
+			<Word Data="vegetable" Hint="" />
+			<Word Data="fruits" Hint="" />
+			<Word Data="newspaper" Hint="" />
+			<Word Data="wire" Hint="" />
+		</Difficulty>
+	</WordsList>
+</ScrambleWords>

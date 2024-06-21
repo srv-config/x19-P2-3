@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### BattleCore ###
+//	Enable: Opens BattleCore registration ability, 0/1
+//	PromotionMode: Executes BattleCoreAccountUserDataCopy_Promotion procedure instead BattleCoreAccountUserDataCopy
+//	NoticeWindow: Activates a notice window upon entry to the game, 0/1
+//
+// ### BattleCore::Rewards::ChaosCastleSurvival::Reward ###
+//	Type: Type of reward or stage of event the reward setting applies to
+//	ItemCat: Group of item reward, see ItemList.xml
+//	ItemIndex: Index of item reward, see ItemList.xml
+//	Name: Reward name, used for in-file description and logging purpose
+//
+// ### BattleCore::Rewards::TormentedSquare::Reward ###
+//	Type: Type of reward or stage of event the reward setting applies to
+//	ItemCat: Group of item reward, see ItemList.xml
+//	ItemIndex: Index of item reward, see ItemList.xml
+//	Name: Reward name, used for in-file description and logging purpose
+//
+// ### BattleCore::Rewards::ChaosCastleBattle::Reward ###
+//	Type: Type of reward or stage of event the reward setting applies to
+//	ItemCat: Group of item reward, see ItemList.xml
+//	ItemIndex: Index of item reward, see ItemList.xml
+//	Name: Reward name, used for in-file description and logging purpose
+//
+// ### BattleCore::Rewards::TormentedSquareBattle::Reward ###
+//	Type: Type of reward or stage of event the reward setting applies to
+//	ItemCat: Group of item reward, see ItemList.xml
+//	ItemIndex: Index of item reward, see ItemList.xml
+//	Name: Reward name, used for in-file description and logging purpose
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<BattleCore Enable="1" PromotionMode="0" NoticeWindow="0">
+	<Rewards>
+		<ChaosCastleSurvival>
+			<Reward Type="1" ItemCat="14" ItemIndex="254" Name="Pre-League" />
+			<Reward Type="2" ItemCat="14" ItemIndex="256" Name="Semi-Final" />
+			<Reward Type="3" ItemCat="14" ItemIndex="257" Name="Final" />
+			<Reward Type="4" ItemCat="13" ItemIndex="276" Name="League-Winner" />
+		</ChaosCastleSurvival>
+		<TormentedSquare>
+			<Reward Type="1" ItemCat="14" ItemIndex="258" Name="Pre-League" />
+			<Reward Type="2" ItemCat="14" ItemIndex="259" Name="Semi-Final" />
+			<Reward Type="3" ItemCat="14" ItemIndex="260" Name="Final" />
+			<Reward Type="4" ItemCat="13" ItemIndex="277" Name="League-Winner" />
+		</TormentedSquare>
+		<ChaosCastleBattle>
+			<Reward Type="1" ItemCat="14" ItemIndex="261" Name="General" />
+			<Reward Type="2" ItemCat="14" ItemIndex="262" Name="Winner" />
+		</ChaosCastleBattle>
+		<TormentedSquareBattle>
+			<Reward Type="1" ItemCat="14" ItemIndex="265" Name="Goblin Box Reward" />
+			<Reward Type="2" ItemCat="14" ItemIndex="266" Name="Goblin Box Reward" />
+			<Reward Type="3" ItemCat="14" ItemIndex="267" Name="Goblin Box Reward" />
+			<Reward Type="4" ItemCat="14" ItemIndex="268" Name="Goblin Box Reward" />
+			<Reward Type="5" ItemCat="14" ItemIndex="269" Name="Exp Potion Reward" />
+			<Reward Type="6" ItemCat="14" ItemIndex="270" Name="Exp Potion Reward" />
+			<Reward Type="7" ItemCat="14" ItemIndex="271" Name="Exp Potion Reward" />
+			<Reward Type="8" ItemCat="14" ItemIndex="272" Name="Exp Potion Reward" />
+			<Reward Type="9" ItemCat="14" ItemIndex="273" Name="Exp Potion Reward" />
+			<Reward Type="10" ItemCat="14" ItemIndex="274" Name="Exp Potion Reward" />
+			<Reward Type="11" ItemCat="14" ItemIndex="275" Name="Exp Potion Reward" />
+			<Reward Type="12" ItemCat="14" ItemIndex="276" Name="Exp Potion Reward" />
+			<Reward Type="13" ItemCat="14" ItemIndex="279" Name="Exp Potion Reward" />
+			<Reward Type="14" ItemCat="14" ItemIndex="280" Name="Exp Potion Reward" />		
+		</TormentedSquareBattle>
+	</Rewards>
+</BattleCore>

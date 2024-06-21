@@ -1,0 +1,196 @@
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//	BAG ITEM: NO LIMIT
+//
+// ### ItemBag::BagConfig ###
+//	Name: Name of an Item or Monster
+//	ItemRate: Chance to get an item from the bag, n/10000
+//	SetItemRate: Drop rate of random set item selected from entire pool of available ancients, rate is being drawn individually for every drop attempt, n/10000, can be 0
+//	SetItemCount: Number of set items to drop if SetItemRate is set to value greater than 0
+//	MasterySetItemInclude: If set to 1 the set item drop based on SetItemRate will include mastery set items, otherwise set to 0
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The SetItemRate is not available for all EVENT_BAG types. Define Set Items via Drop sections manually instead
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	MoneyDrop: Money (Zen) amount to drop from bag (must be greater than 0 if ItemRate is lower than 10000)
+//	IsPentagramForBeginnersDrop: Defines whether to drop Pentagram for Beginners with pre-defined Errtels for Beginners, 0/1
+//	BagUseEffect:
+//		~ -1: no effect
+//		~ 0: Firecracker effect type
+//		~ 2: Silver and Gold Medals effect type, Box of Heaven
+//		~ 58: Cherry Blossom Play Box effect type
+//
+//	PartyDropRate: Chance to apply party drop, if chance rate draw succeed the bag will be executed individually for every party member within party range of 9 tiles from party master with consideration of PartyOneDropOnly setting, does not apply to INVENTORY bag type, n/10000
+//	PartyOneDropOnly: Defines type of item drop for party
+//		~ 0: Bag is executed individually for item and coin award for every party member within party range of 9 tiles from party master, for coin share type check PartyShareType setting
+//		~ 1: Bag is executed once only for item drop but issues coins for every party member within party range of 9 tiles from party master, for coin share type check PartyShareType setting
+//			
+//	PartyShareType: Determined mode of dividing share among party members, includes Coin, Ruud and Zen
+//		~ 0: Share proportionally to number of party members, e.g. coin reward is set to 100 and party members is 5, so each party member within 9 tiles from party master will receive 20 coins.
+//		~ 1: Each party member receives full coin amount configured in bag
+//
+//	BagUseType: Attribute is used only for item bags defined as BAG_EVENT type in ItemBagsScript.lua, does not apply to mix related bags
+//		~ 0: Reward is dropped on ground
+//		~ 1: Reward is issued to inventory
+//		~ 2: Reward is issued to Gremory Case
+//
+//	GCStorageType: Gremory Case storage type, applies only if BagUseType is set to 2
+//		~ 1: Account
+//		~ 2: Character
+//		~ 3: Mobile
+//		~ 4: Personal Store
+//	
+//	GCRewardType: Type of reward issued to Gremory Case, check GremoryCase.xml::GremoryCase::RewardExpiryTime::General::Use::Type, applies only if BagUseType is set to 2
+//
+//	BagUseRate: Defines probability to use Bag, n/10000.
+//				If value is lower than 10000 (100%) then a draw is performed between item bag and another drop system in hierarchy
+//
+// ### ItemBag:::SummonBook ### - drops random Summon Book from range - Cat: 14; Index: 217-221
+//	Enable: Activates or deactivates the Summon Book drop, 0/1
+//	DropRate: Summon Book drop rate, n/1000000
+//	ItemCat: Category of Summon Book Item: 14
+//	ItemIndex: Index of Summon Book Item: 217-221
+//
+// ### ItemBag::AddCoin ### - awards with configured coin type and count
+//	Enable: Activates or deactivates the coin award, 0/1
+//	CoinType:
+//		~ 0: WCoin
+//		~ 1: Goblin Point
+//
+//	CoinValue: Points count to award with
+//	PlayerMinLevel: Minimum level of player to apply Coin (must be lower or equal to PlayerMaxLevel)
+//	PlayerMaxLevel: Maximum level of player to apply Coin (must be greater or equal to PlayerMinLevel)
+//	PlayerMinReset: Minimum reset of player to apply Coin (must be lower or equal to PlayerMaxReset)
+//	PlayerMaxReset: Maximum reset of player to apply Coin (must be greater or equal to PlayerReset)
+//
+// ### ItemBag::Ruud ### - awards with configured count of Ruud basing of the rate (if Ruud is awarded then no item will be given)
+//	GainRate: Chance rate to award with configured amount of Ruud, n/10000, can be 0
+//	MinValue: Minimum amount of Ruud to award with
+//	MaxValue: Maximum amount of Ruud to award with
+//	PlayerMinLevel: Minimum level of player to apply Ruud (must be lower or equal to PlayerMaxLevel)
+//	PlayerMaxLevel: Maximum level of player to apply Ruud (must be greater or equal to PlayerMinLevel)
+//	PlayerMinReset: Minimum reset of player to apply Ruud (must be lower or equal to PlayerMaxReset)
+//	PlayerMaxReset: Maximum reset of player to apply Ruud (must be greater or equal to PlayerReset)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If MAX is used as value for PlayerMaxLevel attribute then the attribute is being set to sum of MaxNormalLevel and MaxMasterLevel from Common.ini
+//~~ If MAX is used as value for PlayerMaxReset attribute then the attribute is being set to value of MaxResets from Resetystem.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### DropSection ###
+//	UseMode: Determines way the section is being used like
+//		~ -1: Used for party and non-party drop
+//		~ 0: Used while not in party
+//		~ 1: Used for party only
+//	DisplayName: Name of section, displayed within logs and used by ToolKit Premium editor
+//
+// ### ItemBag::DropSection::DropAllow ### - by setting lower class the higher one automatically is being allowed
+//	DW: 0 or specific class evolution: 1/2/3/4/5
+//	DK: 0 or specific class evolution: 1/2/3/4/5
+//	ELF: 0 or specific class evolution: 1/2/3/4/5
+//	MG: 0 or specific class evolution: 1/2/4/5
+//	DL: 0 or specific class evolution: 1/2/4/5
+//	SU: 0 or specific class evolution: 1/2/3/4/5
+//	RF: 0 or specific class evolution: 1/2/4/5
+//	GL: 0 or specific class evolution: 1/2/4/5
+//	RW: 0 or specific class evolution: 1/2/4/5
+//	SLA: 0 or specific class evolution: 1/2/3/4/5
+//	GC: 0 or specific class evolution: 1/2/3/4/5
+//	LW: 0 or specific class evolution: 1/2/3/4/5
+//	LM: 0 or specific class evolution: 1/2/3/4/5
+//	IK: 0 or specific class evolution: 1/2/3/4/5
+//	PlayerMinLevel: Minimum level of player to apply drop of items from the section (must be lower or equal to PlayerMaxLevel)
+//	PlayerMaxLevel: Maximum level of player to apply drop of items from the section (must be greater or equal to PlayerMinLevel)
+//	PlayerMinReset: Minimum reset of player to apply drop of items from the section (must be lower or equal to PlayerMaxReset)
+//	PlayerMaxReset: Maximum reset of player to apply drop of items from the section (must be greater or equal to PlayerReset)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If MAX is used as value for PlayerMaxLevel attribute then the attribute is being set to sum of MaxNormalLevel and MaxMasterLevel from Common.ini
+//~~ If MAX is used as value for PlayerMaxReset attribute then the attribute is being set to value of MaxResets from Resetystem.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	MapNumber: Map Number the drop of items applies to, -1 for all maps
+//
+// ### ItemBag::DropSection::DropAllow::Drop ###
+//	Rate: Drop rate of items from the section, n/10000
+//	Type: Defines the way items drop from the section
+//		~ 0: Regular drop, random items of configured count
+//		~ 1: All items from a section, Count attribute is ignored then
+//
+//	Count: Items count to be dropped at a time - option ignored for LuckyCoin, MuRuumy, LordMix and Cherry Blosson rewards, always 1
+//
+// ### ItemBag::DropSection::DropAllow::Drop::Item ###
+//	Cat: Category of the item, refer to \Data\Items\ItemList.xml
+//	Index: Index of the item, refer to \Data\Items\ItemList.xml
+//	ItemMinLevel: Minimum level the item should drop with (must be lower or equal to ItemMaxLevel)
+//	ItemMaxLevel: Maximum level of the item should drop with (must be greater or equal to ItemMinLevel)
+//	Durability: Durability is optional attribute, if used then defined value will be used, otherwise generated automatically, 0-255
+//	Skill: 0 - no Skill, -1 - Random (50/50% chance), 1 - with Skill
+//	Luck: 0 - no Luck, -1 - Random (50/50% chance), 1 - with Luck
+//	Option: 0 - no Option, -1 - Random, 1,2,3,4,5,6,7 - with specified option - +4,+8,+12,+16,+20,+24,+28
+//	Exc:
+//		Excellent Options:
+//			-1: No exc option
+//			-2: Random count of random options (based on rates from ExcellentOptions.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
+//			-10: A draw of bonus and excellent options set from MasteryExcOptions.xml. If used, the skill and luck attributes from this file are ignored, see referred file for further details.
+//			X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//		Grade Options (4th and 5th Wings - 5th Wings can support up to two grade options of level 0 only):
+//			-1: No grade option
+//			-2: Random count of random options (based on rates from ItemGradeOption.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of grade options, max 4 (options selection based on rates from ItemGradeOption.xml)
+//			ID1;LV1;ID2;LV2;ID3;LV3;ID4;LV4: Defines grade option index and option level, the 'IDX' is grade option index and LVX is grade option level based on Index and GradeXVal (0-9) from ItemGradeOption.xml, maximum 4 options can be defined
+//		Guardian Items:
+//			-1: No option
+//			-2;X: Random count of random options (based on rates from GuardianItemOption.xml), the 'X' takes value 0 or 1, determining whether to generate random elite option or not
+//			-3;X;Y: Specified count of random options, the 'X' defines count of options, max 4, the 'Y' takes value 0 or 1, determining whether to generate random elite option or not
+//			X;X;X;X;Y: Defines specific options, the 'X' is guardian regular option index from GuardianItemOption.xml::OptionList section, maximum 4 options can be defined, -1 if not applies, the Y is elite option index from GuardianItemOption.xml::EliteOptionList, must be defined as 5th argument, -1 if not applies
+//		Artifact Items:
+//			-1: No Option
+//			-2: Random options set (based on rates from ArtifactSystem.xml)
+//			X1;Y1;X2;Y2;X3;Y3: X is OptionType value from ArtifactOption.xml, -1 if not applies, Y is value index, 1~10, referring to ValueX of selected option, -1 if not applies
+//		WingCore:
+//			-1: No Option
+//			-2: Random count of random options (based on rates from WingCoreOption.xml)
+//		
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Advanced config notes: The values -1, -2 and -3 are stored under Exc1 variable in ItemBagScript.lua, the options count (X) for -3 value is stored under Exc2 variable
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	SetItem: 0 ~ no ancient, 1 ~ ancient (random Tier of specified item) - must be added as ancient, otherwise option will be ignored
+//	ErrtelRank: Defines rank to drop Errtel item with, 1-5, not applies to Errtels of Beginner, by default set 1
+//	SocketCount:
+//		~ 0: no Socket slots
+//		~ 1: up to one slot
+//		~ 2: up to two slots
+//		~ 3: up to three slots
+//		~ 4: up to four slots
+//		~ 5: up to five slots
+//	    ~ -2: random count of socket slots (Pentagrams and Socket Items)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Type attribute of the item must be set to 2 - refer to ItemList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	ElementalItem: 0 ~ no Elemental attribute, 1 ~ Fire, 2 ~ Water, 3 ~ Earth, 4 ~ Wind, 5 ~ Darkness, -1 ~ Random attribute
+//	MuunEvolutionItemCat: Attribute used and required for item 16,211 (Evolution Stone) only, defines Muun Item Category
+//	MuunEvolutionItemIndex: Attribute used and required for item 16,211 (Evolution Stone) only, defines Muun Item Index
+//	KindA: Attribute automatically assigned on a basis on ItemList.xml configuration, no necessary to be defined in bag
+//	Duration: Allows to drop expirable item, seconds (not every item is suitable for period items system, please test before putting on live server)
+//
+//~~ Item Bag structure explanation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Bag structure supports multiple DropSections. Each DropSections supports multiple DropAllow sub-sections. Each DropAllow section may have multiple Drop sub-sections.
+//
+//~~ Understanding DropSection ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Every item bag (except INVENTORY bag type) support ability to define multiple DropSection. It is used to drop two or more items from different sections of different rules for single player, check Item_(14,354,0)_PlayTime_Box.xml for examples.
+//
+//~~ Understanding DropAllow/Drop sections selection ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Qualified (player meets requirements of) DropAllow section is selected on basis of its weight. Weight (priority) of DropAllow section is equal to sum of all Rates of Drop sections and divided by number of Drop sections contained inside DropAllow section.
+// If there are multiple DropAllow sections of same weight then DropAllow section is selected randomly from pool of all qualified DropAllow sections of same weight.
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->

@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file should be reflected in FormulaData.bmd in client side.
+//~~ Order and count of arguments is defined by %d and %1f included in specified formula.
+//~~ Types are explained as comments to every formula, in order the values are passed.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### FormulaData::Exp::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		TotalLevel: Actual character's level, sum of regular and master
+//		MonsterExpLevel: Value of ExpLevel attribute from MonsterList.xml
+//		SoloExp: Single exp calculated using formula 0 or 1, see explanation below
+//		PartyAddExp: Values of PartyRegAddExp or PartySetAddExp section from ExpSystem.xml
+//		MembLevel: Party level, sum of all regular and master levels of party members
+//		AttackDamage: Actual damage caused
+//		TotalDamage: Total damage caused
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Single Exp:
+//	IF character's total level is lower or equal monster's level THEN: SoloExp = Formula 0
+//	IF character's total level is greater than monster's level THEN: SoloExp = Formula 1
+//	IF result of calculation of formula 0 OR 1 is equal or lower than 0 THEN: SoloExp = Formula 5
+//	IF result of calculation of formula 5 is 0 or lower then SoloExp = 1
+//
+// Party Exp:
+//	IF character's total level is lower or equal monster's level THEN: SoloExp = Formula 0
+//	IF character's total level is greater than monster's level THEN: SoloExp = Formula 1
+//	IF result of calculation of formula 0 OR 1 is equal or lower than 0 THEN: SoloExp = Formula 5
+//	IF result of calculation of formula 5 is 0 or lower then SoloExp = 1
+//		THEN:
+//	SoloExp = Formula 3
+//		THEN:
+//	IF Party members are on same map and distance among them is less than 10 squares
+//		THEN:
+//	PartyExp = Formula 4
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### FormulaData::ExcellentOption::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		ItemDropLevel: Item drop level from ItemList.xml
+//		PlayerLevel: Level of player
+//
+// ### FormulaData::SetAddStatOption::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		ItemLevel: Level of item
+//
+// ### FormulaData::SkillTree::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		SkillPoint: Actual points invested in skill in the skill tree
+//
+// ### FormulaData::SetOption::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		ItemLevel: Level of item
+//
+// ### FormulaData::Wing4thDamage::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		~ 0: Damage increase of 4th wings of DW
+//		~ 1: Damage increase of 4th wings of DK
+//		~ 2: Damage increase of 4th wings of ELF
+//		~ 3: Damage increase of 4th wings of MG
+//		~ 4: Damage increase of 4th wings of DL
+//		~ 5: Damage increase of 4th wings of SU
+//		~ 6: Damage increase of 4th wings of RF
+//		~ 7: Damage increase of 4th wings of GL
+//		~ 8: Damage increase of 4th wings of RW
+//		~ 9: Damage increase of 4th wings of SLA
+//		~ 10: Damage increase of 4th wings of GC
+//		~ 11: Damage increase of 4th wings of LW
+//		~ 12: Damage increase of 4th wings of LM
+//		~ 13: Damage increase of 4th wings of IK
+//
+// ### FormulaData::Wing4th5thDefense::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		~ 0: Fourth wings level 0-9 defense increase
+//		~ 1: Fourth wings level 10-15 defense increase
+//		~ 2: Fifth wings level 0-9 defense increase
+//		~ 3: Fifth wings level 10-15 defense increase
+//
+// ### FormulaData::Character::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		~ 0: Berserker skill conversion
+//		~ 1: Berserker Attack Speed Increase
+//		~ 2: Berserker HP decrease
+//		~ 3: Berserker Defense deduction
+//		~ 4: Darkness skill conversion
+//		~ 5: Darkness Defense addition
+//		~ 6: Darkness HP decrease
+//		~ 7: Weakness Attack Decrease
+//		~ 8: Innovation Defense Decrease
+//		~ 17: Mastery Shield Damage Reduction Taken Instead
+//		~ 30: Spiral Charge Attack Damage Increase
+//		~ 31: Spiral Charge Defense Increase
+//		~ 32: Crusher Charge Attack Speed Increase
+//		~ 33: Crusher Charge Defense Increase
+//		~ 34: Elemental Charge Wizardry Increase
+//		~ 35: Elemental Charge Defense Increase
+//		~ 36: Elemental Damage Increase
+//		~ 37: Duration time for formulas 36 and 38
+//		~ 38: Elemental Defense Increase
+//		~ 39: DEX Booster Duration Time
+//		~ 40: DEX Booster Attack Speed Increase
+//		~ 42: Illusion Blade Attack Damage
+//		~ 44: Wrath Combat Power Increase
+//		~ 45: Oversting damage decrease
+//		~ 46: Wrath Attack Increase
+//		~ 47: Wrath Defense Decrease
+//		~ 48: Crown Force Increase All Stats
+//		~ 49: Crown Force Duration Time
+//		~ 50: Lord Dignity Critical and Excellent Damage Increase
+//		~ 51: Lord Dignity Duration Time
+//		~ 52: Dark Lord Mastery Shield Defense Increase Percent, applies when riding Divine Horse)
+//		~ 53: Dark Lord Mastery Shield Elemental Defense Increase Percent, applies when riding Divine Horse)
+//		~ 54: Skill Attack Power Increase of Dark Lord class
+//		~ 55: Battle Glory Combat Power Increase
+//		~ 56: Battle Glory Attack Power Increase
+//
+// ### FormulaData::GuardianItem::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//
+// ### FormulaData::Earrings::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//
+// ### FormulaData::ArtifactOption::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//
+// ### FormulaData::CombatPower::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		~ 0: Combat Power base calculation for item of level lower than 11 (outputs CombatPowerResult)
+//		~ 1: Combat Power base calculation for item of level greater or equal than 11 (outputs CombatPowerResult)
+//		~ 2: Combat Power adjustment formula for normal item of level lower than 11
+//		~ 3: Combat Power adjustment formula for normal item of level greater or equal than 11
+//		~ 4: Combat Power adjustment formula for excellent item of level lower than 11
+//		~ 5: Combat Power adjustment formula for excellent item of level greater or equal than 11
+//		~ 6: Combat Power adjustment formula for ancient item
+//		~ 7: Two weapons Combat Power adjustment formula: CombatPowerAttackDamage = TwoWeaponCombatPower * Constant / 100
+//		~ 8: One weapon Combat Power adjustment formula: CombatPowerAttackDamage = OneWeaponCombatPower * Constant / 100
+//		~ 9: Base Combat Power formula for Knight class
+//		~ 10: Base Combat Power formula for Magic Gladiator class
+//		~ 11: Base Combat Power formula for Rage Fighter class
+//		~ 12: Base Combat Power formula for Slayer class
+//		~ 13: Base Combat Power formula for Grow Lancer class
+//		~ 14: Base Combat Power formula for Dark Lord class
+//
+// ### FormulaData::Wing5thDamage::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		~ 0: Fifth Wings Damage Increase (12, 185)
+//		~ 1: Fifth Wings Damage Increase, all other 5th
+//
+// ### FormulaData::WingCore::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		~ 0: 
+//		~ 1: Fifth Wings Damage Correction
+//		~ 2: Wing Core Wing attack power/magic power/curse power increase
+//		~ 3: 
+//
+// ### FormulaData::AbilityTree::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//	
+// ### FormulaData::PetItem::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		~ 0: Max Pet Level for Divine Horse
+//		~ 1: Exp Table formula for Divine Horse
+//		~ 4: Divine Horse Sell Price Formula, 255 * result of formula
+//		~ 5: Divine Horse Defense Increase Percent
+//		~ 6: Divine Horse Elemental Defense Increase Percent
+//		~ 7: Max Pet Level for Divine Spirit
+//		~ 8: Exp Table formula for Divine Spirit
+//		~ 11: Divine Spirits Sell Price Formula, 255 * result of formula
+//		~ 20: Divine Spirits Attack Speed
+//		~ 21: Divine Spirits Attack Success Rate
+//		~ 22: Divine Spirits Max Attack Power Limit
+//		~ 23: Divine Spirits Max Attack Speed Limit
+//		~ 24: Divine Horse and Dark Lord Mastery Shield Max Defense Increase Limit
+//		~ 25: Divine Horse and Dark Lord Mastery Shield Max Elemental Defense Increase Limit
+//		~ 26: Divine Spirits Minimum Attack Power
+//		~ 27: Divine Spirits Maximum Attack Power
+//
+// ### FormulaData::LevelExp::Formula ###
+//	ID: Next unique ID of formula, starts from 0
+//	Data: The formula data, no spaces
+//		~ 0: Regular level exp for range 1 to 255
+//		~ 1: Regular level exp for range 255 to max regular level
+//		~ 2: Master level exp for range 1 to 600
+//		~ 3: Master level exp for range 601 to 770
+//		~ 4: Master level exp for range 771 to 800
+//		~ 5: Master level exp for range 801 to 999
+//		~ 6: Master level exp for range 1000 to 1449
+//		~ 7: Master level exp for range 1450 to max master level
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<FormulaData>
+	<Exp> <!-- Do not mix elements from different exp formulas, use only attributes available from within specified formula -->
+		<Formula ID="0" Data="(%d*15)+((((%d*15)*0.2)/500)*(%d-%d))" /> <!-- TotalLevel, MonsterExpLevel, MonsterExpLevel, TotalLevel -->
+		<Formula ID="1" Data="(%d*15)+((((%d*15)*0.2)/500)*(%d-%d))" /> <!-- MonsterExpLevel, TotalLevel, MonsterExpLevel, TotalLevel -->
+		<Formula ID="2" Data="%d*%f*%d/%d" /> <!-- SoloExp, PartyAddExp, MembLevel, TotalLevel -->
+		<Formula ID="3" Data="%d*(%I64d/%I64d)" /> <!-- SoloExp, AttackDamage, TotalDamage -->
+		<Formula ID="4" Data="%d*%f*%d/%d" /> <!-- SoloExp, PartyAddExp, MembLevel, TotalLevel -->
+		<!-- <Formula ID="5" Data="(%d*15)+((((%d*15)*0.2)/500)*(%d-%d))" /> -->
+		<!-- <Formula ID="6" Data="(((1000*15)+((((1000*15)*0.2)/500)*(%d-1000)))-(((%d-1000)*15)+(((((%d-1000)*15)*0.2)/500)*(%d-1000))*((1+(((%d-1000)^1.1)/1000))*0.3)))" /> -->
+		<!-- <Formula ID="7" Data="((((%d+700)*15)+(((((%d+700)*15)*0.2)/500)*(%d-(%d+700))))-(((%d-(%d+700))*15)+(((((%d-(%d+700))*15)*0.2)/500)*(%d-(%d+700)))*((1+((%d-(%d+700))^1.1)/1000))*0.3))" /> -->
+		<Formula ID="5" Data="1" /> <!-- TotalLevel, MonsterExpLevel -->
+	</Exp>
+	<ExcellentOption>
+		<Formula ID="0" Data="(%d/100)*(%d/20)" /> <!-- ItemDropLevel, PlayerLevel -->
+		<Formula ID="1" Data="(%d/3.5)" /> <!-- ItemDropLevel -->
+		<Formula ID="2" Data="(%d*1.1)" /> <!-- ItemDropLevel -->
+		<Formula ID="3" Data="(%d*1.1)" /> <!-- ItemDropLevel -->
+		<Formula ID="4" Data="(%d*0.3)" /> <!-- ItemDropLevel -->
+		<Formula ID="5" Data="(%d/3.5)" /> <!-- ItemDropLevel -->
+		<Formula ID="6" Data="(%d/100)*(%d/20)" /> <!-- ItemDropLevel, PlayerLevel -->
+		<Formula ID="7" Data="((%d/200)+((%d*4)^1.11))" /> <!-- ItemDropLevel, PlayerLevel -->
+		<Formula ID="8" Data="((%d/200)+((%d*3)^1.1))" /> <!-- ItemDropLevel, PlayerLevel -->
+		<Formula ID="9" Data="(%d*0.05)^1.4" /> <!-- ItemDropLevel -->
+		<Formula ID="10" Data="(%d-130)/10*15" /> <!-- ItemDropLevel -->
+	</ExcellentOption>
+	<SetAddStatOption>
+		<Formula ID="0"	Data="%d/10" /> <!-- ItemLevel -->
+		<Formula ID="1"	Data="%d/5" /> <!-- ItemLevel -->
+		<Formula ID="2"	Data="%d/10" /> <!-- ItemLevel -->
+		<Formula ID="3"	Data="%d/5" /> <!-- ItemLevel -->
+		<Formula ID="4"	Data="%d/10" /> <!-- ItemLevel -->
+		<Formula ID="5"	Data="%d/5" /> <!-- ItemLevel -->
+		<Formula ID="6"	Data="%d/10" /> <!-- ItemLevel -->
+		<Formula ID="7"	Data="%d/5" /> <!-- ItemLevel -->
+		<Formula ID="8"	Data="%d/10" /> <!-- ItemLevel -->
+		<Formula ID="9"	Data="%d/5" /> <!-- ItemLevel -->
+		<Formula ID="10" Data="%d/20" /> <!-- ItemLevel -->
+		<Formula ID="11" Data="%d/10" /> <!-- ItemLevel -->
+	</SetAddStatOption>
+	<SkillTree>
+		<Formula ID="0" Data="0" /> <!-- empty -->
+		<Formula ID="1" Data="1+((((((%d)-30)^3)+25000)/499)/6)" /> <!-- SkillPoint -->
+		<Formula ID="2" Data="0.8+(((((((%d-30)^3)+25000)/499)/6)))" /> <!-- SkillPoint -->
+		<Formula ID="3" Data="(0.85+(((((((%d-30)^3)+25000)/499)/6))))*6" /> <!-- SkillPoint -->
+		<Formula ID="4" Data="(0.9+(((((((%d-30)^3)+25000)/499)/6))))*8" /> <!-- SkillPoint -->
+		<Formula ID="5" Data="(0.95+(((((((%d-30)^3)+25000)/499)/6))))*10" /> <!-- SkillPoint -->
+		<Formula ID="6" Data="52/(1+(((((((%d-30)^3)+25000)/499)/6))))" /> <!-- SkillPoint -->
+		<Formula ID="7" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*1.5" /> <!-- SkillPoint -->
+		<Formula ID="8" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*23" /> <!-- SkillPoint -->
+		<Formula ID="9" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85" /> <!-- SkillPoint -->
+		<Formula ID="10" Data="(0.8+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*8" /> <!-- SkillPoint -->
+		<Formula ID="11" Data="11/(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))" /> <!-- SkillPoint -->
+		<Formula ID="12" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*6" /> <!-- SkillPoint -->
+		<Formula ID="13" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*5" /> <!-- SkillPoint -->
+		<Formula ID="14" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*8" /> <!-- SkillPoint -->
+		<Formula ID="15" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*15" /> <!-- SkillPoint -->
+		<Formula ID="16" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*50" /> <!-- SkillPoint -->
+		<Formula ID="17" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*10" /> <!-- SkillPoint -->
+		<Formula ID="18" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*6" /> <!-- SkillPoint -->
+		<Formula ID="19" Data="50/(1+(((((((%d-30)^3)+25000)/499)/6))))+20" /> <!-- SkillPoint -->
+		<Formula ID="20" Data="41/(1+(((((((%d-29)^3)+22333)/444)/10))))+0.8" /> <!-- SkillPoint -->
+		<Formula ID="21" Data="(2+(((((((%d-30)^3)+25000)/499)/6))))*1.5" /> <!-- SkillPoint -->
+		<Formula ID="22" Data="(0.9+(((((((%d-35)^3)+40440)/600)/7.5))))*5" /> <!-- SkillPoint -->
+		<Formula ID="23" Data="%d*1.0" /> <!-- SkillPoint -->
+		<Formula ID="24" Data="(0.95+(((((((%d-30)^3)+25000)/499)/6))))*7.8" /> <!-- SkillPoint -->
+		<Formula ID="25" Data="170" /> <!-- SkillPoint -->
+		<Formula ID="26" Data="150" /> <!-- SkillPoint -->
+		<Formula ID="27" Data="130" /> <!-- SkillPoint -->
+		<Formula ID="28" Data="800" /> <!-- SkillPoint -->
+		<Formula ID="29" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*2.5" /> <!-- SkillPoint -->
+		<Formula ID="30" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*2" /> <!-- SkillPoint -->
+		<Formula ID="31" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*3.2" /> <!-- SkillPoint -->
+		<Formula ID="32" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*5" /> <!-- SkillPoint -->
+		<Formula ID="33" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*3" /> <!-- SkillPoint -->
+		<Formula ID="34" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*45" /> <!-- SkillPoint -->
+		<Formula ID="35" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*28" /> <!-- SkillPoint -->
+		<Formula ID="36" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*8" /> <!-- SkillPoint -->
+		<Formula ID="37" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*15" /> <!-- SkillPoint -->
+		<Formula ID="38" Data="0.1+(((((((%d-47)^3)+120000)/600)/41)))" /> <!-- SkillPoint -->
+		<Formula ID="39" Data="0.9+(((((((%d-30)^3)+25000)/499)/12)))" /> <!-- SkillPoint -->
+		<Formula ID="40" Data="(1+((((((((%d)-30)^3)+25000)/499)/6))))*12" /> <!-- SkillPoint -->
+		<Formula ID="41" Data="(1+((((((((%d)-30)^3)+25000)/499)/6))))*13" /> <!-- SkillPoint -->
+		<Formula ID="42" Data="(1+((((((((%d)-30)^3)+25000)/499)/6))))*14" /> <!-- SkillPoint -->
+		<Formula ID="43" Data="(1+(((((((%d-35)^3)+43000)/499)/50)*100)/12))*85" /> <!-- SkillPoint -->
+		<Formula ID="44" Data="(((((20+%d)^1.4)*2.402)/2.8)*4)" /> <!-- SkillPoint -->
+		<Formula ID="45" Data="15/%d" /> <!-- SkillPoint -->
+		<Formula ID="46" Data="30/%d" /> <!-- SkillPoint -->
+		<Formula ID="47" Data="45/%d" /> <!-- SkillPoint -->
+		<Formula ID="48" Data="60/%d" /> <!-- SkillPoint -->
+		<Formula ID="49" Data="15/%d" /> <!-- SkillPoint -->
+		<Formula ID="50" Data="((((((2.02+%d)^1.1)/10)*5)/3)*1)" /> <!-- SkillPoint -->
+		<Formula ID="51" Data="((((((3.33+%d)^1.3)/10)*5)/3)*1)" /> <!-- SkillPoint -->
+		<Formula ID="52" Data="((((((3.78+%d)^1.42)/10)*5)/3)*1)" /> <!-- SkillPoint -->
+		<Formula ID="53" Data="((((((3.33+%d)^1.52)/10)*5)/3)*1)" /> <!-- SkillPoint -->
+		<Formula ID="54" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="55" Data="(%d*15/10)" /> <!-- SkillPoint -->
+		<Formula ID="56" Data="(10/%d)*7" /> <!-- SkillPoint -->
+		<Formula ID="57" Data="(10/%d)*10" /> <!-- SkillPoint -->
+		<Formula ID="58" Data="(10/%d)*11" /> <!-- SkillPoint -->
+		<Formula ID="59" Data="(10/%d)*12" /> <!-- SkillPoint -->
+		<Formula ID="60" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="61" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="62" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="63" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="64" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="65" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="66" Data="%d*0.75" /> <!-- SkillPoint -->
+		<Formula ID="67" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="68" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="69" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="70" Data="((((((20+%d)^2)/15)*7.5)/213.3)*4)" /> <!-- SkillPoint -->
+		<Formula ID="71" Data="((((((20+%d)^2)/15)*7.5)/213.3)*4)" /> <!-- SkillPoint -->
+		<Formula ID="72" Data="((((((20+%d)^2)/15)*7.5)/213.3)*4)" /> <!-- SkillPoint -->
+		<Formula ID="73" Data="((((((20+%d)^2)/15)*7.5)/213.3)*4)" /> <!-- SkillPoint -->
+		<Formula ID="74" Data="87+((%d*6.5)^1.6)" /> <!-- SkillPoint -->
+		<Formula ID="75" Data="((((((5.85+%d)^2)/10)*5)/5)*3)+15" /> <!-- SkillPoint -->
+		<Formula ID="76" Data="(140+((%d*18)^1.265))" /> <!-- SkillPoint -->
+		<Formula ID="77" Data="((((((7+%d)^2)/10)*5)/9.8)*5)/10" /> <!-- SkillPoint -->
+		<Formula ID="78" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="79" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="80" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="81" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="82" Data="(125+((%d*7.5)^1.5))" /> <!-- SkillPoint -->
+		<Formula ID="83" Data="0.91+(%d*0.278)^1.3" /> <!-- SkillPoint -->
+		<Formula ID="84" Data="(96+((%d*21.9)^1.2))" /> <!-- SkillPoint -->
+		<Formula ID="85" Data="%d/5" /> <!-- SkillPoint -->
+		<Formula ID="86" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="87" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="88" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="89" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="90" Data="%d*0.5" /> <!-- SkillPoint -->
+		<Formula ID="91" Data="0.94+(%d*0.3)^1.23" /> <!-- SkillPoint -->
+		<Formula ID="92" Data="0.94+(%d*0.3)^1.23" /> <!-- SkillPoint -->
+		<Formula ID="93" Data="0.94+(%d*0.3)^1.23" /> <!-- SkillPoint -->
+		<Formula ID="94" Data="0.94+(%d*0.3)^1.23" /> <!-- SkillPoint -->
+		<Formula ID="95" Data="((((((4+%d)^2)/10)*5)/7)*5*8)" /> <!-- SkillPoint -->
+		<Formula ID="96" Data="((((((5.9+%d)^2)/10)*5)/10)*3)" /> <!-- SkillPoint -->
+		<Formula ID="97" Data="((((((5+%d)^2)/10)*5)/7)*4*7)" /> <!-- SkillPoint -->
+		<Formula ID="98" Data="((((((4.25+%d)^2)/10)*5)/9.8)*5)/15" /> <!-- SkillPoint -->
+		<Formula ID="99" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="100" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="101" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="102" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="103" Data="(108+((%d*5.1)^1.5))" /> <!-- SkillPoint -->
+		<Formula ID="104" Data="0.83+(%d*0.278)^1.25" /> <!-- SkillPoint -->
+		<Formula ID="105" Data="(95+((%d*14)^1.2))" /> <!-- SkillPoint -->
+		<Formula ID="106" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="107" Data="((((((20+%d)^2)/15)*5)/213.3)*2)" /> <!-- SkillPoint -->
+		<Formula ID="108" Data="((((((20+%d)^2)/15)*5)/213.3)*2)" /> <!-- SkillPoint -->
+		<Formula ID="109" Data="((((((20+%d)^2)/15)*5)/213.3)*2)" /> <!-- SkillPoint -->
+		<Formula ID="110" Data="((((((20+%d)^2)/15)*5)/213.3)*2)" /> <!-- SkillPoint -->
+		<Formula ID="111" Data="%d*0.5" /> <!-- SkillPoint -->
+		<Formula ID="112" Data="((((((23+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="113" Data="((((((8+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="114" Data="((((((9+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="115" Data="((((((18+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="116" Data="((((((8+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="117" Data="((((((6+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="118" Data="((((((8+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="119" Data="((((((5+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="120" Data="((((((38+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="121" Data="((((((11+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="122" Data="((((((10+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="123" Data="((((((32+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="124" Data="((((((9+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="125" Data="((((((7+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="126" Data="((((((7+%d)^2)/10)*5)/7)*5)" /> <!-- SkillPoint -->
+		<Formula ID="127" Data="((((((26+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="128" Data="((((((5+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="129" Data="((((((4+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="130" Data="((((((22+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="131" Data="((((((23+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="132" Data="((((((22+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="133" Data="((((((26+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="134" Data="((((((25+%d)^1.7)/10)*9)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="135" Data="((((((3+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="136" Data="((((((23+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="137" Data="((((((12+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="138" Data="((((((1+%d)^2)/10)*5)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="139" Data="(25000+((%d-800)*25))+((%d+%d+%d)*0)" /> <!-- SkillPoint -->
+		<Formula ID="140" Data="(25000+((%d-800)*25))+((%d+%d+%d)*0)" /> <!-- SkillPoint -->
+		<Formula ID="141" Data="(25000+((%d-800)*25))+((%d+%d+%d)*0)" /> <!-- SkillPoint -->
+		<Formula ID="142" Data="(25000+((%d-800)*25))+((%d+%d+%d)*0)" /> <!-- SkillPoint -->
+		<Formula ID="143" Data="(((15+%d)^2.5))+1253" /> <!-- SkillPoint -->
+		<Formula ID="144" Data="(((15+%d)^2.5))+1253" /> <!-- SkillPoint -->
+		<Formula ID="145" Data="(((15+%d)^2.5))+1253" /> <!-- SkillPoint -->
+		<Formula ID="146" Data="(((15+%d)^2.5))+1253" /> <!-- SkillPoint -->
+		<Formula ID="147" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="148" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="149" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="150" Data="40/%d" /> <!-- SkillPoint -->
+		<Formula ID="151" Data="((((((%d*%d)*0.6/24)+(((%d-800)*(%d-500))/200))/24)+1500))" /> <!-- SkillPoint -->
+		<Formula ID="152" Data="70*%d" /> <!-- SkillPoint -->
+		<Formula ID="153" Data="8+(%d*0)" /> <!-- SkillPoint -->
+		<Formula ID="154" Data="15*%d" /> <!-- SkillPoint -->
+		<Formula ID="155" Data="7*%d" /> <!-- SkillPoint -->
+		<Formula ID="156" Data="13*%d" /> <!-- SkillPoint -->
+		<Formula ID="157" Data="13*%d" /> <!-- SkillPoint -->
+		<Formula ID="158" Data="8+(%d*0)" /> <!-- SkillPoint -->
+		<Formula ID="159" Data="50*%d" /> <!-- SkillPoint -->
+		<Formula ID="160" Data="7*%d" /> <!-- SkillPoint -->
+		<Formula ID="161" Data="13*%d" /> <!-- SkillPoint -->
+		<Formula ID="162" Data="%d*3.5" /> <!-- SkillPoint -->
+		<Formula ID="163" Data="%d*0" /> <!-- SkillPoint -->
+		<Formula ID="164" Data="4.5/%d" /> <!-- SkillPoint -->
+		<Formula ID="165" Data="((((((4+%d)^1.6)/7)*5.5)/5.7)*5)" /> <!-- SkillPoint -->
+		<Formula ID="166" Data="((((((5+%d)^1.6)/5)*4)/5)*4.3)" /> <!-- SkillPoint -->
+		<Formula ID="167" Data="((((((5+%d)^1.6)/5)*4)/4.3)*4.2)" /> <!-- SkillPoint -->
+		<Formula ID="168" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="169" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="170" Data="10/%d" /> <!-- SkillPoint -->
+		<Formula ID="171" Data="20/%d" /> <!-- SkillPoint -->
+		<Formula ID="172" Data="(0.9+(((((((%d-35)^3)+40440)/600)/7.5))))*5" /> <!-- SkillPoint -->
+		<Formula ID="173" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="174" Data="(0.9+(((((((%d-35)^3)+40440)/600)/7.5))))*5" /> <!-- SkillPoint -->
+		<Formula ID="175" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*33.3" /> <!-- SkillPoint -->
+		<Formula ID="176" Data="((((((4+%d)^1.6)/7)*5.5)/5.7)*5)" /> <!-- SkillPoint -->
+		<Formula ID="177" Data="((((((4+%d)^1.6)/7)*5.5)/5.5)*6)" /> <!-- SkillPoint -->
+		<Formula ID="178" Data="300" /> <!-- SkillPoint -->
+		<Formula ID="179" Data="6.073+(%d*0.3)^1.47" /> <!-- SkillPoint -->
+		<Formula ID="180" Data="6.073+(%d*0.3)^1.47" /> <!-- SkillPoint -->
+		<Formula ID="181" Data="6.073+(%d*0.3)^1.47" /> <!-- SkillPoint -->
+		<Formula ID="182" Data="6.073+(%d*0.3)^1.47" /> <!-- SkillPoint -->
+		<Formula ID="183" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="184" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="185" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="186" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="187" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="188" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="189" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="190" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="191" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="192" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="193" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="194" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="195" Data="(19.75+((%d^1.3)*5))" /> <!-- SkillPoint -->
+		<Formula ID="196" Data="(14.71+((%d^1.3)*4))" /> <!-- SkillPoint -->
+		<Formula ID="197" Data="(19.75+((%d^1.3)*5))" /> <!-- SkillPoint -->
+		<Formula ID="198" Data="(14.71+((%d^1.3)*4))" /> <!-- SkillPoint -->
+		<Formula ID="199" Data="(19.75+((%d^1.3)*5))" /> <!-- SkillPoint -->
+		<Formula ID="200" Data="(14.71+((%d^1.3)*4))" /> <!-- SkillPoint -->
+		<Formula ID="201" Data="(5.71+((%d^1.3)*4))" /> <!-- SkillPoint -->
+		<Formula ID="202" Data="(5.71+((%d^1.3)*4))" /> <!-- SkillPoint -->
+		<Formula ID="203" Data="(5.71+((%d^1.3)*4))" /> <!-- SkillPoint -->
+		<Formula ID="204" Data="(5.45+((%d^1.3)*3))" /> <!-- SkillPoint -->
+		<Formula ID="205" Data="(5.45+((%d^1.3)*3))" /> <!-- SkillPoint -->
+		<Formula ID="206" Data="(5.45+((%d^1.3)*3))" /> <!-- SkillPoint -->
+		<Formula ID="207" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="208" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="209" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="210" Data="7*%d" /> <!-- SkillPoint -->
+		<Formula ID="211" Data="7*%d" /> <!-- SkillPoint -->
+		<Formula ID="212" Data="7*%d" /> <!-- SkillPoint -->
+		<Formula ID="213" Data="(((((20+%d)^1.4)*2.402)/4.5))" /> <!-- SkillPoint -->
+		<Formula ID="214" Data="(1+(((((((%d-30)^3)+25000)/490)/50)*100)/15))*20" /> <!-- SkillPoint -->
+		<Formula ID="215" Data="(((15+%d)^2.55))+1843" /> <!-- SkillPoint -->
+		<Formula ID="216" Data="(((15+%d)^2.55))+1843" /> <!-- SkillPoint -->
+		<Formula ID="217" Data="(((15+%d)^2.55))+1843" /> <!-- SkillPoint -->
+		<Formula ID="218" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="219" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="220" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="221" Data="15/%d" /> <!-- SkillPoint -->
+		<Formula ID="222" Data="2100+((%d-30)*42)" /> <!-- SkillPoint -->
+		<Formula ID="223" Data="450+((%d-30)*9)" /> <!-- SkillPoint -->
+		<Formula ID="224" Data="390+((%d-30)*8)" /> <!-- SkillPoint -->
+		<Formula ID="225" Data="1500+((%d-30)*30)" /> <!-- SkillPoint -->
+		<Formula ID="226" Data="%d*0" /> <!-- SkillPoint -->
+		<Formula ID="227" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="228" Data="1.91+((%d^1.4)/3)" /> <!-- SkillPoint -->
+		<Formula ID="229" Data="1.01+((%d^1.3)/8.2)" /> <!-- SkillPoint -->
+		<Formula ID="230" Data="3.1+(((((((%d-50)^3)+120000)/60)/33)))" /> <!-- SkillPoint -->
+		<Formula ID="231" Data="10+((((%d+10)^2)/4)-25)/2.5" /> <!-- SkillPoint -->
+		<Formula ID="232" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="233" Data="(((%d+10)^2)/6)" /> <!-- SkillPoint -->
+		<Formula ID="234" Data="(((%d+10)^2)/3)" /> <!-- SkillPoint -->
+		<Formula ID="235" Data="((((((23+%d)^2)/10)*5)/7)*2)" /> <!-- SkillPoint -->
+		<Formula ID="236" Data="((((((9+%d)^2)/10)*5)/7)*1)" /> <!-- SkillPoint -->
+		<Formula ID="237" Data="60+(%d*3)" /> <!-- SkillPoint -->
+		<Formula ID="238" Data="((1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85)/2" /> <!-- SkillPoint -->
+		<Formula ID="239" Data="30+((((%d+10)^2)/5)-25)/2" /> <!-- SkillPoint -->
+		<Formula ID="240" Data="1.91+((%d^1.4)/3)" /> <!-- SkillPoint -->
+		<Formula ID="241" Data="1+((%d^1.2)/3.7)" /> <!-- SkillPoint -->
+		<Formula ID="242" Data="((((%d+10)^2)/4)-25)/2" /> <!-- SkillPoint -->
+		<Formula ID="243" Data="%d*1.5" /> <!-- SkillPoint -->
+		<Formula ID="244" Data="%d*0.75" /> <!-- SkillPoint -->		
+		<Formula ID="245" Data="((2+((((((((%d)-30)^3)+25000)/499)/6))))*12)" /> <!-- SkillPoint -->
+		<Formula ID="246" Data="((1+((((((((%d)-30)^3)+25000)/499)/7.5))))*12)" /> <!-- SkillPoint -->
+		<Formula ID="247" Data="((1+((((((((%d)-30)^3)+25000)/490)/7))))*12)+10" /> <!-- SkillPoint -->
+		<Formula ID="248" Data="((2+((((((((%d)-30)^3)+25000)/499)/6))))*12)" /> <!-- SkillPoint -->
+		<Formula ID="249" Data="((1+(((((((%d-30)^3)+25000)/499)/6))))*9.2)" /> <!-- SkillPoint -->
+		<Formula ID="250" Data="((1+(((((((%d-30)^3)+25000)/499)/6))))*13)" /> <!-- SkillPoint -->
+		<Formula ID="251" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="252" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="253" Data="(((((((5+%d)^1.5)/6)*5)/4)*3.5)-3.5)" /> <!-- SkillPoint -->
+		<Formula ID="254" Data="((((%d^1.3)*4.1)/3.33))+3" /> <!-- SkillPoint -->
+		<Formula ID="255" Data="(((((%d^1.45)*4)/3)+3.5)*0.85)" /> <!-- SkillPoint -->
+		<Formula ID="256" Data="(((((%d^1.3)*4.1)/3.35)+3.1)*0.8)" /> <!-- SkillPoint -->
+		<Formula ID="257" Data="(((((%d^1.45)*4)/3)+3.5)*0.85)" /> <!-- SkillPoint -->
+		<Formula ID="258" Data="%d+1" /> <!-- SkillPoint -->
+		<Formula ID="259" Data="%d+1" /> <!-- SkillPoint -->
+		<Formula ID="260" Data="%d+1" /> <!-- SkillPoint -->
+		<Formula ID="261" Data="%d+1" /> <!-- SkillPoint -->
+		<Formula ID="262" Data="((((%d^1.4)*3)/6)+8)" /> <!-- SkillPoint -->
+		<Formula ID="263" Data="(1+((((((%d)-30)^3)+25000)/499)/5.3))-0.07475" /> <!-- SkillPoint -->
+		<Formula ID="264" Data="%d+1" /> <!-- SkillPoint -->
+		<Formula ID="265" Data="%d+1" /> <!-- SkillPoint -->
+		<Formula ID="266" Data="((((((5+%d)^1.6)/4)*4)/5)*4.5)" /> <!-- SkillPoint -->
+		<Formula ID="267" Data="((((((5+%d)^1.6)/4)*4)/5)*5)" /> <!-- SkillPoint -->
+		<Formula ID="268" Data="((((((5+%d)^1.6)/5)*4)/5)*3.5)" /> <!-- SkillPoint -->
+		<Formula ID="269" Data="(((((%d^1.3)*4.1)/3.35)+3.1)*0.8)" /> <!-- SkillPoint -->
+		<Formula ID="270" Data="(((((%d^1.45)*4)/3)+3.5)*0.85)" /> <!-- SkillPoint -->
+		<Formula ID="271" Data="(0.9+(((((((%d-35)^3)+40440)/600)/7.5))))*4" /> <!-- SkillPoint -->
+		<Formula ID="272" Data="(0.85+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*6" /> <!-- SkillPoint -->
+		<Formula ID="273" Data="((((((2+%d)^2)/10)*6)/7)*7.5)" /> <!-- SkillPoint -->
+		<Formula ID="274" Data="((((((8+%d)^2)/10)*4)/7)*9.5)" /> <!-- SkillPoint -->
+		<Formula ID="275" Data="(((((%d^1.3)*6.1)/3)+1.1)*2)" /> <!-- SkillPoint -->
+		<Formula ID="276" Data="(((((%d^1.3)*4.1)/3.35)+3.1)*1.5)" /> <!-- SkillPoint -->
+		<Formula ID="277" Data="(((((%d^1.3)*4.1)/3.35)+3.1)*2.5)" /> <!-- SkillPoint -->
+		<Formula ID="278" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="279" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="280" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="281" Data="(((((%d^1.3)*3.5)/3.35)+3.1)*4.5)" /> <!-- SkillPoint -->
+		<Formula ID="282" Data="(((((%d^1.3)*3.5)/3.35)+3.1)*2.8)" /> <!-- SkillPoint -->
+		<Formula ID="283" Data="(1+((((((%d)-30)^3)+25000)/499)/8))-0.07475" /> <!-- SkillPoint -->
+		<Formula ID="284" Data="(1+((((((%d)-30)^3)+25000)/499)/8))-0.07475" /> <!-- SkillPoint -->
+		<Formula ID="285" Data="((5+(((%d-47)^3)+102000)/860)/2)" /> <!-- SkillPoint -->
+		<Formula ID="286" Data="%d*1" /> <!-- SkillPoint -->
+		<Formula ID="287" Data="(1+(((((((%d-30)^3)+25000)/499)/6))))*33.3" /> <!-- SkillPoint -->
+		<Formula ID="288" Data="((((((8+%d)^2)/10)*7)/6)*4)" /> <!-- SkillPoint -->
+		<Formula ID="289" Data="((((((25+%d)^1.7)/10)*9)/7)*4)" /> <!-- SkillPoint -->
+		<Formula ID="290" Data="((((((23+%d)^2)/10)*5)/7)*2)" /> <!-- SkillPoint -->
+		<Formula ID="291" Data="(0.8+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*8" /> <!-- SkillPoint -->
+		<Formula ID="292" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*23" /> <!-- SkillPoint -->
+		<Formula ID="293" Data="(1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*23" /> <!-- SkillPoint -->
+		<Formula ID="294" Data="(((((%d^1.3)*4.1)/3.35)+3.1)*0.8)" /> <!-- SkillPoint -->
+		<Formula ID="295" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="296" Data="(((((%d^1.3)*4.1)/3.35)+3.1)*0.8)" /> <!-- SkillPoint -->
+		<Formula ID="297" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="298" Data="(((((%d^1.3)*4.1)/3.35)+3.1)*0.8)" /> <!-- SkillPoint -->
+		<Formula ID="299" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="300" Data="%d/10" /> <!-- SkillPoint -->
+		<Formula ID="301" Data="(((((%d^1.3)*4.1)/3.35)+3.1)*0.8)" /> <!-- SkillPoint -->
+		<Formula ID="302" Data="%d*5" /> <!-- SkillPoint -->
+		<Formula ID="303" Data="%d*1.0" /> <!-- SkillPoint -->
+		<Formula ID="304" Data="%d*0.5" /> <!-- SkillPoint -->
+		<Formula ID="305" Data="(((((%d^1.3)*3.5)/3.35)+3.1)*4.5)" /> <!-- SkillPoint -->
+		<Formula ID="306" Data="(1+((((((%d)-30)^3)+25000)/499)/8))-0.07475" /> <!-- SkillPoint -->
+		<Formula ID="307" Data="((((((2+%d)^2)/10)*6)/7)*7.5)" /> <!-- SkillPoint -->
+		<Formula ID="308" Data="((((((5+%d)^1.6)/4)*4)/5)*4.5)" /> <!-- SkillPoint -->
+		<Formula ID="309" Data="((((((5+%d)^1.6)/4)*4)/5)*5)" /> <!-- SkillPoint -->
+		<Formula ID="310" Data="((((((5+%d)^1.6)/5)*4)/5)*3.5)" /> <!-- SkillPoint -->
+		<Formula ID="311" Data="((1+(((((((%d-30)^3)+25000)/499)/50)*100)/12))*85*2)*2" /> <!-- SkillPoint -->
+		<Formula ID="312" Data="%d*1.5" /> <!-- SkillPoint -->
+		<Formula ID="313" Data="(0.9+(((((((%d-35)^3)+40440)/450)/3))))*3.3+7" /> <!-- SkillPoint -->
+		<Formula ID="314" Data="((((((5+%d)^1.74)/4)*4)/5)*7.5)-20" /> <!-- SkillPoint -->
+		<Formula ID="315" Data="(0.9+(((((((%d-35)^3)+40440)/450)/3))))*3.3+7" /> <!-- SkillPoint -->
+		<Formula ID="316" Data="((((((5+%d)^1.85)/4)*4)/5)*7.6)+10" /> <!-- SkillPoint -->
+		<Formula ID="317" Data="((((((2+%d)^2)/10)*6)/7)*7.5)" /> <!-- SkillPoint -->
+		<Formula ID="318" Data="((0.85+(((%d-30)^3)+25000)/499/50*100/12)*6)" /> <!-- SkillPoint -->
+		<Formula ID="319" Data="%d*50" /> <!-- SkillPoint -->
+		<Formula ID="320" Data="%d*75" /> <!-- SkillPoint -->
+		<Formula ID="321" Data="(((%d+9)^1.2/4.4-1.92))" /> <!-- SkillPoint -->
+		<Formula ID="322" Data="((((((5+%d)^1.85)/4)*4)/5)*7.6)+20" /> <!-- SkillPoint -->
+		<Formula ID="323" Data="%d*1.5" /> <!-- SkillPoint -->
+	</SkillTree>
+	<SetOption>
+		<Formula ID="0" Data="((((%d*1.25)^1.48)+5)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="1" Data="((((%d*1.25)^1.48)+5)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="2" Data="(((%d*1.3)^1.4)+7)" /> <!-- ItemLevel -->
+		<Formula ID="3" Data="(((%d*4.5)+20)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="4" Data="(((%d*3.5)+20)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="5" Data="((((%d*1.22)^1.5)+5)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="6" Data="((((%d*1.25)^1.48)+5)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="7" Data="(((%d*1.3)^1.4)+7)" /> <!-- ItemLevel -->
+		<Formula ID="8" Data="(((%d*4.5)+20)/1.6)" /> <!-- ItemLevel -->
+		<Formula ID="9" Data="(((%d*3.5)+20)/1.72)" /> <!-- ItemLevel -->
+		<Formula ID="10" Data="((((%d*1.1)^1.48)+7)/1.6)" /> <!-- ItemLevel -->
+		<Formula ID="11" Data="((((%d*1.2)^1.6)+5)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="12" Data="(((%d*1.3)^1.4)+7)" /> <!-- ItemLevel -->
+		<Formula ID="13" Data="(((%d*4)+20)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="14" Data="(((%d*3)+20)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="15" Data="(((%d*3.5)+25)/2)" /> <!-- ItemLevel -->
+		<Formula ID="16" Data="(((%d*1)^1)+1)" /> <!-- ItemLevel -->
+		<Formula ID="17" Data="((((%d*1.25)^1.56)+70)/1)" /> <!-- ItemLevel -->
+		<Formula ID="18" Data="(((%d*1.2)^1.4)+21)" /> <!-- ItemLevel -->
+		<Formula ID="19" Data="((((%d*1.25)^1.48)+24)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="20" Data="((((%d*1.25)^1.48)+24)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="21" Data="(((%d*1.1)^1)+4)" /> <!-- ItemLevel -->
+		<Formula ID="22" Data="(((%d*4.5)+47)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="23" Data="(((%d*3.5)+43)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="24" Data="((((%d*1.22)^1.5)+25)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="25" Data="(((%d*1)^1)+8)" /> <!-- ItemLevel -->
+		<Formula ID="26" Data="(((%d*4.5)+46)/1.6)" /> <!-- ItemLevel -->
+		<Formula ID="27" Data="(((%d*3.5)+43)/1.72)" /> <!-- ItemLevel -->
+		<Formula ID="28" Data="(((%d*1.1)^1)+5)" /> <!-- ItemLevel -->
+		<Formula ID="29" Data="(((%d*3.5)+37)/2)" /> <!-- ItemLevel -->
+		<Formula ID="30" Data="(((%d*4)+30)/2)" /> <!-- ItemLevel -->
+		<Formula ID="31" Data="(((%d*1.4)^1)+1)" /> <!-- ItemLevel -->
+		<Formula ID="32" Data="((((%d*1.8)^1.56)+90)/1)" /> <!-- ItemLevel -->
+		<Formula ID="33" Data="(((%d*1.6)^1.4)+21)" /> <!-- ItemLevel -->
+		<Formula ID="34" Data="((((%d*1.3)^1.48)+34)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="35" Data="((((%d*1.3)^1.48)+34)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="36" Data="(((%d*1.3)^1)+8)" /> <!-- ItemLevel -->
+		<Formula ID="37" Data="(((%d*7.5)+64)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="38" Data="(((%d*6.5)+61)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="39" Data="((((%d*1.3)^1.5)+35)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="40" Data="(((%d*1.3)^1)+12)" /> <!-- ItemLevel -->
+		<Formula ID="41" Data="(((%d*7)+64)/1.6)" /> <!-- ItemLevel -->
+		<Formula ID="42" Data="(((%d*6.5)+60)/1.72)" /> <!-- ItemLevel -->
+		<Formula ID="43" Data="(((%d*1.3)^1)+9)" /> <!-- ItemLevel -->
+		<Formula ID="44" Data="(((%d*4)+60)/2)" /> <!-- ItemLevel -->
+		<Formula ID="45" Data="(((%d*1.1)^1.4)+1)" /> <!-- ItemLevel -->
+		<Formula ID="46" Data="(((%d*4.5)+40)/2)" /> <!-- ItemLevel -->
+		<Formula ID="47" Data="(((%d*1.6)^1)+2)" /> <!-- ItemLevel -->
+		<Formula ID="48" Data="((((%d*2.2)^1.56)+110)/1)" /> <!-- ItemLevel -->
+		<Formula ID="49" Data="(((%d*2)^1.4)+23)" /> <!-- ItemLevel -->
+		<Formula ID="50" Data="((((%d*1.4)^1.48)+44)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="51" Data="((((%d*1.4)^1.48)+44)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="52" Data="(((%d*1.55)^1)+12)" /> <!-- ItemLevel -->
+		<Formula ID="53" Data="(((%d*11)+80)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="54" Data="(((%d*9.5)+80)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="55" Data="((((%d*1.4)^1.5)+45)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="56" Data="(((%d*1.6)^1)+16)" /> <!-- ItemLevel -->
+		<Formula ID="57" Data="(((%d*9.5)+84)/1.6)" /> <!-- ItemLevel -->
+		<Formula ID="58" Data="(((%d*9.5)+70)/1.63)" /> <!-- ItemLevel -->
+		<Formula ID="59" Data="(((%d*1.5)^1)+13)" /> <!-- ItemLevel -->
+		<Formula ID="60" Data="(((%d*5)+80)/2)" /> <!-- ItemLevel -->
+		<Formula ID="61" Data="(((%d*1.3)^1.4)+3)" /> <!-- ItemLevel -->
+		<Formula ID="62" Data="(((%d*5)+50)/2)" /> <!-- ItemLevel -->
+		<Formula ID="63" Data="(((%d*1.8)^1)+3)" /> <!-- ItemLevel -->
+		<Formula ID="64" Data="((((%d*2.6)^1.56)+130)/1)" /> <!-- ItemLevel -->
+		<Formula ID="65" Data="(((%d*2.4)^1.4)+25)" /> <!-- ItemLevel -->
+		<Formula ID="66" Data="((((%d*1.5)^1.48)+54)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="67" Data="((((%d*1.5)^1.48)+54)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="68" Data="(((%d*1.8)^1)+16)" /> <!-- ItemLevel -->
+		<Formula ID="69" Data="(((%d*14.5)+96)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="70" Data="(((%d*12.5)+99)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="71" Data="((((%d*1.5)^1.5)+55)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="72" Data="(((%d*1.9)^1)+20)" /> <!-- ItemLevel -->
+		<Formula ID="73" Data="(((%d*12)+104)/1.6)" /> <!-- ItemLevel -->
+		<Formula ID="74" Data="(((%d*13)+82)/1.63)" /> <!-- ItemLevel -->
+		<Formula ID="75" Data="(((%d*1.7)^1)+17)" /> <!-- ItemLevel -->
+		<Formula ID="76" Data="(((%d*6)+100)/2)" /> <!-- ItemLevel -->
+		<Formula ID="77" Data="(((%d*1.5)^1.4)+5)" /> <!-- ItemLevel -->
+		<Formula ID="78" Data="(((%d*1.8)^1)+18)" /> <!-- ItemLevel -->
+		<Formula ID="79" Data="((((%d*1.4)^1.48)+52)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="80" Data="(((%d*5.5)+60)/2)" /> <!-- ItemLevel -->
+		<Formula ID="81" Data="(((%d*2.0)^1)+4)" /> <!-- ItemLevel -->
+		<Formula ID="82" Data="((((%d*3.0)^1.56)+150)/1)" /> <!-- ItemLevel -->
+		<Formula ID="83" Data="(((%d*2.8)^1.4)+27)" /> <!-- ItemLevel -->
+		<Formula ID="84" Data="((((%d*1.6)^1.48)+64)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="85" Data="((((%d*1.6)^1.48)+64)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="86" Data="(((%d*2.05)^1)+20)" /> <!-- ItemLevel -->
+		<Formula ID="87" Data="(((%d*18)+112)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="88" Data="(((%d*15.5)+118)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="89" Data="((((%d*1.6)^1.5)+65)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="90" Data="(((%d*2.2)^1)+24)" /> <!-- ItemLevel -->
+		<Formula ID="91" Data="(((%d*14.5)+124)/1.6)" /> <!-- ItemLevel -->
+		<Formula ID="92" Data="(((%d*16)+94)/1.63)" /> <!-- ItemLevel -->
+		<Formula ID="93" Data="(((%d*1.9)^1)+21)" /> <!-- ItemLevel -->
+		<Formula ID="94" Data="(((%d*7)+120)/2)" /> <!-- ItemLevel -->
+		<Formula ID="95" Data="(((%d*1.7)^1.4)+7)" /> <!-- ItemLevel -->
+		<Formula ID="96" Data="(((%d*2.0)^1)+20)" /> <!-- ItemLevel -->
+		<Formula ID="97" Data="((((%d*1.6)^1.48)+54)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="98" Data="(((%d*1.8)^1)+19)" /> <!-- ItemLevel -->
+		<Formula ID="99" Data="(((%d*6)+70)/2)" /> <!-- ItemLevel -->
+		<Formula ID="100" Data="(((%d*2.2)^1)+5)" /> <!-- ItemLevel -->
+		<Formula ID="101" Data="((((%d*3.4)^1.56)+170)/1)" /> <!-- ItemLevel -->
+		<Formula ID="102" Data="(((%d*3.19)^1.4)+29)" /> <!-- ItemLevel -->
+		<Formula ID="103" Data="((((%d*1.7)^1.48)+74)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="104" Data="((((%d*1.7)^1.48)+74)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="105" Data="(((%d*2.25)^1)+24)" /> <!-- ItemLevel -->
+		<Formula ID="106" Data="(((%d*21.5)+128)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="107" Data="(((%d*18.5)+137)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="108" Data="((((%d*1.7)^1.5)+75)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="109" Data="(((%d*2.5)^1)+28)" /> <!-- ItemLevel -->
+		<Formula ID="110" Data="(((%d*17)+144)/1.6)" /> <!-- ItemLevel -->
+		<Formula ID="111" Data="(((%d*19)+106)/1.63)" /> <!-- ItemLevel -->
+		<Formula ID="112" Data="(((%d*2.1)^1)+25)" /> <!-- ItemLevel -->
+		<Formula ID="113" Data="(((%d*8)+140)/2)" /> <!-- ItemLevel -->
+		<Formula ID="114" Data="(((%d*1.9)^1.4)+9)" /> <!-- ItemLevel -->
+		<Formula ID="115" Data="(((%d*2.2)^1)+22)" /> <!-- ItemLevel -->
+		<Formula ID="116" Data="((((%d*1.8)^1.48)+56)/1.1)" /> <!-- ItemLevel -->
+		<Formula ID="117" Data="(((%d*2)^1)+21)" /> <!-- ItemLevel -->
+	</SetOption>
+	<Wing4thDamage>
+		<Formula ID="0" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="1" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="2" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="3" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="4" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="5" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="6" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="7" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="8" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="9" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="10" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="11" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="12" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+		<Formula ID="13" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
+	</Wing4thDamage>
+	<Wing4th5thDefense>
+		<Formula ID="0" Data="(140+(%d^1.5*15))" /> <!-- WingsLevel -->
+		<Formula ID="1" Data="((((%d-10)^1.3)*5)^1.6)" /> <!-- WingsLevel -->
+		<Formula ID="2" Data="(900+(%d^1.5*18))" /> <!-- WingsLevel -->
+		<Formula ID="3" Data="((((%d-10)^1.3)*8)^1.6)" /> <!-- WingsLevel -->
+	</Wing4th5thDefense>
+	<Character>
+		<Formula ID="0" Data="(%d/3.5)+(%d-(%d*0.86))*(%d*0.002)" /> <!-- Energy, CurseAddDamage, CurseAddDamage, CurseAddDamage -->
+		<Formula ID="1" Data="%d/500" /> <!-- Energy -->
+		<Formula ID="2" Data="(%d/300)*0.01" /> <!-- Energy -->
+		<Formula ID="3" Data="(%d/200)*0.01" /> <!-- Energy -->
+		<Formula ID="4" Data="(%d/3.5)+(%d-(%d*0.91))*(%d*0.002)" /> <!-- Energy, WizadryAddDamage, WizadryAddDamage, WizadryAddDamage -->
+		<Formula ID="5" Data="%d/5" /> <!-- Energy -->
+		<Formula ID="6" Data="(%d/300)*0.01" /> <!-- Energy -->
+		<Formula ID="7" Data="((%d/3)*0.15)" /> <!-- Energy -->
+		<Formula ID="8" Data="((%d/3)*0.15)" /> <!-- Energy -->
+		<Formula ID="9" Data="((((((%d*%d)*0.6/24)+(((%d-800)*(%d-500))/200))/24)+2000))" /> <!--  -->
+		<Formula ID="10" Data="%d*0+%d*0" /> <!--  -->
+		<Formula ID="11" Data="5+(%d/100)+(%d/100)" /> <!--  -->
+		<Formula ID="12" Data="5" /> <!--  -->
+		<Formula ID="13" Data="((0.2+(%d/1500))*((1+(%d/500))^0.1))*100" /> <!--  -->
+		<Formula ID="14" Data="3+(%d*0)+(((%d-1052)/100))+(%d*0)" /> <!--  -->
+		<Formula ID="15" Data="(((%d/5)+(%d/2))/(1+(%d^0.3)))" /> <!--  -->
+		<Formula ID="16" Data="((((%d/5)+(%d/2))/(1+(%d^0.3)))*(%d/%d))" /> <!--  -->
+		<Formula ID="17" Data="0.1+(%d*0.15)+(%d*0)" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="18" Data="(((%d/5)+(%d/2))/(1+(%d^0.3)))/3" /> <!--  -->
+		<Formula ID="19" Data="(((((%d/5)+(%d/2))/(1+(%d^0.3)))*(%d/%d)))/3" /> <!--  -->
+		<Formula ID="20" Data="400" /> <!--  -->
+		<Formula ID="21" Data="300" /> <!--  -->
+		<Formula ID="22" Data="250" /> <!--  -->
+		<Formula ID="23" Data="150" /> <!--  -->
+		<Formula ID="24" Data="30" /> <!--  -->
+		<Formula ID="25" Data="(%d*1.5)+(%d/2.5)" /> <!--  -->
+		<Formula ID="26" Data="((%d*1.5)+(%d/2.5))/8*(%d/2)" /> <!--  -->
+		<Formula ID="27" Data="(%d*1.9)+900" /> <!--  -->
+		<Formula ID="28" Data="(%d/2)" /> <!--  -->
+		<Formula ID="29" Data="(10+((%d/2)*3))" /> <!--  -->
+		<Formula ID="30" Data="((%d/4)+(%d*0.2))*2.4" /> <!-- TotalLevel, Strength -->
+		<Formula ID="31" Data="((%d/10)+(%d/30))*2" /> <!-- TotalLevel, Agility -->
+		<Formula ID="32" Data="((%d/100)+(%d/50))*0.4" /> <!-- TotalLevel, Agility -->
+		<Formula ID="33" Data="((%d/10)+(%d/30))*2" /> <!-- TotalLevel, Agility -->
+		<Formula ID="34" Data="((%d/15)+(%d*0.1))*1.5" /> <!-- TotalLevel, Energy -->
+		<Formula ID="35" Data="((%d/10)+(%d/30))*2" /> <!-- TotalLevel, Agility -->
+		<Formula ID="36" Data="((%d/10)+5)" /> <!-- Energy -->
+		<Formula ID="37" Data="(%d/10)+10" /> <!-- Energy -->
+		<Formula ID="38" Data="(%d/30)+5" /> <!-- Energy -->
+		<Formula ID="39" Data="5" /> <!-- None -->
+		<Formula ID="40" Data="30" /> <!-- None -->
+		<Formula ID="41" Data="2000" /> <!-- None -->
+		<Formula ID="42" Data="((%d/4)+(%d/14))" /> <!-- Strength, Agility -->
+		<Formula ID="43" Data="(%d/50)+(40+((%d+10)^2/16))+(%d*0)+(%d/3.5)" /> <!--  -->
+		<Formula ID="44" Data="(%d+%d)*0+10" /> <!-- Strength, Agility -->
+		<Formula ID="45" Data="(%d+%d)*0+5" /> <!-- Strength, Agility -->
+		<Formula ID="46" Data="(%d+%d)/3" /> <!-- Strength, Agility -->
+		<Formula ID="47" Data="%d*(((%d+%d)*0+0.05)*-1)" /> <!-- Defense, Strength, Agility -->
+		<Formula ID="48" Data="%d/100+%d*0" /> <!-- Command, Energy -->
+		<Formula ID="49" Data="((%d+%d)*0)+5*100" /> <!-- Command, Energy -->
+		<Formula ID="50" Data="(%d/4)+(%d*%d*0)" /> <!-- Command, Energy, Command -->
+		<Formula ID="51" Data="(%d/4)+(%d/10)+(%d*0)" /> <!-- Command, Energy, Command -->
+		<Formula ID="52" Data="((%d*0)+(%d*0)+(%d/50))" /> <!-- ItemLevel, ItemLevel, ItemDropLevel -->
+		<Formula ID="53" Data="((%d*0)+(%d*0)+(%d/70))" /> <!-- ItemLevel, ItemLevel, ItemDropLevel -->
+		<Formula ID="54" Data="250+(%d/20)+(%d/20)" /> <!-- Energy, Command -->
+		<Formula ID="55" Data="(%d+%d)*0+10" /> <!-- Command, Agility -->
+		<Formula ID="56" Data="(%d+%d)/3" /> <!-- Command, Agility -->
+	</Character>
+	<GuardianItem>
+		<Formula ID="0" Data="20+((9+%d)/2)^2" /> <!-- ItemLevel -->
+		<Formula ID="1" Data="20+((9+%d)/2)^2" /> <!-- ItemLevel -->
+		<Formula ID="2" Data="(1+((%d/10)*1.9)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="3" Data="(1+((%d/10)*1.6)^1.49)" /> <!-- ItemLevel -->
+		<Formula ID="4" Data="(1+((3.9+%d)/2)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="5" Data="(4.36+(%d/10))^3.9" /> <!-- ItemLevel -->
+		<Formula ID="6" Data="(4.15+(%d/10))^4.2" /> <!-- ItemLevel -->
+		<Formula ID="7" Data="(3.3+(%d/10))^4.2" /> <!-- ItemLevel -->
+		<Formula ID="8" Data="(1+(0.5*%d))^1.72" /> <!-- ItemLevel -->
+		<Formula ID="9" Data="(3.4+(%d/10))^4.2" /> <!-- ItemLevel -->
+		<Formula ID="10" Data="(20+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="11" Data="(20+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="12" Data="(2+((%d/10)*1.9)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="13" Data="(2+((%d/10)*1.6)^1.49)" /> <!-- ItemLevel -->
+		<Formula ID="14" Data="(2+((3.9+%d)/2)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="15" Data="((4.96+(%d/10))^3.9)" /> <!-- ItemLevel -->
+		<Formula ID="16" Data="((4.75+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="17" Data="((3.9+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="18" Data="((1.6+(0.5*%d))^1.72)" /> <!-- ItemLevel -->
+		<Formula ID="19" Data="((4+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="20" Data="(56+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="21" Data="(56+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="22" Data="(3+((%d/10)*1.9)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="23" Data="(3+((%d/10)*1.6)^1.49)" /> <!-- ItemLevel -->
+		<Formula ID="24" Data="(2+((3.9+%d)/2)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="25" Data="((5.5+(%d/10))^3.9)" /> <!-- ItemLevel -->
+		<Formula ID="26" Data="((5.25+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="27" Data="((4.4+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="28" Data="((2.1+(0.5*%d))^1.72)" /> <!-- ItemLevel -->
+		<Formula ID="29" Data="((4.5+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="30" Data="(%d*3+(%d/5))" /> <!-- ItemLevel -->
+		<Formula ID="31" Data="(121+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="32" Data="(121+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="33" Data="(4+((%d/10)*1.9)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="34" Data="(4+((%d/10)*1.6)^1.49)" /> <!-- ItemLevel -->
+		<Formula ID="35" Data="(2+((3.9+%d)/2)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="36" Data="((6+(%d/10))^3.9)" /> <!-- ItemLevel -->
+		<Formula ID="37" Data="((5.7+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="38" Data="((5+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="39" Data="((3.5+(0.5*%d))^1.72)" /> <!-- ItemLevel -->
+		<Formula ID="40" Data="((5.6+(%d/10))^4)" /> <!-- ItemLevel -->
+		<Formula ID="41" Data="(185+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="42" Data="(185+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="43" Data="(5+((%d/10)*1.9)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="44" Data="(5+((%d/10)*1.6)^1.49)" /> <!-- ItemLevel -->
+		<Formula ID="45" Data="(2+((3.9+%d)/2)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="46" Data="((6.5+(%d/10))^3.9)" /> <!-- ItemLevel -->
+		<Formula ID="47" Data="((6.2+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="48" Data="((5.4+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="49" Data="((4.2+(0.5*%d))^1.72)" /> <!-- ItemLevel -->
+		<Formula ID="50" Data="((6+(%d/10))^4)" /> <!-- ItemLevel -->
+		<Formula ID="51" Data="(249+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="52" Data="(249+((15+%d)/2)^2)" /> <!-- ItemLevel -->
+		<Formula ID="53" Data="(6+((%d/10)*1.9)^1.5)" /> <!-- ItemLevel -->
+		<Formula ID="54" Data="(6+((%d/10)*1.6)^1.49)" /> <!-- ItemLevel -->
+		<Formula ID="55" Data="%d*0" /> <!-- ItemLevel -->
+		<Formula ID="56" Data="((7+(%d/10))^3.9)" /> <!-- ItemLevel -->
+		<Formula ID="57" Data="((6.7+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="58" Data="((5.8+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="59" Data="((4.9+(0.5*%d))^1.72)" /> <!-- ItemLevel -->
+		<Formula ID="60" Data="((6.4+(%d/10))^4)" /> <!-- ItemLevel -->
+	</GuardianItem>
+	<Earrings>
+		<Formula ID="0" Data="(((%d*5)+70)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="1" Data="(((%d*5)+65)/1)" /> <!-- ItemLevel -->
+		<Formula ID="2" Data="(((%d*5)+102)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="3" Data="(((%d*5)+95)/1)" /> <!-- ItemLevel -->
+		<Formula ID="4" Data="(((%d*5)+134)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="5" Data="(((%d*5)+125)/1)" /> <!-- ItemLevel -->
+		<Formula ID="6" Data="(((%d*6)+60)/1)" /> <!-- ItemLevel -->
+		<Formula ID="7" Data="(((%d*5)+166)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="8" Data="(((%d*5)+155)/1)" /> <!-- ItemLevel -->
+		<Formula ID="9" Data="(((%d*6)+70)/1)" /> <!-- ItemLevel -->
+		<Formula ID="10" Data="(((%d*5)+198)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="11" Data="(((%d*5)+185)/1)" /> <!-- ItemLevel -->
+		<Formula ID="12" Data="(((%d*6)+80)/1)" /> <!-- ItemLevel -->
+	</Earrings>
+	<Group11>
+		<Formula ID="0" Data="0" /> <!-- empty -->
+		<Formula ID="1" Data="%d-%d" /> <!--  -->
+		<Formula ID="2" Data="%d-%d" /> <!--  -->
+		<Formula ID="3" Data="%d-%d" /> <!--  -->
+		<Formula ID="4" Data="(%d*0)+100" /> <!--  -->
+	</Group11>
+	<ArtifactOption>
+		<Formula ID="0" Data="(%d^1.05+(%d*((%d/7)^2))+%d)" /> <!-- OptionValue, ArtifactLevel, OptionValue, ArtifactLevel -->
+		<Formula ID="1" Data="(%d^1.05+(%d*((%d/7)^4.7))+%d)" /> <!-- OptionValue, ArtifactLevel, OptionValue, ArtifactLevel -->
+		<Formula ID="2" Data="(%d^1.05+(%d*((%d/7)^6.1))+%d)" /> <!-- OptionValue, ArtifactLevel, OptionValue, ArtifactLevel -->
+		<Formula ID="3" Data="(%d^1.05+(%d*((%d/7)^3.5))+%d)" /> <!-- OptionValue, ArtifactLevel, OptionValue, ArtifactLevel -->
+		<Formula ID="4" Data="(%d+%d)+((%d*0)+(%d*0))" /> <!-- OptionValue, ArtifactLevel, OptionValue, ArtifactLevel -->
+		<Formula ID="5" Data="(%d^1.05+(%d*((%d/7)^2.5))+%d)" /> <!-- OptionValue, ArtifactLevel, OptionValue, ArtifactLevel -->
+	</ArtifactOption>
+	<CombatPower>
+		<Formula ID="0" Data="%d+(%d*0.5)+(%d*0.5)" /> <!-- CombatPower, ItemLevel, ItemLevel -->
+		<Formula ID="1" Data="(%d+(%d*1.5)+(%d*1.5))+((%d-9)*(%d-8)/2)" /> <!-- CombatPower, ItemLevel, ItemLevel, ItemLevel -->
+		<Formula ID="2" Data="((((%d/%d+5)+%d)/2)+(%d*2))+12.5" /> <!-- CombatPowerResult, ItemDropLevel, CombatPowerResult, ItemLevel -->
+		<Formula ID="3" Data="(((%d/%d+5)+%d)/2)+(%d*2)" /> <!-- CombatPowerResult, ItemDropLevel, CombatPowerResult, ItemLevel -->
+		<Formula ID="4" Data="((((%d*25/%d+5)+%d)/2)+(%d*2))+14.5" /> <!-- CombatPowerResult, ItemDropLevel, CombatPowerResult, ItemLevel -->
+		<Formula ID="5" Data="(((%d*25/%d+5)+%d)/2)+(%d*2)" /> <!-- CombatPowerResult, ItemDropLevel, CombatPowerResult, ItemLevel -->
+		<Formula ID="6" Data="((((%d*25/%d+5)+%d)+2+((%d+30)/60))/2)+(%d*2)" /> <!-- CombatPowerResult, ItemDropLevel, CombatPowerResult, ItemLevel -->
+		<Formula ID="7" Data="60" /> <!-- Constant -->
+		<Formula ID="8" Data="40" /> <!-- Constant -->
+		<Formula ID="9" Data="10+(%d/80)" /> <!-- Strength -->
+		<Formula ID="10" Data="15+(%d/110)+(%d/80)" /> <!-- Strength, Agility -->
+		<Formula ID="11" Data="12+(%d/100)+(%d/100)" /> <!-- Agility, Vitality -->
+		<Formula ID="12" Data="10+(%d/100)" /> <!-- Agility -->
+		<Formula ID="13" Data="10+(%d/120)+(%d/130)" /> <!-- Strength, Agility -->
+		<Formula ID="14" Data="15+(%d/100)+(%d/90)" /> <!-- Command, Agility -->
+	</CombatPower>
+	<Wing5thDamage>
+		<Formula ID="0" Data="300+(%d^1.6*23)" /> <!-- WingsLevel -->
+		<Formula ID="1" Data="300+(%d^1.6*23)" /> <!-- WingsLevel -->
+	</Wing5thDamage>
+	<WingCore>
+		<Formula ID="0" Data="0*%d" /> <!--  -->
+		<Formula ID="1" Data="1+%d" /> <!--  -->
+		<Formula ID="2" Data="50+((%d^1.9)*1.3)" /> <!-- WingCoreLevel -->
+		<Formula ID="3" Data="100+((%d^1.5)*1.8)" /> <!--  -->
+	</WingCore>
+	<AbilityTree>
+		<Formula ID="0" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="1" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="2" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="3" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.59+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="4" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="5" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="6" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.16+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="7" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="8" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="9" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.71+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="10" Data="(((15+(%d*15))+((%d+1)*%d*2))*3.04+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="11" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="12" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="13" Data="(((15+(%d*15))+((%d+1)*%d*2))*2.57+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="14" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="15" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.83+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="16" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="17" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.13+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="18" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="19" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="20" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.44+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="21" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="22" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="23" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="24" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.41+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="25" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="26" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.34+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="27" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.88+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="28" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="29" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.4+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="30" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="31" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.03+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="32" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="33" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.59+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="34" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="35" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.36+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="36" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="37" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="38" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.33+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="39" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="40" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.25+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="41" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="42" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="43" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.33+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="44" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="45" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="46" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="47" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.41+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="48" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="49" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.83+30)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="50" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="51" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="52" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="53" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="54" Data="(((85+(%d*92))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="55" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="56" Data="(((180+(%d*199))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="57" Data="(((190+(%d*197))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="58" Data="(((60+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="59" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="60" Data="(((40+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="61" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="62" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="63" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="64" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="65" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="66" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="67" Data="(((170+(%d*201))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="68" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="69" Data="(((300+(%d*435))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="70" Data="(((70+(%d*101))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="71" Data="(((60+(%d*99))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="72" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="73" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="74" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="75" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="76" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="77" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="78" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="79" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="80" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="81" Data="(((70+(%d*89))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="82" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="83" Data="(((180+(%d*199))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="84" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="85" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="86" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="87" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="88" Data="(((40+(%d*57))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="89" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="90" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="91" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="92" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="93" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="94" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="95" Data="(((35+(%d*68))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="96" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="97" Data="(((90+(%d*117))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="98" Data="(((25+(%d*32))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="99" Data="(((35+(%d*52))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="100" Data="(((60+(%d*67))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="101" Data="(((100+(%d*137))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="102" Data="" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="103" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="104" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="105" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="106" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="107" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="108" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="109" Data="(((475+(%d*500))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="110" Data="(((375+(%d*420))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="111" Data="(((80+(%d*91))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="112" Data="(((70+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="113" Data="(((60+(%d*83))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="114" Data="(((225+(%d*350))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="115" Data="(((150+(%d*265))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="116" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="117" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="118" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="119" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="120" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="121" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="122" Data="(((85+(%d*92))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="123" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="124" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="125" Data="(((190+(%d*197))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="126" Data="(((60+(%d*91))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="127" Data="(((50+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="128" Data="(((40+(%d*83))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="129" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="130" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="131" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="132" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="133" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="134" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="135" Data="(((170+(%d*201))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="136" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="137" Data="(((300+(%d*435))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="138" Data="(((70+(%d*101))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="139" Data="(((60+(%d*99))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="140" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="141" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="142" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="143" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="144" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="145" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="146" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="147" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="148" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="149" Data="(((70+(%d*89))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="150" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="151" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="152" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="153" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="154" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="155" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="156" Data="(((40+(%d*57))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="157" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="158" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="159" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="160" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="161" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="162" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="163" Data="(((35+(%d*68))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="164" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="165" Data="(((90+(%d*117))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="166" Data="(((25+(%d*32))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="167" Data="(((35+(%d*52))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="168" Data="(((60+(%d*67))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="169" Data="(((100+(%d*137))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="170" Data="" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="171" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="172" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="173" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="174" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="175" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="176" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="177" Data="(((475+(%d*500))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="178" Data="(((375+(%d*420))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="179" Data="(((80+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="180" Data="(((70+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="181" Data="(((60+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="182" Data="(((225+(%d*350))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="183" Data="(((150+(%d*265))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="184" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="185" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="186" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="187" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="188" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="189" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="190" Data="(((85+(%d*92))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="191" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="192" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="193" Data="(((190+(%d*197))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="194" Data="(((60+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="195" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="196" Data="(((40+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="197" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="198" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="199" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="200" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="201" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="202" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="203" Data="(((170+(%d*201))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="204" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="205" Data="(((300+(%d*435))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="206" Data="(((70+(%d*101))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="207" Data="(((60+(%d*99))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="208" Data="(((50+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="209" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="210" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="211" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="212" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="213" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="214" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="215" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="216" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="217" Data="(((70+(%d*89))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="218" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="219" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="220" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="221" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="222" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="223" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="224" Data="(((40+(%d*57))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="225" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="226" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="227" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="228" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="229" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="230" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="231" Data="(((35+(%d*68))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="232" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="233" Data="(((90+(%d*117))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="234" Data="(((25+(%d*32))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="235" Data="(((35+(%d*52))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="236" Data="(((60+(%d*67))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="237" Data="(((100+(%d*137))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="238" Data="" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="239" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="240" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="241" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="242" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="243" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="244" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="245" Data="(((475+(%d*500))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="246" Data="(((375+(%d*420))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="247" Data="(((80+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="248" Data="(((70+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="249" Data="(((60+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="250" Data="(((225+(%d*350))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="251" Data="(((150+(%d*265))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="252" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="253" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="254" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="255" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="256" Data="(0.1+%d*0.6)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="257" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="258" Data="(0.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="259" Data="(0.3+(((%d+1)*0.1)*7))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="260" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="261" Data="(1.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="262" Data="(0.5+(((%d+1)*0.1)*15))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="263" Data="(0.8+(((%d+1)*0.1)*12))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="264" Data="(3+(%d*3))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="265" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="266" Data="(0.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="267" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="268" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="269" Data="(1+(((%d+1)*0.1)*10))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="270" Data="(0.2+(((%d+1)*0.1)*8))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="271" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="272" Data="(0.1+%d*0.6)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="273" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="274" Data="(0.1+(((%d+1)*0.1)*9))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="275" Data="(0.6+(((%d+1)*0.1)*4))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="276" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="277" Data="(0.2+(((%d+1)*0.1)*8))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="278" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="279" Data="(0.6+(((%d+1)*0.1)*4))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="280" Data="(25+%d*25)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="281" Data="(25+%d*25)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="282" Data="(15+%d*15)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="283" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.59+100)" /> <!-- CardLevel, CardLevel -->
+	</AbilityTree>
+	<PetItem>
+		<Formula ID="0" Data="50" /> <!-- None -->
+		<Formula ID="1" Data="(((%d*750000)*((%d-1))/10)+(%d-1)*1000000)+(%d*0)" /> <!-- PetLevel, PetLevel, PetLevel, PetLevel -->
+		<Formula ID="2" Data="4800" /> <!--  -->
+		<Formula ID="3" Data="1" /> <!--  -->
+		<Formula ID="4" Data="(10000+(((%d^1.1)*(%d^1.3))+(%d*21)))" /> <!-- PetLevel, PetLevel, PetLevel -->
+		<Formula ID="5" Data="2.75+(%d*0.25)+(%d*0)" /> <!-- PetLevel, PetLevel -->
+		<Formula ID="6" Data="1.75+(%d*0.25)+(%d*0)" /> <!-- PetLevel, PetLevel -->
+		<Formula ID="7" Data="50" /> <!-- None -->
+		<Formula ID="8" Data="(((%d*750000)*((%d-1))/10)+(%d-1)*1000000)+(%d*0)" /> <!-- PetLevel, PetLevel, PetLevel, PetLevel -->
+		<Formula ID="9" Data="4800" /> <!--  -->
+		<Formula ID="10" Data="1" /> <!--  -->
+		<Formula ID="11" Data="(10000+(((%d^1.1)*(%d^1.3))+(%d*21)))" /> <!-- PetLevel, PetLevel, PetLevel -->
+		<Formula ID="12" Data="2.65+(%d*0.35)+(%d*0)" /> <!--  -->
+		<Formula ID="13" Data="(%d+%f+%f)*(((%d+%d)*0)+1)*(1+(%f/100))" /> <!--  -->
+		<Formula ID="14" Data="(%d+%f+%f)*(((%d+%d)*0)+1)*(1+(%f/100))" /> <!--  -->
+		<Formula ID="15" Data="1+((%d+%d)*0)" /> <!--  -->
+		<Formula ID="16" Data="%d*0+10" /> <!--  -->
+		<Formula ID="17" Data="0.5" /> <!--  -->
+		<Formula ID="18" Data="0.5" /> <!--  -->
+		<Formula ID="19" Data="(250+(%d/20)+(%d/20))/100" /> <!--  -->
+		<Formula ID="20" Data="80+%d*3/5+%d/60" /> <!-- PetLevel, Command -->
+		<Formula ID="21" Data="(3000+((%d-399)/2)*14)+(%d*50)" /> <!-- CharacterTotalLevel, PetLevel -->
+		<Formula ID="22" Data="100000" /> <!-- None -->
+		<Formula ID="23" Data="200" /> <!-- None -->
+		<Formula ID="24" Data="1500" /> <!-- None -->
+		<Formula ID="25" Data="500" /> <!-- None -->
+		<Formula ID="26" Data="(((%d*4)+(%d*2.5))*(1+((%d/100)+(%d/5))/100))-100" /> <!-- PetLevel, CharacterTotalLevel, Energy, Command) -->
+		<Formula ID="27" Data="((%d*4)+(%d*2.5))*(1+((%d/100)+(%d/5))/100)" /> <!-- PetLevel, CharacterTotalLevel, Energy, Command) -->
+	</PetItem>
+	<LevelExp>
+		<Formula ID="0" Data="(9+%d)*%d*%d*10" /> <!-- RegularLevel, RegularLevel, RegularLevel -->
+		<Formula ID="1" Data="((9+%d)*%d*%d*10)+((9+(%d-255))*(%d-255)*(%d-255)*1000)" /> <!-- RegularLevel, RegularLevel, RegularLevel, RegularLevel, RegularLevel -->
+		<Formula ID="2" Data="((((9+%d)*%d*%d*10)+((9+(%d-255))*(%d-255)*(%d-255)*1000)-3892250000)/2)" /> <!-- MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel -->
+		<Formula ID="3" Data="(((((9+%d)*%d*%d*10)+((9+(%d-255))*(%d-255)*(%d-255)*1000)-3892250000)/2)*(1+(1.2*((%d-600)^2))/100000))" /> <!-- MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel -->
+		<Formula ID="4" Data="(((((9+%d)*%d*%d*10)+((9+(%d-255))*(%d-255)*(%d-255)*1000)-3892250000)/2)*(1+(1.2*((%d-(600-(0.3*((%d-770)*(%d-770)))))^2))/100000))" /> <!-- MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel -->
+		<Formula ID="5" Data="((%d-800)*19024359459)+(300000000*(%d-801)*((%d-800)/2))" /> <!-- MasterLevel, MasterLevel, MasterLevel -->
+		<Formula ID="6" Data="(((%d-800)*19024359459)+(300000000*(%d-801)*((%d-800)/2))+(1200000000*(%d-999)*((%d-1000)/2)))" /> <!-- MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel -->
+		<Formula ID="7" Data="(197413333648350+(((%d-1450)*753724359459)+(1500000000*(%d-1450)*(%d-1449)/2)+(150001*(%d-1450)*(%d-1449)/2)*(((%d-1450)*(%d-1449)/2)^1.4)))" /> <!-- MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel, MasterLevel -->
+	</LevelExp>
+</FormulaData>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### GodOfDarkness ###
+//	Enable: Enables or disables the event, 0/1
+//
+// ### GodOfDarkness::Time ###
+//	WaterMonsterTime: Time to kill 'Monster of the Water' (793) once it appears, seconds
+//	MainBossTime: Time to kill 'God of Darkness' (794) once it appears, seconds
+//	MoveTown: Time to move to town from event zone after event end, seconds
+//	RegenMinTime: Minimum time to re-spawn 'God of Darkness', seconds
+//	RegenMaxTime: Maximum time to re-spawn 'God of Darkness', seconds
+//	NoticeBeforeBoss: Notice time to be sent before appearance of the 'God of Darkness', seconds
+//
+// ### GodOfDarkness::AISettings::WaterMonster ###
+//	AIGroup: AI group to control 'Monster of the Water', see Monster_AI_Group.xml
+//
+// ### GodOfDarkness::AISettings::SwampMonster ###
+//	AIGroup: AI group to control 'Swamp Monster', see Monster_AI_Group.xml
+//
+// ### GodOfDarkness::AISettings::GodOfDarkness ###
+//	AIGroup: AI group to control 'God of Darkness', see Monster_AI_Group.xml
+//
+// ### GodOfDarkness::Spawn::Monster ###
+//	Index: Index of a monster, see MonsterList.xml
+//	MapNumber: Map number to spawn the monster on, see MapList.xml
+//	StartX: The X axis coordinate to spawn the monster on, 1-255
+//	StartY: The Y axis coordinate to spawn the monster on, 1-255
+//	Dir:
+//		~ 0: Central
+//		~ 1: South-West
+//		~ 2: South
+//		~ 3: South-East
+//		~ 4: East
+//		~ 5: North-East
+//		~ 6: North
+//		~ 7: North-West
+//		~ 8: West
+//		~ -1: Random
+//	Name: Name of the monster, used for logging purpose only
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Count of monster definition entries must be equal to value of SpawnSummonMonster
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<GodOfDarkness Enable="1">
+	<Time WaterMonsterTime="600" MainBossTime="600" MoveTown="300" RegenMinTime="64800" RegenMaxTime="86400" NoticeBeforeBoss="300" /> <!-- seconds -->
+	
+	<AISettings> <!-- Monster Info controlled by AI -->
+		<WaterMonster AIGroup="30" />
+		<SwampMonster AIGroup="31" />
+		<GodOfDarkness AIGroup="32" />
+	</AISettings>
+
+	<Spawn> <!-- Max 30 entries -->
+		<Monster Index="791" MapNumber="122" StartX="189" StartY="13" Dir="-1" Name="Pet of Swamp" />
+		<Monster Index="792" MapNumber="122" StartX="189" StartY="18" Dir="-1" Name="Pet of Swamp" />
+		<Monster Index="791" MapNumber="122" StartX="189" StartY="22" Dir="-1" Name="Pet of Swamp" />
+		<Monster Index="792" MapNumber="122" StartX="184" StartY="23" Dir="-1" Name="Pet of Swamp" />
+		<Monster Index="791" MapNumber="122" StartX="180" StartY="22" Dir="-1" Name="Pet of Swamp" />
+		<Monster Index="792" MapNumber="122" StartX="180" StartY="18" Dir="-1" Name="Pet of Swamp" />
+		<Monster Index="791" MapNumber="122" StartX="180" StartY="14" Dir="-1" Name="Pet of Swamp" />
+		<Monster Index="792" MapNumber="122" StartX="184" StartY="13" Dir="-1" Name="Pet of Swamp" />
+	</Spawn>
+</GodOfDarkness>

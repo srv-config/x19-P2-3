@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### IceWindValley ###
+//	Enable: Deactivates or activates the event: 0/1
+//	ServerCode: Server code to run the event on, regular game servers only, see MapServerInfo.xml
+//
+//	Type: Event registration mode:
+//		0: No application required, everyone can participate
+//		1: Registration required via command /regicewind
+//
+// ### IceWindValley::Schedule::Start ###
+//	DayOfWeek: Day of week the event is active on
+//		~ 0: Sunday
+//		~ 1: Monday
+//		~ 2: Tuesday
+//		~ 3: Wednesday
+//		~ 4: Thursday
+//		~ 5: Friday
+//		~ 6: Saturday
+//
+//	Reg: Registration hour, 0-23
+//	Reg: Registration minute, 0-59
+//	Reg: Time the registration period last, minutes
+//	Hour: Start hour, 0-23
+//	Minute: Start minute, 0-59
+//	Duration: Event duration, minutes
+//
+// ### IceWindValley::ApplicationConditions ###
+//	MinGuildMember: Minimum guild members to register to the event
+//	MaxGuildMember: Maximum guild members to register to the event
+//	WCoin: Cost of registration in WCoins
+//	GoblinPoint: Cost of registration in Goblin Points
+//	Ruud: Cost of registration in Ruud
+//	Contribution: Cost of registration in Gens contribution
+//	Zen: Cost of registration in Zen
+//
+// ### IceWindValley::Settings ###
+//	EventStartMoveToDevias: Determines move to town mode on event start:
+//		~ 0: Do not move
+//		~ 1: Move all registered members to Devias 1
+//
+//	MoveGateID: Gate ID to use for EventStartMoveToDevias option
+//	BlockMoveDevias3: If set to 1 the Devias 3 entry will be blocked
+//	HideUnregisteredPlayer: Applies invisibility buff for any player not registered to the event, making it unable to disturb the event, 0/1
+//	MaxLeaveTime: Maximum time the throne can be left unoccupied. Additionally acts as a cool-down, see PlayType setting, seconds
+//	TotalSitdownTime: Amount of time required to sit on throne, seconds
+//	GuildAssistantCanSit: Determines whether Guild Assistant can sit on throne, 0/1
+//	GuildMemberCanSit: Determines whether Guild Member can sit on throne, 0/1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ GuildAssistantCanSit and GuildMemberCanSit apply to PlayType = 0 only
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	PlayType: 
+//		~ 0: Other guild master must wait for cool-down (MaxLeaveTime) to end from previous guild master to be able to take seat
+//		~ 1: Other guild master do not need to wait cool-down time to take the seat, each guild has its own time as long as seat is not unoccupied longer than MaxLeaveTime
+//
+//	VibrationEffect: Deactivates or activates game vibration effect, 0/1
+//	VibrationDuration: Vibration effect duration, seconds
+//	ApplyFlameEffect: Deactivates or activates flame effect on IceValley castle owners, 0/1
+//
+// ### IceWindValley::CityLord ###
+//	EnableMap: Enables specified map locked to Ice Wind Castle owners
+//	Map: Number of map to lock
+//	Gate: Gate index to use for the warp, see GateSettings.xml
+//	NPC: Index of warp NPC, see MonsterList.xml
+//	NPCMap: Index map the NPC is located at, see MapList.xml
+//	NPCX: The X coordinate of warp NPC
+//	NPCY: The Y coordinate of warp NPC
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Any NPC can act as the warp NPC for purpose of Ice Valley.
+//~~ Original functionality of the NPC will be disabled if defined here.
+//~~ The NPC is not being added automatically, must be added manually via MonsterSpawn.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### IceWindValley::CastleArea ###
+//	StartX: Start X coordinate of Ice Valley Castle
+//	StartY: Start Y coordinate of Ice Valley Castle
+//	EndX: End X coordinate of Ice Valley Castle
+//	EndY: End Y coordinate of Ice Valley Castle 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Coordinates define area within Devias map
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### IceWindValley::Strings::String ###
+//	Id: Unique message ID to display for the event
+//	Text: Text of the message, order and number of placeholders (%s and %d) must be maintained
+//
+// ### IceWindValley::RewardsLeader ###
+//	EqualWC: Amount of WCoins to reward for guild master of winning guild 
+//	EqualGP: Amount of Goblin Points to reward for guild master of winning guild 
+//	EqualRuud: Amount of Ruud to reward for guild master of winning guild 
+//	EqualContribution: Amount of Gens contribution points to reward for guild master of winning guild 
+//	BuffId: ID of buff to apply, see BuffEffectManager.xml::Index
+//	BuffDuration: Duration of the buff
+//	BuffEffect: Buff Effect ID, see BuffEffectManager.xml::EffectType
+//	BuffEffectValue: Buff Effect Value
+//	EventBagReward: If set to 1 guild member will be rewarded an item from Event_IWC_GuildMaster.xml bag
+//
+// ### IceWindValley::RewardsMember ###
+//	EqualWC: Amount of WCoins to reward divided by number of guild members participating the event
+//	EqualGP: Amount of Goblin Points to reward divided by number of guild members participating the event
+//	EqualRuud: Amount of Ruud to reward divided by number of guild members participating the event
+//	EqualContribution: Amount of Gens contribution points to reward divided by number of guild members participating the event
+//	BuffId: ID of buff to apply, see BuffEffectManager.xml::Index
+//	BuffDuration: Duration of the buff
+//	BuffEffect: Buff Effect ID, see BuffEffectManager.xml::EffectType
+//	BuffEffectValue: Buff Effect Value
+//	EventBagReward: If set to 1 guild member will be rewarded an item from Event_IWC_GuildMember.xml bag
+//
+// ### IceWindValley::RewardsPlayer ###
+//	EqualWC: Amount of WCoins to reward divided by number of players who lost the event
+//	EqualGP: Amount of Goblin Points to reward divided by number of players who lost the event
+//	EqualRuud: Amount of Ruud to reward divided by number of players who lost the event
+//	EqualContribution: Amount of Gens contribution points to reward divided by number of players who lost the event
+//	BuffId: ID of buff to apply, see BuffEffectManager.xml::Index
+//	BuffDuration: Duration of the buff
+//	BuffEffect: Buff Effect ID, see BuffEffectManager.xml::EffectType
+//	BuffEffectValue: Buff Effect Value to apply
+//	EventBagReward: If set to 1 guild member will be rewarded an item from Event_IWC_Player.xml bag
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The reward buffs must be defined in BuffEffectManager.xml::BuffEffectManager::Period section to apply them as period buffs
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<IceWindValley Enabled="0" ServerCode="0" Type="1">
+	<Schedule>
+		<Start DayOfWeek="0" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="1" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="2" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="3" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="4" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="5" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+		<Start DayOfWeek="6" RegHour="7" RegMinute="50" RegDuration="5" Hour="8" Minute="0" Duration="30" />
+	</Schedule>
+	
+	<ApplicationConditions MinGuildMember="1" MaxGuildMember="10" WCoin="0" GoblinPoint="0" Ruud="0" Contribution="0" Zen="0"/>
+	<Settings EventStartMoveToDevias="0" MoveGateID="22" BlockMoveDevias3="1" HideUnregisteredPlayer="1" MaxLeaveTime="30" TotalSitdownTime="60" GuildAssistantCanSit="1" GuildMemberCanSit="1" PlayType="0" VibrationEffect="1" VibrationDuration="10" ApplyFlameEffect="1"/>
+
+	<CityLord EnableMap="1" Map="10" Gate="63" NPC="234" NPCMap="0" NPCX="128" NPCY="135" />
+	<CastleArea StartX="207" StartY="203" EndX="242" EndY="239" />
+
+	<Strings>
+		<String Id="0" Text="Ice Wind Valley Siege has not begun" />
+		<String Id="1" Text="Ice Wind Valley Siege Application has not started" />
+		<String Id="2" Text="Your guild has applied for Ice Wind Siege" />
+		<String Id="3" Text="Ice Wind Valley Siege Application has begun, please apply as soon as possible!" />
+		<String Id="4" Text="Ice Wind Valley Siege Battle has begun!" />
+		<String Id="5" Text="Ice Wind Valley Siege Battle is over!" />
+		<String Id="6" Text="Guild Master Character %s has been seated on the throne for %d seconds" /> <!-- Time sitting on the throne -->
+		<String Id="7" Text="You have %d seconds left from the throne. Please go to the throne as soon as possible." /> <!-- Countdown to the throne after being killed while sitting on the throne -->
+		<String Id="8" Text="Congratulations to Guild '%s' for occupying Ice Wind Vale Castle!" />
+		<String Id="9" Text="** Ice Wind Valley will begin in %d minutes **" />
+		<String Id="10" Text="** Ice Wind Dale starts with %d seconds remaining **" /> <!-- Countdown starts 30 seconds before turning on -->
+		<String Id="11" Text="** The owner %s of Ice Wind Valley is live on the %s map **" /> <!-- Ice Wind Valley City Master Character Login Game Tips -->
+		<String Id="12" Text="You need to be a Guild Master to register" />
+		<String Id="13" Text="Minimum Guild members to register is %d" />
+		<String Id="14" Text="Ice Wind Registration is over" />
+		<String Id="15" Text="You lack requirements to register" />
+		<String Id="16" Text="Your guild is already registered" />
+		<String ID="17" Text="Maximum guild members allowed in a guild is %d" />
+	</Strings>
+
+	<RewardsLeader EqualWC="1000" EqualGP="1000" EqualRuud="1000" EqualContribution="1000" BuffId="44" BuffDuration="3600" BuffEffect="67" BuffEffectValue="15" EventBagReward="1"/>
+	<RewardsMember EqualWC="1000" EqualGP="1000" EqualRuud="1000" EqualContribution="1000" BuffId="10" BuffDuration="3600" BuffEffect="10" BuffEffectValue="15" EventBagReward="1"/>
+	<RewardsPlayer EqualWC="700" EqualGP="700" EqualRuud="700" EqualContribution="700" BuffId="10" BuffDuration="3600" BuffEffect="10" BuffEffectValue="15" EventBagReward="1"/>
+</IceWindValley>

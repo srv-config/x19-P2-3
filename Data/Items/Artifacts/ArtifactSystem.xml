@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes in this file must be reflected on game client side in ArtifactSystem.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ArtifactSystem::ArtifactMaps::Map ###
+//	ID: Unique ID of artifact map
+//	FullSetOptionIndex: Index of option that is being granted when map is fully filled, check ArtifactOption.xml :: OptionBaseValue section
+//	FragmentCat: Category of item fragment used to mix random artifact for current artifact map, see ItemList.xml
+//	FragmentIndex: Index of item fragment used to mix random artifact for current artifact map, see ItemList.xml
+//	MapSlotFile: File (*.mab) containing definitions of artifacts for specific map, located at \Data\Items\Artifacts\Maps\
+//	MapItemFile:  File (*.mapack) containing map definition for the artifacts, located at \Data\Items\Artifacts\Maps\
+//	NameTextID: ID of text in Text.txt, used by Game Client)
+//
+// ### ArtifactSystem::ArtifactItem::Item ###
+//	MapID: ID of artifact map the artefact definitions points to, check ID attribute of ArtifactMap::Map section
+//	Type: Unique number defining attribute type
+//	Unk1: 
+//	Cat: Category of artifact item, see ItemList.xml
+//	Index: Index of artifact item, see ItemList.xml
+//	Rate: Chance rate of getting artifact of specific type, total rate is sum of all rates in a column
+//
+// ### ArtifactSystem::OptionSelect::Select ###
+//	MapID: ID of artifact map the artefact definitions points to, check ID attribute of ArtifactMap::Map section
+//	ArtifactType: Type of artifact the setting points to, see ArtifactItem::Item::Type attribute
+//	OptionSetIDX (1-3): Index of options set assigned to the artifact type/entry, check ArtifactOption.xml :: OptionBaseValue::OptionSet::Index attribute, 0 if not assigned
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Every type of artifact can have assigned up to 3 option sets
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	Rate: Chance rate of getting specific options set, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates for same artifact Type must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ArtifactSystem::EnhancementMix::Enhance ###
+//	ReqLevel: Input item (Cat/Index 1) required level, 0-14
+//	SuccessRate: Success rate for the mix, n/1000000
+//	ItemCatX (1-3): Category of item required for the mix, see ItemList.xml
+//	ItemIndexX (1-3): Index of item required for the mix, see ItemList.xml
+//	ItemCountX (1-3): Count of required items
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes of mix setting require modification of mix.bmd on game client side
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	ReqMoney: Money amount required for the mix, Zen
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ArtifactSystem>
+	<ArtifactMap>
+		<Map ID="0"	FullSetOptionIndex="28" FragmentCat="20" FragmentIndex="95" MapSlotFile="Spider_Slot" MapItemFile="Spider_Artifact" NameTextID="6084" />
+	</ArtifactMap>
+
+	<ArtifactItem>
+		<Item MapID="0" Type="1" Unk1="1" Cat="20" Index="96" Rate="217120" />
+		<Item MapID="0" Type="2" Unk1="2" Cat="20" Index="97" Rate="208000" />
+		<Item MapID="0" Type="3" Unk1="3" Cat="20" Index="98" Rate="168000" />
+		<Item MapID="0" Type="4" Unk1="4" Cat="20" Index="99" Rate="168000" />
+		<Item MapID="0" Type="5" Unk1="5" Cat="20" Index="100" Rate="19200" />
+		<Item MapID="0" Type="6" Unk1="6" Cat="20" Index="101" Rate="19200" />
+		<Item MapID="0" Type="7" Unk1="6" Cat="20" Index="102" Rate="480" />
+	</ArtifactItem>
+
+	<OptionSelect>
+		<Select MapID="0" ArtifactType="1" OptionSetID1="1" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
+		<Select MapID="0" ArtifactType="1" OptionSetID1="2" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
+		<Select MapID="0" ArtifactType="1" OptionSetID1="3" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="1" OptionSetID1="4" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="2" OptionSetID1="5" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="2" OptionSetID1="6" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="2" OptionSetID1="7" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="2" OptionSetID1="8" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="2" OptionSetID1="9" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="3" OptionSetID1="10" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="3" OptionSetID1="11" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="3" OptionSetID1="12" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
+		<Select MapID="0" ArtifactType="3" OptionSetID1="13" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
+		<Select MapID="0" ArtifactType="4" OptionSetID1="14" OptionSetID2="0" OptionSetID3="0" Rate="399970" />
+		<Select MapID="0" ArtifactType="4" OptionSetID1="15" OptionSetID2="0" OptionSetID3="0" Rate="400000" />
+		<Select MapID="0" ArtifactType="4" OptionSetID1="16" OptionSetID2="0" OptionSetID3="0" Rate="30"/>
+		<Select MapID="0" ArtifactType="4" OptionSetID1="17" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="5" OptionSetID1="18" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="5" OptionSetID1="19" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="5" OptionSetID1="20" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
+		<Select MapID="0" ArtifactType="5" OptionSetID1="21" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
+		<Select MapID="0" ArtifactType="6" OptionSetID1="22" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="6" OptionSetID1="23" OptionSetID2="0" OptionSetID3="0" Rate="100000" />
+		<Select MapID="0" ArtifactType="6" OptionSetID1="24" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="6" OptionSetID1="25" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="6" OptionSetID1="26" OptionSetID2="0" OptionSetID3="0" Rate="100000" />
+		<Select MapID="0" ArtifactType="6" OptionSetID1="27" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="7" OptionSetID1="29" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
+		<Select MapID="0" ArtifactType="7" OptionSetID1="31" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+		<Select MapID="0" ArtifactType="7" OptionSetID1="32" OptionSetID2="0" OptionSetID3="0" Rate="300000" />
+		<Select MapID="0" ArtifactType="7" OptionSetID1="34" OptionSetID2="0" OptionSetID3="0" Rate="200000" />
+	</OptionSelect>										
+	
+	<EnhancementMix>
+		<Enhance ReqLevel="0" SuccessRate="1000000" ItemCat1="20" ItemIndex1="94" ItemCount1="1" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="1000000" />
+		<Enhance ReqLevel="1" SuccessRate="1000000" ItemCat1="20" ItemIndex1="94" ItemCount1="3" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="1500000" />
+		<Enhance ReqLevel="2" SuccessRate="950000" ItemCat1="20" ItemIndex1="94" ItemCount1="5" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="2000000" />
+		<Enhance ReqLevel="3" SuccessRate="950000" ItemCat1="20" ItemIndex1="94" ItemCount1="7" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="2500000" />
+		<Enhance ReqLevel="4" SuccessRate="950000" ItemCat1="20" ItemIndex1="94" ItemCount1="9" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="3000000" />
+		<Enhance ReqLevel="5" SuccessRate="900000" ItemCat1="20" ItemIndex1="94" ItemCount1="11" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="3500000" />
+		<Enhance ReqLevel="6" SuccessRate="900000" ItemCat1="20" ItemIndex1="94" ItemCount1="13" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="4000000" />
+		<Enhance ReqLevel="7" SuccessRate="900000" ItemCat1="20" ItemIndex1="94" ItemCount1="15" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="4500000" />
+		<Enhance ReqLevel="8" SuccessRate="850000" ItemCat1="20" ItemIndex1="94" ItemCount1="17" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="5000000" />
+		<Enhance ReqLevel="9" SuccessRate="850000" ItemCat1="20" ItemIndex1="94" ItemCount1="19" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="5500000" />
+		<Enhance ReqLevel="10" SuccessRate="800000" ItemCat1="20" ItemIndex1="94" ItemCount1="21" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="6000000" />
+		<Enhance ReqLevel="11" SuccessRate="800000" ItemCat1="20" ItemIndex1="94" ItemCount1="23" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="6500000" />
+		<Enhance ReqLevel="12" SuccessRate="750000" ItemCat1="20" ItemIndex1="94" ItemCount1="25" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="7000000" />
+		<Enhance ReqLevel="13" SuccessRate="750000" ItemCat1="20" ItemIndex1="94" ItemCount1="27" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="7500000" />
+		<Enhance ReqLevel="14" SuccessRate="600000" ItemCat1="20" ItemIndex1="94" ItemCount1="29" ItemCat2="-1" ItemIndex2="-1" ItemCount2="0" ItemCat3="-1" ItemIndex3="-1" ItemCount3="0" ReqMoney="8000000" />
+	</EnhancementMix>
+</ArtifactSystem>

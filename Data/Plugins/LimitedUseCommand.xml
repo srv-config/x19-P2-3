@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### LimitedUseCommand::EventInfoCommandData::Lines::Line ###
+//	EventKind: Type of event configuration applies to
+//
+UseCountLimitType:
+	0 - Account
+	1 - Character
+SpecialFunction:
+	0 - No special function
+	1 - Event Info CMD
+	
+EventInfoCommandData
+EventKind:
+
+-->
+
+<LimitedUseCommand>
+	<EventInfoCommandData>
+		<Lines>
+			<Line EventKind="0" EventType="0" Enable="1" Tag=" Blood Castle" />
+			<Line EventKind="1" EventType="0" Enable="1" Tag=" Devil Square" />
+			<Line EventKind="2" EventType="0" Enable="1" Tag=" Chaos Castle" />
+			<Line EventKind="3" EventType="0" Enable="1" Tag=" Golden Dragon" />
+			<Line EventKind="4" EventType="0" Enable="1" Tag=" God of Darkness" />
+			<Line EventKind="5" EventType="0" Enable="1" Tag=" Lord of Ferea" />
+			<Line EventKind="6" EventType="0" Enable="1" Tag=" Medusa" />
+			<Line EventKind="7" EventType="0" Enable="1" Tag=" Selupan" />
+			<Line EventKind="8" EventType="0" Enable="1" Tag=" Lord Silvester" />
+			<Line EventKind="9" EventType="0" Enable="1" Tag=" Core Magriffy" />
+			<Line EventKind="10" EventType="0" Enable="1" Tag=" Nix" />
+			<Line EventKind="11" EventType="0" Enable="1" Tag=" Illusion Temple" />
+			<Line EventKind="12" EventType="0" Enable="1" Tag=" Doppelganger" />
+			<Line EventKind="13" EventType="0" Enable="1" Tag=" Ice Wind Valley" />
+			<Line EventKind="14" EventType="0" Enable="1" Tag=" Kanturu Event" />
+			<Line EventKind="15" EventType="0" Enable="1" Tag=" Red Dragon" />
+			<Line EventKind="16" EventType="0" Enable="1" Tag=" White Wizard" />
+		</Lines>
+		
+		<Strings>
+			<String Id="0" Text=" [%s] Next Event time In [%d] Minutes" />
+			<String Id="1" Text=" [%s] Event is" />
+			<String Id="2" Text="Live" />
+			<String Id="3" Text=" [%s] Next Event in [%d] days" />
+		</Strings>
+	</EventInfoCommandData>
+	
+	<Command Id="0" Tag="/xmasgift" SpecialFunction="0" UseCount="100" UseCountLimitType="1" SuccessMessage=" XMAS GIFT REWARDED" SuccessMessageRGB="255;55;128" FailMessage=" YOU ALREADY USED XMAS GIFT" FailMessageRGB="255;0;0" FireworksOnSuccess="1" MinReset="0" MinLevel="1" MaxLevel="999" MinVipType="0" CoinType="1" CoinValue="100">
+		<RewardItems>
+			<Item ItemCat="14" ItemIndex="221" Level="0" ExpireMinutes="10800" IsPeriod="0" UseHex="1" Hex="1D005A0000000000007800FFFFFFFFFF0005AF16FFFFF005070101202030304" /> <!--Kundun Greed-->
+		</RewardItems>
+		
+		<RewardBuffs>
+			<Buff ItemCat="13" ItemIndex="93" ExpireMinutes="60" IsPeriod="1" />
+		</RewardBuffs>
+	</Command>
+	
+	<Command Id="1" Tag="/buyzen" SpecialFunction="0" UseCount="0" UseCountLimitType="1" SuccessMessage=" PURCHASED ZEN" SuccessMessageRGB="255;55;128" FailMessage=" Zen buy failed" FailMessageRGB="255;0;0" FireworksOnSuccess="1" CoinType="1" CoinValue="100">
+		<Reward Zen="1000000" Ruud="0" />
+	</Command>
+	
+	<Command Id="2" Tag="/buyruud" SpecialFunction="0" UseCount="0" UseCountLimitType="1" SuccessMessage=" PURCHASED RUUD" SuccessMessageRGB="255;55;128" FailMessage=" RUUD buy failed" FailMessageRGB="255;0;0" FireworksOnSuccess="1" CoinType="2" CoinValue="100">
+		<Reward Zen="0" Ruud="1000000" />
+	</Command>
+	
+	<Command Id="3" Tag="/eventinfo" SpecialFunction="1" UseCount="0" UseCountLimitType="1" SuccessMessage=" Event Info" SuccessMessageRGB="255;55;128" FailMessage=" Event Info CMD failed" FailMessageRGB="255;0;0" FireworksOnSuccess="0" CoinType="1" CoinValue="0">
+	
+	</Command>
+</LimitedUseCommand>

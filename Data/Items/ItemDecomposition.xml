@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ItemDecomposition::RateSettings::Decomposition ###
+//	Type: Decomposition type:
+//		1: Exc item
+//		2: Set item
+//		3: Ertel item
+//		4: Pentagram item
+//		5: Guardian mount
+//		6: Artifact Items
+//		7: Normal Expired Items
+//
+//	Normal_Rate: Rate for Item 1, see RewardSettings section 
+//	Rare_Rate: Rate for Item 2, see RewardSettings section 
+//	Epic_Rate: Rate for Item 3, see RewardSettings section 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates per entry must be equal to 10000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	ReqMoneyManual: Required Money, Zen
+//	ReqMoneyAuto: Required Money, Zen
+//
+// ### ItemDecomposition::RewardSettings::Item ###
+//	DecompositionType: Type of decomposition the reward applies to
+// CatX (1-3): Category of reward item, see ItemList.xml
+// IndexX (1-3): Index of reward item, see ItemList.xml
+// CountX (1-3): Count of reward item
+//	
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->					
+<ItemDecomposition>
+	<RateSettings>
+		<!-- <Decomposition Type="1" Normal_Rate="10000" Rare_Rate="0" Epic_Rate="0" ReqMoneyManual="300" ReqMoneyAuto="1000" /> --> <!-- Excellent Item -->
+		<Decomposition Type="2" Normal_Rate="10000" Rare_Rate="0" Epic_Rate="0" ReqMoneyManual="300" ReqMoneyAuto="1000" /> <!-- Set Item -->
+		<Decomposition Type="3" Normal_Rate="10000" Rare_Rate="0" Epic_Rate="0" ReqMoneyManual="300" ReqMoneyAuto="1000" /> <!-- Errtel Item -->
+		<!-- <Decomposition Type="4" Normal_Rate="10000" Rare_Rate="0" Epic_Rate="0" ReqMoneyManual="300" ReqMoneyAuto="1000" /> --> <!-- Pentagram Item -->
+		<Decomposition Type="5" Normal_Rate="7000" Rare_Rate="2800" Epic_Rate="200" ReqMoneyManual="300" ReqMoneyAuto="1000" /> <!-- Guardian Mount -->
+		<Decomposition Type="6" Normal_Rate="10000" Rare_Rate="0" Epic_Rate="0" ReqMoneyManual="300" ReqMoneyAuto="1000" /> <!-- Artifact Items -->
+		<Decomposition Type="7" Normal_Rate="10000" Rare_Rate="0" Epic_Rate="0" ReqMoneyManual="300" ReqMoneyAuto="1000" /> <!-- Normal expired items -->
+	</RateSettings>
+	
+	<RewardSettings>
+		<Item DecompositionType="1" Cat1="14" Index1="290" Count1="1" Cat2="-1" Index2="-1" Count2="0" Cat3="-1" Index3="-1" Count3="0" />
+		<Item DecompositionType="2" Cat1="14" Index1="290" Count1="1" Cat2="-1" Index2="-1" Count2="0" Cat3="-1" Index3="-1" Count3="0" />
+		<Item DecompositionType="3" Cat1="14" Index1="290" Count1="1" Cat2="-1" Index2="-1" Count2="0" Cat3="-1" Index3="-1" Count3="0" />
+		<Item DecompositionType="4" Cat1="14" Index1="290" Count1="1" Cat2="-1" Index2="-1" Count2="0" Cat3="-1" Index3="-1" Count3="0" />
+		<Item DecompositionType="5" Cat1="14" Index1="469" Count1="1" Cat2="14" Index2="467" Count2="1" Cat3="14" Index3="468" Count3="1" />
+		<Item DecompositionType="6" Cat1="20" Index1="94" Count1="1" Cat2="-1" Index2="-1" Count2="0" Cat3="-1" Index3="-1" Count3="0" />
+		<Item DecompositionType="7" Cat1="14" Index1="290" Count1="1" Cat2="-1" Index2="-1" Count2="0" Cat3="-1" Index3="-1" Count3="0" />
+	</RewardSettings>
+</ItemDecomposition>

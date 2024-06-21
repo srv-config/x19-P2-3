@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ IMPORTANT: The event must have its monsters defined only in BloodCastle_Monster.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### BloodCastle ###
+//	Enable: Allow to activate or disable the event, 0/1
+//	EarlyFinishRestriction: Allows to activate restriction preventing completing the event before time specified in EarlyFinishMinTime
+//	EarlyFinishMinTime: Minimum event time the event can be completed (weapon can be returned to Archangel), seconds
+//	MonsterKillReqPerPlayer: Count of monster required to kill to get the bridge to fall down
+//
+// ### BloodCastle::Monster ###
+//	TimeToRegen: Time to respawn monster, milliseconds
+//
+// ### BloodCastle::Time ###
+//	ToOpen: Time the event will be opened from event start notification moment, minutes
+//	PlayDuration: Event duration, minutes
+//	ToClose: Time to move players to down after the event is finished, minutes
+//
+// ### BloodCastle::Schedule::Start ###
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//
+// ### BloodCastle::EntryLevel::Castle ###
+//	Level: Level of the event the the configuration applies to
+//	MinLevel: Minimum level of player to allow entry to specified event level
+//	MaxLevel: Maximum level of player to allow entry to specified event level, max is currently 800
+//
+// ### BloodCastle::EventSettings::Castle ###
+//	Level: Level of the event the the configuration applies to
+//	StatueHP: Maximum Health of the Statue
+//	GateHP: Maximum Health of the Gate
+//
+// ### BloodCastle::RewardExpSettings::Castle ###
+//	Level: Level of the event the the configuration applies to
+//	Multiplier: Multiplier of reward exp (received after completing the event)
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<BloodCastle Enable="1" EarlyFinishRestriction="0" EarlyFinishMinTime="300" MonsterKillReqPerPlayer="40">
+<Monster TimeToRegen="0" />
+<Time ToOpen="5" PlayDuration="15" ToClose="1" />
+	
+	<Schedule>
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="3" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="3" Minute="40" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="5" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="7" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="9" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="11" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="13" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="15" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="17" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="19" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="21" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="21" Minute="40" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="22" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="22" Minute="40" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="23" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="23" Minute="40" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="0" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="0" Minute="40" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="1" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="1" Minute="40" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="2" Minute="10" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="2" Minute="40" Second="-1" />
+	</Schedule>
+
+	<EntryLevel>
+		<Castle Level="0" MinLevel="50" MaxLevel="399" /> <!-- Blood Castle 1 -->
+		<Castle Level="1" MinLevel="400" MaxLevel="599" /> <!-- Blood Castle 2 -->
+		<Castle Level="2" MinLevel="600" MaxLevel="699" /> <!-- Blood Castle 3 -->
+		<Castle Level="3" MinLevel="700" MaxLevel="799" /> <!-- Blood Castle 4 -->
+		<Castle Level="4" MinLevel="800" MaxLevel="899" /> <!-- Blood Castle 5 -->
+		<Castle Level="5" MinLevel="900" MaxLevel="999" /> <!-- Blood Castle 6 -->
+		<Castle Level="6" MinLevel="1000" MaxLevel="MAX" /> <!-- Blood Castle 7 -->
+	</EntryLevel>
+
+	<EventSettings>
+		<Castle Level="0" StatueHP="65000" GateHP="150000" /> <!-- Blood Castle 1 -->
+		<Castle Level="1" StatueHP="105000" GateHP="205000" /> <!-- Blood Castle 2 -->
+		<Castle Level="2" StatueHP="145000" GateHP="260000" /> <!-- Blood Castle 3 -->
+		<Castle Level="3" StatueHP="185000" GateHP="325000" /> <!-- Blood Castle 4 -->
+		<Castle Level="4" StatueHP="225000" GateHP="400000" /> <!-- Blood Castle 5 -->
+		<Castle Level="5" StatueHP="265000" GateHP="480000" /> <!-- Blood Castle 6 -->
+		<Castle Level="6" StatueHP="305000" GateHP="565000" /> <!-- Blood Castle 7 -->
+	</EventSettings>
+
+	<RewardExpSettings>
+		<Castle Level="0" Multiplier="1.0" /> <!-- Blood Castle 1 -->
+		<Castle Level="1" Multiplier="1.0" /> <!-- Blood Castle 2 -->
+		<Castle Level="2" Multiplier="1.0" /> <!-- Blood Castle 3 -->
+		<Castle Level="3" Multiplier="1.0" /> <!-- Blood Castle 4 -->
+		<Castle Level="4" Multiplier="1.0" /> <!-- Blood Castle 5 -->
+		<Castle Level="5" Multiplier="1.0" /> <!-- Blood Castle 6 -->
+		<Castle Level="6" Multiplier="1.0" /> <!-- Blood Castle 7 -->
+	</RewardExpSettings>
+</BloodCastle>

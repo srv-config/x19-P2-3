@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Change in this file require modification on client side of proper mix in Mix.bmd
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	
+// ### ArchangelWeapon::Upgrade ###
+//	SuccessRate: Mix success rate, 1-100
+//	OptionUpgradeType: Determines options generation after upgrade:
+//		~ 0: Full Option (original)
+//		~ 1: Copy from source item
+//
+// ### ArchangelWeapon::Upgrade::Item ###
+//	NeedCat: Input item category
+//	NeedIndex: Input item index
+//	ResultCat: Result item category
+//	ResultIndex: Result item index
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ For item category and index refer to ItemList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ArchangelWeapon>
+	<Upgrade SuccessRate="100" OptionUpgradeType="0"> <!-- n/100 -->
+		<Item NeedCat="0"  NeedIndex="19"  ResultCat="0"  ResultIndex="51" /> <!-- Divine Sword of Archangel ~>  Blessed Divine Arch Sword -->
+		<Item NeedCat="0"  NeedIndex="60"  ResultCat="0"  ResultIndex="61" /> <!-- Divine Archangel Absolute Claw ~> Blessed Arch's Absolute Claw -->
+		<Item NeedCat="0"  NeedIndex="76"  ResultCat="0"  ResultIndex="77" /> <!-- Divine Archangel Short Sword ~> Blessed Arch's Short Sword -->
+		<Item NeedCat="2"  NeedIndex="13"  ResultCat="2"  ResultIndex="25" /> <!-- Divine Scepter of Archangel ~> Blessed Divine Arch Scepter -->
+		<Item NeedCat="2"  NeedIndex="34"  ResultCat="2"  ResultIndex="35" /> <!-- Absolute Mace of Archangel ~> Blessed Divine Arch Mace -->
+		<Item NeedCat="3"  NeedIndex="26"  ResultCat="3"  ResultIndex="27" /> <!-- Divine Lance of Archangel ~> Blessed Divine Lance -->
+		<Item NeedCat="4"  NeedIndex="18"  ResultCat="4"  ResultIndex="30" /> <!-- Divine Crossbow of Archangel ~> Blessed Divine Arch Crossbow -->
+		<Item NeedCat="4"  NeedIndex="46"  ResultCat="4"  ResultIndex="47" /> <!-- Archangel's Absolute Magic Gun ~> Absolute Magical Gun of the Blessed Archangel -->
+		<Item NeedCat="5"  NeedIndex="10"  ResultCat="5"  ResultIndex="49" /> <!-- Divine Staff of Archangel ~>  Blessed Divine Arch Staff -->
+		<Item NeedCat="5"  NeedIndex="36"  ResultCat="5"  ResultIndex="50" /> <!-- Divine Stick of the Archangel ~> Blessed Divine Arch Stick -->
+		<Item NeedCat="5"  NeedIndex="93"  ResultCat="5"  ResultIndex="94" /> <!-- Archangel's Absolute Orb ~> Blessed Archangel's Absolute Orb -->
+		<Item NeedCat="0"  NeedIndex="113"  ResultCat="0"  ResultIndex="114" /> <!-- Archangel's Absolute Blade ~> Blessed Archangel's Absolute Blade -->
+	</Upgrade>
+</ArchangelWeapon>

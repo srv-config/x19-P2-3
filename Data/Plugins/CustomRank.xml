@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~ Changes to the file must be reflected on game client side and encrypted to .bmd using ToolKit Lite or Premium "IGC File Enc/Dec (XML)" tool, \Data\Local\CustomRank.bmd
+//
+// ### CustomRanks ###
+//	Enabled: Deactivates or activates the system, 0/1
+//	Password: A password used by ToolKit ServerInfo (XML) editor to encode the file, max 8 characters
+//
+// ### CustomRanks::Rank ###
+//	VipConditonMandatory: If rank has defined a VIP requirement condition then no other conditions will be checked unless VIP condition is met 
+//	MeetAllConditions: If set to 1 then all conditions must be met before VIP will be displayed
+//	DBRankPriority: If enabled, the priority will take private rank set via "PCR" column in [dbo].[Character] table, 0/1
+//	The column takes value of rank index where rank index is counted from up to down, as the ranks are defined in file, starting from 0.
+// 
+//	Password: A password used by ToolKit ServerInfo (XML) editor to encode the file, max 8 characters
+//
+// ### CustomRanks::Rank ###
+//	MinLevel: Minimum level required for the rank
+//	MaxLevel: Maximum level for the rank
+//	MinReset: Minimum reset required for the rank
+//	MaxReset: Maximum reset for the rank
+//	VipType: Vip level the rank applies too, see VipSettings.xml
+//	IWCLord: Defines the Ice Wind Castle rank (requires Ice Wind Castle event plugin), 0/1
+//	SiegeLord: Defines the Castle Siege owner rank, 0/1
+//	ImageName: Name of graphics file for the rank, files must be placed in \Data\Custom\Interface of Game Client
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Ranks are applied based on Priority when the highest priority is met, priority order listed below:
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	~ 0: IWCLord & SiegeLord
+//	~ 1: VipType
+//	~ 2: MaxReset, if greater than 0
+//	~ 3: MaxLevel, if greater than 0
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<CustomRanks Enabled="1" VipConditonMandatory="1" MeetAllConditions="0" DBRankPriority="0" Password="WErt$4t3">
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="1"  IWCLord="0" ImageName="Rank1.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="2"  IWCLord="0" ImageName="Rank2.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="3"  IWCLord="0" ImageName="Rank3.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="4"  IWCLord="0" ImageName="Rank4.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="5"  IWCLord="0" ImageName="Rank5.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="6"  IWCLord="0" ImageName="Rank6.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="7"  IWCLord="0" ImageName="Rank7.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="8"  IWCLord="0" ImageName="Rank8.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="9"  IWCLord="0" ImageName="Rank9.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="10" IWCLord="0" ImageName="Rank10.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="11" IWCLord="0" ImageName="Rank11.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="12" IWCLord="0" ImageName="Rank12.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="13" IWCLord="0" ImageName="Rank13.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="14" IWCLord="0" ImageName="Rank14.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="-1"  IWCLord="1" ImageName="BingCZ.tga" />
+	<Rank MinLevel="0" MaxLevel="0" MinReset="0" MaxReset="0" VipType="15" IWCLord="0" SiegeLord="1" ImageName="LuoLan.tga" />	
+</CustomRanks>

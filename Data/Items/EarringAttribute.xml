@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file requires modification of EarringAttribute.txt and EarringOptionText.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### EarringAttribute::EditionSettings::Edition ###
+//	ID: Unique Edition ID
+//	OptionRate1: Chance rate of getting 1 option
+//	OptionRate2: Chance rate of getting 2 options
+//	OptionRate3: Chance rate of getting 3 options
+//	OptionRate4: Chance rate of getting 4 options
+//	OptionRate5: Chance rate of getting 5 options
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ OptionRateX is n/100, sum of all 5 should be equal to 100 per edition
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### EarringAttribute::OptionLinkSettings::Option ###
+//	LinkID: Unique identifier of option link
+//	IndexX: Option index (1-5), check OptionsList section for available option indexes
+//
+//	ValueX: Option value index, see OptionSettings section (1-5)
+//	RateX: Chance rate of getting specified option, n/10000 (1-5)
+//	Edition: Edition option applies to
+//	ItemCat: Category of earring item
+//	ItemIndex: Index of earring item
+//	Name: Earing item name
+//
+// ### EarringAttribute::LinkedOptionActivation::Link ###
+//	ID1: Link ID of left earring
+//	ID2: Link ID of right earring
+//	OptIdx1: Option index (1-3)
+//	OptValIdx1: Option value
+//	Name: Name of link
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Bonus options getting activated while equipping earrings of Link ID1 and ID2 at the same time
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### EarringAttribute::OptionSettings::OptionSet ###
+//	Index: Unique index of option value set
+//	Value: Value of option
+//	Edition: Edition option applies to
+//	Description: Option description
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ For options of Edition=2, index 4 and 6, the Value attribute stores FormulaID from FormulaData.xml, earrings section
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<EarringAttribute>
+	<EditionSettings>
+		<Edition ID="1" OptionRate1="20" OptionRate2="40" OptionRate3="40" OptionRate4="0" OptionRate5="0" />
+		<Edition ID="2" OptionRate1="20" OptionRate2="40" OptionRate3="40" OptionRate4="0" OptionRate5="0" />
+		<Edition ID="3" OptionRate1="20" OptionRate2="40" OptionRate3="40" OptionRate4="0" OptionRate5="0" />
+		<Edition ID="4" OptionRate1="20" OptionRate2="40" OptionRate3="40" OptionRate4="0" OptionRate5="0" />
+		<Edition ID="5" OptionRate1="20" OptionRate2="40" OptionRate3="40" OptionRate4="0" OptionRate5="0" />
+		<Edition ID="6" OptionRate1="20" OptionRate2="40" OptionRate3="40" OptionRate4="0" OptionRate5="0" />
+	</EditionSettings>
+
+	<OptionLinkSettings>
+	<!-- Left -->
+		<Option LinkID="1" Index1="19" ValueIdx1="1" Rate1="2000" Index2="23" ValueIdx2="4" Rate2="2000" Index3="18" ValueIdx3="6" Rate3="2000" Index4="16" ValueIdx4="6" Rate4="2000" Index5="11" ValueIdx5="0" Rate5="2000" Edition="1" ItemCat="12" ItemIndex="449" Name="Rage" />
+		<Option LinkID="2" Index1="19" ValueIdx1="1" Rate1="2000" Index2="28" ValueIdx2="4" Rate2="2000" Index3="29" ValueIdx3="6" Rate3="2000" Index4="30" ValueIdx4="6" Rate4="2000" Index5="11" ValueIdx5="0" Rate5="2000" Edition="2" ItemCat="12" ItemIndex="450" Name="Ancestor" />
+		<Option LinkID="3" Index1="19" ValueIdx1="1" Rate1="2000" Index2="28" ValueIdx2="4" Rate2="2000" Index3="29" ValueIdx3="6" Rate3="2000" Index4="30" ValueIdx4="6" Rate4="2000" Index5="11" ValueIdx5="0" Rate5="2000" Edition="3" ItemCat="12" ItemIndex="451" Name="Honor" />
+		<Option LinkID="4" Index1="19" ValueIdx1="1" Rate1="2000" Index2="28" ValueIdx2="4" Rate2="2000" Index3="29" ValueIdx3="6" Rate3="2000" Index4="30" ValueIdx4="6" Rate4="2000" Index5="11" ValueIdx5="0" Rate5="2000" Edition="4" ItemCat="12" ItemIndex="452" Name="Blood" />
+		<Option LinkID="5" Index1="19" ValueIdx1="1" Rate1="2000" Index2="28" ValueIdx2="4" Rate2="2000" Index3="29" ValueIdx3="6" Rate3="2000" Index4="30" ValueIdx4="6" Rate4="2000" Index5="11" ValueIdx5="0" Rate5="2000" Edition="5" ItemCat="12" ItemIndex="453" Name="Daze" />
+		<Option LinkID="6" Index1="19" ValueIdx1="1" Rate1="2000" Index2="28" ValueIdx2="4" Rate2="2000" Index3="29" ValueIdx3="6" Rate3="2000" Index4="30" ValueIdx4="6" Rate4="2000" Index5="11" ValueIdx5="0" Rate5="2000" Edition="6" ItemCat="12" ItemIndex="454" Name="Solidarity" />
+		<!-- <Option LinkID="7" Index1="0" ValueIdx1="0" Rate1="0" Index2="0" ValueIdx2="0" Rate2="0" Index3="0" ValueIdx3="0" Rate3="0" Index4="0" ValueIdx4="0" Rate4="0" Index5="0" ValueIdx5="0" Rate5="0" Edition="0" ItemCat="0" ItemIndex="455" Name="Fracture" /> -->
+		<!-- <Option LinkID="8" Index1="0" ValueIdx1="0" Rate1="0" Index2="0" ValueIdx2="0" Rate2="0" Index3="0" ValueIdx3="0" Rate3="0" Index4="0" ValueIdx4="0" Rate4="0" Index5="0" ValueIdx5="0" Rate5="0" Edition="0" ItemCat="0" ItemIndex="456" Name="Commitment" /> -->
+	<!-- Right -->
+		<Option LinkID="9" Index1="9" ValueIdx1="5" Rate1="2000" Index2="17" ValueIdx2="2" Rate2="2000" Index3="15" ValueIdx3="2" Rate3="2000" Index4="14" ValueIdx4="3" Rate4="2000" Index5="12" ValueIdx5="0" Rate5="2000" Edition="1" ItemCat="12" ItemIndex="457" Name="Rage II" />
+		<Option LinkID="10" Index1="9" ValueIdx1="5" Rate1="2000" Index2="17" ValueIdx2="2" Rate2="2000" Index3="15" ValueIdx3="2" Rate3="2000" Index4="14" ValueIdx4="3" Rate4="2000" Index5="12" ValueIdx5="0" Rate5="2000" Edition="2" ItemCat="12" ItemIndex="458" Name="Ancestor II" />
+		<Option LinkID="11" Index1="9" ValueIdx1="5" Rate1="2000" Index2="17" ValueIdx2="2" Rate2="2000" Index3="15" ValueIdx3="2" Rate3="2000" Index4="14" ValueIdx4="3" Rate4="2000" Index5="12" ValueIdx5="0" Rate5="2000" Edition="3" ItemCat="12" ItemIndex="459" Name="Honor II" />
+		<Option LinkID="12" Index1="9" ValueIdx1="5" Rate1="2000" Index2="17" ValueIdx2="2" Rate2="2000" Index3="15" ValueIdx3="2" Rate3="2000" Index4="14" ValueIdx4="3" Rate4="2000" Index5="12" ValueIdx5="0" Rate5="2000" Edition="4" ItemCat="12" ItemIndex="460" Name="Blood II" />
+		<Option LinkID="13" Index1="9" ValueIdx1="5" Rate1="2000" Index2="17" ValueIdx2="2" Rate2="2000" Index3="15" ValueIdx3="2" Rate3="2000" Index4="14" ValueIdx4="3" Rate4="2000" Index5="12" ValueIdx5="0" Rate5="2000" Edition="5" ItemCat="12" ItemIndex="461" Name="Daze II" />
+		<Option LinkID="14" Index1="9" ValueIdx1="5" Rate1="2000" Index2="17" ValueIdx2="2" Rate2="2000" Index3="15" ValueIdx3="2" Rate3="2000" Index4="14" ValueIdx4="3" Rate4="2000" Index5="12" ValueIdx5="0" Rate5="2000" Edition="6" ItemCat="12" ItemIndex="462" Name="Solidarity II" />
+		<!-- <Option LinkID="15" Index1="0" ValueIdx1="0" Rate1="0" Index2="0" ValueIdx2="0" Rate2="0" Index3="0" ValueIdx3="0" Rate3="0" Index4="0" ValueIdx4="0" Rate4="0" Index5="0" ValueIdx5="0" Rate5="0" Edition="0" ItemCat="0" ItemIndex="463" Name="Destruction II" /> -->
+		<!-- <Option LinkID="16" Index1="0" ValueIdx1="0" Rate1="0" Index2="0" ValueIdx2="0" Rate2="0" Index3="0" ValueIdx3="0" Rate3="0" Index4="0" ValueIdx4="0" Rate4="0" Index5="0" ValueIdx5="0" Rate5="0" Edition="0" ItemCat="0" ItemIndex="464" Name="Commitment II" /> -->
+	</OptionLinkSettings>
+
+	<LinkedOptionActivation> <!-- Linked option is being activated when left and right earning (link indexes) are worn together -->
+		<Link ID1="1" ID2="9" OptIdx1="21" OptValIdx1="7" OptIdx2="24" OptValIdx2="2" OptIdx3="-1" OptValIdx3="-1" Name="Rage" />
+		<Link ID1="2" ID2="10" OptIdx1="21" OptValIdx1="7" OptIdx2="24" OptValIdx2="2" OptIdx3="-1" OptValIdx3="-1" Name="Ancestor" />
+		<Link ID1="3" ID2="11" OptIdx1="21" OptValIdx1="7" OptIdx2="24" OptValIdx2="2" OptIdx3="-1" OptValIdx3="-1" Name="Honor" />
+		<Link ID1="4" ID2="12" OptIdx1="21" OptValIdx1="7" OptIdx2="24" OptValIdx2="2" OptIdx3="31" OptValIdx3="8" Name="Blood" />
+		<Link ID1="5" ID2="13" OptIdx1="21" OptValIdx1="7" OptIdx2="24" OptValIdx2="2" OptIdx3="31" OptValIdx3="8" Name="Daze" />
+		<Link ID1="6" ID2="14" OptIdx1="21" OptValIdx1="7" OptIdx2="24" OptValIdx2="2" OptIdx3="31" OptValIdx3="8" Name="Solidarity" />
+		<!-- <Link ID1="7" ID2="15" OptIdx1="21" OptValIdx1="7" OptIdx2="24" OptValIdx2="2" OptIdx3="31" OptValIdx3="8" Name="Destruction" /> -->
+		<!-- <Link ID1="8" ID2="16" OptIdx1="21" OptValIdx1="7" OptIdx2="24" OptValIdx2="2" OptIdx3="31" OptValIdx3="8" Name="Commitment" /> -->
+	</LinkedOptionActivation>
+
+	<OptionSettings>
+	<!-- Edition 1 -->
+		<OptionSet Index="0" Value="200" Edition="1" Description="Max Life Increase and Max Mana Increase" />
+		<OptionSet Index="1" Value="17" Edition="1" Description="Skill Damage Increase" />
+		<OptionSet Index="2" Value="4" Edition="1" Description="Excellent Damage Probability Increase and Critical Damage Probability Increase" />
+		<OptionSet Index="3" Value="10" Edition="1" Description="AG Auto Recovery Amount Increase" />
+		<OptionSet Index="4" Value="20" Edition="1" Description="Attack Power / Wizardry Increase" />
+		<OptionSet Index="5" Value="7" Edition="1" Description="Attack Speed Increase" />
+		<OptionSet Index="6" Value="35" Edition="1" Description="Attack Power Increase and Critical Damage Power Increase" />
+		<OptionSet Index="7" Value="1" Edition="1" Description="Ignore enemy defense" />
+	<!-- Edition 2 -->
+		<OptionSet Index="0" Value="400" Edition="2" Description="Max Life Increase and Max Mana Increase" />
+		<OptionSet Index="1" Value="19" Edition="2" Description="Skill Damage Increase" />
+		<OptionSet Index="2" Value="5" Edition="2" Description="Excellent Damage Probability Increase and Critical Damage Probability Increase" />
+		<OptionSet Index="3" Value="10" Edition="2" Description="AG Auto Recovery Amount Increase" />
+		<OptionSet Index="4" Value="0" Edition="2" Description="Attack Power / Wizardry Increase" />
+		<OptionSet Index="5" Value="7" Edition="2" Description="Attack Speed Increase" />
+		<OptionSet Index="6" Value="1" Edition="2" Description="Attack Power Increase and Critical Damage Power Increase" />
+		<OptionSet Index="7" Value="2" Edition="2" Description="Ignore enemy defense" />
+	<!-- Edition 3 -->
+		<OptionSet Index="0" Value="600" Edition="3" Description="Max Life Increase and Max Mana Increase" />
+		<OptionSet Index="1" Value="21" Edition="3" Description="Skill Damage Increase" />
+		<OptionSet Index="2" Value="6" Edition="3" Description="Excellent Damage Probability Increase and Critical Damage Probability Increase" />
+		<OptionSet Index="3" Value="10" Edition="3" Description="AG Auto Recovery Amount Increase" />
+		<OptionSet Index="4" Value="2" Edition="3" Description="Attack Power / Wizardry Increase" />
+		<OptionSet Index="5" Value="7" Edition="3" Description="Attack Speed Increase" />
+		<OptionSet Index="6" Value="3" Edition="3" Description="Attack Power Increase and Critical Damage Power Increase" />
+		<OptionSet Index="7" Value="3" Edition="3" Description="Ignore enemy defense" />
+	<!-- Edition 4 -->
+		<OptionSet Index="0" Value="800" Edition="4" Description="Max Life Increase and Max Mana Increase" />
+		<OptionSet Index="1" Value="23" Edition="4" Description="Skill Damage Increase" />
+		<OptionSet Index="2" Value="7" Edition="4" Description="Excellent Damage Probability Increase and Critical Damage Probability Increase" />
+		<OptionSet Index="3" Value="10" Edition="4" Description="AG Auto Recovery Amount Increase" />
+		<OptionSet Index="4" Value="4" Edition="4" Description="Attack Power / Wizardry Increase" />
+		<OptionSet Index="5" Value="7" Edition="4" Description="Attack Speed Increase" />
+		<OptionSet Index="6" Value="5" Edition="4" Description="Attack Power Increase and Critical Damage Power Increase" />
+		<OptionSet Index="7" Value="4" Edition="4" Description="Ignore enemy defense" />
+		<OptionSet Index="8" Value="6" Edition="4" Description="Damage Increase" />
+	<!-- Edition 5 -->
+		<OptionSet Index="0" Value="1000" Edition="5" Description="Max Life Increase and Max Mana Increase" />
+		<OptionSet Index="1" Value="25" Edition="5" Description="Skill Damage Increase" />
+		<OptionSet Index="2" Value="8" Edition="5" Description="Excellent Damage Probability Increase and Critical Damage Probability Increase" />
+		<OptionSet Index="3" Value="10" Edition="5" Description="AG Auto Recovery Amount Increase" />
+		<OptionSet Index="4" Value="7" Edition="5" Description="Attack Power / Wizardry Increase" />
+		<OptionSet Index="5" Value="7" Edition="5" Description="Attack Speed Increase" />
+		<OptionSet Index="6" Value="8" Edition="5" Description="Attack Power Increase and Critical Damage Power Increase" />
+		<OptionSet Index="7" Value="5" Edition="5" Description="Ignore enemy defense" />
+		<OptionSet Index="8" Value="9" Edition="5" Description="Damage Increase" />
+	<!-- Edition 5 -->
+		<OptionSet Index="0" Value="1000" Edition="6" Description="Max Life Increase and Max Mana Increase" />
+		<OptionSet Index="1" Value="27" Edition="6" Description="Skill Damage Increase" />
+		<OptionSet Index="2" Value="9" Edition="6" Description="Excellent Damage Probability Increase and Critical Damage Probability Increase" />
+		<OptionSet Index="3" Value="10" Edition="6" Description="AG Auto Recovery Amount Increase" />
+		<OptionSet Index="4" Value="10" Edition="6" Description="Attack Power / Wizardry Increase" />
+		<OptionSet Index="5" Value="7" Edition="6" Description="Attack Speed Increase" />
+		<OptionSet Index="6" Value="11" Edition="6" Description="Attack Power Increase and Critical Damage Power Increase" />
+		<OptionSet Index="7" Value="6" Edition="6" Description="Ignore enemy defense" />
+		<OptionSet Index="8" Value="12" Edition="6" Description="Damage Increase" />
+	</OptionSettings>
+
+	<OptionsList> <!-- Section used by tools only -->
+		<Option Index="0" Name="Strength Increase" Operator="1" />
+		<Option Index="1" Name="Agility Increase" Operator="1" />
+		<Option Index="2" Name="Energy Increase" Operator="1" />
+		<Option Index="3" Name="Vitality Increase" Operator="1" />
+		<Option Index="4" Name="Command Increase" Operator="1" />
+		<Option Index="5" Name="Min Damage Power Increase" Operator="1" />
+		<Option Index="6" Name="Max Damage Power Increase" Operator="1" />
+		<Option Index="7" Name="Wizardry Increase" Operator="2" />
+		<Option Index="8" Name="Damage Increase" Operator="2" />
+		<Option Index="9" Name="Attack Speed Increase" Operator="1" />
+		<Option Index="10" Name="Defense Increase" Operator="1" />
+		<Option Index="11" Name="Maximum Life Increase" Operator="1" />
+		<Option Index="12" Name="Maximum Mana Increase" Operator="1" />
+		<Option Index="13" Name="AG Automatic Recover Increase" Operator="1" />
+		<Option Index="14" Name="AG Automatic Recovery Increase" Operator="1" />
+		<Option Index="15" Name="Critical Damage Probability Increase" Operator="2" />
+		<Option Index="16" Name="Critical Damage Power Increase" Operator="1" />
+		<Option Index="17" Name="Excellent Damage Probability Increase" Operator="2" />
+		<Option Index="18" Name="Excellent Damage Power Increase" Operator="1" />
+		<Option Index="19" Name="Skill Damage Increases" Operator="1" />
+		<Option Index="20" Name="Double Damage probability Increase" Operator="2" />
+		<Option Index="21" Name="Ignore Enemy Defense" Operator="2" />
+		<Option Index="22" Name="Defense Increased when equipping Shield" Operator="2" />
+		<Option Index="23" Name="ATK / HP" Operator="1" />
+		<!-- <Option Index="24" Name="Healing Power Increase" Operator="0" /> -->
+		<!-- <Option Index="25" Name="Increased interpersonal defense rate of allies near 6" Operator="0" /> -->
+		<!-- <Option Index="26" Name="Min Damage Power Increase" Operator="0" /> -->
+		<!-- <Option Index="27" Name="Triple Damage Chance Increase" Operator="0" /> -->
+		<Option Index="24" Name="All Stats Increase" Operator="1" />
+		<!-- <Option Index="25" Name="Base Defense Increase" Operator="1" /> -->
+		<Option Index="26" Name="Damage Increase" Operator="1" />
+		<Option Index="27" Name="Wizardry Power Increase" Operator="1" />
+		<Option Index="28" Name="Mastery Attack Power and Wizardry Increase" Operator="1" />
+		<Option Index="29" Name="Mastery Excellent Damage Increase" Operator="1" />
+		<Option Index="30" Name="Mastery Critical Damage Increase" Operator="1" />
+		<Option Index="31" Name="Mastery Damage Increase" Operator="1" />
+	</OptionsList>
+</EarringAttribute>

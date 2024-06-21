@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### CherryBlossomMix::Mix ###
+//	ID: Unique mix ID
+//	ItemCat: Category of mix source item, refer to ItemList.xml
+//	ItemIndex: Index of mix source item, refer to ItemList.xml
+//	ItemCount: Count of mix source item
+//	EventBagID: ID of event item bag type defined in ItemBagScript.lua
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Modification of values of the system required adjustment of Mix.bmd file, see group 9
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<CherryBlossomMix>
+	<Mix ID="0" ItemCat="14" ItemIndex="88" ItemCount="10" EventBagID="47" />
+	<Mix ID="1" ItemCat="14" ItemIndex="89" ItemCount="50" EventBagID="48" />
+	<Mix ID="2" ItemCat="14" ItemIndex="90" ItemCount="255" EventBagID="21" />
+</CherryBlossomMix>

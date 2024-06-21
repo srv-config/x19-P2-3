@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//
+// ### BonusEvent ###
+//	Enable: Activates or deactivates event, 0/10
+//	DisplayNotice: Displays notice about the event start (English.ini ~> 1039)
+//
+// ### BonusEvent::Event ###
+//	DayOfWeek: Day of a week the event will run on:
+//		~ 0: Sunday
+//		~ 1: Monday
+//		~ 2: Tuesday
+//		~ 3: Wednesday
+//		~ 4: Thursday
+//		~ 5: Friday
+//		~ 6: Saturday
+//		~ -1: every day
+//	StartHour: Start hour of the event, 0-23
+//	StartMinute: End minute of the event, 0-59
+//	EndHour: End hour of the event, 0-23
+//	EndHour: End minute of the event, 0-59
+//	ExpMultiplier: Regular experience multiplier
+//	MasterExpMultiplier: Master experience multiplier
+//	MajesticExpMultiplier: Majestic experience multiplier
+//	ItemDropBonus: Bonus of item drop rate added to server base value of item drop on server
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<BonusEvent Enable="1" DisplayNotice="1">
+	<Event DayOfWeek="-1" StartHour="8" StartMinute="0" EndHour="10" EndMinute="0" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
+	<Event DayOfWeek="-1" StartHour="14" StartMinute="0" EndHour="16" EndMinute="0" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
+	<Event DayOfWeek="-1" StartHour="20" StartMinute="0" EndHour="22" EndMinute="0" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
+	<Event DayOfWeek="-1" StartHour="2" StartMinute="0" EndHour="4" EndMinute="0" ExpMultiplier="1.5" MasterExpMultiplier="1.5" MajesticExpMultiplier="1.5" ItemDropBonus="15" />
+</BonusEvent>

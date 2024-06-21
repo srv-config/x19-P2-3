@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ClassQuest::QuestInfo ###
+//	Index: 
+//	Type: 
+//	SubType: 
+//	Name:
+//
+// ### ClassQuest::QuestInfo::QuestJob::Job ###
+//	Type: 
+//	ReqItemCat: 
+//	ItemLevel: 
+//	ItemCount: 
+//	MonsterMinLevel: 
+//	MonsterMaxLevel: 
+//	DropRate: 
+//	RewardType: 
+//	RewardSubType: 
+//	RewardCount: 
+//	LinkConditionIndex: 
+//	DarkWizard: 
+//	DarkKnight: 
+//	FairyElf: 
+//	MagicGladiator: 
+//	DarkLord: 
+//	Summoner: 
+//	RageFighter: 
+//	GrowLancer: 
+//	GunCrusher: 
+//
+// ### ClassQuest::QuestCondition::Condition ###
+//	Type: 
+//	Index: 
+//	MinLevel: 
+//	MaxLevel: 
+//	ReqStrength: 
+//	ReqMoney: 
+//	StartContext:
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+
+<ClassQuest>
+	<QuestInfo Index="0" Type="2" SubType="235" Name="Locate the Scroll of the Emperor!">
+		<QuestJob>
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="23" ItemLevel="0" ItemCount="1" MonsterMinLevel="45" MonsterMaxLevel="60" DropRate="10" RewardType="200" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="1" DarkKnight="1" FairyElf="1" MagicGladiator="0" DarkLord="0" Summoner="1" RageFighter="0" GrowLancer="0" RuneWizard="1" Slayer="1" GunCrusher="1" LightWizard="1" LemuriaMage="1" IllusionKnight="1" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="23" ItemLevel="0" ItemCount="1" MonsterMinLevel="45" MonsterMaxLevel="60" DropRate="10" RewardType="200" RewardSubType="0" RewardCount="10" LinkConditionIndex="1" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="1" DarkLord="1" Summoner="0" RageFighter="1" GrowLancer="0" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+		</QuestJob>
+		
+		<QuestCondition>
+			<Condition Type="1"  Index="0"  MinLevel="10000" MaxLevel="10000" ReqStrength="0" ReqMoney="0" StartContext="73" />
+			<Condition Type="-1" Index="-1" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="1000000" StartContext="51" />
+			<Condition Type="-1" Index="-1" MinLevel="150" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="50" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="1" Type="2" SubType="235" Name="The Four Treasures of Mu">
+		<QuestJob>
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="24" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="1" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="25" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="1" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="26" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="1" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="68" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="1" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="26" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="1" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="24" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="1" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="24" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="0" GunCrusher="1" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="26" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="1" Slayer="0" GunCrusher="0" LightWizard="1" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="26" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="1" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="1" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="24" ItemLevel="0" ItemCount="1" MonsterMinLevel="62" MonsterMaxLevel="76" DropRate="10" RewardType="201" RewardSubType="0" RewardCount="10" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="1" />
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="-1" Index="0" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="2000000" StartContext="71" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="2" Type="2" SubType="229" Name="Achieve 'Hero Status!'">
+		<QuestJob>
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="23" ItemLevel="1" ItemCount="1" MonsterMinLevel="72" MonsterMaxLevel="108" DropRate="10" RewardType="202" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="2" DarkKnight="0" FairyElf="2" MagicGladiator="0" DarkLord="0" Summoner="2" RageFighter="0" GrowLancer="0" RuneWizard="2" Slayer="2" GunCrusher="2" LightWizard="2" LemuriaMage="2" IllusionKnight="2" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="23" ItemLevel="1" ItemCount="1" MonsterMinLevel="72" MonsterMaxLevel="108" DropRate="10" RewardType="202" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="0" DarkKnight="2" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="-1" Index="-1" MinLevel="220" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="100" />
+			<Condition Type="-1" Index="1"  MinLevel="0"   MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="116" />
+			<Condition Type="-1" Index="-1" MinLevel="0"   MaxLevel="0" ReqStrength="0" ReqMoney="3000000" StartContext="118" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="3" Type="2" SubType="229" Name="Secret of the 'Dark Stone'">
+		<QuestJob>
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="24" ItemLevel="1" ItemCount="1" MonsterMinLevel="72" MonsterMaxLevel="108" DropRate="10" RewardType="203" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="0" DarkKnight="2" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="2" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />		
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="24" ItemLevel="1" ItemCount="1" MonsterMinLevel="72" MonsterMaxLevel="108" DropRate="10" RewardType="205" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="1" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />		
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="24" ItemLevel="1" ItemCount="1" MonsterMinLevel="72" MonsterMaxLevel="108" DropRate="10" RewardType="205" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="2" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />		
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="-1" Index="-1" MinLevel="220" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="115" />
+			<Condition Type="1" Index="2" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="117" />
+			<Condition Type="-1" Index="-1" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="2000000" StartContext="119"  />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="4" Type="2" SubType="406" Name="Prove Your Strength">
+		<QuestJob>
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="65" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="63" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="0" LinkConditionIndex="3" DarkWizard="2" DarkKnight="0" FairyElf="2" MagicGladiator="0" DarkLord="0" Summoner="2" RageFighter="0" GrowLancer="0" RuneWizard="2" Slayer="0" GunCrusher="2" LightWizard="2" LemuriaMage="2" IllusionKnight="2" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="66" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="309" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="0" LinkConditionIndex="1" DarkWizard="2" DarkKnight="0" FairyElf="2" MagicGladiator="0" DarkLord="0" Summoner="2" RageFighter="0" GrowLancer="0" RuneWizard="2" Slayer="0" GunCrusher="2" LightWizard="2" LemuriaMage="2" IllusionKnight="2" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="67" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="77" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="20" LinkConditionIndex="1" DarkWizard="2" DarkKnight="0" FairyElf="2" MagicGladiator="0" DarkLord="0" Summoner="2" RageFighter="0" GrowLancer="0" RuneWizard="2" Slayer="0" GunCrusher="2" LightWizard="2" LemuriaMage="2" IllusionKnight="2" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="65" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="63" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="0" LinkConditionIndex="3" DarkWizard="0" DarkKnight="2" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="2" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="66" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="309" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="0" LinkConditionIndex="2" DarkWizard="0" DarkKnight="2" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="2" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="67" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="77" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="20" LinkConditionIndex="2" DarkWizard="0" DarkKnight="2" FairyElf="0" MagicGladiator="0" DarkLord="0" Summoner="0" RageFighter="0" GrowLancer="0" RuneWizard="0" Slayer="2" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="65" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="63" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="0" LinkConditionIndex="3" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="1" DarkLord="1" Summoner="0" RageFighter="1" GrowLancer="1" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="66" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="309" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="1" DarkLord="1" Summoner="0" RageFighter="1" GrowLancer="1" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="67" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="77" DropRate="1000" RewardType="200" RewardSubType="0" RewardCount="20" LinkConditionIndex="0" DarkWizard="0" DarkKnight="0" FairyElf="0" MagicGladiator="1" DarkLord="1" Summoner="0" RageFighter="1" GrowLancer="1" RuneWizard="0" Slayer="0" GunCrusher="0" LightWizard="0" LemuriaMage="0" IllusionKnight="0" />
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="1" Index="2" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="166" />
+			<Condition Type="2" Index="3" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="166" />
+			<Condition Type="3" Index="-1" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="5000000" StartContext="146" />
+			<Condition Type="-1" Index="-1" MinLevel="380" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="5" Type="2" SubType="406" Name="Infiltrate the Barracks of Balgass">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="409" ReqItemIndex="0" ItemLevel="0" ItemCount="20" MonsterMinLevel="-1" MonsterMaxLevel="409" DropRate="0" RewardType="0"   RewardSubType="0" RewardCount="0"  LinkConditionIndex="1" DarkWizard="2" DarkKnight="2" FairyElf="2" MagicGladiator="1" DarkLord="1" Summoner="2" RageFighter="1" GrowLancer="1" RuneWizard="2" Slayer="2" GunCrusher="2" LightWizard="2" LemuriaMage="2" IllusionKnight="2" />
+			<Job Type="2" ReqItemCat="410" ReqItemIndex="0" ItemLevel="0" ItemCount="20" MonsterMinLevel="-1" MonsterMaxLevel="410" DropRate="0" RewardType="0"   RewardSubType="0" RewardCount="0"  LinkConditionIndex="0" DarkWizard="2" DarkKnight="2" FairyElf="2" MagicGladiator="1" DarkLord="1" Summoner="2" RageFighter="1" GrowLancer="1" RuneWizard="2" Slayer="2" GunCrusher="2" LightWizard="2" LemuriaMage="2" IllusionKnight="2" />
+			<Job Type="2" ReqItemCat="411" ReqItemIndex="0" ItemLevel="0" ItemCount="20" MonsterMinLevel="-1" MonsterMaxLevel="411" DropRate="0" RewardType="200" RewardSubType="0" RewardCount="20" LinkConditionIndex="0" DarkWizard="2" DarkKnight="2" FairyElf="2" MagicGladiator="1" DarkLord="1" Summoner="2" RageFighter="1" GrowLancer="1" RuneWizard="2" Slayer="2" GunCrusher="2" LightWizard="2" LemuriaMage="2" IllusionKnight="2" />
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="1" Index="-1" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="7000000" StartContext="157" />
+			<Condition Type="-1" Index="-1" MinLevel="400" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+			<Condition Type="-1" Index="4" MinLevel="0"	MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="145" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="6" Type="2" SubType="406" Name="Into the Realm of 'Darkness'">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="412" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="412" DropRate="0" RewardType="204" RewardSubType="200" RewardCount="30" LinkConditionIndex="0" DarkWizard="2" DarkKnight="2" FairyElf="2" MagicGladiator="1" DarkLord="1" Summoner="2" RageFighter="1" GrowLancer="1" RuneWizard="2" Slayer="2" GunCrusher="2" LightWizard="2" LemuriaMage="2" IllusionKnight="2" />
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="-1" Index="-1" MinLevel="400" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+			<Condition Type="-1" Index="5" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="145" />
+			<Condition Type="-1" Index="-1" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="10000000" StartContext="167" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="7" Type="2" SubType="766" Name="4th Class Upgrade - Eligibility Test">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="763" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="763" DropRate="0" RewardType="200" RewardSubType="0" RewardCount="20" LinkConditionIndex="0" DarkWizard="3" DarkKnight="3" FairyElf="3" MagicGladiator="3" DarkLord="3" Summoner="3" RageFighter="3" GrowLancer="3" RuneWizard="3" Slayer="3" GunCrusher="3" LightWizard="3" LemuriaMage="3" IllusionKnight="3" />
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="-1" Index="6" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="188" />
+			<Condition Type="-1" Index="-1" MinLevel="800" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="8" Type="2" SubType="766" Name="4th Class Upgrade - New Battle">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="767" ReqItemIndex="0" ItemLevel="0" ItemCount="5" MonsterMinLevel="-1" MonsterMaxLevel="767" DropRate="0" RewardType="0" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="3" DarkKnight="3" FairyElf="3" MagicGladiator="3" DarkLord="3" Summoner="3" RageFighter="3" GrowLancer="3" RuneWizard="3" Slayer="3" GunCrusher="3" LightWizard="3" LemuriaMage="3" IllusionKnight="3" />
+			<Job Type="2" ReqItemCat="770" ReqItemIndex="0" ItemLevel="0" ItemCount="5" MonsterMinLevel="-1" MonsterMaxLevel="772" DropRate="0" RewardType="200" RewardSubType="0" RewardCount="30" LinkConditionIndex="0" DarkWizard="3" DarkKnight="3" FairyElf="3" MagicGladiator="3" DarkLord="3" Summoner="3" RageFighter="3" GrowLancer="3" RuneWizard="3" Slayer="3" GunCrusher="3" LightWizard="3" LemuriaMage="3" IllusionKnight="3" />
+			<Job Type="2" ReqItemCat="771" ReqItemIndex="0" ItemLevel="0" ItemCount="5" MonsterMinLevel="-1" MonsterMaxLevel="771" DropRate="0" RewardType="0" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="3" DarkKnight="3" FairyElf="3" MagicGladiator="3" DarkLord="3" Summoner="3" RageFighter="3" GrowLancer="3" RuneWizard="3" Slayer="3" GunCrusher="3" LightWizard="3" LemuriaMage="3" IllusionKnight="3" />
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="-1" Index="7" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="194" />
+			<Condition Type="-1" Index="-1" MinLevel="800" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="9" Type="2" SubType="766" Name="4th Class Upgrade - New Battle (2)">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="763" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="763" DropRate="0" RewardType="206" RewardSubType="200" RewardCount="50" LinkConditionIndex="0" DarkWizard="3" DarkKnight="3" FairyElf="3" MagicGladiator="3" DarkLord="3" Summoner="3" RageFighter="3" GrowLancer="3" RuneWizard="3" Slayer="3" GunCrusher="3" LightWizard="3" LemuriaMage="3" IllusionKnight="3" />
+		</QuestJob>
+
+		<QuestCondition>
+			<Condition Type="-1" Index="8" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="200" />
+			<Condition Type="-1" Index="-1" MinLevel="800" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+
+	<QuestInfo Index="10" Type="2" SubType="941" Name="5th Class - New Power Nuke">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="937" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="937" DropRate="0" RewardType="0" RewardSubType="0" RewardCount="0" LinkConditionIndex="1" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="9" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="232" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+	
+	<QuestInfo Index="11" Type="2" SubType="941" Name="5th Class - New Power Bolt">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="937" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="937" DropRate="0" RewardType="0" RewardSubType="0" RewardCount="0" LinkConditionIndex="1" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="10" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="238" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+	
+	<QuestInfo Index="12" Type="2" SubType="941" Name="5th Class - New Power Wide Area">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="937" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="937" DropRate="0" RewardType="207" RewardSubType="200" RewardCount="200" LinkConditionIndex="1" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="11" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="244" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+	
+	<QuestInfo Index="13" Type="2" SubType="941" Name="5th Class - Giant Mount (1)">
+		<QuestJob>
+			<Job Type="1" ReqItemCat="14" ReqItemIndex="22" ItemLevel="0" ItemCount="300" MonsterMinLevel="-1" MonsterMaxLevel="44" DropRate="500" RewardType="0" RewardSubType="0" RewardCount="0" LinkConditionIndex="0" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="12" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="253" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+	
+	<QuestInfo Index="14" Type="2" SubType="941" Name="5th Class - Giant Mount (2)">
+		<QuestJob>
+			<Job Type="2" ReqItemCat="938" ReqItemIndex="0" ItemLevel="0" ItemCount="1" MonsterMinLevel="-1" MonsterMaxLevel="938" DropRate="0" RewardType="208" RewardSubType="0" RewardCount="1" LinkConditionIndex="1" DarkWizard="4" DarkKnight="4" FairyElf="4" MagicGladiator="4" DarkLord="4" Summoner="4" RageFighter="4" GrowLancer="4" RuneWizard="4" Slayer="4" GunCrusher="4" LightWizard="4" LemuriaMage="4" IllusionKnight="4" />
+		</QuestJob>
+	
+		<QuestCondition>
+			<Condition Type="-1" Index="13" MinLevel="0" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="254" />
+			<Condition Type="-1" Index="-1" MinLevel="1200" MaxLevel="0" ReqStrength="0" ReqMoney="0" StartContext="144" />
+		</QuestCondition>
+	</QuestInfo>
+</ClassQuest>

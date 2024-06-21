@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ IMPORTANT: The event must have its monsters defined only in DevilSquare_Classic_Monsters.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### DevilSquare_Classic::Monster ###
+//	EventLevel: Defines event level the spawn applies to, starts from 0
+//	MapNumber: Map number to spawn the monsters at
+//
+// ### DevilSquare_Classic::Monster::Spawn ###
+//	Index: Index of monster to spawn, refer to MonsterList.xml
+//	Distance: Distance the monster is spawned from the defined start coordinated
+//	StartX: The start X coordinate of monster spawn area, must be greater or equal StartY
+//	StartY: The start Y coordinate of monster spawn area, must be lower or equal StartX
+//	EndX: The End X coordinate of monster spawn area, must be greater or equal EndY
+//	EndY: The End Y coordinate of monster spawn area, must be lower or equal EndX
+//	Count: Count of monsters to spawn
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<DevilSquare_Classic>
+	<Monster EventLevel="0" MapNumber="9"> <!-- Level 1 -->
+		<Spawn Index="310" Distance="30" StartX="119" StartY="80" EndX="150" EndY="115" Dir="-1" Count="35" /> <!-- Hammer Scout -->
+		<Spawn Index="356" Distance="30" StartX="119" StartY="80" EndX="150" EndY="115" Dir="-1" Count="35" /> <!-- Gigantis -->
+	</Monster>
+	
+	<Monster EventLevel="1" MapNumber="9"> <!-- Level 2 -->
+		<Spawn Index="345" Distance="30" StartX="121" StartY="152" EndX="151" EndY="184" Dir="-1" Count="35" /> <!-- Death Spirit -->
+		<Spawn Index="337" Distance="30" StartX="121" StartY="152" EndX="151" EndY="184" Dir="-1" Count="35" /> <!-- Schriker7 -->
+	</Monster>
+	
+	<Monster EventLevel="2" MapNumber="9"> <!-- Level 3 -->
+		<Spawn Index="517" Distance="30" StartX="49" StartY="138" EndX="79" EndY="173" Dir="-1" Count="35" /> <!-- Cavalry Captain -->
+		<Spawn Index="514" Distance="30" StartX="49" StartY="138" EndX="79" EndY="173" Dir="-1" Count="35" /> <!-- Knight Commander -->
+	</Monster>
+	
+	<Monster EventLevel="3" MapNumber="9"> <!-- Level 4 -->
+		<Spawn Index="782" Distance="30" StartX="53" StartY="74" EndX="83" EndY="109" Dir="-1" Count="35" /> <!-- Soram -->
+		<Spawn Index="780" Distance="30" StartX="53" StartY="74" EndX="83" EndY="109" Dir="-1" Count="35" /> <!-- Necron -->
+	</Monster>
+	
+	<Monster EventLevel="4" MapNumber="32"> <!-- Level 5 -->
+		<Spawn Index="743" Distance="30" StartX="120" StartY="80" EndX="150" EndY="115" Dir="-1" Count="35" /> <!-- Paraca -->
+		<Spawn Index="770" Distance="30" StartX="120" StartY="80" EndX="150" EndY="115" Dir="-1" Count="35" /> <!-- Deep Dungeon Larva -->
+	</Monster>
+	
+	<Monster EventLevel="5" MapNumber="32"> <!-- Level 6 -->
+		<Spawn Index="776" Distance="30" StartX="122" StartY="152" EndX="151" EndY="184" Dir="-1" Count="35" /> <!-- Deep Dungeon Poison Bull Fighter -->
+		<Spawn Index="810" Distance="30" StartX="122" StartY="152" EndX="151" EndY="184" Dir="-1" Count="35" /> <!-- Mine Digger -->
+	</Monster>
+	
+	<Monster EventLevel="6" MapNumber="32"> <!-- Level 7 -->
+		<Spawn Index="812" Distance="30" StartX="50" StartY="138" EndX="79" EndY="173" Dir="-1" Count="35" /> <!-- Mine Porter -->
+		<Spawn Index="775" Distance="30" StartX="50" StartY="138" EndX="79" EndY="173" Dir="-1" Count="35" /> <!-- Deep Dungeon Thunder Lich -->
+	</Monster>
+</DevilSquare_Classic>

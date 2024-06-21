@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### BossBattleTogether ###
+//	Enable: Disables or enables the event, 0/1
+//	MaxUser: Maximum number of users that can join the event, maximum value is 100
+//	DamageToSuccess: Minimum value of damage caused to boss monsters to received basic reward, defined in RewardList at mission 0
+//
+// ### BossBattleTogether::Time ###
+//	ToOpen: Time from notification appearance about the event until event open, seconds
+//	ToStart: Time to start after entry to the event has been closed, seconds
+//	PlayDuration: Duration of the event, seconds
+//	ToClose: Time to warp to the town after event end, seconds
+
+// ### BossBattleTogether::Schedule ###
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//
+// ### BossBattleTogether::RewardList ###
+//	Mission: Mission number the reward is assigned to:
+//		~ 0: Accumulate specific value of damage caused
+//		~ 1: Highest total damage caused during the event
+//		~ 2: Last hit caused to final (second) boss monster
+//
+//	CatX (1-3): Category of rward item, see ItemList.xml
+//	IndexX (1-3): Index of reward item, See ItemList.xml
+//	CountX (1-3): Number of reward items
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Rewards are issued to Gremory Case
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<BossBattleTogether Enable="1" MaxUser="100" DamageToSuccess="1000000" >
+	<Time ToOpen="300" ToStart="30" PlayDuration="300" ToClose="30" />
+	
+	<Schedule>
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="20" Minute="0" Second="-1" />
+	</Schedule>
+	
+	<RewardList>
+		<Reward Mission="0" Cat1="20" Index1="78" Count1="1" Cat2="20" Index2="110" Count2="1" Cat3="-1" Index3="-1" Count3="0" /> <!-- Accumulate specific value of damage caused -->
+		<Reward Mission="1" Cat1="20" Index1="110" Count1="1" Cat2="-1" Index2="-1" Count2="0" Cat3="-1" Index3="-1" Count3="0" /> <!-- Highest total damage caused during the event -->
+		<Reward Mission="2" Cat1="20" Index1="110" Count1="1" Cat2="-1" Index2="-1" Count2="0" Cat3="-1" Index3="-1" Count3="0" /> <!-- Last hit caused to final (second) boss monster -->
+	</RewardList>
+</BossBattleTogether>

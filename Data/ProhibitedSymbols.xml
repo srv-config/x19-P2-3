@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ProhibitedSymbols ###
+//	Mode: Defines mode the system will detect prohibited/allowed symbols
+//		0: Basing on characters defined in Symbols section, disallowed mode
+//		1: Basing on Regular Expression definition, Regex section, allowed mode
+//
+//	AllowSpace: Defines whether to allow spaces in character and guild names, 0/1, applies to mode 0 only - (not recommented to enable)
+//	CodePage: A code page of character input, e.g. if language is Korean then use dedicated code page of Korean 949 on both sides - client and server, UTF-8 is also allowed for UNICODE languages
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ All characters in final are converted to UTF-8 and compared, the CodePage indicates a character culture. Remember to perform a test before going live. Character names check does not work (yet)
+//~~ Depending of configuration the current file may require to be saved in encoding dedicated for specified language, example editor allowing to set file encoding is NotePad++ (Encoding tab)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ProhibitedSymbols::Symbols::Restrict ###
+//	Symbol: defines a symbol to restrict
+//	Chat: Restricts Character from entire chat in game, 0/1
+//	CharName: Restricts character from character names, 0/1
+//	GuildName: Restricts character from Guild Name, 0/1
+//
+// ### ProhibitedSymbols::Regex::Type ###
+//	System: Defines part of the game regular expression applies to
+//		0: In-Game Chat
+//		1: Character Names
+//		2: Guild Names
+//	Regex: Regular expression definition of allowed characters
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ For tutorials of how to build own regex refer to http://regexone.com/ or
+//~~ https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html
+//~~ or any other guide of your choice. System does not have an effect on
+//~~ existing character or guild with prohibited symbol in name, only newly created
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ IMPORTANT ~~ File must be saved with UTF-8 Without BOM encoding
+//~~ Invalid regex syntax will cause Game Server crash
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ProhibitedSymbols Mode="0" AllowSpace="0" CodePage="1252">
+	<Symbols> <!-- This section works in DISALLOW mode -->
+		<Restrict Symbol="%" Chat="1" CharName="1" GuildName="1" />
+		<Restrict Symbol="'" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="." Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol=";" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol=":" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="." Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="`" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="@" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="#" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="(" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol=")" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="*" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="^" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="=" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="_" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="-" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="~" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="!" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="?" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="|" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="\" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="/" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="[" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="]" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="=" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol=">" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="<" Chat="0" CharName="1" GuildName="1" />
+		<Restrict Symbol="�" Chat="0" CharName="1" GuildName="1" />
+	</Symbols>
+	<!-- Examples ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	~~ Russian: ^[\w\d\s\Sа-яА-Я]+$
+	~~ Viernamese: ^[\w\d\s\SÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂ µưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Regex> <!-- Regex works in ALLOW mode -->
+		<Type System="0" Regex="^[\w\d\s\S]+$" /> <!-- In-Game Chat -->
+		<Type System="1" Regex="^[A-Za-z0-9]+$" /> <!-- Character Name --> <!-- Temporary working only if game client is being run on machine with Operating System of same culture as input language, e.g. Korean locale and Korean input -->
+		<Type System="2" Regex="^[A-Za-z0-9]+$" /> <!-- Guild Names -->
+	</Regex>
+</ProhibitedSymbols>

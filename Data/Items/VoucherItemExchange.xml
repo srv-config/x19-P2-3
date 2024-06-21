@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### VoucherItemExchange ###
+//	Enable: Deactivates or activates the system, 0/1
+//
+// ### VoucherItemExchange::VoucherSettings::Voucher ###
+//	ID: Unique ID of the voucher
+//	ItemCat: Category of the voucher item, see ItemList.xml
+//	ItemIndex: Index of the voucher item, see ItemList.xml
+//	MaxUseCount: Maximum number of times the voucher can be used, should be equal to Overlap attribute set in ItemList.xml for the voucher item
+//
+// ### VoucherItemExchange::VoucherSettings::Voucher::RewardItemList::Reward ###
+//	ID: Unique reward ID
+//	ItemCat: Category of the reward item, see ItemList.xml
+//	ItemIndex: Index of the reward item, see ItemList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Reward items type should be configured according to voucher type
+//~~ Voucher ID 0: 4th wings
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	ItemLevel: Level of reward item, 0-15
+//	Luck: Defines whether reward item should come with Luck, 0/1
+//	Option: Option of the reward item, 0-7, +0 to +28
+//	Duration: Duration of rewarded wings, 0 if not applies, seconds
+//
+// ### VoucherItemExchange::VoucherSettings::Voucher::RewardItemOptions::OptionSet ###
+//	ID: Unique ID of options set
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Voucher ID 0: defines grad options for 4th wings, see ItemGradeOption.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	OptionID1-4: ID of the option
+//	OptionVal1-4: Value of the option, should be in min/max range of specific option type
+//
+//	ShuffleEffect: Visual effect of drawn options:
+//		0: Normal
+//		1: Rare
+//
+//	Rate: Chance rate of the options set
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->											
+
+<VoucherItemExchange Enable="1">
+	<VoucherSettings>
+		<Voucher ID="0" ItemCat="20" ItemIndex="113" MaxUseCount="100">
+			<RewardItemList>
+				<Reward ID="0" ItemCat="12" ItemIndex="414" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="1" ItemCat="12" ItemIndex="415" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="2" ItemCat="12" ItemIndex="416" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="3" ItemCat="12" ItemIndex="419" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="4" ItemCat="12" ItemIndex="417" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="5" ItemCat="12" ItemIndex="418" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="6" ItemCat="12" ItemIndex="420" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="7" ItemCat="12" ItemIndex="421" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="8" ItemCat="12" ItemIndex="469" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="9" ItemCat="12" ItemIndex="474" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="10" ItemCat="12" ItemIndex="490" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="11" ItemCat="12" ItemIndex="160" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="12" ItemCat="12" ItemIndex="152" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+				<Reward ID="13" ItemCat="12" ItemIndex="178" ItemLevel="11" Luck="1" Option="1" Duration="2592000" />
+			</RewardItemList>
+			<RewardItemOptions>
+				<OptionSet ID="0" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="-1" OptionVal3="-1" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="16666" />
+				<OptionSet ID="1" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="-1" OptionVal3="-1" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="11667" />
+				<OptionSet ID="2" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="-1" OptionVal3="-1" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="11667" />
+				<OptionSet ID="3" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="-1" OptionVal3="-1" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="10000" />
+				<OptionSet ID="4" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="0" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="75000" />
+				<OptionSet ID="5" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="1" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="7500" />
+				<OptionSet ID="6" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="2" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="5000" />
+				<OptionSet ID="7" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="4" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="5000" />
+				<OptionSet ID="8" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="20000" />
+				<OptionSet ID="9" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="7" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="50000" />
+				<OptionSet ID="10" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="8" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="37500" />
+				<OptionSet ID="11" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="9" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="25000" />
+				<OptionSet ID="12" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="10" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="25000" />
+				<OptionSet ID="13" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="0" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="30000" />
+				<OptionSet ID="14" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="1" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="3000" />
+				<OptionSet ID="15" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="2" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="2000" />
+				<OptionSet ID="16" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="4" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="2000" />
+				<OptionSet ID="17" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="8000" />
+				<OptionSet ID="18" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="7" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="20000" />
+				<OptionSet ID="19" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="8" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="15000" />
+				<OptionSet ID="20" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="9" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="10000" />
+				<OptionSet ID="21" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="10" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="10000" />
+				<OptionSet ID="22" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="0" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="30000" />
+				<OptionSet ID="23" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="1" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="3000" />
+				<OptionSet ID="24" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="2" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="2000" />
+				<OptionSet ID="25" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="4" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="2000" />
+				<OptionSet ID="26" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="8000" />
+				<OptionSet ID="27" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="7" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="20000" />
+				<OptionSet ID="28" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="8" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="15000" />
+				<OptionSet ID="29" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="9" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="10000" />
+				<OptionSet ID="30" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="10" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="10000" />
+				<OptionSet ID="31" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="0" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="45000" />
+				<OptionSet ID="32" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="1" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="4500" />
+				<OptionSet ID="33" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="2" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="3000" />
+				<OptionSet ID="34" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="4" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="3000" />
+				<OptionSet ID="35" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="12000" />
+				<OptionSet ID="36" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="7" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="30000" />
+				<OptionSet ID="37" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="8" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="22500" />
+				<OptionSet ID="38" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="9" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="15000" />
+				<OptionSet ID="39" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="10" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="0" Rate="15000" />
+				<OptionSet ID="40" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="0" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="7500" />
+				<OptionSet ID="41" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="1" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="750" />
+				<OptionSet ID="42" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="2" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="500" />
+				<OptionSet ID="43" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="4" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="500" />
+				<OptionSet ID="44" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="2000" />
+				<OptionSet ID="45" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="7" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="5000" />
+				<OptionSet ID="46" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="8" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="3750" />
+				<OptionSet ID="47" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="9" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="2500" />
+				<OptionSet ID="48" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="10" OptionVal3="2" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="2500" />
+				<OptionSet ID="49" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="0" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="15000" />
+				<OptionSet ID="50" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="1" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="1500" />
+				<OptionSet ID="51" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="2" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="1000" />
+				<OptionSet ID="52" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="4" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="1000" />
+				<OptionSet ID="53" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="4000" />
+				<OptionSet ID="54" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="7" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="10000" />
+				<OptionSet ID="55" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="8" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="7500" />
+				<OptionSet ID="56" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="9" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="5000" />
+				<OptionSet ID="57" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="10" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="5000" />
+				<OptionSet ID="58" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="0" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="15000" />
+				<OptionSet ID="59" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="1" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="1500" />
+				<OptionSet ID="60" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="2" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="1000" />
+				<OptionSet ID="61" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="4" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="1000" />
+				<OptionSet ID="62" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="4000" />
+				<OptionSet ID="63" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="7" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="10000" />
+				<OptionSet ID="64" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="8" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="7500" />
+				<OptionSet ID="65" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="9" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="5000" />
+				<OptionSet ID="66" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="10" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="5000" />
+				<OptionSet ID="67" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="0" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="7500" />
+				<OptionSet ID="68" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="1" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="750" />
+				<OptionSet ID="69" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="2" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="500" />
+				<OptionSet ID="70" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="4" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="500" />
+				<OptionSet ID="71" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="2000" />
+				<OptionSet ID="72" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="7" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="5000" />
+				<OptionSet ID="73" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="8" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="3750" />
+				<OptionSet ID="74" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="9" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="2500" />
+				<OptionSet ID="75" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="10" OptionVal3="3" OptionID4="-1" OptionVal4="-1" ShuffleEffect="1" Rate="2500" />
+				<OptionSet ID="76" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="7" OptionVal4="2" ShuffleEffect="0" Rate="25343" />
+				<OptionSet ID="77" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="10" OptionVal4="2" ShuffleEffect="0" Rate="13333" />
+				<OptionSet ID="78" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="8" OptionVal4="2" ShuffleEffect="0" Rate="10000" />
+				<OptionSet ID="79" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="9" OptionVal4="2" ShuffleEffect="0" Rate="13333" />
+				<OptionSet ID="80" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="1" OptionVal4="2" ShuffleEffect="0" Rate="2000" />
+				<OptionSet ID="81" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="2" OptionVal4="2" ShuffleEffect="0" Rate="1333" />
+				<OptionSet ID="82" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="4" OptionVal4="2" ShuffleEffect="0" Rate="1333" />
+				<OptionSet ID="83" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="7" OptionVal4="2" ShuffleEffect="1" Rate="4560" />
+				<OptionSet ID="84" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="10" OptionVal4="2" ShuffleEffect="1" Rate="2400" />
+				<OptionSet ID="85" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="8" OptionVal4="2" ShuffleEffect="1" Rate="1800" />
+				<OptionSet ID="86" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="9" OptionVal4="2" ShuffleEffect="1" Rate="2400" />
+				<OptionSet ID="87" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="1" OptionVal4="2" ShuffleEffect="1" Rate="360" />
+				<OptionSet ID="88" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="2" OptionVal4="2" ShuffleEffect="1" Rate="240" />
+				<OptionSet ID="89" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="4" OptionVal4="2" ShuffleEffect="1" Rate="240" />
+				<OptionSet ID="90" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="7" OptionVal4="2" ShuffleEffect="1" Rate="6186" />
+				<OptionSet ID="91" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="10" OptionVal4="2" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="92" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="8" OptionVal4="2" ShuffleEffect="1" Rate="2442" />
+				<OptionSet ID="93" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="9" OptionVal4="2" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="94" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="1" OptionVal4="2" ShuffleEffect="1" Rate="488" />
+				<OptionSet ID="95" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="2" OptionVal4="2" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="96" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="4" OptionVal4="2" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="97" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="7" OptionVal4="3" ShuffleEffect="1" Rate="6186" />
+				<OptionSet ID="98" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="10" OptionVal4="3" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="99" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="8" OptionVal4="3" ShuffleEffect="1" Rate="2442" />
+				<OptionSet ID="100" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="9" OptionVal4="3" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="101" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="1" OptionVal4="3" ShuffleEffect="1" Rate="488" />
+				<OptionSet ID="102" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="2" OptionVal4="3" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="103" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="2" OptionID4="4" OptionVal4="3" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="104" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="7" OptionVal4="2" ShuffleEffect="1" Rate="6186" />
+				<OptionSet ID="105" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="10" OptionVal4="2" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="106" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="8" OptionVal4="2" ShuffleEffect="1" Rate="2442" />
+				<OptionSet ID="107" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="9" OptionVal4="2" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="108" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="1" OptionVal4="2" ShuffleEffect="1" Rate="488" />
+				<OptionSet ID="109" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="2" OptionVal4="2" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="110" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="4" OptionVal4="2" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="111" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="7" OptionVal4="3" ShuffleEffect="1" Rate="6186" />
+				<OptionSet ID="112" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="10" OptionVal4="3" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="113" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="8" OptionVal4="3" ShuffleEffect="1" Rate="2442" />
+				<OptionSet ID="114" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="9" OptionVal4="3" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="115" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="1" OptionVal4="3" ShuffleEffect="1" Rate="488" />
+				<OptionSet ID="116" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="2" OptionVal4="3" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="117" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="4" OptionVal4="3" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="118" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="7" OptionVal4="3" ShuffleEffect="1" Rate="6186" />
+				<OptionSet ID="119" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="10" OptionVal4="3" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="120" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="8" OptionVal4="3" ShuffleEffect="1" Rate="2442" />
+				<OptionSet ID="121" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="9" OptionVal4="3" ShuffleEffect="1" Rate="3256" />
+				<OptionSet ID="122" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="1" OptionVal4="3" ShuffleEffect="1" Rate="488" />
+				<OptionSet ID="123" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="2" OptionVal4="3" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="124" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="4" OptionVal4="3" ShuffleEffect="1" Rate="326" />
+				<OptionSet ID="125" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="7" OptionVal4="2" ShuffleEffect="1" Rate="2533" />
+				<OptionSet ID="126" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="10" OptionVal4="2" ShuffleEffect="1" Rate="1333" />
+				<OptionSet ID="127" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="8" OptionVal4="2" ShuffleEffect="1" Rate="1000" />
+				<OptionSet ID="128" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="9" OptionVal4="2" ShuffleEffect="1" Rate="1333" />
+				<OptionSet ID="129" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="1" OptionVal4="2" ShuffleEffect="1" Rate="200" />
+				<OptionSet ID="130" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="2" OptionVal4="2" ShuffleEffect="1" Rate="133" />
+				<OptionSet ID="131" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="4" OptionVal4="2" ShuffleEffect="1" Rate="133" />
+				<OptionSet ID="132" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="7" OptionVal4="3" ShuffleEffect="1" Rate="3369" />
+				<OptionSet ID="133" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="10" OptionVal4="3" ShuffleEffect="1" Rate="1773" />
+				<OptionSet ID="134" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="8" OptionVal4="3" ShuffleEffect="1" Rate="1330" />
+				<OptionSet ID="135" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="9" OptionVal4="3" ShuffleEffect="1" Rate="1773" />
+				<OptionSet ID="136" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="1" OptionVal4="3" ShuffleEffect="1" Rate="266" />
+				<OptionSet ID="137" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="2" OptionVal4="3" ShuffleEffect="1" Rate="177" />
+				<OptionSet ID="138" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="2" OptionID3="5" OptionVal3="3" OptionID4="4" OptionVal4="3" ShuffleEffect="1" Rate="177" />
+				<OptionSet ID="139" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="7" OptionVal4="3" ShuffleEffect="1" Rate="3369" />
+				<OptionSet ID="140" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="10" OptionVal4="3" ShuffleEffect="1" Rate="1773" />
+				<OptionSet ID="141" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="8" OptionVal4="3" ShuffleEffect="1" Rate="1330" />
+				<OptionSet ID="142" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="9" OptionVal4="3" ShuffleEffect="1" Rate="1773" />
+				<OptionSet ID="143" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="1" OptionVal4="3" ShuffleEffect="1" Rate="266" />
+				<OptionSet ID="144" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="2" OptionVal4="3" ShuffleEffect="1" Rate="177" />
+				<OptionSet ID="145" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="2" OptionID4="4" OptionVal4="3" ShuffleEffect="1" Rate="177" />
+				<OptionSet ID="146" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="7" OptionVal4="3" ShuffleEffect="1" Rate="3369" />
+				<OptionSet ID="147" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="10" OptionVal4="3" ShuffleEffect="1" Rate="1773" />
+				<OptionSet ID="148" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="8" OptionVal4="3" ShuffleEffect="1" Rate="1330" />
+				<OptionSet ID="149" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="9" OptionVal4="3" ShuffleEffect="1" Rate="1773" />
+				<OptionSet ID="150" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="1" OptionVal4="3" ShuffleEffect="1" Rate="266" />
+				<OptionSet ID="151" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="2" OptionVal4="3" ShuffleEffect="1" Rate="177" />
+				<OptionSet ID="152" OptionID1="3" OptionVal1="2" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="4" OptionVal4="3" ShuffleEffect="1" Rate="177" />
+				<OptionSet ID="153" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="7" OptionVal4="3" ShuffleEffect="1" Rate="2533" />
+				<OptionSet ID="154" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="10" OptionVal4="3" ShuffleEffect="1" Rate="1333" />
+				<OptionSet ID="155" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="8" OptionVal4="3" ShuffleEffect="1" Rate="1000" />
+				<OptionSet ID="156" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="9" OptionVal4="3" ShuffleEffect="1" Rate="1333" />
+				<OptionSet ID="157" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="1" OptionVal4="3" ShuffleEffect="1" Rate="200" />
+				<OptionSet ID="158" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="2" OptionVal4="3" ShuffleEffect="1" Rate="133" />
+				<OptionSet ID="159" OptionID1="3" OptionVal1="3" OptionID2="6" OptionVal2="3" OptionID3="5" OptionVal3="3" OptionID4="4" OptionVal4="3" ShuffleEffect="1" Rate="133" />
+			</RewardItemOptions>
+		</Voucher>
+	</VoucherSettings>											
+</VoucherItemExchange>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### GamblingSystem ###
+//	Enable: Activates entire Gambling System, 0/1
+//	GamblingPrice: Multiplier of Shop Sale Tax, formula: TaxMultiplier * Chaos Tax / 100, percentage
+//	ShoppingDelayTime: Time in which shopping can be processed before shop will get closed and re-opening will be necessary, seconds
+//
+// ### GamblingSystem::ItemRewardRateSettings::Rate ###
+//	Skill: Chance for a Skill on item from specified section, n/1000000
+//	Luck: Chance for Luck on item from specified section, n/1000000
+//	Option: Chance for Option on item from specified section, n/1000000
+//	Exc: Chance for Exc options on item from specified section, n/1000000
+//	ItemChance: Chance for an item from specified section, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of all ItemChance per RareItem must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### GamblingSystem::ItemOptionChance ###
+//	Rate1: Chance for option - +4, n/1000000
+//	Rate2: Chance for option - +8, n/1000000
+//	Rate3: Chance for option - +12, n/1000000
+//	Rate4: Chance for option - +16, n/1000000
+//	Rate5: Chance for option - +20, n/1000000 - option ignored if server is configured up to support option up to +16
+//	Rate6: Chance for option - +24, n/1000000 - option ignored if server is configured up to support option up to +16
+//	Rate7: Chance for option - +28, n/1000000 - option ignored if server is configured up to support option up to +16
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of all Rates per RareItem must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### GamblingSystem::RareItemRewardChance ###
+//	Item1: Chance for special Item (Rare) of hidden under Rare Item 1, n/1000000 
+//	Item2: Chance for special Item (Rare) of hidden under Rare Item 2, n/1000000 
+//	Item3: Chance for special Item (Rare) of hidden under Rare Item 3, n/1000000 
+//	Item4: Chance for special Item (Rare) of hidden under Rare Item 4, n/1000000 
+//	Item5: Chance for special Item (Rare) of hidden under Rare Item 5, n/1000000 
+//
+// ### GamblingSystem::ExcOptionCountChance ### - applies to special items only (hidden under '?')
+//	Count1: Chance for 1 Exc Option on Item, n/1000000
+//	Count2: Chance for 2 Exc Options on Item, n/1000000
+//	Count3: Chance for 3 Exc Options on Item, n/1000000
+//	Count4: Chance for 4 Exc Options on Item, n/1000000
+//	Count5: Chance for 5 Exc Options on Item, n/1000000
+//	Count6: Chance for 6 Exc Options on Item, n/1000000
+//	Count7: Chance for 7 Exc Options on Item, n/1000000
+//	Count8: Chance for 8 Exc Options on Item, n/1000000
+//	Count9: Chance for 9 Exc Options on Item, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of all Counts per RareItem must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### GamblingSystem::ItemRewardList::Section ###
+//	ID: Unique section ID used to recognize area to draw items, do not modify
+//	Name: Used for in-file description only
+//
+// ### GamblingSystem::ItemRewardList::Section::Item ###
+//	Cat: Category of an Item, ItemList.xml
+//	Index: Index of an item, ItemList.xml
+//	MinLevel: Minimum level for reward item, 0-15, must be lower or equal to maximum item level
+//	MaxLevel: Maximum level for reward item, 0-15, must be higher or equal to minimum item level
+//	Skill: Defines if item can come with Skill, 0/1
+//	Luck: Defines if item can come with Luck, 0/1
+//	Option: Defines if item can come with Option, 0/1
+//	Exc:
+//		-1: No exc option
+//		-2: Random count of random options (based on rates from ExcellentOptions.xml)
+//		-3;X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
+//		X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<GamblingSystem Enable="1" GamblingPrice="1000000" ShoppingDelayTime="120">
+	<ItemRewardRateSettings> <!-- Sum of all ItemChance per Rare Item must be equal to 1000000 -->
+	<!-- Rare Item 1 -->
+		<Rate Skill="100000" Luck="50000" Option="120000" Exc="5000" ItemChance="560000" /> <!-- Section 5 -->
+		<Rate Skill="100000" Luck="50000" Option="100000" Exc="3000" ItemChance="380000" /> <!-- Section 6 -->
+		<Rate Skill="50000"  Luck="50000" Option="50000"  Exc="1000" ItemChance="50000" /> <!-- Section 7 -->
+		<Rate Skill="30000"  Luck="10000" Option="10000"  Exc="-1"	 ItemChance="9980" /> <!-- Section 8 -->
+		<Rate Skill="0"      Luck="0"     Option="0"	  Exc="-1"	 ItemChance="20" /> <!-- Section 9 -->
+	<!-- Rare Item 2 -->
+		<Rate Skill="100000" Luck="50000" Option="120000" Exc="5000" ItemChance="560000" /> <!-- Section 10 -->
+		<Rate Skill="100000" Luck="50000" Option="100000" Exc="3000" ItemChance="380000" /> <!-- Section 11 -->
+		<Rate Skill="50000"  Luck="50000" Option="50000"  Exc="1000" ItemChance="50000" /> <!-- Section 12 -->
+		<Rate Skill="30000"  Luck="10000" Option="10000"  Exc="-1"	 ItemChance="9980" /> <!-- Section 13 -->
+		<Rate Skill="0"      Luck="0"     Option="0"	  Exc="-1"	 ItemChance="20" /> <!-- Section 14 -->
+	<!-- Rare Item 3 -->
+		<Rate Skill="100000" Luck="50000" Option="120000" Exc="5000" ItemChance="560000" /> <!-- Section 15 -->
+		<Rate Skill="100000" Luck="50000" Option="100000" Exc="3000" ItemChance="380000" /> <!-- Section 16 -->
+		<Rate Skill="50000"  Luck="50000" Option="50000"  Exc="1000" ItemChance="50000" /> <!-- Section 17 -->
+		<Rate Skill="30000"  Luck="10000" Option="10000"  Exc="-1"	 ItemChance="9980" /> <!-- Section 18 -->
+		<Rate Skill="0"      Luck="0"     Option="0"	  Exc="-1"	 ItemChance="20" /> <!-- Section 19 -->
+	<!-- Rare Item 4 -->
+		<Rate Skill="100000" Luck="50000" Option="120000" Exc="5000" ItemChance="560000" /> <!-- Section 20 -->
+		<Rate Skill="100000" Luck="50000" Option="100000" Exc="3000" ItemChance="380000" /> <!-- Section 21 -->
+		<Rate Skill="50000"  Luck="50000" Option="50000"  Exc="1000" ItemChance="50000" /> <!-- Section 22 -->
+		<Rate Skill="30000"  Luck="10000" Option="10000"  Exc="-1"	 ItemChance="9980" /> <!-- Section 23 -->
+		<Rate Skill="0"      Luck="0"     Option="0"	  Exc="-1"	 ItemChance="20" /> <!-- Section 24 -->
+	<!-- Rare Item 5 -->
+		<Rate Skill="100000" Luck="50000" Option="120000" Exc="5000" ItemChance="560000" /> <!-- Section 25 -->
+		<Rate Skill="100000" Luck="50000" Option="100000" Exc="3000" ItemChance="380000" /> <!-- Section 26 -->
+		<Rate Skill="50000"  Luck="50000" Option="50000"  Exc="1000" ItemChance="50000" /> <!-- Section 27 -->
+		<Rate Skill="30000"  Luck="10000" Option="10000"  Exc="-1"	 ItemChance="9980" /> <!-- Section 28 -->
+		<Rate Skill="0"      Luck="0"     Option="0"	  Exc="-1"	 ItemChance="20" /> <!-- Section 29 -->
+	</ItemRewardRateSettings>
+
+	<ItemOptionChance Rate1="850000" Rate2="100000" Rate3="50000" Rate4="0" Rate5="0" Rate6="0" Rate7="0" /> <!-- Sum of all Rates must be equal to 1000000 -->
+	
+	<RareItemRewardChance Item1="3" Item2="3" Item3="3" Item4="3" Item5="3" /> <!-- n/1000000 -->
+
+	<ExcOptionCountChance Count1="0" Count2="900000" Count3="100000" Count4="0" Count5="0" Count6="0" Count7="0" Count8="0" Count9="0" /> <!-- Sum of all Counts must be equal to 1000000 -->
+
+	<ItemRewardList> <!-- Total items for sections 5~29 cannot exceed 149 -->
+		<Section ID="5" Name="Rare Item 1 (Sword/Mace/Spear)">
+			<Item Cat="0" Index="1"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Short Sword -->
+			<Item Cat="0" Index="4"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Sword of Assassin -->
+			<Item Cat="0" Index="6"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Gladius -->
+			<Item Cat="0" Index="7"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Falcon -->
+			<Item Cat="0" Index="8"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Serpent Sword -->
+			<Item Cat="0" Index="9"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Sword of Salamander -->
+		</Section>
+		<Section ID="6" Name="Rare Item 1 (Sword/Mace/Spear)">
+			<Item Cat="0" Index="0"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Kris -->
+			<Item Cat="0" Index="2"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Rapier -->
+			<Item Cat="0" Index="3"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Katana -->
+			<Item Cat="0" Index="5"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Blade -->
+			<Item Cat="0" Index="10" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Light Saber -->
+			<Item Cat="0" Index="11" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Legendary Sword -->
+			<Item Cat="0" Index="12" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Helical Sword -->
+			<Item Cat="0" Index="13" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Double Blade -->
+			<Item Cat="0" Index="14" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Lighting Sword -->
+			<Item Cat="0" Index="15" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Giant Sword -->
+			<Item Cat="2" Index="3"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Great Hammer -->
+			<Item Cat="2" Index="4"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Crystal Morning Start -->
+			<Item Cat="2" Index="5"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Crystal Sword -->
+			<Item Cat="3" Index="7"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Berdysh -->
+			<Item Cat="3" Index="8"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Great Scythe -->
+			<Item Cat="3" Index="9"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Bill of Balrog -->
+		</Section>
+		<Section ID="7" Name="Rare Item 1 (Sword/Mace/Spear)">
+			<Item Cat="3" Index="10" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Dragon Spear -->
+			<Item Cat="0" Index="16" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Sword of Destruction -->
+			<Item Cat="0" Index="17" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Dark Breaker -->
+			<Item Cat="0" Index="18" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Thunder Blade -->
+		</Section>
+		<Section ID="8" Name="Rare Item 1 (Sword/Mace/Spear)">
+			<Item Cat="0" Index="20" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Knight Blade -->
+			<Item Cat="0" Index="21" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Dark Reign Blade -->
+			<Item Cat="0" Index="31" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Rune Blade -->
+			<Item Cat="0" Index="24" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Daybreak -->
+			<Item Cat="0" Index="25" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Sword Dancer -->
+		</Section>
+		<Section ID="9" Name="Rare Item 1 (Sword/Mace/Spear)">
+			<Item Cat="14" Index="96" MinLevel="0" MaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" /> <!-- Talisman of Chaos Assembly -->
+		</Section>
+		<Section ID="10" Name="Rare Item 2 (Staff)">
+			<Item Cat="5"  Index="0"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Skill Staff -->
+			<Item Cat="5"  Index="1"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Angelic Staff -->
+			<Item Cat="5"  Index="2"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Serpent Staff -->
+		</Section>
+		<Section ID="11" Name="Rare Item 2 (Staff)">
+			<Item Cat="5"  Index="3"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Thunder Staff -->
+			<Item Cat="5"  Index="4"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Gorgon Staff -->
+		</Section>
+		<Section ID="12" Name="Rare Item 2 (Staff)">
+			<Item Cat="5"  Index="5"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Legendary Staff -->
+			<Item Cat="5"  Index="6"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Staff of Resurrection -->
+			<Item Cat="5"  Index="8"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Staff of Destruction -->
+		</Section>
+		<Section ID="13" Name="Rare Item 2 (Staff)">
+			<Item Cat="5"  Index="9"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Dragon Soul Staff -->
+			<Item Cat="5"  Index="11" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Staff of Kundun -->
+			<Item Cat="5"  Index="13" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Platina Staff -->
+		</Section>
+		<Section ID="14" Name="Rare Item 2 (Staff)">
+			<Item Cat="14" Index="96" MinLevel="0" MaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" /> <!-- Talisman of Chaos Assembly -->
+		</Section>
+		<Section ID="15" Name="Rare Item 3 (Bow/Crossbow)">
+			<Item Cat="4"  Index="0"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Short Bow -->
+			<Item Cat="4"  Index="1"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Bow -->
+			<Item Cat="4"  Index="2"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Elven Bow -->
+			<Item Cat="4"  Index="3"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- battle Bow -->
+		</Section>
+		<Section ID="16" Name="Rare Item 3 (Bow/Crossbow)">
+			<Item Cat="4"  Index="4"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Tiger Bow -->
+			<Item Cat="4"  Index="5"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Silver Bow -->
+			<Item Cat="4"  Index="9"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Golden Crossbow -->
+			<Item Cat="4"  Index="10" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Arquebus -->
+		</Section>
+		<Section ID="17" Name="Rare Item 3 (Bow/Crossbow)">
+			<Item Cat="4"  Index="11" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Light Crossbow -->
+			<Item Cat="4"  Index="14" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Aquagold Crossbow -->
+			<Item Cat="4"  Index="16" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Saint Crossbow -->
+			<Item Cat="4"  Index="17" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Celestial Bow -->
+			<Item Cat="4"  Index="19" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Great Reign Crossbow -->
+			<Item Cat="4"  Index="20" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Arrow Viper Bow -->
+		</Section>
+		<Section ID="18" Name="Rare Item 3 (Bow/Crossbow)">
+			<Item Cat="4"  Index="22" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Albatross Bow -->
+		</Section>
+		<Section ID="19" Name="Rare Item 3 (Bow/Crossbow)">
+			<Item Cat="14" Index="96" MinLevel="0" MaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" /> <!-- Talisman of Chaos Assembly -->
+		</Section>
+		<Section ID="20" Name="Rare Item 4 (Scepter)">
+			<Item Cat="2"  Index="8"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Battle Scepter -->
+			<Item Cat="2"  Index="9"  MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Master Scepter -->
+		</Section>
+		<Section ID="21" Name="Rare Item 4 (Scepter)">
+			<Item Cat="2"  Index="10" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Great Scepter -->
+			<Item Cat="2"  Index="11" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Lord Scepter -->
+		</Section>
+		<Section ID="22" Name="Rare Item 4 (Scepter)">
+			<Item Cat="2"  Index="12" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Great Lord Scepter -->
+		</Section>
+		<Section ID="23" Name="Rare Item 4 (Scepter)">
+			<Item Cat="2"  Index="15" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Shinning Scepter -->
+		</Section>
+		<Section ID="24" Name="Rare Item 4 (Scepter)">
+			<Item Cat="14" Index="96" MinLevel="0" MaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" /> <!-- Talisman of Chaos Assembly -->
+		</Section>
+		<Section ID="25" Name="Rare Item 5 (Stick)">
+			<Item Cat="5"  Index="14" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Mystery Stick -->
+		</Section>
+		<Section ID="26" Name="Rare Item 5 (Stick)">
+			<Item Cat="5"  Index="15" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Violet Wing Stick -->
+			<Item Cat="5"  Index="16" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Red Wing Stick -->
+		</Section>
+		<Section ID="27" Name="Rare Item 5 (Stick)">
+			<Item Cat="5"  Index="17" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-2" /> <!-- Ancient Stick -->
+		</Section>
+		<Section ID="28" Name="Rare Item 5 (Stick)">
+			<Item Cat="5"  Index="18" MinLevel="0" MaxLevel="3" Skill="1" Luck="1" Option="1" Exc="-1" /> <!-- Demonic Stick -->
+		</Section>
+		<Section ID="29" Name="Rare Item 5 (Stick)">
+			<Item Cat="14" Index="96" MinLevel="0" MaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" /> <!-- Talisman of Chaos Assembly -->
+		</Section>
+	</ItemRewardList>
+</GamblingSystem>

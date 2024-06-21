@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ImperialGuardian ###
+//	Enable: Deactivates or activates the event, 0/1
+//	LootTime: Maximum time to pick up item from ground after it dropped, seconds
+//	CompleteSecromiconMixReqMoney: Amount of money (Zen) required for mix of Complete Secromicon (14,109)
+//
+// ### ImperialGuardian::Time ###
+//	StandBy: waiting time before next rounds, seconds
+//	RoundDuration: Duration of every event round, seconds
+//	
+// ### ImperialGuardian::EventEntry::Event ###
+//	Level: Level of the event, minimum 1 max 50
+//	ReqLevel: Minimum level required to enter the event
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If MAX is used as value for ReqLevel attribute then the attribute is being set to sum of MaxNormalLevel and MaxMasterLevel from Common.ini
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	AdditionalRewardBagID: If enabled, issues additional reward from Event_ImperialGuardian_Additional_Reward.xml, -1 to disable
+//
+// ### ImperialGuardian::ElementInfo::Week ###
+//	Number: Number of a week during the year, 1-52
+//	Element: Element type the event monsters are spawned with
+//		~ -1: Random
+//		~ 1: Fire
+//		~ 2: Water
+//		~ 3: Earth
+//		~ 4: Wind
+//		~ 5: Darkness
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ImperialGuardian Enable="1" LootTime="60" CompleteSecromiconMixReqMoney="1000000">
+	<Time StandBy="10" RoundDuration="600" />
+
+	<EventEntry>
+		<Event Level="1" ReqLevel="1000" AdditionalRewardBagID="850" />
+	</EventEntry>
+	
+	<ElementInfo>
+		<Week Number="1" Element="1" />
+		<Week Number="2" Element="2" />
+		<Week Number="3" Element="3" />
+		<Week Number="4" Element="4" />
+		<Week Number="5" Element="5" />
+		<Week Number="6" Element="-1" />
+		<Week Number="7" Element="1" />
+		<Week Number="8" Element="2" />
+		<Week Number="9" Element="3" />
+		<Week Number="10" Element="4" />
+		<Week Number="11" Element="5" />
+		<Week Number="12" Element="-1" />
+		<Week Number="13" Element="1" />
+		<Week Number="14" Element="2" />
+		<Week Number="15" Element="3" />
+		<Week Number="16" Element="4" />
+		<Week Number="17" Element="5" />
+		<Week Number="18" Element="-1" />
+		<Week Number="19" Element="1" />
+		<Week Number="20" Element="2" />
+		<Week Number="21" Element="3" />
+		<Week Number="22" Element="4" />
+		<Week Number="23" Element="5" />
+		<Week Number="24" Element="-1" />
+		<Week Number="25" Element="1" />
+		<Week Number="26" Element="2" />
+		<Week Number="27" Element="3" />
+		<Week Number="28" Element="4" />
+		<Week Number="29" Element="5" />
+		<Week Number="30" Element="-1" />
+		<Week Number="31" Element="1" />
+		<Week Number="32" Element="2" />
+		<Week Number="33" Element="3" />
+		<Week Number="34" Element="4" />
+		<Week Number="35" Element="5" />
+		<Week Number="36" Element="-1" />
+		<Week Number="37" Element="1" />
+		<Week Number="38" Element="2" />
+		<Week Number="39" Element="3" />
+		<Week Number="40" Element="4" />
+		<Week Number="41" Element="5" />
+		<Week Number="42" Element="-1" />
+		<Week Number="43" Element="1" />
+		<Week Number="44" Element="2" />
+		<Week Number="45" Element="3" />
+		<Week Number="46" Element="4" />
+		<Week Number="47" Element="5" />
+		<Week Number="48" Element="-1" />
+		<Week Number="49" Element="1" />
+		<Week Number="50" Element="2" />
+		<Week Number="51" Element="3" />
+		<Week Number="52" Element="4" />
+	</ElementInfo>
+</ImperialGuardian>

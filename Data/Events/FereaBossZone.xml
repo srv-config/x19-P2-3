@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### FereaBossZone ###
+//	Enable: Deactivates or activates the event, 0/1
+//
+// ### FereaBossZone::RegenTime ###
+//	SuccessStartBaseHour: The base number of hours to restart the event after successful completetion of it, minimum value is 1
+//	SuccessStartAddHour: The add hour is a random number from the setting value, minimum value is 1 which represents 0
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ RestartHour = SuccessStartBaseHour + ((RandomValue of SuccessStartAddHour) - 1)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	FailureStartMin: Number of minutes to restart the event after failing to kill the boss
+//
+// ### FereaBossZone::HPRecovery ###
+//	Value: 
+//
+// ### FereaBossZone::Skills ###
+//	WhirlWindDamagePercent: 
+//	WhirlWindDistance: 
+//	LandMineDamagePercent: 
+//	RoarDistance: 
+//
+// ### FereaBossZone::CrystalBall::Phase ###
+//	Number: 
+//	Life: 
+//
+// ### FereaBossZone::SummonMonsterPos ###
+//	StartX: 
+//	StartY: 
+//	EndX: 
+//	EndY: 
+//
+// ### FereaBossZone::SummonMonsterInfo ###
+//	MaxMonster: 
+//
+// ### FereaBossZone::SummonMonsterInfo::Group ###
+//	Number: 
+//	Index: 
+//	Count: 
+//	Element: 
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<FereaBossZone Enable="1">
+	<RegenTime SuccessStartBaseHour="12" SuccessStartAddHour="12" FailureStartMin="5" />
+	<HPRecovery Value="70000" />
+	<Skills WhirlWindDamagePercent="80" WhirlWindDistance="3" LandMineDamagePercent="95" RoarDistance="6" />
+	
+	<CrystalBall>
+		<Phase Number="0" Life="90" />
+		<Phase Number="1" Life="70" />
+		<Phase Number="2" Life="50" />
+		<Phase Number="3" Life="30" />
+		<Phase Number="4" Life="0" />
+	</CrystalBall>
+	
+	<SummonMonsterPos StartX="27" StartY="115" EndX="35" EndY="125" />
+	<SummonMonsterInfo MaxMonster="25">
+		<Group Number="0" Index="730" Count="1" Element="0" />
+		<Group Number="0" Index="731" Count="2" Element="0" />
+		<Group Number="0" Index="732" Count="2" Element="0" />
+		<Group Number="1" Index="730" Count="2" Element="0" />
+		<Group Number="1" Index="731" Count="2" Element="0" />
+		<Group Number="1" Index="732" Count="3" Element="0" />
+		<Group Number="2" Index="730" Count="3" Element="0" />
+		<Group Number="2" Index="731" Count="3" Element="0" />
+		<Group Number="2" Index="732" Count="4" Element="0" />
+		<Group Number="3" Index="730" Count="3" Element="0" />
+		<Group Number="3" Index="731" Count="3" Element="0" />
+		<Group Number="3" Index="732" Count="4" Element="0" />
+	</SummonMonsterInfo>
+</FereaBossZone>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TransferCMD>
+	<String Id="1" Tag="WCoin" />
+	<String Id="2" Tag="Goblin Point" />
+	<String Id="3" Tag="Zen" />
+	<String Id="4" Tag="Ruud" />
+	<String Id="5" Tag="Gens Contribute Point(s)" />
+</TransferCMD>
+
+<ChangeClassCMD>
+	<String Id="0" Tag="Dark Wizard" />
+	<String Id="1" Tag="Dark Knight" />
+	<String Id="2" Tag="Fairy Elf" />
+	<String Id="3" Tag="Magic Gladiator" />
+	<String Id="4" Tag="Dark Lord" />
+	<String Id="5" Tag="Summoner" />	
+	<String Id="6" Tag="Rage Fighter" />
+	<String Id="7" Tag="Grow Lancer" />
+	<String Id="8" Tag="Rune Wizard" />
+	<String Id="9" Tag="Slayer" />
+	<String Id="10" Tag="Gun Crusher" />
+	<String Id="11" Tag="Light Wizard" />
+	<String Id="12" Tag="Lemuria Mage" />
+	<String Id="13" Tag="Illusion Knight" />
+</ChangeClassCMD>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MonsterGPInfo::Monster ###
+//	Index: Index of a monster, refer to MonsterList.xml
+//	MapNumber: Map number a kill of specified monster will result in award of configured coin type and value, -1 for all maps
+//	CoinType:
+//		0: WCoin
+//		1: Goblin Point
+//	CoinValue: Amount of coins to award with
+//	Enable: Defines whether the configured entry is enabled or not, 0/1
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MonsterGPInfo>
+	<Monster Index="3" MapNumber="-1" CoinType="1" CoinValue="12" Enable="0" /> <!-- Example entry -->
+</MonsterGPInfo>

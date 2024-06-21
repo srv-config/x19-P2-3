@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ImperialGuardian::Monster ###
+//	EventLevel: Level of the event the settings apply to
+//	Level: Monster Level multiplier
+//	HealthPoint: Monster Health Points (HP) multiplier
+//	ManaPoint: Monster Mana Point (MP) multiplier
+//	DamageMin: Monster Minimum Damage multiplier
+//	DamageMax: Monster Maximum Damage multiplier
+//	Defense: Monster Defense multiplier
+//	MagicDefense: Monster Magic Defense multiplier
+//	AttackRate: Monster Attack Rate multiplier
+//	SuccessfulBlocking: Monster Successful Blocking multiplier
+//	PentagramDamageMin: Minimum Elemental Damage multiplier
+//	PentagramDamageMax: Maximum Elemental Damage multiplier
+//	PentagramAttackRate: Monster Elemental Attack Rate multiplier
+//	PentagramDefense: Monster Elemental Defense multiplier
+//	PentagramDefenseRate: Monster Elemental Defense Rate multiplier
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Monster indexes affected with settings above
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//		~ 504-511: Boss Monsters
+//		~ 512-521: Regular Monsters
+//		~ 524, 525, 527, 528: Gates
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Do not modify Imperial Guardian event monsters settings trough MonsterList.xml, use multipliers below.
+//~~ All values for the above defined indexes are set to 1 in MonsterList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ImperialGuardian>
+	<Monster EventLevel="1" Level="160" HealthPoint="2320" ManaPoint="0" DamageMin="61" DamageMax="61" Defense="61" MagicDefense="0" AttackRate="45" SuccessfulBlocking="45" PentagramDamageMin="61" PentagramDamageMax="61" PentagramAttackRate="45" PentagramDefense="61" PentagramDefenseRate="45" />
+</ImperialGuardian>

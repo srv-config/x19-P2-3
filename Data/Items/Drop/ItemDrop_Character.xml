@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### CharacterItemDrop ###
+//	Enable: Deactivates or activates the system, 0/1
+//	CheckType:
+//		~ 0: drop counts to the player the item dropped for, items are not dropping if limit is reached but still can pick (loot) items dropped to other players
+//		~ 1: drop counts to player that obtains the item, items are still dropping after limit is reached but cannot be picked up
+//		~ 2: drop counts to player the item dropped for, item does not drop after limit is reached and cannot be picked up even if dropped to other player
+//		~ 3: drop counts to player that obtains the item, item does not drop after limit is reached and cannot be picked up if dropped to other player
+//
+// ### CharacterItemDrop::DropLimit::Item ###
+//	DropID: Unique ID of drop, matching DropID from CharacterItemDrop::DropItem::Item section, must be greater or equal 0
+//	MaxCount: Maximum number of items that can be dropped/obtained by character, max 2147483647
+//	Cat: Category of item, refer to ItemList.xml
+//	Index: Category of index, refer to ItemList.xml
+//	MinLevel: Minimum item level to drop, 0-15
+//	MaxLevel: Maximum item level to drop, 0-15
+//	Durability: durability of item to drop, 0 indicates automatically generated valid durability
+//	Skill:
+//		~ -1: random, based on ItemSkillRate/ExcItemSkillRate setting from ItemDropControl.ini
+//		~ 0: no skill
+//		~ 1: with skill
+//
+//	Luck:
+//		~ -1: random, based on ItemLuckRate/ExcItemLuckRate setting from ItemDropControl.ini
+//		~ 0: no luck
+//		~ 1: with luck
+//
+//	Option:
+//		~ -1: random, up to 16 or 28, depending on server setting
+//		~ -2: official and original option selection, complex to explain, depending on many aspects, max option value for this setting is +12, applies to excellent items, pendants and rings
+//		~ 0: no option
+//		~ 1,2,3,4,5,6,7: with specified option (+4,+8,+12,+16,+20,+24,+28), check ItemDropRateControl.xml::OptionDropMode for more info
+//
+//	Exc:
+//		-1: no exc option
+//		-2: random count of random options (based on rates from ExcellentOptions.xml)
+//		-3; X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
+//		-10: A draw of bonus and excellent options set from MasteryExcOptions.xml. If used, the skill and luck attributes from this file are ignored, see referred file for further details.
+//		X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If exc item has been drawn a skill and luck are drawn on basis of ExcItemLuckRate and ExcItemSkillRate from ItemDropRateControl.ini, otherwise ItemLuckRate and ItemSkillRate are used.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	Element:
+//		~ 0: No Elemental
+//		~ 1: Fire
+//		~ 2: Water
+//		~ 3: Earth
+//		~ 4: Wind
+//		~ 5: Darkness
+//		~ -1: Use PentagramItemDropRate.xml
+//
+//	SocketCount: Minimum and maximum socket count of item to drop, 1-5, usage: min;max, 0 to use SocketSystem.xml rates, for pentagram a rate of sockets from PentagramItemDropRate.xml are used
+//
+// ### CharacterItemDrop::DropItem::Item ###
+//	Cat: Category of item, refer to ItemList.xml
+//	Index: Category of index, refer to ItemList.xml
+//	Level: Level of item, 0-15
+//
+// ### CharacterItemDrop::DropItem::Item ###
+//	DropID: ID of drop referencing to DropID attribute from CharacterItemDrop::DropLimit::Item section
+//
+// ### CharacterItemDrop::DropItem::Item::Monster ###
+//	Index: Index of monster to apply drop to
+//	Rate: Chance rate of getting specific item drop, n/1000000
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Limit resets every day at 12 PM and/or upon login if day passed since last reset time
+//~~ If item configured in 'DropItem' will not exist in 'DropLimit' the item will drop as limit would not exist
+//~~ Items are dropped on 'Rate' basis. System keeps drawing the items in order as defined in file.
+//~~ The 'Rate' attribute should be configured from lowest to highest. The limited items can drop as addition to general drop
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<CharacterItemDrop Enable="1" CheckType="3">
+	<DropLimit>
+		<Item DropID="1" MaxCount="1" Cat="20" Index="164" MinLevel="0" MaxLevel="0" Durability="1" Skill="-1" Luck="-1" Option="0" Exc="-1" Element="0" SocketCount="0;0" />
+		<Item DropID="2" MaxCount="4" Cat="20" Index="238" MinLevel="0" MaxLevel="0" Durability="1" Skill="-1" Luck="-1" Option="0" Exc="-1" Element="0" SocketCount="0;0" />
+	</DropLimit>
+	<DropItem>
+		<Item DropID="1">
+			<Monster Index="892" Rate="200" />
+			<Monster Index="893" Rate="200" />
+			<Monster Index="894" Rate="200" />
+			<Monster Index="895" Rate="250" />
+			<Monster Index="896" Rate="250" />
+			<Monster Index="897" Rate="250" />
+			<Monster Index="905" Rate="300" />
+			<Monster Index="906" Rate="300" />
+			<Monster Index="907" Rate="300" />
+			<Monster Index="908" Rate="350" />
+			<Monster Index="909" Rate="350" />
+			<Monster Index="910" Rate="350" />
+			<Monster Index="911" Rate="400" />
+			<Monster Index="912" Rate="400" />
+			<Monster Index="913" Rate="400" />
+			<Monster Index="914" Rate="450" />
+			<Monster Index="915" Rate="450" />
+			<Monster Index="916" Rate="450" />
+			<Monster Index="926" Rate="500" />
+			<Monster Index="927" Rate="500" />
+			<Monster Index="928" Rate="500" />
+			<Monster Index="929" Rate="500" />
+			<Monster Index="930" Rate="550" />
+			<Monster Index="931" Rate="550" />
+			<Monster Index="932" Rate="550" />
+			<Monster Index="942" Rate="600" />
+			<Monster Index="943" Rate="600" />
+			<Monster Index="944" Rate="600" />
+			<Monster Index="945" Rate="650" />
+			<Monster Index="946" Rate="650" />
+			<Monster Index="947" Rate="650" />
+		</Item>
+		<Item DropID="2">
+			<Monster Index="892" Rate="400" />
+			<Monster Index="893" Rate="400" />
+			<Monster Index="894" Rate="400" />
+			<Monster Index="895" Rate="450" />
+			<Monster Index="896" Rate="450" />
+			<Monster Index="897" Rate="450" />
+			<Monster Index="905" Rate="500" />
+			<Monster Index="906" Rate="500" />
+			<Monster Index="907" Rate="500" />
+			<Monster Index="908" Rate="550" />
+			<Monster Index="909" Rate="550" />
+			<Monster Index="910" Rate="550" />
+			<Monster Index="911" Rate="600" />
+			<Monster Index="912" Rate="600" />
+			<Monster Index="913" Rate="600" />
+			<Monster Index="914" Rate="650" />
+			<Monster Index="915" Rate="650" />
+			<Monster Index="916" Rate="650" />
+			<Monster Index="926" Rate="700" />
+			<Monster Index="927" Rate="700" />
+			<Monster Index="928" Rate="700" />
+			<Monster Index="929" Rate="700" />
+			<Monster Index="930" Rate="750" />
+			<Monster Index="931" Rate="750" />
+			<Monster Index="932" Rate="750" />
+			<Monster Index="942" Rate="800" />
+			<Monster Index="943" Rate="800" />
+			<Monster Index="944" Rate="800" />
+			<Monster Index="945" Rate="850" />
+			<Monster Index="946" Rate="850" />
+			<Monster Index="947" Rate="850" />
+		</Item>
+	</DropItem>
+</CharacterItemDrop>

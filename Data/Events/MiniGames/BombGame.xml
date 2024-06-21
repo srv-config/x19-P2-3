@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### BombGame ###
+//	Enabled: Disables or enables the mini-game
+//
+// ### BombGame:GameBoard ###
+//	SizeX: Width of the board, max 10
+//	SizeY: Height of the board, max 10
+//	BombsCount: Count of bomba on the board, minimum 1 and no more than Width * Height - 1
+//
+// ### BombGame:PointPer ###
+//	Clear: Points for clearing the board
+//	NumberMatch: Point for matching the number
+//	CorrectBombCard:  Points for matching a bomb with right click
+//	BombCardFailure: Negative points for failure of bomb match with right click
+//	StepOnBomb: Negative points for steeping on bomb
+//
+// ### BombGame:RewardSettings::Score ###
+//	MinPoint: Minimum points range to apply for the reward
+//	MaxPoint: Maximum points to apply for the reward
+//	ItemCat: Reward Item Category, see ItemList.xml
+//	ItemIndex: Reward Item Category, see ItemList.xml
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ For Card Piece (14,215) drop rate refer to EventItemMonsterBag.xml	
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<BombGame Enable="1">
+	<GameBoard SizeX="8" SizeY="6" BombsCount="11" />
+	<PointPer Clear="500" NumberMatch="10" CorrectBombCard="50" BombCardFailure="20" StepOnBomb="50" /> <!-- BombCardFailure and StepOnBomb are negative points -->
+	
+	<RewardSettings>
+		<Score MinPoint="0" MaxPoint="150" ItemCat="14" ItemIndex="374" />
+		<Score MinPoint="151" MaxPoint="850" ItemCat="14" ItemIndex="375" />
+		<Score MinPoint="851" MaxPoint="1100" ItemCat="14" ItemIndex="376" />
+		<Score MinPoint="1101" MaxPoint="MAX" ItemCat="14" ItemIndex="377" />
+	</RewardSettings>
+</BombGame>

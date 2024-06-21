@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//	Changes to the system requires equal modifications in PlayGuide.bmd
+//
+// ### PlayGuide::Guide ###
+//	OpenLevel: A minimum level of character to open a display of specified guide
+//	URL: Unused for server, kept for reference
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<PlayGuide>
+	<Guide OpenLevel="0" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_main.html" />
+	<Guide OpenLevel="1" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub01.html" />
+	<Guide OpenLevel="2" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub02.html" />
+	<Guide OpenLevel="3" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub05.html" />
+	<Guide OpenLevel="5" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub03.html" />
+	<Guide OpenLevel="6" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub06.html" />
+	<Guide OpenLevel="8" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub07.html" />
+	<Guide OpenLevel="10" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub04.html" />
+	<Guide OpenLevel="11" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub08.html" />
+	<Guide OpenLevel="12" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub09.html" />
+	<Guide OpenLevel="13" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub10.html" />
+	<Guide OpenLevel="15" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub11.html" />
+	<Guide OpenLevel="20" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub12.html" />
+	<Guide OpenLevel="25" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub13.html" />
+	<Guide OpenLevel="40" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub14.html" />
+	<Guide OpenLevel="50" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub15.html" />
+	<Guide OpenLevel="60" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub18.html" />
+	<Guide OpenLevel="80" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub17.html" />
+	<Guide OpenLevel="150" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub19.html" />
+	<Guide OpenLevel="180" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub18.html" />
+	<Guide OpenLevel="220" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub19.html" />
+	<Guide OpenLevel="380" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub19.html" />
+	<Guide OpenLevel="400" URL="http://image.webzen.kr/Mu/images/event/20140418_ingame_guide/ingame_guide_sub19.html" />
+</PlayGuide>

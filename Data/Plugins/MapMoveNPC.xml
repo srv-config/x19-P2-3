@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MapMoveNPC ##
+//	Enable: Deactivates or activates the system, 0/1
+//	DecisionTime: A time to make a decision to move with NPC (time between first and second NPC click), milliseconds
+//	
+// ### MapMoveNPC::NPC ##
+//	Index: Index of NPC, see ItemList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Most NPCs can be used, e.g. Shop NPCs (selected NPCs are not supported, e.g. event ones)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	MapNumber: The map number to spawn the NPC
+//	PosX: The X coordinate to spawn the NPC
+//	PosY: The Y coordinate to spawn the NPC
+//	Dir: Direction the monster/NPC looks at after spawn ~ (Spot Type: 0-3)
+//		~ 0: Central
+//		~ 1: South-West
+//		~ 2: South
+//		~ 3: South-East
+//		~ 4: East
+//		~ 5: North-East
+//		~ 6: North
+//		~ 7: North-West
+//		~ 8: West
+//		~ -1: Random
+//
+//	GateId: The number of Gate to use for move, see GateSettings.xml, level requirement of the gate is used as level requirement to use the NPC
+//	CoinType: Coin type to charge for moving
+//		~ 0: WCoin,
+//		~ 1: Goblin Point,
+//		~ 2: Zen,
+//		~ 3: Ruud,
+//		~ 4: Gens Contribution Points
+//
+//	MoveCost: A cost for moving, set to 0 to disable
+//	PlayerMinReset: Minimum number of resets to use the NPC
+//	PlayerMaxReset: Maximum number of resets to use the NPC, if "MAX" is used as value then the attribute is being set to value of "MaxResets" attribute from ResetSystem.xml
+//	ReqItemIndex: Category of required item for the move, see ItemList.xml
+//	ReqItemLvl: Exact item level of required iten, -1 if not applies
+//	ReqItemCat: Index of required item for the move, see ItemList.xml
+//	ReqItemCount: Number of required items for the move, 0 to disable
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ System checks regular inventory for required items only
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	MinVipLevel: Minimum VIP level to use the NPC, 0 to disable
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ System ignores VIP level requirement of specific map
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	MaxUsePKLevel: Maximum PK level to allow use of the NPC
+//	EliteMark: Activates Elite mark under NPC, 0/1
+//	BuffIndex: Index of a buff effect to apply to NPC, option purpose is to improve visual effect only, so selected buffs without visual effect will be ineffective
+//		~ 28: GM Talk type
+//		~ 133: Immune
+//		~ 157: Flames
+//		~ 158: Ice
+//	Text: A text shout above the NPC, displayed every 10 seconds, maximum 90 characters
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Maximum 300 NPCs can be defined
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<MapMoveNPC Enable="0" DecisionTime="10000">
+	<NPC Index="256" MapNumber="0" PosX="141" PosY="135" Dir="-1" GateId="2" CoinType="2" MoveCost="1000" PlayerMinReset="0" PlayerMaxReset="MAX" ReqItemCat="14" ReqItemIndex="13" ReqItemLvl="0" ReqItemCount="15" MinVipLevel="0" MaxUsePKLevel="3" EliteMark="0" BuffIndex="133" Text="I am so happy to.." />
+	<NPC Index="255" MapNumber="0" PosX="144" PosY="135" Dir="-1" GateId="2" CoinType="2" MoveCost="1000" PlayerMinReset="0" PlayerMaxReset="MAX" ReqItemCat="14" ReqItemIndex="13" ReqItemLvl="0" ReqItemCount="10" MinVipLevel="0" MaxUsePKLevel="3" EliteMark="0" BuffIndex="157" Text="Travel Services!" />
+	<NPC Index="258" MapNumber="0" PosX="147" PosY="135" Dir="-1" GateId="2" CoinType="1" MoveCost="15" PlayerMinReset="0" PlayerMaxReset="MAX" ReqItemCat="0" ReqItemIndex="0" ReqItemLvl="0" ReqItemCount="0" MinVipLevel="0" MaxUsePKLevel="3" EliteMark="1" BuffIndex="28" Text="I'll be your guide!" />
+</MapMoveNPC>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### PentagramSystem:::OptionList::Pentagram ### - maximum 20 entries
+//	ItemCat: Pentagram Item Category (ItemList.xml)
+//	ItemIndex: Pentagram Item Index (ItemList.xml)
+//	Grade: Grade of Pentagram, 1-3
+//	OptionNum1: Pentagram Option 1 number
+//	OptionNum2: Pentagram Option 2 number
+//	OptionNum3: Pentagram Option 3 number
+//	OptionNum4: Pentagram Option 4 number
+//	OptionNum5: Pentagram Option 5 number
+//	OptionNum6: Pentagram Option 6 number
+//	OptionNum7: Pentagram Option 7 number
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ for OptionNum refer to OptionSettings section
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Name: Name of Pentagram Item
+//
+// ### PentagramSystem::OptionSettings::Errtel ###
+//	OptionNum: Errtel Option Number definition
+//	Type1: 
+//	Rank1: 
+//	Level1: 
+//	Type2: 
+//	Rank2: 
+//	Level2: 
+//	Type3: 
+//	Rank3: 
+//	Level3: 
+//	Name: Name of Pentagram Option
+//
+// ### Pentagram System::SocketRate::Socket ###
+//	Grade: Grade of Errtels the rates will be applied to
+//	Rate1: Chance rate for Socket count 1
+//	Rate2: Chance rate for Socket count 2
+//	Rate3: Chance rate for Socket count 3
+//	Rate4: Chance rate for Socket count 4
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Rate is n/10000, sum of total per row must be equal to 10000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->	
+
+<PentagramSystem>
+	<OptionList>
+		<Pentagram ItemCat="12" ItemIndex="200" Grade="1" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Muren's Book of Magic" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="201" Grade="1" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Scroll of Etramu" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="202" Grade="1" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Empire Guardian's Iron Wall Shield" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="203" Grade="1" OptionNum1="3" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Empire Guardian's Iron Wall Shield" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="204" Grade="1" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Hero's Potion" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="205" Grade="1" OptionNum1="4" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Hero's Potion" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="206" Grade="1" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Gladiator's Dagger" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="207" Grade="1" OptionNum1="2" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Gladiator's Dagger" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="217" Grade="1" OptionNum1="5" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Thoughtful Sage's Jewel" /> <!-- Common -->
+		<Pentagram ItemCat="12" ItemIndex="208" Grade="2" OptionNum1="26" OptionNum2="24" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Kundun's Blade of Madness" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="209" Grade="2" OptionNum1="27" OptionNum2="24" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Kundun's Magic Scroll" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="210" Grade="2" OptionNum1="26" OptionNum2="28" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Empire Guardians' Bastion" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="211" Grade="2" OptionNum1="27" OptionNum2="28" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Icarus' Ancient Tome" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="218" Grade="2" OptionNum1="27" OptionNum2="24" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Magic Scroll (Attributable)" /> <!-- Rare -->				
+		<Pentagram ItemCat="12" ItemIndex="306" Grade="2" OptionNum1="34" OptionNum2="21" OptionNum3="29" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Runedil's Goldentune Harp" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="307" Grade="2" OptionNum1="34" OptionNum2="22" OptionNum3="30" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Lemuria's Orb" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="308" Grade="2" OptionNum1="23" OptionNum2="24" OptionNum3="25" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Norrwen's Bloodstring Lyra" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="499" Grade="2" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="1st Golden Melody Harf (Rare)" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="500" Grade="2" OptionNum1="61" OptionNum2="63" OptionNum3="66" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="1st Brilliant Orb (Rare)" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="501" Grade="2" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="1st Bloody Demonstration Lira (Rare)" /> <!-- Rare -->
+		<Pentagram ItemCat="12" ItemIndex="212" Grade="3" OptionNum1="41" OptionNum2="24" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Arcana Book of Prophesies" /> <!-- Unique -->
+		<Pentagram ItemCat="12" ItemIndex="213" Grade="3" OptionNum1="41" OptionNum2="42" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Antonias' Sword" /> <!-- Unique -->
+		<Pentagram ItemCat="12" ItemIndex="214" Grade="3" OptionNum1="41" OptionNum2="43" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Kundun's Sealed Book" /> <!-- Unique -->
+		<Pentagram ItemCat="12" ItemIndex="502" Grade="3" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="1st Arcana Prophecy (Unique)" /> <!-- Unique -->
+		<Pentagram ItemCat="12" ItemIndex="503" Grade="3" OptionNum1="67" OptionNum2="68" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="1st Antonias' Sword (Unique)" /> <!-- Unique -->
+		<Pentagram ItemCat="12" ItemIndex="504" Grade="3" OptionNum1="0" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="1st Seal of the Kundun (Unique)" /> <!-- Unique -->
+		<Pentagram ItemCat="12" ItemIndex="215" Grade="1" OptionNum1="1" OptionNum2="0" OptionNum3="0" OptionNum4="0" OptionNum5="0" OptionNum6="0" OptionNum7="0" Name="Pentagram for Beginners" /> <!-- Common -->
+	</OptionList>
+
+	<OptionSetting>
+		<Errtel OptionNum="1" Type1="0" Rank1="1" Level1="0" Type2="1" Rank2="1" Level2="0" Type3="2" Rank3="1" Level3="0" Type4="3" Rank4="1" Level4="0" Type5="-1" Rank5="-1" Level5="0" Name="Pentagram DMG and DEF+5%%" />
+		<Errtel OptionNum="2" Type1="0" Rank1="1" Level1="0" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Pentagram DMG +10%%" />
+		<Errtel OptionNum="3" Type1="0" Rank1="1" Level1="0" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Pentagram DEF +10%%" />
+		<Errtel OptionNum="4" Type1="0" Rank1="1" Level1="0" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental Critical DMG Rate +10%%" />
+		<Errtel OptionNum="5" Type1="0" Rank1="1" Level1="0" Type2="1" Rank2="1" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Errtel of Blessing Rank 1 Option +35" />
+		<Errtel OptionNum="21" Type1="0" Rank1="2" Level1="0" Type2="2" Rank2="2" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Pentagram DMG +10%%" />
+		<Errtel OptionNum="22" Type1="1" Rank1="2" Level1="0" Type2="3" Rank2="2" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Pentagram DEF +10%%" />
+		<Errtel OptionNum="23" Type1="1" Rank1="1" Level1="7" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental Critical DMG Rate +5%%" />
+		<Errtel OptionNum="24" Type1="0" Rank1="2" Level1="3" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental Critical DMG Rate +10%%" />
+		<Errtel OptionNum="25" Type1="0" Rank1="3" Level1="0" Type2="1" Rank2="3" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental Critical DMG Rate +25%%" />
+		<Errtel OptionNum="26" Type1="0" Rank1="3" Level1="0" Type2="1" Rank2="3" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="DEF Added to Elemental DEF +5%%" />
+		<Errtel OptionNum="27" Type1="0" Rank1="3" Level1="0" Type2="1" Rank2="3" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="DMG Added to Elemental DMG +1%%" />
+		<Errtel OptionNum="28" Type1="1" Rank1="2" Level1="0" Type2="2" Rank2="1" Level2="7" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="%s, %s Elemental DMG Perfect Dodge Rate +5%%" />
+		<Errtel OptionNum="29" Type1="0" Rank1="3" Level1="0" Type2="2" Rank2="3" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Elemental DMG +30" />
+		<Errtel OptionNum="30" Type1="1" Rank1="3" Level1="0" Type2="3" Rank2="3" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Elemental DEF +30" />
+		<Errtel OptionNum="31" Type1="2" Rank1="1" Level1="0" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Errtel of Integrity Rank 1 Option +20 (unused option)" />
+		<Errtel OptionNum="32" Type1="3" Rank1="1" Level1="0" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Errtel of Divinity Rank 1 Option +20 (unused option)" />
+		<Errtel OptionNum="33" Type1="4" Rank1="1" Level1="0" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Errtel of Radiance Rank 1 Option +20 (unused option)" />
+		<Errtel OptionNum="34" Type1="0" Rank1="1" Level1="7" Type2="1" Rank2="1" Level2="7" Type3="4" Rank3="1" Level3="7" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Pentagram DMG and DEF+5%%" />
+		<Errtel OptionNum="41" Type1="1" Rank1="3" Level1="6" Type2="2" Rank2="3" Level2="6" Type3="3" Rank3="3" Level3="6" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental DMG Perfect Dodge Rate +5%%" />
+		<Errtel OptionNum="42" Type1="0" Rank1="3" Level1="5" Type2="1" Rank2="3" Level2="5" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="DEF Added to Elemental DEF +5%%" />
+		<Errtel OptionNum="43" Type1="0" Rank1="3" Level1="5" Type2="1" Rank2="3" Level2="5" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="DMG Added to Elemental DMG +1%%" />
+		<Errtel OptionNum="61" Type1="0" Rank1="1" Level1="7" Type2="4" Rank2="1" Level2="7" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Pentagram DMG/DEF +5%%" />
+		<Errtel OptionNum="62" Type1="0" Rank1="2" Level1="0" Type2="2" Rank2="2" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Pentagram DMG +10%%" />
+		<Errtel OptionNum="63" Type1="1" Rank1="2" Level1="0" Type2="3" Rank2="2" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Increase Pentagram DEF +10%%" />
+		<Errtel OptionNum="64" Type1="1" Rank1="1" Level1="7" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental Critical DMG Rate +5%%" />
+		<Errtel OptionNum="65" Type1="0" Rank1="2" Level1="3" Type2="-1" Rank2="-1" Level2="-1" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental Critical DMG Rate +10%%" />
+		<Errtel OptionNum="66" Type1="0" Rank1="3" Level1="0" Type2="1" Rank2="3" Level2="0" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental Critical DMG Rate +25%%" />
+		<Errtel OptionNum="67" Type1="1" Rank1="3" Level1="6" Type2="2" Rank2="3" Level2="6" Type3="3" Rank3="3" Level3="6" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="Elemental DMG Perfect Dodge Rate +5%%" />
+		<Errtel OptionNum="68" Type1="0" Rank1="3" Level1="5" Type2="1" Rank2="3" Level2="5" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="DEF Added to Elemental DEF +5%%" />
+		<Errtel OptionNum="69" Type1="0" Rank1="3" Level1="5" Type2="1" Rank2="3" Level2="5" Type3="-1" Rank3="-1" Level3="-1" Type4="-1" Rank4="-1" Level4="-1" Type5="-1" Rank5="-1" Level5="-1" Name="DMG Added to Elemental DMG +1%%" />
+	</OptionSetting>
+
+	<SocketProbabilityRate>
+		<Socket Grade="2" Rate1="0" Rate2="0" Rate3="7000" Rate4="3000" /> <!-- Rare Chance Socket, Total 10000 -->
+		<Socket Grade="3" Rate1="0" Rate2="0" Rate3="0"  Rate4="10000" /> <!-- Unique Chance Socket, Total 10000 -->
+	</SocketProbabilityRate>
+</PentagramSystem>

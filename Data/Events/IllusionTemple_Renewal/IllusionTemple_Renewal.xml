@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### IllusionTempleRenewal ###
+//	Enable: Disables or Enables the event, 0/1
+//	MinUserInParty: Minimum players in party to join the event, applied only when AlternativeMode is set to 0
+//	SaveRankingPoint: If enabled, the ranking data is being saved to [dbo].[Ranking].[EVENT_INFO_IT] table, 0/1
+//	AlternativeMode: If enabled the party is being formed from users that entered the event, right after it starts.
+//	The MinUserInParty setting does not take a place then, 0/1
+//	SpawnMonster: If enabled, monsters will continue to spawn during the event, 0/1
+//	RequireInvitation: If set to 1, an invitation (13,51) will be required to enter Illusion Temple, applied to AlternativeMode mode only, 0/1
+//	StatueSpawnRateReductionPerPoint: Statue spawn rate reduction for every match point (occupied stone), formula: SpawnSuccessRate = 100 - (OccupiedStones * StatueSpawnRateReductionPerPoint)
+//
+// ### IllusionTempleRenewal::Time ###
+//	StartIn: Announcement appearance, time to start the event, minutes
+//	WaitingArea: Waiting time inside the Temple, minutes
+//	Duration: Duration of the event, minutes
+//	TownSpawn: Waiting time after event end before moving to town, minutes
+//
+// ### IllusionTempleRenewal::Schedule::Start ###
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//
+// ### IllusionTempleRenewal::EntryLevel::Square ###
+//	Level: Level of the event the the configuration applies to
+//	MinLevel: Minimum level of player to allow entry to specified event level
+//	MaxLevel: Maximum level of player to allow entry to specified event level, max is currently 800
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<IllusionTempleRenewal Enable="1" MinUserInParty="5" SaveRankingPoint="1" AlternativeMode="0" SpawnMonster="0" RequireInvitation="0" StatueSpawnRateReductionPerPoint="10">
+	<Time StartIn="5" WaitingArea="1" Duration="15" TownSpawn="1" />
+
+	<Schedule>
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="0" Minute="0" Second="-1" />
+	</Schedule>
+
+	<EntryLevel>
+		<Temple Level="0" MinLevel="180" MaxLevel="399" /> <!-- Illussion Temple 1 -->
+		<Temple Level="1" MinLevel="400" MaxLevel="599" /> <!-- Illussion Temple 2 -->
+		<Temple Level="2" MinLevel="600" MaxLevel="799" /> <!-- Illussion Temple 3 -->
+		<Temple Level="3" MinLevel="800" MaxLevel="999" /> <!-- Illussion Temple 4 -->
+		<Temple Level="4" MinLevel="1000" MaxLevel="MAX" /> <!-- Illussion Temple 5 -->
+	</EntryLevel>
+</IllusionTempleRenewal>

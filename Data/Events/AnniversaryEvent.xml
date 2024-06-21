@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file must be reflected in Relationevent.txt inside Lang.mpr
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### AnniversaryEvent ###
+//	Enable: Disables or enables the event, 0/1
+//
+// ### AnniversaryEvent::Schedule::Quest ###
+//	Index: Unique index of quest schedule, 0-29
+//	StartDate: Start date and time of the quest, format: yyyy-MM-dd HH:mm
+//	EndDate: End date and time of the quest, format: yyyy-MM-dd HH:mm
+//	CharacterLevel: Required character level, it is a sum of regular nad master level
+//
+// ### AnniversaryEvent::Schedule::QuestList::Quest ###
+//	Index: Unique index of quest, must match index from Schedule section, 0-29
+//	ObjectiveType: Type of quest
+//		~ 0: None
+//		~ 1: Kill monster
+//		~ 2: Get item (unused)
+//		~ 3: Drop/use item
+//		~ 4: Exchange Cherry Blossom Branch
+//		~ 5: Exchange item (unused)
+//		~ 6: Enhance earrings
+//		~ 7: Grant Jewel of Harmony options
+//		~ 8: Clear Maze of Dimension Level
+//		~ 9: Exchange lucky coins
+//		~ 10: Use item
+//		~ 11: Mini~Game Use Cards deck
+//		~ 12: Play time event
+//		~ 13: Craft fruits
+//		~ 14: Upgrade mastery item
+//		~ 15: Pentagram/Errtel upgrade
+//		~ 16: Reach character level
+//		~ 17: Autumn Event
+//		~ 18: Christmas Event
+//
+//	ObjectiveCount: Number of objectives required to complete the quest
+//	ObjectiveReqTypeX (1-4):
+//		~ For item related quest the attribute stands for item category
+//		~ For mix exchange quests where multiple mixes can be identified by same identifier it is mix head code, see mix.bmd
+//		~ For monsters related quests it is monster index
+//		~ For character level related quests it is character class 
+//			~ 0: Dark Wizard
+//			~ 1: Dark Knight
+//			~ 2: Fairy Elf
+//			~ 3: Magic Gladiator
+//			~ 4: Dark Lord
+//			~ 5: Summoner
+//			~ 6: Rage Fighter
+//			~ 7: Grow Lancer
+//			~ 8: Rune Wizard
+//			~ 9: Slayer
+//			~ 10: Gun Crusher
+//			~ 11: Light Wizard
+//			~ 12: Lemuria Mage
+//			~ 13: Illusion Knight
+//
+//	ObjectiveReqSubTypeX (1-4):
+//		~ For item related quest the attribute stands for item index
+//		~ For Monsters related quests it is -1
+//		~ For character level related quests it is required level to reach
+//
+// ### AnniversaryEvent::Schedule::BuffReward::Buff ###
+//	Level: Level of Anniversary experiance buff, 0~25
+//	BuffNumber: Number of buff to apply at specific level, see BuffEffectManager.xml
+//	AddExperience: Experience bonus to apply at specific buff level
+//
+// ### AnniversaryEvent::ItemReward ###
+//	ReceiveStartDate: Start of period the item compensation are available to collect, format: yyyy-MM-dd HH:mm
+//	ReceiveEndDate: End of period the item compensation are available to collect, format: yyyy-MM-dd HH:mm
+//
+// ### AnniversaryEvent::ItemReward::Reward ###
+//	Level: Level of achaived anniversary reward buff to collect item compensation
+//	ItemCat: Reward item category, see ItemList.xml
+//	ItemIndex: Reward item index, see ItemList.xml
+//	Name: name of the reward, used for loggin and description purpose
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<AnniversaryEvent Enable="0">
+	<Schedule>
+		<Quest Index="0" StartDate="2023-01-07 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Access for characters Level 400 or higher (%d/1) -->		
+		<Quest Index="1" StartDate="2023-01-07 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- New Year's Monster Kill (%d/100) -->
+		<Quest Index="2" StartDate="2023-02-04 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Lucky Rabbit Monster Kill (%d/100) -->		
+		<Quest Index="3" StartDate="2023-03-25 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Golden Goblin Monster Kill (%d/50) -->	
+		<Quest Index="4" StartDate="2023-04-08 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Red Cherry Blossom Branch (50) Number of Exchanges (%d/5) -->	
+		<Quest Index="5" StartDate="2023-04-20 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Earring enhancement (%d/3) -->	
+		<Quest Index="6" StartDate="2023-05-11 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Grant Jewel of Harmony options (%d/10) -->	
+		<Quest Index="7" StartDate="2023-05-13 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Maze Of Dimensions clear (%d/1) -->	
+		<Quest Index="8" StartDate="2023-06-17 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Lucky Coin exchange (%d/5) -->	
+		<Quest Index="9" StartDate="2023-07-08 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Use Chicken Box (%d/1) -->	
+		<Quest Index="10" StartDate="2023-07-22 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Use Card Deck (%d/3) -->	
+		<Quest Index="11" StartDate="2023-08-12 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Accumulate 20 hours of play time with characters above level 400 (%d hours/20 accumulated hours) -->	
+		<Quest Index="12" StartDate="2023-09-09 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Lucky Rabbit Monster Kill (%d/100) -->	
+		<Quest Index="13" StartDate="2023-10-26 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Number of fruit items crafted (%d/3) -->	
+		<Quest Index="14" StartDate="2023-10-26 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Successful Chaos Combination 'Equipment Enhancement' using mastery items of level +9 or higher (%d/1 -->	
+		<Quest Index="15" StartDate="2023-10-26 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Access to Kundun and Lemuria of Lv. 400 or higher (%d/1) -->	
+		<Quest Index="16" StartDate="2023-10-26 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Access to Kundun and Lemuria of Lv. 770 or higher (%d/1) -->	
+		<Quest Index="17" StartDate="2023-10-28 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Number of Pumpkins of Luck used (%d/10) -->	
+		<Quest Index="18" StartDate="2023-11-04 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Number of Maple Leaf Exchanges (%d/5) -->	
+		<Quest Index="19" StartDate="2023-12-16 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- 1 entry to Santa's Village (%d/1)"	"December 16th to December 30th before regular maintenance -->	
+		<Quest Index="20" StartDate="2023-12-16 08:00" EndDate="2023-12-31 08:00" CharacterLevel="400" /> <!-- Successful 'Equipment Enhancement' or 'Errtel Level Up' using with Pentagram of level +9 or higher (%d/1) -->	
+	</Schedule>
+	<QuestList>
+		<Quest Index="0" ObjectiveType="0" ObjectiveCount="1" ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1" ObjectiveReqSubType2="-1"	ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1"	ObjectiveReqSubType4="-1" />
+		<Quest Index="1" ObjectiveType="1" ObjectiveCount="100"	ObjectiveReqType1="884"	ObjectiveReqSubType1="-1" ObjectiveReqType2="885" ObjectiveReqSubType2="-1"	ObjectiveReqType3="886"	ObjectiveReqSubType3="-1" ObjectiveReqType4="887" ObjectiveReqSubType4="-1" />
+		<Quest Index="2" ObjectiveType="1" ObjectiveCount="100" ObjectiveReqType1="413"	ObjectiveReqSubType1="-1" ObjectiveReqType2="888" ObjectiveReqSubType2="-1"	ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1"	ObjectiveReqSubType4="-1" />
+		<Quest Index="3" ObjectiveType="1" ObjectiveCount="50" ObjectiveReqType1="652" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1"	ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="4" ObjectiveType="4" ObjectiveCount="5" ObjectiveReqType1="41" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1" ObjectiveReqSubType2="-1"	ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1"	ObjectiveReqSubType4="-1" />
+		<Quest Index="5" ObjectiveType="6" ObjectiveCount="3" ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1" ObjectiveReqSubType2="-1"	ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1"	ObjectiveReqSubType4="-1" />
+		<Quest Index="6" ObjectiveType="7" ObjectiveCount="10" ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1" ObjectiveReqSubType2="-1" ObjectiveReqType3="-1"	ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="7" ObjectiveType="8" ObjectiveCount="1" ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1" ObjectiveReqSubType2="-1"	ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1"	ObjectiveReqSubType4="-1" />
+		<Quest Index="8" ObjectiveType="9" ObjectiveCount="5" ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1" ObjectiveReqSubType2="-1"	ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1"	ObjectiveReqSubType4="-1" />
+		<Quest Index="9" ObjectiveType="10" ObjectiveCount="1" ObjectiveReqType1="14" ObjectiveReqSubType1="445" ObjectiveReqType2="-1"	ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="10" ObjectiveType="11" ObjectiveCount="3"	ObjectiveReqType1="14" ObjectiveReqSubType1="216" ObjectiveReqType2="-1" ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1"	ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="11" ObjectiveType="12" ObjectiveCount="20" ObjectiveReqType1="-1"	ObjectiveReqSubType1="-1" ObjectiveReqType2="-1" ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1"	ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="12" ObjectiveType="1"	ObjectiveCount="100" ObjectiveReqType1="413" ObjectiveReqSubType1="-1" ObjectiveReqType2="888" ObjectiveReqSubType2="-1" ObjectiveReqType3="-1"	ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="13" ObjectiveType="13" ObjectiveCount="3"	ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1"	ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="14" ObjectiveType="14" ObjectiveCount="1"	ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1"	ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="15" ObjectiveType="16" ObjectiveCount="1"	ObjectiveReqType1="11" ObjectiveReqSubType1="400" ObjectiveReqType2="12" ObjectiveReqSubType2="400"	ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1"	ObjectiveReqSubType4="-1" />
+		<Quest Index="16" ObjectiveType="16" ObjectiveCount="1"	ObjectiveReqType1="11" ObjectiveReqSubType1="770" ObjectiveReqType2="12" ObjectiveReqSubType2="770"	ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1"	ObjectiveReqSubType4="-1" />
+		<Quest Index="17" ObjectiveType="3"	ObjectiveCount="10"	ObjectiveReqType1="14" ObjectiveReqSubType1="45" ObjectiveReqType2="-1"	ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="18" ObjectiveType="17" ObjectiveCount="5"	ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1"	ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="19" ObjectiveType="18" ObjectiveCount="1"	ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1"	ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+		<Quest Index="20" ObjectiveType="15" ObjectiveCount="1"	ObjectiveReqType1="-1" ObjectiveReqSubType1="-1" ObjectiveReqType2="-1"	ObjectiveReqSubType2="-1" ObjectiveReqType3="-1" ObjectiveReqSubType3="-1" ObjectiveReqType4="-1" ObjectiveReqSubType4="-1" />
+	</QuestList>
+	<BuffReward>
+		<Buff Level="0" BuffNumber="349" AddExperience="5" />	
+		<Buff Level="1" BuffNumber="350" AddExperience="5" />
+		<Buff Level="2" BuffNumber="351" AddExperience="5" />	
+		<Buff Level="3" BuffNumber="352" AddExperience="10" />	
+		<Buff Level="4" BuffNumber="353" AddExperience="10" />	
+		<Buff Level="5" BuffNumber="354" AddExperience="10" />
+		<Buff Level="6" BuffNumber="355" AddExperience="15" />
+		<Buff Level="7" BuffNumber="356" AddExperience="15" />
+		<Buff Level="8" BuffNumber="357" AddExperience="15" />
+		<Buff Level="9" BuffNumber="358" AddExperience="20" />
+		<Buff Level="10" BuffNumber="359" AddExperience="20" />
+		<Buff Level="11" BuffNumber="360" AddExperience="20" />
+		<Buff Level="12" BuffNumber="361" AddExperience="20" />
+		<Buff Level="13" BuffNumber="362" AddExperience="20" />
+		<Buff Level="14" BuffNumber="363" AddExperience="20" />
+		<Buff Level="15" BuffNumber="364" AddExperience="20" />
+		<Buff Level="16" BuffNumber="385" AddExperience="20" />
+		<Buff Level="17" BuffNumber="386" AddExperience="20" />
+		<Buff Level="18" BuffNumber="387" AddExperience="20" />
+		<Buff Level="19" BuffNumber="388" AddExperience="20" />
+		<Buff Level="20" BuffNumber="389" AddExperience="20" />
+		<Buff Level="21" BuffNumber="390" AddExperience="20" />
+		<Buff Level="22" BuffNumber="391" AddExperience="20" />
+		<Buff Level="23" BuffNumber="392" AddExperience="20" />
+		<Buff Level="24" BuffNumber="393" AddExperience="20" />
+		<Buff Level="25" BuffNumber="394" AddExperience="20" />
+	</BuffReward>
+	<ItemReward ReceiveStartDate="2023-10-26 08:00" ReceiveEndDate="2024-01-06 08:00">
+		<Reward Level="3" ItemCat="20" ItemIndex="68" Name="Limited-time Wing Box" />
+		<Reward Level="5" ItemCat="20" ItemIndex="69" Name="Earring Box of Fury (Left)" />	
+		<Reward Level="7" ItemCat="20" ItemIndex="70" Name="Earring Box of Anger (Right)" />	
+		<Reward Level="9" ItemCat="20" ItemIndex="71" Name="Ghost Horse Capsule" />
+		<Reward Level="11" ItemCat="20" ItemIndex="72" Name="Blood Angel Armor Box (1)" />	
+		<Reward Level="12" ItemCat="20" ItemIndex="73" Name="Blood Angel Armor Box (2)" />
+		<Reward Level="13" ItemCat="20" ItemIndex="74" Name="Blood Angel Armor Box (3)" />
+		<Reward Level="14" ItemCat="20" ItemIndex="75" Name="Blood Angel Armor Box (4)" />
+		<Reward Level="15" ItemCat="20" ItemIndex="76" Name="Blood Angel Weapon Box" />
+	</ItemReward>
+</AnniversaryEvent>								

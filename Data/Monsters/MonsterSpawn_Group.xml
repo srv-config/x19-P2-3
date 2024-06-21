@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MonsterGroupRegenSystem ###
+//	SpawnNotice: Enables or disabled the spawn notice configurable in GroupSettings section, 0/1
+//	MonsterKillRewardType: monsters kill reward loot type
+//		~ 0: Last Hit
+//		~ 1: Most Damage
+//
+// ### MonsterGroupRegenSystem::GroupSettings::Group ###
+//	Enable: Deactivates or activates specific group spawn, 0/1
+//	Index: Group number definition, unique in the section
+//	Duration: Time after which monsters will be deleted if not killed, minutes, if -1 is specified then monsters remain until killed
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If Duration is set to longer than next spawn schedule then monsters are being removed on a basis of schedule higher priority spawn
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	MapNumber: Map to spawn the Monster Group on
+//	BossMonsterIndex: Index of Boss Monster for the Group
+//	BossMonsterName: Name of Boss Monster, used for in-file information only
+//	AllowMove: Determines whether group monsters will be moving after spawn or not, 0/1
+//	SpawnNotice: Notice to display in-game upon spawn of the monsters group
+//	DespawnNotice: Notice to display in-game upon despawn of the monsters group
+//
+// ### MonsterGroupRegenSystem::SpotSettings::Group ###
+//	Index: Index of Group number, references to setting from GroupSettings section
+//	StartX: Start X coordinate of spot spawn location for the Monster of the Group (StartX must be greater than EndX)
+//	StartY: Start Y coordinate of spot spawn location for the Monster of the Group (StartY must be greater than EndY)
+//	EndX: End X coordinate of spot spawn location for the Monster of the Group
+//	EndY: End Y coordinate of spot spawn location for the Monster of the Group
+//
+// ### MonsterGroupRegenSystem::MonsterSettings::Group ###
+//	Index: Index of Group number, references to setting from GroupSettings section
+//
+// ### MonsterGroupRegenSystem::MonsterSettings::Group::Monster ###
+//	Index: Index of a monster belonging to the group, refer to MonsterList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Boss Monster must be defined in first row of the section
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	MoveRange: Distance in tiles of how far the monsters can move from initial location after spawn
+//	SpawnType: Determines relation to BossMonsterIndex of specific group, if set to higher than 0 the monsters will be treated as minions and spawned around the boss.
+//			   Value specified in SpawnType will be used as distance the monsters will be spawned from the boss. Boss monsters should always be set with value 0
+//	Count: Count of monsters of specified type to spawn
+//	OverrideDefaultSettings: Determines whether to use monster attributes from MonsterList.xml or override them with attributes defined from this file, 0/1
+//	EventID: ID of event item bag type defined in ItemBagScript.lua
+//	HP: Value of health to set for specified monster
+//	DamageMin: Value of minimum damage to set for specified monster
+//	DamageMax: Value of maxumum damage to set for specified monster
+//	Defense: Value of defense to set for specified monster
+//	AttackRate: Value of Attack Rate to set for specified monster
+//	DefenseRate: Value of Defense Rate to set for specified monster
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Override values of monster attributes applies only if OverrideDefaultSettings is set to 1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MonsterGroupRegenSystem::SpawnSettings::Group ###
+//	Index: Index of Group number, references to setting from GroupSettings section
+//
+// ### MonsterGroupRegenSystem::SpawnSettings::Group::Spawn ###
+//	DayOfMonth: Day of month the spawn will run on, 1-31 or -1 for any day
+//	DayOfWeek: Day of a week the spawn will run on:
+//		~ 0: Sunday
+//		~ 1: Monday
+//		~ 2: Tuesday
+//		~ 3: Wednesday
+//		~ 4: Thursday
+//		~ 5: Friday
+//		~ 6: Saturday
+//		~ -1: every day
+//	Hour: Start hour for the spawn, 0-23
+//	Minute: Start minute for the spawn, 0-59
+//	AppearanceRate: Chance to process specified spawn, expressed in percent, 0-100
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MonsterGroupRegenSystem SpawnNotice="1" MonsterKillRewardType="1">
+	<GroupSettings>
+		<Group Enable="1" Index="0" Duration="60" MapNumber="56" BossMonsterIndex="561" BossMonsterName="Medusa" AllowMove="0" SpawnNotice="Medusa and her assistants has invaded Swamp of Clamness!!!" DespawnNotice="Medusa and her assistants are gone" PreNotice="Medusa will spawn in %d Minutes" />
+	</GroupSettings>
+ 
+	<SpotSettings>
+		<Group Index="0">
+			<Area StartX="50"  StartY="103" EndX="57"  EndY="114" />
+			<Area StartX="127" StartY="162" EndX="136" EndY="171" />
+			<Area StartX="149" StartY="10"  EndX="162" EndY="19" />
+			<Area StartX="178" StartY="114" EndX="184" EndY="129" />
+		</Group>
+	</SpotSettings>
+ 
+	<MonsterSettings>
+		<Group Index="0">
+			<Monster Index="561" MoveRange="10" SpawnType="0" Count="1" OverrideDefaultSettings="1" EventID="150" HP="15000000" DamageMin="1000" DamageMax="1500" Defense="550" AttackRate="2000" DefenseRate="2000" SendKillNotice="1" KillNotice="[MEDUSA] %s killed Medusa! [%d] of [%d]" />
+			<Monster Index="560" MoveRange="10" SpawnType="0" Count="7" OverrideDefaultSettings="1" EventID="151" HP="150000" DamageMin="100" DamageMax="150" Defense="150" AttackRate="1000" DefenseRate="1000" SendKillNotice="1" KillNotice="[MEDUSA] %s killed Medusa assistant! [%d] of [%d]" />
+		</Group>
+	</MonsterSettings>
+ 
+	<SpawnSettings>
+		<Group Index="0">
+			<Spawn DayOfMonth="-1" DayOfWeek="-1" Hour="11" Minute="8" AppearanceRate="100" />
+		</Group> 
+	</SpawnSettings>
+</MonsterGroupRegenSystem>

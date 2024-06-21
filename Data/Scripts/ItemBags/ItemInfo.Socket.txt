@@ -1,0 +1,25 @@
+		-- Item must be of Type 2 in item list settings
+		if (IsSocketItem(ItemID) == true) then
+			if (ItemInfo.Socket > 0 and ItemInfo.Socket <= 5) then -- if slots value is supported (0-5)
+				IsSocket = GetRandomValue(ItemInfo.Socket+1) -- set up to configured value of sockets
+			elseif (ItemInfo.Socket == -2) then
+				IsSocket = -2
+			end
+		else
+			IsSocket = 0 -- no socket, applies for items of no item type 2 only
+		end
+
+//------------------------
+// Replace
+//------------------------
+
+		-- Item must be of Type 2 in item list settings
+		if (IsSocketItem(ItemID) == true) then
+			if (ItemInfo.Socket > 0 and ItemInfo.Socket <= 5) then -- if slots value is supported (0-5)
+				IsSocket = ItemInfo.Socket -- set up to configured value of sockets
+			elseif (ItemInfo.Socket == -2) then
+				IsSocket = -2
+			end
+		else
+			IsSocket = 0 -- no socket, applies for items of no item type 2 only
+		end

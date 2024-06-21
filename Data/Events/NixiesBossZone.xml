@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### NixiesBossZone ###
+//	Enable: Opens or restricts access to Nixies Lake Boss Zone, 0/1
+//	MaxBossZoneEnterTime: Maximum time player can stay in Nix Boss zone, minutes
+//	BossZoneKickAwayTime: Time to kick users away from the boss zone area after Nix death, seconds
+//	RewardMode:
+//		~ 0: Reward will be issues to every user that survived in Nix boss zone. Number of items per user will depend from drawn "Drop" section of Nix item bag, it is not recommended to use item bag party drop when using this mode
+//		~ 1: Reward will be issued only one time, regardless number of players that survived in Nix boss zone, can be used in connection of item bags party drop
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<NixiesBossZone Enable="1" MaxBossZoneEnterTime="15" BossZoneKickAwayTime="30" RewardMode="0">
+	<!-- More options to come upon requirement -->
+</NixiesBossZone>

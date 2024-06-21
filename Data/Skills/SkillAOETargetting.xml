@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### SkillAOETargetting::Skill ###
+//	Index: Skill index, only defined by default indexes will work with the system
+//	CastleSiegeDisable: When set to 1 attacking with the skill will not require player targeting during Castle Siege Event, 0/1
+//	ArcaBattleDisable: When set to 1 attacking with the skill will not require player targeting during Arca Battle Event, 0/1
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Only skills defines in the file can work with the system
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<SkillAOETargetting>
+	<Skill Index="217" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Damage Reflection" />
+	<Skill Index="739" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Dark Phoenix Shot" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="43" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Stab" />
+	<Skill Index="339" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Stab Proficiency" />
+	<Skill Index="1071" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Stab Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="288" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Scythe" />
+	<Skill Index="1155" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Scythe Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="282" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Spirit Hook" />
+	<Skill Index="1147" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Spirit Hook Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="1127" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bloodying Hit" />
+	<Skill Index="1131" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bloodying Hit Damage Enhancement" />
+	<Skill Index="1135" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bloodying Hit Explosion Infection Effect" />
+	<Skill Index="1198" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bloodying Hit Damage Enhancement" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="232" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Strike of Destruction" />
+	<Skill Index="807" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Strike of Destruction Strengthener" />
+	<Skill Index="809" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Strike of Destruction Mastery" />
+	<Skill Index="1202" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Strike of Destruction Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="225" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Pollution" />
+	<Skill Index="776" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Pollution Strengthener" />
+	<Skill Index="777" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Pollution Strengthener" />
+	<Skill Index="778" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Pollution Mastery" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="260" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Killing Blow" />
+	<Skill Index="551" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Killing Blow Strengthener" />
+	<Skill Index="554" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Killing Blow Mastery" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="261" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Beast Uppercut" />
+	<Skill Index="552" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Beast Uppercut Strengthener" />
+	<Skill Index="555" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Beast Uppercut Mastery" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="262" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chain Drive" />
+	<Skill Index="558" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chain Drive Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="264" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Dragon Roar" />
+	<Skill Index="560" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Dragon Roar Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="38" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Decay" />
+	<Skill Index="387" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Decay Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="215" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chain Lightning" />
+	<Skill Index="455" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chain Lightning Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="214" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Drain Life" />
+	<Skill Index="458" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Drain Life Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="223" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Explosion" />
+	<Skill Index="774" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Explosion Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="224" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Requiem" />
+	<Skill Index="775" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Requiem Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="235" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Multi-Shot" />
+	<Skill Index="411" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Multi-Shot Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="238" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chaotic Diseier" />
+	<Skill Index="523" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chaotic Diseier Strengthener" />
+	<Skill Index="1098" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chaotic Diseier Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2012" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chaos Blade" />
+	<Skill Index="1214" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Chaos Blade Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2013" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Havok Spear" />
+	<Skill Index="1215" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Havok Spear Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="241" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Shining Bird" />
+	<Skill Index="843" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Shining Bird Strengthener" />
+	<Skill Index="844" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Shining Bird Mastery" />
+	<Skill Index="1220" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Shining Bird Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="242" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Dragon Violent" />
+	<Skill Index="846" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Dragon Violent Strengthener" />
+	<Skill Index="847" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Dragon Violent Mastery" />
+	<Skill Index="1221" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Dragon Violent Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="243" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Spear Storm" />
+	<Skill Index="1216" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Spear Storm Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="245" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Marvel Burst" />
+	<Skill Index="848" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Marvel Burst Strengthener" />
+	<Skill Index="849" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Marvel Burst Mastery" />
+	<Skill Index="1217" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Marvel Burst Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="246" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Unleash Marvel" />
+	<Skill Index="855" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Unleash Marvel Strengthener" />
+	<Skill Index="856" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Unleash Marvel Mastery" />
+	<Skill Index="1218" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Unleash Marvel Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="247" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ultimate Force" />
+	<Skill Index="1219" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ultimate Force Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2023" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Raining Arrow" />
+	<Skill Index="1222" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Raining Arrow Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="293" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bat Flock" />
+	<Skill Index="781" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bat Flock Strengthener" />
+	<Skill Index="782" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bat Flock Mastery" />
+	<Skill Index="1159" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bat Flock Skill Enhancement" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="294" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Pierce Attack" />
+	<Skill Index="1160" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Pierce Attack Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2002" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ice Break" />
+	<Skill Index="823" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ice Break Strengthener" />
+	<Skill Index="824" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ice Break Mastery" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2004" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Fire" />
+	<Skill Index="825" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Fire Strengthener" />
+	<Skill Index="826" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Fire Mastery" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2006" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Ice" />
+	<Skill Index="835" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Ice Strengthener" />
+	<Skill Index="836" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Death Ice Mastery" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2003" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ice Blast" />
+	<Skill Index="1212" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ice Blast Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2005" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Bursting Flare" />
+	<Skill Index="1213" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Busting Flare Enhancement Skill" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="39" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ice Storm" />
+	<Skill Index="391" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ice Storm Strengthener" />
+	<Skill Index="393" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Ice Storm Mastery" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="344" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Blood Storm" />
+	<Skill Index="346" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Blood Storm Strengthener"  />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="40" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Nova" />
+	<Skill Index="392" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Nova Strengthener" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="65" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Electric Spark" />
+	<Skill Index="519" CastleSiegeDisable="0" ArcaBattleDisable="0" Name="Electric Spark Strengthener" />
+</SkillAOETargetting>

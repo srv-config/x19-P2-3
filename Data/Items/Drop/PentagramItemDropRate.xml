@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Items to drop are defined in \Data\Items\Drop\EachMonsterMapDrop\MonsterMap_(X)_Bag.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### PentagramItemDrop::ServerElementRate::Server ### - Drop Rate of item of specified element per server (Code)
+//	Index: Unique Index in the section, starts from 1
+//	Code: Server Code of the server (corresponding to GameServer.ini settings)
+//	FireDrop: Chance of drop of item with Fire Element
+//	EarthDrop: Chance of drop of item with Earth Element
+//	WindDrop: Chance of drop of item with Wind Element
+//	DarknessDrop: Chance of drop of item with Darkness Element
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Element Drop Settings is n/10000. Sum of all Drop Rates in a row must be equal to 10000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### PentagramItemDrop::SocketRate::Socket ### - rate of chance to drop Pentagram item with specified count of sockets
+//	Count: Count of Sockets
+//	OpenRate: Chance rate to use specified record, n/10000 - sum in column must be equal to 10000
+//	OpenSet: Chance rate to select a record from records of same count, the OpenSet must be equal to 10000 for records of same Count value, n/10000
+//---------------------------------------------------------------------------------------------------~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ OpenRate values must be set ascending - down from lowest to highest, repeated values are allowed
+//~~ OpenSet values for same Count must be set descending - down from highest to lowest, records of OpenSet = 0 are ignored, despite OpenRate is greater than 0
+//---------------------------------------------------------------------------------------------------~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	SlotRate1: Chance of Pentagram item drop with 1 socket, n/10000
+//	SlotRate2: Chance of Pentagram item drop with 2 socket, n/10000
+//	SlotRate3: Chance of Pentagram item drop with 3 socket, n/10000
+//	SlotRate4: Chance of Pentagram item drop with 4 socket, n/10000
+//	SlotRate5: Chance of Pentagram item drop with 5 socket, n/10000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ How it works:
+//~~ 1) Basing on OpenRate system selects a record to use, e.g. selected record with Count = 3
+//~~ 2) Basing on OpenSet system makes a draw of a record among all records of Count = 3 (example)
+//~~ 3) Basing on SlotRateX system draws a final socket count to drop for an item
+//~~
+//~~ Each entry of same SocketCount represents different Pentagram sockets configuration and chance to get it
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ NOTE ~ ServerCode must match configuration of \Data\MapServerInfo.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<PentagramItemDrop>
+	<ServerElementRate>
+		<Server Index="1" Code="0"  FireDrop="2000" WaterDrop="2000" EarthDrop="2000" WindDrop="2000" DarknessDrop="2000" /> <!-- Total must be equal to 10000 -->
+		<Server Index="2" Code="12" FireDrop="2000" WaterDrop="2000" EarthDrop="2000" WindDrop="2000" DarknessDrop="2000" /> <!-- Total must be equal to 10000 -->
+		<Server Index="3" Code="13" FireDrop="2000" WaterDrop="2000" EarthDrop="2000" WindDrop="2000" DarknessDrop="2000" /> <!-- Total must be equal to 10000 -->
+		<Server Index="4" Code="14" FireDrop="2000" WaterDrop="2000" EarthDrop="2000" WindDrop="2000" DarknessDrop="2000" /> <!-- Total must be equal to 10000 -->
+		<Server Index="5" Code="15" FireDrop="2000" WaterDrop="2000" EarthDrop="2000" WindDrop="2000" DarknessDrop="2000" /> <!-- Total must be equal to 10000 -->
+	</ServerElementRate>
+	
+	<SocketRate>
+		<Socket Count="5" OpenRate="10"	  OpenSet="9990"  SlotRate1="10000" SlotRate2="10000" SlotRate3="10000" SlotRate4="10000" SlotRate5="100" />
+		<Socket Count="5" OpenRate="10"	  OpenSet="10"    SlotRate1="10000" SlotRate2="10000" SlotRate3="10000" SlotRate4="10000" SlotRate5="10000" />
+		<Socket Count="5" OpenRate="10"	  OpenSet="0"     SlotRate1="0"     SlotRate2="0"     SlotRate3="0"     SlotRate4="0"     SlotRate5="0" /> <!-- OpenRate filler -->
+		<Socket Count="5" OpenRate="10"	  OpenSet="0"     SlotRate1="0"     SlotRate2="0"     SlotRate3="0"     SlotRate4="0"     SlotRate5="0" /> <!-- OpenRate filler -->
+		<Socket Count="5" OpenRate="10"	  OpenSet="0"     SlotRate1="0"     SlotRate2="0"     SlotRate3="0"     SlotRate4="0"     SlotRate5="0" /> <!-- OpenRate filler -->
+		<Socket Count="4" OpenRate="15"	  OpenSet="9900"  SlotRate1="10000" SlotRate2="10000" SlotRate3="5000"  SlotRate4="800"   SlotRate5="0" />
+		<Socket Count="4" OpenRate="15"	  OpenSet="100"   SlotRate1="10000" SlotRate2="10000" SlotRate3="10000" SlotRate4="10000" SlotRate5="0" />
+		<Socket Count="4" OpenRate="15"	  OpenSet="0"     SlotRate1="0"     SlotRate2="0"     SlotRate3="0"     SlotRate4="0"     SlotRate5="0" /> <!-- OpenRate filler -->
+		<Socket Count="4" OpenRate="15"	  OpenSet="0"     SlotRate1="0"     SlotRate2="0"     SlotRate3="0"     SlotRate4="0"     SlotRate5="0" /> <!-- OpenRate filler -->
+		<Socket Count="3" OpenRate="70"	  OpenSet="5000"  SlotRate1="10000" SlotRate2="10000" SlotRate3="6000"  SlotRate4="0"	  SlotRate5="0" />
+		<Socket Count="3" OpenRate="70"	  OpenSet="3000"  SlotRate1="10000" SlotRate2="6000"  SlotRate3="10000" SlotRate4="0"	  SlotRate5="0" />
+		<Socket Count="3" OpenRate="70"	  OpenSet="2000"  SlotRate1="10000" SlotRate2="6000"  SlotRate3="4000"  SlotRate4="0"	  SlotRate5="0" />
+		<Socket Count="3" OpenRate="70"	  OpenSet="0"	  SlotRate1="0"     SlotRate2="0"     SlotRate3="0"     SlotRate4="0"     SlotRate5="0" /> <!-- OpenRate filler -->
+		<Socket Count="2" OpenRate="9610" OpenSet="10000" SlotRate1="10000" SlotRate2="4000"  SlotRate3="0"  	SlotRate4="0"  	  SlotRate5="0" />
+		<Socket Count="1" OpenRate="0" 	  OpenSet="0"     SlotRate1="0"     SlotRate2="0"     SlotRate3="0"     SlotRate4="0"     SlotRate5="0" />
+	</SocketRate>
+</PentagramItemDrop>

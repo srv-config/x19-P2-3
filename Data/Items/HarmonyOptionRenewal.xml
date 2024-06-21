@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2021 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+<HarmonySystem>
+	<Type ID="0" Description="Physical">
+		<Option Index="1" RandomWeight="40" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Strength Stat Increase" />
+		<Option Index="2" RandomWeight="40" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Agility Stat Increase" />
+		<Option Index="3" RandomWeight="40" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Energy Stat Increase" />
+		<Option Index="4" RandomWeight="30" RangeVal1="179" RangeVal2="179" RangeVal3="499" MaxVal="500" DisplayType="1" Name="Attack Success Rate Increase" />
+		<Option Index="5" RandomWeight="30" RangeVal1="8" RangeVal2="8" RangeVal3="39" MaxVal="40" DisplayType="1" Name="Attack Power Increase" />
+		<Option Index="6" RandomWeight="20" RangeVal1="8" RangeVal2="8" RangeVal3="39" MaxVal="40" DisplayType="1" Name="Critical Damage Increase" />
+		<Option Index="7" RandomWeight="20" RangeVal1="8" RangeVal2="8" RangeVal3="39" MaxVal="40" DisplayType="1" Name="Excellent Damage Increase" />
+		<Option Index="8" RandomWeight="20" RangeVal1="7" RangeVal2="7" RangeVal3="34" MaxVal="35" DisplayType="1" Name="Skill Attack Power Increase" />
+		<Option Index="9" RandomWeight="10" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Item Durability Increase" />
+		<Option Index="10" RandomWeight="10" RangeVal1="2" RangeVal2="2" RangeVal3="9" MaxVal="10" DisplayType="2" Name="SD Reduction Rate Increase" />
+		<Option Index="11" RandomWeight="10" RangeVal1="9" RangeVal2="9" RangeVal3="44" MaxVal="45" DisplayType="1" Name="5% of Mana Converted to Attack" />
+	</Type>
+	<Type ID="1" Description="Magical">
+		<Option Index="1" RandomWeight="40" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Strength Stat Increase" />
+		<Option Index="2" RandomWeight="40" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Agility Stat Increase" />
+		<Option Index="3" RandomWeight="40" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Energy Stat Increase" />
+		<Option Index="4" RandomWeight="30" RangeVal1="179" RangeVal2="179" RangeVal3="499" MaxVal="500" DisplayType="1" Name="Attack Success Rate Increase" />
+		<Option Index="5" RandomWeight="30" RangeVal1="19" RangeVal2="19" RangeVal3="79" MaxVal="80" DisplayType="1" Name="Wizardry Attack Power Increase" />
+		<Option Index="6" RandomWeight="20" RangeVal1="8" RangeVal2="8" RangeVal3="39" MaxVal="40" DisplayType="1" Name="Critical Damage Increase" />
+		<Option Index="7" RandomWeight="20" RangeVal1="8" RangeVal2="8" RangeVal3="39" MaxVal="40" DisplayType="1" Name="Excellent Damage Increase" />
+		<Option Index="8" RandomWeight="20" RangeVal1="7" RangeVal2="7" RangeVal3="34" MaxVal="35" DisplayType="1" Name="Skill Attack Power Increase" />
+		<Option Index="9" RandomWeight="10" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Item Durability Increase" />
+		<Option Index="10" RandomWeight="10" RangeVal1="2" RangeVal2="2" RangeVal3="9" MaxVal="10" DisplayType="2" Name="SD Reduction Rate Increase" />
+		<Option Index="11" RandomWeight="10" RangeVal1="20" RangeVal2="20" RangeVal3="84" MaxVal="85" DisplayType="1" Name="5% of Mana Converted to Magic Attack Power" />
+	</Type>
+	<Type ID="2" Description="Defensive">
+		<Option Index="1" RandomWeight="40" RangeVal1="2" RangeVal2="2" RangeVal3="9" MaxVal="10" DisplayType="1" Name="Vitality Stat Increase" />
+		<Option Index="2" RandomWeight="40" RangeVal1="10" RangeVal2="10" RangeVal3="49" MaxVal="50" DisplayType="1" Name="Defense Increase" />
+		<Option Index="4" RandomWeight="40" RangeVal1="27" RangeVal2="27" RangeVal3="99" MaxVal="100" DisplayType="1" Name="Maximum AG Increase" />
+		<Option Index="5" RandomWeight="30" RangeVal1="27" RangeVal2="27" RangeVal3="99" MaxVal="100" DisplayType="1" Name="Maximum HP Increase" />
+		<Option Index="6" RandomWeight="30" RangeVal1="27" RangeVal2="27" RangeVal3="99" MaxVal="100" DisplayType="1" Name="Maximum MP Increase" />
+		<Option Index="7" RandomWeight="20" RangeVal1="2" RangeVal2="2" RangeVal3="9" MaxVal="10" DisplayType="1" Name="Automatic Life Recovery Increase" />
+		<Option Index="8" RandomWeight="20" RangeVal1="2" RangeVal2="2" RangeVal3="9" MaxVal="10" DisplayType="1" Name="Automatic Mana Increase" />
+		<Option Index="9" RandomWeight="20" RangeVal1="10" RangeVal2="10" RangeVal3="49" MaxVal="50" DisplayType="1" Name="Damage Reduction Increase" />
+		<Option Index="10" RandomWeight="10" RangeVal1="6" RangeVal2="6" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Item Durability Increase" />
+		<Option Index="11" RandomWeight="10" RangeVal1="1" RangeVal2="1" RangeVal3="4" MaxVal="5" DisplayType="2" Name="SD Ratio Increase" />
+		<Option Index="13" RandomWeight="10" RangeVal1="31" RangeVal2="31" RangeVal3="119" MaxVal="120" DisplayType="1" Name="Convert 10% of Mana to Life" />
+	</Type>
+	<Type ID="3" Description="Books">	
+		<Option Index="1" RandomWeight="40" RangeVal1="6" RangeVal2="15" RangeVal3="29" MaxVal="30"	DisplayType="1" Name="Strength Stat Increase" />
+		<Option Index="2" RandomWeight="40" RangeVal1="6" RangeVal2="15" RangeVal3="29" MaxVal="30"	DisplayType="1" Name="Agility Stat Increase" />
+		<Option Index="3" RandomWeight="40" RangeVal1="6" RangeVal2="15" RangeVal3="29" MaxVal="30"	DisplayType="1" Name="Energy Stat Increase" />
+		<Option Index="4" RandomWeight="30" RangeVal1="179" RangeVal2="299" RangeVal3="499" MaxVal="500" DisplayType="1" Name="Attack Success Rate Increase" />
+		<Option Index="5" RandomWeight="30" RangeVal1="8" RangeVal2="20" RangeVal3="39" MaxVal="40" DisplayType="1" Name="Curse Damage Increase" />
+		<Option Index="6" RandomWeight="20" RangeVal1="8" RangeVal2="20" RangeVal3="39" MaxVal="40" DisplayType="1" Name="Critical Damage Increase" />
+		<Option Index="7" RandomWeight="20" RangeVal1="8" RangeVal2="20" RangeVal3="39" MaxVal="40" DisplayType="1" Name="Excellent Damage Increase" />
+		<Option Index="8" RandomWeight="20" RangeVal1="7" RangeVal2="17" RangeVal3="34" MaxVal="35" DisplayType="1" Name="Skill Attack Power Increase" />
+		<Option Index="9" RandomWeight="10" RangeVal1="6" RangeVal2="15" RangeVal3="29" MaxVal="30" DisplayType="1" Name="Item Durability Increase" />
+		<Option Index="10" RandomWeight="10" RangeVal1="2" RangeVal2="5" RangeVal3="9" MaxVal="10" DisplayType="2" Name="SD Reduction Rate Increase" />
+		<Option Index="11" RandomWeight="10" RangeVal1="9" RangeVal2="22" RangeVal3="44" MaxVal="45" DisplayType="1" Name="Convert 5% of Mana to Curse Damage" />
+	</Type>
+	
+	<Bonus>
+		<Option Level="1" LowerStoneRate="10" HigherStoneRate="50" /> <!-- +10 -->
+		<Option Level="2" LowerStoneRate="10" HigherStoneRate="50" /> <!-- +20 -->
+		<Option Level="3" LowerStoneRate="10" HigherStoneRate="50" /> <!-- +30 -->
+		<Option Level="4" LowerStoneRate="10" HigherStoneRate="50" /> <!-- +40 -->
+		<Option Level="5" LowerStoneRate="10" HigherStoneRate="50" /> <!-- +50 -->
+	</Bonus>
+</HarmonySystem>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Requires AntiLag plugin purchase: https://www.igcn.mu/store/?tab=plugins
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ### HelperCMD ###
+//	Enable: Activates or deactivates the plugin, 0/1
+//
+// ### HelperCMD::Line ###
+//	Text: Helper text display, max 50 lines
+//	RGB: RGB color values, 0-255
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+//
+-->
+
+<HelperCMD Enable="1">
+	<Line Text=" [ANTI-LAG] [SHIFT + 1]: Hide Wings" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 2]: Reduce Skill Effect" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 3]: Reduce Item Effect" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 4]: Hide Ground Zen" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 5]: Hide Ground Item" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 6]: Hide Muun Pet" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 7]: Hide Chars and Shadows" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 8]: Hide Skill Effect" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 9]: Reduce Item Shine to +0" RGB="255;255;255" />
+	<Line Text=" [ANTI-LAG] [SHIFT + 0]: Reduce terrain objects" RGB="255;255;255" />
+</HelperCMD>

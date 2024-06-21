@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~ For detailed explanation of the Each Monster Map Drop system refer to ### Each Bag System Description ###.txt included in \Data\Items\Drop\EachMonsterMapDrop
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MonsterMapItemDrop>
+  <DropItem MonsterID="354" MonsterElement="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="41" MinLevel="0" MaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" Element="0" SocketCount="0;0" Duration="0" Rate="1000000" Name="Gemstone" />
+  <DropItem MonsterID="360" MonsterElement="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="41" MinLevel="0" MaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" Element="0" SocketCount="0;0" Duration="0" Rate="1000000" Name="Gemstone" />
+  <DropItem MonsterID="359" MonsterElement="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="41" MinLevel="0" MaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" Element="0" SocketCount="0;0" Duration="0" Rate="1000000" Name="Gemstone" />
+  <DropItem MonsterID="358" MonsterElement="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="41" MinLevel="0" MaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" Element="0" SocketCount="0;0" Duration="0" Rate="1000000" Name="Gemstone" />
+  <DropItem MonsterID="357" MonsterElement="-1" PlayerMinReset="-1" PlayerMaxReset="-1" PlayerMinLevel="-1" PlayerMaxLevel="-1" Cat="14" Index="41" MinLevel="0" MaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" Element="0" SocketCount="0;0" Duration="0" Rate="1000000" Name="Gemstone" />
+</MonsterMapItemDrop>

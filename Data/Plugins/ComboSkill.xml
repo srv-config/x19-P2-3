@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//
+// ### ComboSettings ###
+//	Enable: Disables or enables the plugin, 0/1
+//
+// ### ComboSettings::Class ###
+//	Id: Class number:
+//		~ 0: Dark Wizard
+//		~ 1: Dark Knight
+//		~ 2: Fairy Elf
+//		~ 3: Magic Gladiator
+//		~ 4: Dark Lord
+//		~ 5: Summoner
+//		~ 6: Rage Fighter
+//		~ 7: Grow Lancer
+//		~ 8: Rune Wizard
+//		~ 9: Slayer
+//
+//	StaminaCost: Stamina cost, expressed in percentage
+//
+// ### ComboSettings::Class::Skill ###
+//	Pos: Skill use sequence:
+//		~ 0: Always must be casted as firstname
+//		~ 1: Second and third skill, sequence does not matter
+//
+//	SkillId: Skill index, see SkillList.xml
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ComboSettings Enabled="0">
+	<Class Id="0" StaminaCost="5" ComboTriggerCount="3"> <!-- Dark Wizard -->
+		<Skill Pos="0" SkillId="17" /> <!-- Energy Ball -->
+		<Skill Pos="1" SkillId="12" /> <!-- Aqua beam -->
+		<Skill Pos="1" SkillId="14" /> <!-- Inferno -->
+	</Class>
+	
+	<Class Id="1" StaminaCost="5" ComboTriggerCount="3"> <!-- Dark Knight -->
+		<Skill Pos="0" SkillId="19" />
+		<Skill Pos="0" SkillId="20" />
+		<Skill Pos="0" SkillId="21" />
+		<Skill Pos="0" SkillId="22" />
+		<Skill Pos="0" SkillId="23" />
+		<Skill Pos="0" SkillId="326" />
+		<Skill Pos="0" SkillId="327" />
+		<Skill Pos="0" SkillId="328" />
+		<Skill Pos="0" SkillId="329" />
+		<Skill Pos="0" SkillId="631" />
+		<Skill Pos="1" SkillId="330" />
+		<Skill Pos="1" SkillId="331" />
+		<Skill Pos="1" SkillId="336" />
+		<Skill Pos="1" SkillId="339" />
+		<Skill Pos="1" SkillId="337" />
+		<Skill Pos="1" SkillId="344" />
+		<Skill Pos="1" SkillId="346" />
+		<Skill Pos="1" SkillId="41" />
+		<Skill Pos="1" SkillId="42" />
+		<Skill Pos="1" SkillId="43" />
+		<Skill Pos="1" SkillId="232" />
+		<Skill Pos="1" SkillId="723" />
+		<Skill Pos="1" SkillId="1069" />
+		<Skill Pos="1" SkillId="1071" />
+		<Skill Pos="1" SkillId="1072" />
+	</Class>
+	
+	<Class Id="2" StaminaCost="5" ComboTriggerCount="3"> <!-- Fairy Elf -->
+		<Skill Pos="0" SkillId="51" /> <!-- Ice Arrow -->
+		<Skill Pos="1" SkillId="52" /> <!-- Aqua beam -->
+		<Skill Pos="1" SkillId="235" /> <!-- Multi-Shot -->
+	</Class>
+	
+	<Class Id="3" StaminaCost="5" ComboTriggerCount="3"> <!-- Magic Gladiator -->
+		<Skill Pos="0" SkillId="55" /> <!-- Fire Slash -->
+		<Skill Pos="1" SkillId="56" /> <!-- Power Slash -->
+		<Skill Pos="1" SkillId="237" /> <!-- Gigantic Storm -->
+	</Class>
+	
+	<Class Id="4" StaminaCost="5" ComboTriggerCount="3"> <!-- Dark Lord -->
+		<Skill Pos="0" SkillId="78" /> <!-- Fire Scream -->
+		<Skill Pos="1" SkillId="61" /> <!-- Fire Burst -->
+		<Skill Pos="1" SkillId="238" /> <!-- Chaotic-Disaster -->
+	</Class>
+	
+	<Class Id="5" StaminaCost="5" ComboTriggerCount="3"> <!-- Summoner -->
+		<Skill Pos="0" SkillId="214" /> <!-- drain life -->
+		<Skill Pos="1" SkillId="215" /> <!-- chain lightning -->
+		<Skill Pos="1" SkillId="230" /> <!-- Clightning shock -->
+	</Class>
+	
+	<Class Id="6" StaminaCost="5" ComboTriggerCount="3"> <!-- Rage Fighter-->
+		<Skill Pos="0" SkillId="261" /> <!-- Beast UpperCut -->
+		<Skill Pos="1" SkillId="262" /> <!-- dragon roar -->
+		<Skill Pos="1" SkillId="265" /> <!-- Chain drive -->
+	</Class>
+	
+	<Class Id="7" StaminaCost="5" ComboTriggerCount="3"> <!-- Grow Lancer -->
+		<Skill Pos="0" SkillId="20" /> <!-- Lunge -->
+		<Skill Pos="1" SkillId="274" /> <!-- Magic Pin -->
+		<Skill Pos="1" SkillId="271" /> <!-- Spin Step-->
+	</Class>
+	
+	<Class Id="8" StaminaCost="5" ComboTriggerCount="3"> <!-- Rune Wizard -->
+		<Skill Pos="0" SkillId="283" /> <!-- Magic Arrow -->
+		<Skill Pos="1" SkillId="284" /> <!-- Plasma ball -->
+		<Skill Pos="1" SkillId="285" /> <!-- Lightning Storm -->
+	</Class>
+	
+	<Class Id="9" StaminaCost="5" ComboTriggerCount="3"> <!-- Slayer -->
+		<Skill Pos="0" SkillId="294" /> <!-- Pierce Attack -->
+		<Skill Pos="1" SkillId="293" /> <!-- Bat Flock -->
+		<Skill Pos="1" SkillId="41" /> <!-- Twisting Slash -->
+		<Skill Pos="1" SkillId="42" /> <!-- Pierce Attack -->
+	</Class>
+</ComboSettings>

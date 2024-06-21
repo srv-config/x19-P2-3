@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2020 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Items defined in the system are recorded in IGC_ItemDropCountLimit_Data table
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ItemDropCountLimit ###
+// Enable: Allows to enable or disable the system, 0/1
+//
+// ### ItemDropCountLimit::ResetSchedule::Time ###
+//	DayOfMonth: Day of month to perform reset on, 1-31 or -1 for any day
+//	DayOfWeek: Day of week to perform reset on, 0-6 or -1 for any day
+//		~ 0: Sunday
+//		~ 1: Monday
+//		~ 2: Tuesday
+//		~ 3: Wednesday
+//		~ 4: Thursday
+//		~ 5: Friday
+//		~ 6: Saturday
+//	Hour: Hour to perform reset on, 0-23
+//	Min: Minute to perform reset on, 0-59
+//
+// ### ItemDropCountLimit::DropType::Type ###
+//	ID: Unique ID of drop type
+/	Enable: Allows to include or exclude drop system from Drop Count Limit, 0/1
+//	Name: Reference name of drop system
+//
+// ### ItemDropCountLimit::ServerGroup::Item ###
+//	Cat: Item category, see ItemList.xml
+//	Index: Item Index, see ItemList.xml
+//	MaxCount: Maximum number of specific item that can be dropped until next scheduled reset
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<ItemDropCountLimit Enable="0">
+	<ResetSchedule>
+		<Time DayOfMonth="-1" DayOfWeek="6" Hour="0" Min="0" />
+	</ResetSchedule>
+	
+	<!-- Require more drop systems controls? Fill a request (Due to technical reason Item Bags are not possible to include in this system) -->
+	<DropType>
+		<Type ID="1" Enable="1" Name="AllMonsterBag" />
+		<Type ID="2" Enable="1" Name="MonsterMap_(x)_Bag" />
+		<Type ID="3" Enable="1" Name="EventItemMonsterBag" />
+		<Type ID="4" Enable="1" Name="SetItemMonsterBag" />
+		<Type ID="5" Enable="0" Name="GM Item drop command" />
+	</DropType>
+	
+	<ServerGroup>
+		<Item Cat="0" Index="0" MaxCount="100" />
+	</ServerGroup>
+</ItemDropCountLimit>

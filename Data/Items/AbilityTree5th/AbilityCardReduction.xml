@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file need to be reflected on game client side in ParticleReduction.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### AbilityCardReduction::Card ###
+//	Type: Card type the reduction (exchange) setting applies to
+//		~ 1: Skill Card
+//		~ 2: Option Card
+//		~ 3: Elite Card
+//
+//	RewardItemCat: Category of reward item
+//	RewardItemIndex: Index of reward item
+//	Rate: Success chance rate, n/1000000
+//	RewardItemCount: Number of items to reward upon successful card reduction
+//	ReqMoney: Reduction (exchange) required money, Zen
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<AbilityCardReduction>
+	<Card Type="1" RewardItemCat="20" RewardItemIndex="239" Rate="10000000" RewardItemCount="10" ReqMoney="100000000" />
+	<Card Type="2" RewardItemCat="20" RewardItemIndex="239" Rate="10000000" RewardItemCount="1" ReqMoney="10000000" />
+	<Card Type="3" RewardItemCat="20" RewardItemIndex="239" Rate="10000000" RewardItemCount="5" ReqMoney="50000000" />
+</AbilityCardReduction>		

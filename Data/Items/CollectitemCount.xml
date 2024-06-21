@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file must be reflected in CollectItemCount.txt that is part of Lang.mpr
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	### CollectItemCount ###
+//	ID: Unique ID number
+//	Cat: Item category, see ItemList.xml
+//	Index: Item index, see ItemList.xml
+//	Count: Max item overlap
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Purpose of the file is to define items that have overlap larger than 255 (KindA = 29 only)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<CollectItemCount>
+	<Item ID="0" Cat="20" Index="126" Count="2500" />
+	<Item ID="1" Cat="20" Index="127" Count="2500" />
+	<Item ID="2" Cat="20" Index="128" Count="2500" />
+	<Item ID="3" Cat="20" Index="129" Count="2500" />
+	<Item ID="4" Cat="20" Index="130" Count="2500" />
+	<Item ID="5" Cat="20" Index="131" Count="2500" />
+	<Item ID="6" Cat="20" Index="132" Count="2500" />
+	<Item ID="7" Cat="20" Index="133" Count="2500" />
+</CollectItemCount>

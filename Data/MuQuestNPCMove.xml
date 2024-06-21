@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ File defines return to NPC locations for MuQuest system, applies to all quests where 'Go to NPC' is available and MuQuest.xml :: StartSubType contains matching NPC Index
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MuQuest::NPC ###
+//	Type: Index of NPC the setting refers to
+//	DW, DK, ELF, MG, DL, SU, RF, GL, RW, SLA, GC, LW, LM, IK: Disables or enables config for specific character class, 0/1
+//	MapNumber: Map number to go/teleport upon use
+//	StartX: Start X coordinate for the go/move
+//	StartY:  Start Y coordinate for the go/move
+//	EndX:  End X coordinate for the go/move
+//	EndY:  End Y coordinate for the go/move
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MuQuest>
+	<NPC Type="257" DW="1" DK="1" ELF="0" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="1" LM="1" IK="1" MapNumber="0" StartX="173" StartY="125" EndX="174" EndY="130" />
+	<NPC Type="257" DW="0" DK="0" ELF="1" MG="0" DL="0" SU="0" RF="0" GL="0" RW="1" SLA="0" GC="0" LW="0" LM="0" IK="0" MapNumber="3" StartX="163" StartY="117" EndX="164" EndY="121" />
+	<NPC Type="257" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="1" LW="0" LM="0" IK="0" MapNumber="51" StartX="43" StartY="191" EndX="43" EndY="191" />
+	<NPC Type="543" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="0" StartX="145" StartY="126" EndX="146" EndY="130" />
+	<NPC Type="544" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="3" StartX="168" StartY="99" EndX="168" EndY="99" />
+	<NPC Type="566" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="2" StartX="205" StartY="61" EndX="205" EndY="61" />
+	<NPC Type="567" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="29" StartX="10" StartY="28" EndX="10" EndY="28" />
+	<NPC Type="568" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="2" StartX="198" StartY="47" EndX="198" EndY="47" />
+	<NPC Type="568" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="0" StartX="137" StartY="87" EndX="137" EndY="87" />
+	<NPC Type="568" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="3" StartX="169" StartY="89" EndX="169" EndY="80" />
+	<NPC Type="568" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="7" StartX="17" StartY="25" EndX="17" EndY="25" />
+	<NPC Type="581" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" MapNumber="91" StartX="29" StartY="210" EndX="29" EndY="210" />
+</MuQuest>

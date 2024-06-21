@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### BlessingBox ###
+//	Enable: Deactivates or activates the event, 0/1
+//	MinLevel: Minimum total level to be able to obtain the Blessing of Experience buff
+//	MaxLevel: Maximum total level to be able to obtain the Blessing of Experience buff
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If MAX is used as value for MaxLevel attribute then MaxLevel is being set to sum of MaxNormalLevel and MaxMasterLevel from Common.ini
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	MinVipLevel: Minimum VIP level to be able to obtain the Blessing of Experience buff, see VipSettings.xml
+//	MinReset: Minimum resets number to be able to obtain the Blessing of Experience buff
+//	MinGrandReset: Minimum grand resets number to be able to obtain the Blessing of Experience buff
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Requirements apply to obtaining the skill/buff either via killing Blessing Box or via spread
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### BlessingBox::Buff ###
+//	Spread: Determines if spreading the buff is available, 0/1
+//	EffectValue: Value of Experience to add by the buff, percentage
+//	EffectTime: Duration of the buff, seconds
+//
+// ### BlessingBox::Buff::Map ###
+//	Number: Map number the buff is available on
+//	Enable: Deactivates of activates the buff effect on specific map, 0/1
+//
+// ### BlessingBox::Monster ###
+//	Type: Monster index to spawn, see MonsterList.xml
+//	ResetRegen:
+//		~ 0: Does not reset spawn flag
+//		~ 1: Resets spawn flag in MuOnline.[IGC_BlessingBox_Regen].[RegenMonster] table right after spawn, so it occurs only once
+//
+// ### BlessingBox::Monster::Spawn ###
+//	MapNumber: Map number to spawn monster on, see MapList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ BattleCore and instance server maps are not supported
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	StartX: StartX Coordinate of monster spawn
+//	StartY: StartY Coordinate of monster spawn
+//	EndX: End X Coordinate of monster spawn
+//	EndY: End Y Coordinate of monster spawn 
+//	Dir: Direction the monster looks at after spawn
+//		~ 0: Central
+//		~ 1: South-West
+//		~ 2: South
+//		~ 3: South-East
+//		~ 4: East
+//		~ 5: North-East
+//		~ 6: North
+//		~ 7: North-West
+//		~ 8: West
+//		~ -1: Random
+//
+// ### BlessingBox::ServerSpawnSet::Server ###
+//	Code: Server code the setting will be applied to
+//	Enable:
+//		-1: Value is ignored and no MuOnline.[IGC_BlessingBox_Regen].[RegenMonster] column value is being changed
+//		0: Sets MuOnline.[IGC_BlessingBox_Regen].[RegenMonster] to 0 to disable spawn of the monsters in specific server according to its code
+//		1: Sets MuOnline.[IGC_BlessingBox_Regen].[RegenMonster] to 1 to enable spawn of the monsters in specific server according to its code
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ When ResetRegen is set to 1 the [RegenMonster] will be set to 0 right after spawn of the monsters
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//~~~~~~~~~~~~~~~~~~~~~
+//~~ QUICK SETUP GUIDE
+//~~~~~~~~~~~~~~~~~~~~~
+//	1: Configure while entire server is down
+//	2: (only if running event for another time) Clean MuOnline.[IGC_BlessingBox_Regen].[IGC_BlessingBox_Character]: TRUNCATE TABLE [dbo].[IGC_BlessingBox_Character]
+//	2: Set BlessingBox::Enable="1"
+//	3: Set BlessingBox::Server::ServerSpawnSet:Enable="1" for desires BlessingBox::Server::ServerSpawnSet::Code
+//	4: Start Server
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+	
+<BlessingBox Enable="0" MinLevel="100" MaxLevel="MAX" MinVipLevel="-1" MinReset="0" MinGrandReset="0">
+	<Buff Spread="1" EffectValue="35" EffectTime="1800">
+		<Map Number="0" Enable="1" />
+		<Map Number="1" Enable="1" />
+		<Map Number="2" Enable="1" />
+		<Map Number="3" Enable="1" />
+		<Map Number="4" Enable="1" />
+		<Map Number="5" Enable="1" />
+		<Map Number="6" Enable="1" />
+		<Map Number="7" Enable="1" />
+		<Map Number="8" Enable="1" />
+		<Map Number="9" Enable="1" />
+		<Map Number="10" Enable="1" />
+		<Map Number="11" Enable="1" />
+		<Map Number="12" Enable="1" />
+		<Map Number="13" Enable="1" />
+		<Map Number="14" Enable="1" />
+		<Map Number="15" Enable="1" />
+		<Map Number="16" Enable="1" />
+		<Map Number="17" Enable="1" />
+		<Map Number="18" Enable="1" />
+		<Map Number="19" Enable="1" />
+		<Map Number="20" Enable="1" />
+		<Map Number="21" Enable="1" />
+		<Map Number="22" Enable="1" />
+		<Map Number="23" Enable="1" />
+		<Map Number="24" Enable="1" />
+		<Map Number="25" Enable="1" />
+		<Map Number="26" Enable="1" />
+		<Map Number="27" Enable="1" />
+		<Map Number="28" Enable="1" />
+		<Map Number="29" Enable="1" />
+		<Map Number="30" Enable="1" />
+		<Map Number="31" Enable="1" />
+		<Map Number="32" Enable="1" />
+		<Map Number="33" Enable="1" />
+		<Map Number="34" Enable="1" />
+		<Map Number="35" Enable="1" />
+		<Map Number="36" Enable="1" />
+		<Map Number="37" Enable="1" />
+		<Map Number="38" Enable="1" />
+		<Map Number="39" Enable="1" />
+		<Map Number="40" Enable="1" />
+		<Map Number="41" Enable="1" />
+		<Map Number="42" Enable="1" />
+		<Map Number="45" Enable="1" />
+		<Map Number="46" Enable="1" />
+		<Map Number="47" Enable="1" />
+		<Map Number="48" Enable="1" />
+		<Map Number="49" Enable="1" />
+		<Map Number="50" Enable="1" />
+		<Map Number="51" Enable="1" />
+		<Map Number="52" Enable="1" />
+		<Map Number="53" Enable="1" />
+		<Map Number="56" Enable="1" />
+		<Map Number="57" Enable="1" />
+		<Map Number="58" Enable="1" />
+		<Map Number="62" Enable="1" />
+		<Map Number="63" Enable="1" />
+		<Map Number="64" Enable="1" />
+		<Map Number="65" Enable="1" />
+		<Map Number="66" Enable="1" />
+		<Map Number="67" Enable="1" />
+		<Map Number="68" Enable="1" />
+		<Map Number="69" Enable="1" />
+		<Map Number="70" Enable="1" />
+		<Map Number="71" Enable="1" />
+		<Map Number="72" Enable="1" />
+		<Map Number="79" Enable="1" />
+		<Map Number="80" Enable="1" />
+		<Map Number="81" Enable="1" />
+		<Map Number="82" Enable="1" />
+		<Map Number="83" Enable="1" />
+		<Map Number="84" Enable="1" />
+		<Map Number="85" Enable="1" />
+		<Map Number="86" Enable="1" />
+		<Map Number="87" Enable="1" />
+		<Map Number="88" Enable="1" />
+		<Map Number="89" Enable="1" />
+		<Map Number="90" Enable="1" />
+		<Map Number="91" Enable="1" />
+		<Map Number="92" Enable="1" />
+		<Map Number="95" Enable="1" />
+		<Map Number="96" Enable="1" />
+		<Map Number="97" Enable="1" />
+		<Map Number="98" Enable="1" />
+		<Map Number="99" Enable="1" />
+		<Map Number="100" Enable="1" />
+		<Map Number="101" Enable="1" />
+		<Map Number="102" Enable="1" />
+		<Map Number="103" Enable="1" />
+		<Map Number="104" Enable="1" />
+		<Map Number="105" Enable="1" />
+		<Map Number="106" Enable="1" />
+		<Map Number="110" Enable="1" />
+		<Map Number="112" Enable="1" />
+		<Map Number="113" Enable="1" />
+		<Map Number="114" Enable="1" />
+		<Map Number="115" Enable="1" />
+		<Map Number="116" Enable="1" />
+		<Map Number="117" Enable="1" />
+		<Map Number="118" Enable="1" />
+		<Map Number="119" Enable="1" />
+		<Map Number="120" Enable="1" />
+		<Map Number="121" Enable="1" />
+		<Map Number="122" Enable="1" />
+		<Map Number="123" Enable="1" />
+		<Map Number="124" Enable="1" />
+		<Map Number="125" Enable="1" />
+		<Map Number="126" Enable="1" />
+		<Map Number="127" Enable="1" />
+		<Map Number="128" Enable="1" />
+		<Map Number="129" Enable="1" />
+		<Map Number="130" Enable="1" />
+		<Map Number="131" Enable="1" />
+		<Map Number="132" Enable="1" />
+		<Map Number="133" Enable="1" />
+		<Map Number="134" Enable="1" />
+		<Map Number="135" Enable="1" />
+		<Map Number="136" Enable="1" />
+		<Map Number="137" Enable="1" />
+		<Map Number="138" Enable="1" />
+		<Map Number="139" Enable="1" />
+		<Map Number="140" Enable="1" />
+	</Buff>
+	
+	<Monster Type="889" ResetRegen="1" ItemBagID="900">
+		<Spawn MapNumber="10" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Name="Icarus" />
+		<Spawn MapNumber="56" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Name="Swamp of Calmness " />
+		<Spawn MapNumber="100" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Name="Uruk Mountain" />
+		<Spawn MapNumber="112" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Name="Ferea" />
+		<Spawn MapNumber="133" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Name="Temple of Arenil" />
+	</Monster>
+	
+	<ServerSpawnSet>
+		<Server Code="0" Enable="-1" />
+		<Server Code="1" Enable="-1" />
+		<Server Code="2" Enable="-1" />
+		<Server Code="3" Enable="-1" />
+		<Server Code="4" Enable="-1" />
+		<Server Code="5" Enable="-1" />
+		<Server Code="6" Enable="-1" />
+		<Server Code="7" Enable="-1" />
+		<Server Code="8" Enable="-1" />
+		<Server Code="9" Enable="-1" />
+		<Server Code="10" Enable="-1" />
+		<Server Code="11" Enable="-1" />
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<Server Code="16" Enable="-1" />
+		<Server Code="17" Enable="-1" />
+		<Server Code="18" Enable="-1" />
+		<Server Code="19" Enable="-1" />
+	</ServerSpawnSet>
+</BlessingBox>

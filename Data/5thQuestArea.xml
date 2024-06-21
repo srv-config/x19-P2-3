@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### Zone5thQuest ###
+//	MinEnterLevel: Minimum character level to enter qualification zone
+//
+// ### Zone5thQuest::QuestData::Quest ###
+//	Index: Index of a question
+//		~ 10: 5th Class - New Power Nuke
+//		~ 11: 5th Class - New Power Bolt
+//		~ 12: 5th Class - New Power Wide Area
+//		~ 14: 5th Class - Giant Mount (2)
+//
+// ### Zone5thQuest::QuestData::Quest::Condition ###
+//	Type: Type of condition
+//		~ 2: Time based
+//
+//	SubType: Sub condition, monster index to kill
+//	Value:
+//		~ 2: time in seconds, -1 if not applies
+//
+//	SubValue: Number of monsters defined in SubType that must be killed
+//
+// ### Zone5thQuest::QuestData::Quest::MonsterSpawn::Spawn ###
+//	Index: Spawn identification number, starting from zero
+//	Class: Monster index, available monsters:
+//		~ 937: Eunice (Monster)
+//		~ 895: Crimson Lycan
+//		~ 896: Crimson Minos
+//		~ 897: Crimson Harpy
+//
+//	StartX: Start X coordinate
+//	StartY: Start Y coordinate
+//
+// ### Zone5thQuest::MonsterBalance::Quest ###
+//	Index: Index of a question
+//		~ 10: 5th Class - New Power Nuke
+//		~ 11: 5th Class - New Power Bolt
+//		~ 12: 5th Class - New Power Wide Area
+//		~ 14: 5th Class - Giant Mount (2)
+//
+// ### Zone5thQuest::MonsterBalance::Quest::Monster ###
+//	Class: Monster index, available monsters:
+//		~ 937: Eunice (Monster)
+//		~ 895: Crimson Lycan
+//		~ 896: Crimson Minos
+//		~ 897: Crimson Harpy
+//
+//	DamageMin: Monster minimum damage multiplier, float
+//	DamageMax: Monster maximum damage multiplier, float
+//	Defense: Monster defense, float
+//
+// ### Zone5thQuest::GiantTypeAwardRate::Giant ###
+//	Type: Type of giant
+//		~ 1: Type 1 giant
+//		~ 2: Type 2 giant
+//		~ 3: Type 3 giant
+//
+//	Rate: Chance rate of getting specific giant, weight based, sum of all rates is total, rate/total
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<Zone5thQuest MinEnterLevel="1200">
+	<QuestData>
+		<Quest Index="10" Name="5th Class - New Power Nuke">
+			<Condition Type="2" SubType="937" Value="60" SubValue="1" />
+			<MonsterSpawn>
+				<Spawn Index="0" Class="937" StartX="107" StartY="29" />
+				<Spawn Index="1" Class="895" StartX="108" StartY="28" />
+				<Spawn Index="2" Class="896" StartX="107" StartY="28" />
+				<Spawn Index="3" Class="897" StartX="106" StartY="29" />
+				<Spawn Index="4" Class="895" StartX="105" StartY="30" />
+				<Spawn Index="5" Class="896" StartX="106" StartY="31" />
+				<Spawn Index="6" Class="897" StartX="108" StartY="39" />
+			</MonsterSpawn>
+		</Quest>
+		<Quest Index="11" Name="5th Class - New Power Bolt">
+			<Condition Type="2" SubType="937" Value="60" SubValue="1" />
+			<MonsterSpawn>
+				<Spawn Index="0" Class="937" StartX="107" StartY="29" />
+				<Spawn Index="1" Class="895" StartX="108" StartY="28" />
+				<Spawn Index="2" Class="896" StartX="107" StartY="28" />
+				<Spawn Index="3" Class="897" StartX="106" StartY="29" />
+				<Spawn Index="4" Class="895" StartX="105" StartY="30" />
+				<Spawn Index="5" Class="896" StartX="106" StartY="31" />
+				<Spawn Index="6" Class="897" StartX="108" StartY="39" />
+			</MonsterSpawn>
+		</Quest>
+		<Quest Index="12" Name="5th Class - New Power Wide Area">
+			<Condition Type="2" SubType="937" Value="60" SubValue="1" />
+			<MonsterSpawn>
+				<Spawn Index="0" Class="937" StartX="107" StartY="29" />
+				<Spawn Index="1" Class="895" StartX="108" StartY="28" />
+				<Spawn Index="2" Class="896" StartX="107" StartY="28" />
+				<Spawn Index="3" Class="897" StartX="106" StartY="29" />
+				<Spawn Index="4" Class="895" StartX="105" StartY="30" />
+				<Spawn Index="5" Class="896" StartX="106" StartY="31" />
+				<Spawn Index="6" Class="897" StartX="108" StartY="39" />
+			</MonsterSpawn>
+		</Quest>
+		<Quest Index="14" Name="5th Class - Giant Mount (2)">
+			<Condition Type="2" SubType="938" Value="60" SubValue="1" />
+			<MonsterSpawn>
+				<Spawn Index="0" Class="938" StartX="107" StartY="29" />
+			</MonsterSpawn>
+		</Quest>
+	</QuestData>
+	<MonsterBalance>
+		<Quest Index="10">
+			<Monster Class="937" DamageMin="1.0" DamageMax="1.0" Defense="1.0" />
+			<Monster Class="895" DamageMin="1.0" DamageMax="1.0" Defense="1.0" />
+			<Monster Class="896" DamageMin="1.0" DamageMax="1.0" Defense="1.0" />
+			<Monster Class="897" DamageMin="1.0" DamageMax="1.0" Defense="1.0" />
+		</Quest>
+		<Quest Index="11">
+			<Monster Class="937" DamageMin="1.2" DamageMax="1.2" Defense="1.2" />
+			<Monster Class="895" DamageMin="1.2" DamageMax="1.2" Defense="1.2" />
+			<Monster Class="896" DamageMin="1.2" DamageMax="1.2" Defense="1.2" />
+			<Monster Class="897" DamageMin="1.2" DamageMax="1.2" Defense="1.2" />
+		</Quest>
+		<Quest Index="12">
+			<Monster Class="937" DamageMin="1.4" DamageMax="1.4" Defense="1.4" />
+			<Monster Class="895" DamageMin="1.4" DamageMax="1.4" Defense="1.4" />
+			<Monster Class="896" DamageMin="1.4" DamageMax="1.4" Defense="1.4" />
+			<Monster Class="897" DamageMin="1.4" DamageMax="1.4" Defense="1.4" />
+		</Quest>	
+		<Quest Index="14">
+			<Monster Class="938" DamageMin="1.0" DamageMax="1.0" Defense="1.0" />
+			<Monster Class="895" DamageMin="1.5" DamageMax="1.5" Defense="1.5" />
+			<Monster Class="896" DamageMin="1.5" DamageMax="1.5" Defense="1.5" />
+			<Monster Class="897" DamageMin="1.5" DamageMax="1.5" Defense="1.5" />
+		</Quest>		
+	</MonsterBalance>
+	<GiantTypeAwardRate>
+		<Giant Type="1" Rate="5000" /> 
+		<Giant Type="2" Rate="3000" />
+		<Giant Type="3" Rate="2000" />
+	</GiantTypeAwardRate>
+</Zone5thQuest>

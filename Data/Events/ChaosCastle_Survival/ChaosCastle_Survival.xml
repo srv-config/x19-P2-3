@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ChaosCastleSurvival ###
+//	Enable: Disables or Enables the event, 0/1
+//	MinPlayer: Minimum players participating the event to start it
+//	Minimum level of player to enter the event
+//	ExpMultiplier: General experience multiplier, float
+//
+// ### ChaosCastleSurvival::Time ###
+//	StartIn: Announcement appearance, time to start the event (minutes)
+//	Duration: Event duration time (minutes)
+//	TownSpawn: Time to teleport from event map after finished event (minutes)
+//	Notify: Time to display notification on all sub servers (minutes)
+//
+// ### ChaosCastleSurvival::TournamentCycleDay ### - day of a month, must be six in a row
+//	ResetDay: Day of a month to reset previous cycle ranking, should be set a day before EliminationOne
+//	EliminationOne: Day of a month, elimination (Stage 1)
+//	EliminationTwo: Day of a month, elimination (Stage 2)
+//	EliminationThree: Day of a month, elimination (Stage 3)
+//	SemiFinalOne: Day of a month, semi-final (Stage 1)
+//	SemiFinalTwo: Day of a month, semi-final (Stage 2)
+//	Final: Day of a month, final
+//
+// ### ChaosCastleSurvival::RewardRate::Gift ### - monster may drop a gift item up to 6 at a time based on below rates
+//	First: Chance for a gift drop from a monster, n/100
+//	Second: Chance for a gift drop from a monster, n/100
+//	Third: Chance for a gift drop from a monster, n/100
+//	Fourth: Chance for a gift drop from a monster, n/100
+//	Fifth: Chance for a gift drop from a monster, n/100
+//	Sixth: Chance for a gift drop from a monster, n/100
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Gift selection depends from event stage:
+//~~	Elimination: 14,254
+//~~	Semi-Finals: 14,256
+//~~	Final: 14,257
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ChaosCastleSurvival::EventSchedule::Start ### - Final stage can be set only once
+//	Hour: Start Hour (0-23)
+//	Minute: Start Minute (0-59)
+//	Stage1: Battle Stage Type1, if elimination set 1 
+//	Stage2: Battle Stage Type2, if semi-final set 2
+//	Stage3: Battle Stage Type3, if final set 3
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ChaosCastleSurvival Enable="1" MinPlayer="2" MinLevel="280" ExpMultiplier="1.0">
+	<Time StartIn="5" Duration="10" TownSpawn="1" Notify="10" />
+	<TournamentCycleDay ResetDay="15" EliminationOne="16" EliminationTwo="17" EliminationThree="18" SemiFinalOne="19" SemiFinalTwo="20" Final="21" />
+
+	<RewardRate>
+		<Gift First="30" Second="45" Third="60" Fourth="75" Fifth="90" Sixth="100" />
+	</RewardRate>
+	
+	<EventSchedule>
+		<Start Hour="1"  Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="2"  Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="3"  Minute="30" Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="4"  Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="5"  Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="6"  Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="7"  Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="8"  Minute="0"	 Stage1="1" Stage2="2" Stage3="3" />
+		<Start Hour="9"  Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="10" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="11" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="12" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="13" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="14" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="15" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="16" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="17" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="18" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="19" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="20" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="21" Minute="35" Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="22" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="23" Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+		<Start Hour="0"  Minute="0"	 Stage1="1" Stage2="2" Stage3="0" />
+	</EventSchedule>
+</ChaosCastleSurvival>

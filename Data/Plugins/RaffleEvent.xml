@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### RaffleEvent ###
+//	Enable: Deactivates or activates the event, 0/1
+//
+// ### RaffleEvent::ActiveDay ###
+//	Sun: Enables event on Sunday, 0/1
+//	Mon: Enables event on Monday, 0/1
+//	Tue: Enables event on Tuesday, 0/1
+//	Wed: Enables event on Wednesday, 0/1
+//	Thu: Enables event on Thursday, 0/1
+//	Fri: Enables event on Friday, 0/1
+//	Sat: Enables event on Saturday, 0/1
+//
+// ### RaffleEvent::Schedule ###
+//	OpenTime: Event duration, time to buy coupons after event start, minutes
+//	EndTime: Time the event is closed after draw of the prize, minutes
+//
+// ### RaffleEvent::Raffle ###
+//	MaxCoupons: Total number of coupons available in the raffle, -1 for no limit
+//	UserMaxCouponBuy: Maximum number of coupons single player may purchase, -1 for no limit
+//	WinnerCount: Number of Winning coupons (players) for single raffle
+//	RewardItemBag: Item bag ID to issue reward from, bags must be defined in ItemBagsScript.lua 
+//	PriceType: Type of currency the coupons can be purchased for
+//		~ 0: Zen
+//		~ 1: WCoin
+//		~ 2: Goblin Point
+//		~ 3: Ruud
+//
+//	PriceMoney: Amount of money in selected currency to charge for single coupon
+
+//
+// ### HideAndSeek::Schedule::Start ###
+//	Hour: Start hour, 0-23
+//	Minute: Start minute: 0-59
+//	Type:
+//		~ 0: Raffle Event
+//		~ 1: Lotto Event
+//		~ 2: HitOrder Event
+//
+// ### RaffleEvent::Lotto ###
+//	MaxCoupons: Total number of coupons available in the raffle, -1 for no limit
+//	UserMaxCouponBuy: Maximum number of coupons single player may purchase, -1 for no limit
+//	CouponUnique: Determines whether coupons should be unique, it will not be possible to buy two coupons with same numbers, 0/1
+//	NumbersInOrder: Determines whether order of numbers on coupon is important or not, 0/1
+//	NumbersOnCoupon: Determines how many numbers should be specified for every coupon, max 30
+//	DrawMinNumber: Sets minimum for the range of numbers the winning numbers are being drawn from, minimum 1
+//	DrawMaxNumber: Sets maximum for the range of numbers the winning numbers are being drawn from, greater than DrawMinNumber
+//	PriceType: Type of currency the coupons can be purchased for
+//		~ 0: Zen
+//		~ 1: WCoin
+//		~ 2: Goblin Point
+//		~ 3: Ruud
+//
+//	PriceMoney: Amount of money in selected currency to charge for single coupon
+
+// ### RaffleEvent::Lotto::Reward ###
+//	MinNumbers: Sets minimum for a range of guessed winning numbers
+//	MaxNumbers: Sets maximum for a range of guessed winning numbers
+//	ItemBag: Item bag ID to issue reward from, bags must be defined in ItemBagsScript.lua
+//
+// ### RaffleEvent::HitOrder ###
+//	MaxCoupons: Total number of coupons available in the raffle, -1 for no limit
+//	UserMaxCouponBuy: Maximum number of coupons single player may purchase, -1 for no limit
+//	CouponUnique: Determines whether coupons should be unique, it will not be possible to buy two coupons with same numbers, 0/1
+//	NumbersOnCoupon: Determines how many numbers should be specified for every coupon, max 30
+//	DrawMinNumber: Sets minimum for the range of numbers the winning numbers are being drawn from, minimum 1
+//	DrawMaxNumber: Sets maximum for the range of numbers the winning numbers are being drawn from, greater than DrawMinNumber
+//	PriceType: Type of currency the coupons can be purchased for
+//		~ 0: Zen
+//		~ 1: WCoin
+//		~ 2: Goblin Point
+//		~ 3: Ruud
+//
+//	PriceMoney: Amount of money in selected currency to charge for single coupon
+
+// ### RaffleEvent::HitOrder::Reward ###
+//	MinNumbers: Sets minimum for a range of guessed winning numbers
+//	MaxNumbers: Sets maximum for a range of guessed winning numbers
+//	ItemBag: Item bag ID to issue reward from, bags must be defined in ItemBagsScript.lua
+//
+// ### HideAndSeek::Strings ###
+//	ID: Unique String ID
+//	Text: Text to display
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<RaffleEvent Enable="0">
+	<ActiveDay Sun="1" Mon="1" Tue="1" Wed="1" Thu="1" Fri="1" Sat="1" />
+	
+	<Schedule OpenTime="15" EndTime="1">
+		<Start Hour="12" Minute="0" Type="0" />
+		<Start Hour="15" Minute="0" Type="1" />
+		<Start Hour="17" Minute="0" Type="2" />
+	</Schedule>
+	
+	<Raffle MaxCoupons="-1" UserMaxCouponBuy="-1" WinnerCount="3" RewardItemBag="600" PriceType="0" PriceMoney="100" /> <!-- Type 0 -->
+	
+	<Lotto MaxCoupons="-1" UserMaxCouponBuy="-1" CouponUnique="1" NumbersInOrder="0" NumbersOnCoupon="6" DrawMinNumber="1" DrawMaxNumber="49" PriceType="0" PriceMoney="100" > <!-- Type 1 -->
+		<Reward MinNumbers="8" MaxNumbers="8" ItemBag="601" />
+		<Reward MinNumbers="9" MaxNumbers="9" ItemBag="602" />
+		<Reward MinNumbers="10" MaxNumbers="10" ItemBag="603" />
+	</Lotto>
+	
+	<HitOrder MaxCoupons="-1" UserMaxCouponBuy="-1" CouponUnique="1" NumbersOnCoupon="10" DrawMinNumber="1" DrawMaxNumber="10" PriceType="0" PriceMoney="100" > <!-- Type 2 -->
+		<Reward MinNumbers="8" MaxNumbers="8" ItemBag="611" />
+		<Reward MinNumbers="9" MaxNumbers="9" ItemBag="612" />
+		<Reward MinNumbers="10" MaxNumbers="10" ItemBag="613" />
+	</HitOrder>
+	
+	<Strings>
+		<String ID="0" Text="Raffle Event will start after %d minutes" />
+		<String ID="1" Text="Lotto Event will start after %d minutes" />
+		<String ID="2" Text="HitOrder Event will start after %d minutes" />
+		<String ID="3" Text="Raffle Event Coupon sales will end after %d minutes" />
+		<String ID="4" Text="You can buy coupon using /raffle command." />
+		<String ID="5" Text="Lotto Event Coupon sales will end after %d minutes" />
+		<String ID="6" Text="You can buy coupon using /lotto command and typing unique %d numbers from [%d-%d] separated by space" />
+		<String ID="7" Text="Hit Order Coupon sales will end after %d minutes" />
+		<String ID="8" Text="You can buy coupon using /hitorder command and typing unique %d numbers in sequence from [%d-%d] separated by space" />
+		<String ID="9" Text="There coupons sale is ongoing, try again later." />
+		<String ID="10" Text="You are trying to buy invalid ticket for this lottery." />
+		<String ID="11" Text="All coupons for this lottery have been sold." />
+		<String ID="12" Text="You cannot buy more coupons for this lottery." />
+		<String ID="13" Text="You are short of Zen." />
+		<String ID="14" Text="You are short of %s." />
+		<String ID="15" Text="You are short of Ruud." />
+		<String ID="16" Text="Successfully bought a coupon for lottery. You have %d coupons." />
+		<String ID="17" Text="You need to type %d numbers to participate in Lotto." />
+		<String ID="18" Text="Numbers on coupon must be unique" />
+		<String ID="19" Text="A coupon with chosen numbers has been sold to another player." />
+		<String ID="20" Text="Successfully bought a coupon for Lotto. You have %d coupons." />
+		<String ID="21" Text="You need to type %d numbers to participate in HitOrder." />
+		<String ID="22" Text="Successfully bought a coupon for HitOrder. You have %d coupons." />
+		<String ID="23" Text="Lotto: Winning numbers are: " />
+		<String ID="24" Text="HitOrder: Winning sequence is: " />
+		<String ID="25" Text="[RAFFLE] No Winners" />
+		<String ID="26" Text="[LOTTO] No Winners" />
+		<String ID="27" Text="[HITORDER] No Winners" />
+		<String ID="28" Text="[RAFFLE] WINNER: %s [COUPON: %d]" />
+		<String ID="29" Text="[LOTTO] WINNER: %s [CORRECT NUMBERS: %d]" />
+		<String ID="30" Text="[HITORDER] WINNER: %s [CORRECT NUMBERS: %d]" />
+	</Strings>
+</RaffleEvent>

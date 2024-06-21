@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### AbilityCardAddOptions::CardAddOption::Option ###
+//	Index: Index of wing core add option
+//	FormulaID: FormulaID that applies to the option, FormulaData.xml::FormulaData::AbilityTree
+//	Rate: Chance rate of getting specific add option, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of all Rates must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### AbilityCardAddOptions::OptionList::Option ###
+//	Index: Index of card add option
+//	Name: Name of add option
+///
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<AbilityCardAddOptions>
+	<CardAddOption>
+		<Option Index="65" FormulaID="280" Rate="300000" />
+		<Option Index="66" FormulaID="281" Rate="600000" />
+		<Option Index="67" FormulaID="282" Rate="100000" />
+	</CardAddOption>
+	
+	<OptionList>
+		<Option Index="65" Name="HP Increase" />
+		<Option Index="66" Name="MP Increase" />
+		<Option Index="67" Name="AG Increase" />
+	</OptionList>
+</AbilityCardAddOptions>

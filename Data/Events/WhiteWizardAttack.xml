@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### WhiteWizard ###
+//	Enable: Deactivates or activates the event, 0/1
+//
+// ### WhiteWizard::Time ###
+//	ToOpen: Time to start the event from first announcement, minutes
+//	PlayDuration: Play duration of the event, minutes
+//	ToClose: Time the event closes after killing all monster, seconds
+//
+// ### WhiteWizard::Time ###
+//	RandomSize: 
+//	MinRadius: 
+//	MaxRadius: 
+//
+// ### WhiteWizard::Schedule::Start ###
+//	Year: Year to start the event, -1 if not applies
+//	Month: Month number to start the event 1-12, -1 if not applies
+//	Day: Day of a month to start the event, 1-31, -1 if not applies
+//	DayOfWeek: Day of a week to start the event, -1 if not applies
+//		~ 1: Sunday
+//		~ 2: Monday
+//		~ 3: Tuesday
+//		~ 4: Wednesday
+//		~ 5: Thursday
+//		~ 6: Friday
+//		~ 7: Saturday
+//
+// ### WhiteWizard::SpawnSettings::Monster ###
+//	Index: Index of a monster, event can accept only monsters 135-137
+//	Respawn: Determines whether monster re-spawns after being killed, 0/1
+//	AttackFirst: Determines whether monster attacks first or keeps walking until hit by player, 0/1
+//	Name: name of a monster used for description purpose only
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<WhiteWizard Enable="1">
+	<Time ToOpen="3" PlayDuration="30" ToClose="25" />
+	<Move RandomSize="15" MinRadius="3" MaxRadius="6" />
+
+	<Schedule>
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="2" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="14" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="18" Minute="0" Second="-1" />
+		<Start Year="-1" Month="-1" Day="-1" DayOfWeek="-1" Hour="22" Minute="0" Second="-1" />
+	</Schedule>
+
+	<SpawnSettings>
+		<Monster Index="135" Respawn="0" AttackFirst="1" Name="White Wizard" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="136" Respawn="0" AttackFirst="0" Name="Destructive Ogre Soldier" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+		<Monster Index="137" Respawn="0" AttackFirst="1" Name="Destructive Ogre Archer" />
+	</SpawnSettings>
+</WhiteWizard>

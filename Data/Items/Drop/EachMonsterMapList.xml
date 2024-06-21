@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### EachMonsterMapList::Map ###
+//	Number: Map number, refer to MapList.xml
+//	FileName: Each Bag file name assigned to a map, mus tbe located in \Data\Items\Drop\EachMonsterMapDrop\
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+<EachMonsterMapList>
+	<Map Number="0" FileName="MonsterMap_(0)_Bag.xml" />
+	<Map Number="1" FileName="MonsterMap_(1)_Bag.xml" />
+	<Map Number="2" FileName="MonsterMap_(2)_Bag.xml" />
+	<Map Number="3" FileName="MonsterMap_(3)_Bag.xml" />
+	<Map Number="4" FileName="MonsterMap_(4)_Bag.xml" />
+	<Map Number="7" FileName="MonsterMap_(7)_Bag.xml" />
+	<Map Number="8" FileName="MonsterMap_(8)_Bag.xml" />
+	<Map Number="9" FileName="MonsterMap_(9)_Bag.xml" />
+	<Map Number="10" FileName="MonsterMap_(10)_Bag.xml" />
+	<Map Number="11" FileName="MonsterMap_(11)_Bag.xml" />
+	<Map Number="12" FileName="MonsterMap_(12)_Bag.xml" />
+	<Map Number="13" FileName="MonsterMap_(13)_Bag.xml" />
+	<Map Number="14" FileName="MonsterMap_(14)_Bag.xml" />
+<!-- Uncomment to enable drop in Blood Castle event level 4-7
+	<Map Number="15" FileName="MonsterMap_(15)_Bag.xml" />
+	<Map Number="16" FileName="MonsterMap_(16)_Bag.xml" />
+	<Map Number="17" FileName="MonsterMap_(17)_Bag.xml" /> -->
+	<Map Number="24" FileName="MonsterMap_(24)_Bag.xml" />
+	<Map Number="25" FileName="MonsterMap_(25)_Bag.xml" />
+	<Map Number="26" FileName="MonsterMap_(26)_Bag.xml" />
+	<Map Number="27" FileName="MonsterMap_(27)_Bag.xml" /> 
+	<Map Number="28" FileName="MonsterMap_(28)_Bag.xml" /> 
+	<Map Number="29" FileName="MonsterMap_(29)_Bag.xml" /> 
+	<Map Number="31" FileName="MonsterMap_(31)_Bag.xml" />
+<!-- Uncomment to enable drop in Devil Square event level 4-7
+	<Map Number="32" FileName="MonsterMap_(32)_Bag.xml" /> -->
+	<Map Number="33" FileName="MonsterMap_(33)_Bag.xml" /> 
+	<Map Number="34" FileName="MonsterMap_(34)_Bag.xml" />
+	<Map Number="36" FileName="MonsterMap_(36)_Bag.xml" />
+	<Map Number="37" FileName="MonsterMap_(37)_Bag.xml" />
+	<Map Number="38" FileName="MonsterMap_(38)_Bag.xml" />
+	<Map Number="39" FileName="MonsterMap_(39)_Bag.xml" />
+	<Map Number="40" FileName="MonsterMap_(40)_Bag.xml" />
+	<Map Number="41" FileName="MonsterMap_(41)_Bag.xml" />
+	<Map Number="51" FileName="MonsterMap_(51)_Bag.xml" />
+	<Map Number="56" FileName="MonsterMap_(56)_Bag.xml" />
+	<Map Number="57" FileName="MonsterMap_(57)_Bag.xml" />
+	<Map Number="63" FileName="MonsterMap_(63)_Bag.xml" />
+	<Map Number="80" FileName="MonsterMap_(80)_Bag.xml" />
+	<Map Number="81" FileName="MonsterMap_(81)_Bag.xml" />
+	<Map Number="91" FileName="MonsterMap_(91)_Bag.xml" />
+	<Map Number="95" FileName="MonsterMap_(95)_Bag.xml" />
+	<Map Number="100" FileName="MonsterMap_(100)_Bag.xml" />
+	<Map Number="110" FileName="MonsterMap_(110)_Bag.xml" />
+	<Map Number="112" FileName="MonsterMap_(112)_Bag.xml" />
+	<Map Number="113" FileName="MonsterMap_(113)_Bag.xml" />
+	<Map Number="116" FileName="MonsterMap_(116)_Bag.xml" />
+	<Map Number="117" FileName="MonsterMap_(117)_Bag.xml" />
+	<Map Number="118" FileName="MonsterMap_(118)_Bag.xml" />
+	<Map Number="119" FileName="MonsterMap_(119)_Bag.xml" />
+	<Map Number="120" FileName="MonsterMap_(120)_Bag.xml" />
+	<Map Number="122" FileName="MonsterMap_(122)_Bag.xml" />
+	<Map Number="123" FileName="MonsterMap_(123)_Bag.xml" />
+	<Map Number="124" FileName="MonsterMap_(124)_Bag.xml" />
+	<Map Number="125" FileName="MonsterMap_(125)_Bag.xml" />
+	<Map Number="126" FileName="MonsterMap_(126)_Bag.xml" />
+	<Map Number="127" FileName="MonsterMap_(127)_Bag.xml" />
+	<Map Number="128" FileName="MonsterMap_(128)_Bag.xml" />
+	<Map Number="129" FileName="MonsterMap_(129)_Bag.xml" />
+	<Map Number="130" FileName="MonsterMap_(130)_Bag.xml" />
+	<Map Number="131" FileName="MonsterMap_(131)_Bag.xml" />
+	<Map Number="132" FileName="MonsterMap_(132)_Bag.xml" />
+	<Map Number="133" FileName="MonsterMap_(133)_Bag.xml" />
+	<Map Number="134" FileName="MonsterMap_(134)_Bag.xml" />
+	<Map Number="135" FileName="MonsterMap_(135)_Bag.xml" />
+	<Map Number="136" FileName="MonsterMap_(136)_Bag.xml" />
+	<Map Number="137" FileName="MonsterMap_(137)_Bag.xml" />
+	<Map Number="138" FileName="MonsterMap_(138)_Bag.xml" />
+	<Map Number="140" FileName="MonsterMap_(140)_Bag.xml" />
+	<Map Number="141" FileName="MonsterMap_(141)_Bag.xml" />
+</EachMonsterMapList>

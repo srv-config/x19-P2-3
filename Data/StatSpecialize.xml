@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2020 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### StatSpecialize ###
+//	MaxStatValue: Max value of Stat Option value to set when there is no criteria met for any of steps, see explanation below
+//
+// ### StatSpecialize::Class ###
+//	ID: Defines character base class type
+//		~ 1: Dark Wizard
+//		~ 2: Dark Knight
+//		~ 3: Fairy Elf
+//		~ 4: Magic Gladiator
+//		~ 5: Dark Lord
+//		~ 6: Summoner
+//		~ 7: Rage Fighter
+//		~ 8: Grow Lancer
+//		~ 9: Rune Wizard
+//		~ 10: Slayer
+//		~ 11: Gun Crusher
+//		~ 12: Light Wizard
+//		~ 13: Lemuria Mage
+//		~ 14: Illusion Knight
+//
+// ### StatSpecialize::Class::Option ###
+//	StatType: Type of statistic to apply rule to
+//		~ 1: Strength
+//		~ 2: Agility
+//		~ 3: Vitality
+//		~ 4: Energy
+//		~ 5: Command
+//
+//	Index: Option ID to apply
+//		~ 1: STAT_OPTION_INC_ATTACK_POWER
+//		~ 2: STAT_OPTION_INC_ATTACK_RATE
+//		~ 3: STAT_OPTION_INC_ATTACK_RATE_PVP
+//		~ 4: STAT_OPTION_INC_DEFENSE
+//		~ 5: STAT_OPTION_INC_ATTACK_SPEED
+//		~ 6: STAT_OPTION_INC_DEFENSE_RATE
+//		~ 7: STAT_OPTION_INC_DEFENSE_RATE_PVP
+//		~ 8: STAT_OPTION_INC_LIFE
+//		~ 9: STAT_OPTION_INC_MAGIC_DAMAGE
+//		~ 10: STAT_OPTION_INC_CURSE_DAMAGE
+//		~ 11: STAT_OPTION_INC_MANA
+//		~ 12: STAT_OPTION_INC_PET_DAMAGE
+//
+//	StatLimit_1: Stat limit for step one
+//	StatVal_1: Multiplier value for step one
+//	StatLimit_2: Stat limit for step two
+//	StatVal_2: Multiplier for step two
+//	StatLimit_3: Stat limit for step three
+//	StatVal_3: Multiplier for step three
+//	StatLimit_4: Stat limit for step four
+//	StatVal_4: Multiplier for step four
+//	StatLimit_5: Stat limit for step five
+//	StatVal_5: Multiplier for step five
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ StatLimit_X and StatVal_X can be set to -1 if step does not apply, Formula: StatOptionValue = StatVal_X / StatLimit_X * CharacterActualStatValue;
+//~~ If no criteria is met for any of steps then StatOptionValue = MaxStatValue
+//~~ StatLimit_X attribute supports "MAX" as value. It sets max stat value from CalcCharacter.ini, depending on StatType
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<StatSpecialize MaxStatValue="45.0">
+	<Class ID="1"> <!-- Dark Wizard -->
+		<Option StatType="2" Index="2" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="3" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="4" Index="9" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="2"> <!-- Dark Knight -->
+		<Option StatType="1" Index="1" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="4" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="3"> <!-- Fairy Elf -->
+		<Option StatType="2" Index="1" StatLimit_1="1800" StatVal_1="10" StatLimit_2="2100" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="6" StatLimit_1="1800" StatVal_1="10" StatLimit_2="2100" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="7" StatLimit_1="1800" StatVal_1="10" StatLimit_2="2100" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="4"> <!-- Magic Gladiator -->
+		<Option StatType="1" Index="1" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="4" Index="9" StatLimit_1="1800" StatVal_1="10" StatLimit_2="2500" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="5"> <!-- Dark Lord -->
+		<Option StatType="1" Index="1" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="4" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="6"> <!-- Summoner -->
+		<Option StatType="4" Index="9" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="4" Index="10" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="7"> <!-- Rage Fighter -->
+		<Option StatType="1" Index="1" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="8"> <!-- Grow Lancer -->
+		<Option StatType="1" Index="1" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="4" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="9"> <!-- Rune Wizard -->
+		<Option StatType="2" Index="2" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="3" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="4" Index="9" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="10"> <!-- Slayer	 -->
+		<Option StatType="2" Index="1" StatLimit_1="1800" StatVal_1="10" StatLimit_2="2100" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="6" StatLimit_1="1800" StatVal_1="10" StatLimit_2="2100" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="11"> <!-- Gun Crusher -->
+		<Option StatType="2" Index="2" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="3" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="4" Index="9" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="12"> <!-- Light Wizard -->
+		<Option StatType="2" Index="2" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="3" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="4" Index="9" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="13"> <!-- Lemuria Mage -->
+		<Option StatType="2" Index="6" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="7" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="4" Index="9" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+	<Class ID="14"> <!-- Illusion Knight -->
+		<Option StatType="2" Index="1" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+		<Option StatType="2" Index="4" StatLimit_1="1500" StatVal_1="10" StatLimit_2="2000" StatVal_2="30" StatLimit_3="3000" StatVal_3="45" StatLimit_4="-1" StatVal_4="-1" StatLimit_5="-1" StatVal_5="-1" />
+	</Class>
+</StatSpecialize>

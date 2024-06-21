@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ZenDropSystem ###
+//	Enable: Activates or deactivates the system, 0/1
+//	MultiplyByMonsterLevel: Multiplies the Zen dropped by monster by monster level, 0/1
+//	MultiplyChanceRate: Chance of getting the zen multiply bonus if MultiplyByMonsterLevel is enabled, n/10000
+//
+// ### ZenDropSystem::Map ###
+//	MapNumber: Number of a map
+//	MinMoneyCount: Minimum amount of Zen to drop from monster on specified map
+//	MaxMoneyCount: Maximum amount of Zen to drop from monster on specified map
+//	Disable: Allows to exclude specified map from the system, 0/1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The MaxMoneyCount must be greater or equal to MinMoneyCount
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ IMPORTANT: Final output of Zen amount cannot exceed 2147483647
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ZenDropSystem Enable="0" MultiplyByMonsterLevel="1" MultiplyChanceRate="5000">
+	<Map Number="0"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Lorencia -->
+	<Map Number="1"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dungeon (1 ~ 3) -->
+	<Map Number="2"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Devias -->
+	<Map Number="3"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Noria -->
+	<Map Number="4"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Lost Tower (1 ~ 7) -->
+	<Map Number="5"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Exile - does not exist by default in newer game versions -->
+	<Map Number="6"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Arena -->
+	<Map Number="7"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Atlans (1 ~ 3) -->
+	<Map Number="8"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Tarkan (1 ~ 2) -->
+	<Map Number="9"  MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Devil Square (1 ~ 4) -->
+	<Map Number="10" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Icarus -->
+	<Map Number="11" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blood Castle 1 -->
+	<Map Number="12" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blood Castle 2 -->
+	<Map Number="13" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blood Castle 3 -->
+	<Map Number="14" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blood Castle 4 -->
+	<Map Number="15" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blood Castle 5 -->
+	<Map Number="16" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blood Castle 6 -->
+	<Map Number="17" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blood Castle 7 -->
+	<Map Number="18" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Chaos Castle 1 -->
+	<Map Number="19" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Chaos Castle 2 -->
+	<Map Number="20" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Chaos Castle 3 -->
+	<Map Number="21" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Chaos Castle 4 -->
+	<Map Number="22" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Chaos Castle 5 -->
+	<Map Number="23" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Chaos Castle 6 -->
+	<Map Number="24" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kalima 1 -->
+	<Map Number="25" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kalima 2 -->
+	<Map Number="26" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kalima 3 -->
+	<Map Number="27" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kalima 4 -->
+	<Map Number="28" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kalima 5 -->
+	<Map Number="29" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kalima 6 -->
+	<Map Number="30" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Valley of Loren -->
+	<Map Number="31" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Land of Trials -->
+	<Map Number="32" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Devil Square (5 ~ 7) -->
+	<Map Number="33" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Aida (1 ~ 2) -->
+	<Map Number="34" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Crywolf Fortress (First Zone) -->
+	<Map Number="35" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Crywolf (Second Zone) -->
+	<Map Number="36" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kalima 7 (Lost) -->
+	<Map Number="37" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kanturu Ruins -->
+	<Map Number="38" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kanturu 1 (Remain) -->
+	<Map Number="39" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kanturu 2 (Refinery Tower) -->
+	<Map Number="40" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Silent Map -->
+	<Map Number="41" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Barracks of Balgass -->
+	<Map Number="42" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Balgass Refuge -->
+	<Map Number="45" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Illusion Temple (Classic/Renewal) 1 -->
+	<Map Number="46" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Illusion Temple (Classic/Renewal) 2 -->
+	<Map Number="47" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Illusion Temple (Classic/Renewal) 3 -->
+	<Map Number="48" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Illusion Temple (Classic/Renewal) 4 -->
+	<Map Number="49" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Illusion Temple (Classic/Renewal) 5 -->
+	<Map Number="50" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Illusion Temple (Classic/Renewal) 6 -->
+	<Map Number="51" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Elbeland -->
+	<Map Number="52" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blood Castle 8 -->
+	<Map Number="53" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Chaos Castle 7 -->
+	<Map Number="56" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Swamp of Calmness -->
+	<Map Number="57" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Raklion -->
+	<Map Number="58" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Hatchery (Raklion Boss) -->
+	<Map Number="62" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Santa Village -->
+	<Map Number="63" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Vulcanus -->
+	<Map Number="64" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Duel Arena -->
+	<Map Number="65" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Snow -->
+	<Map Number="66" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Volcan -->
+	<Map Number="67" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Sea -->
+	<Map Number="68" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Crystals -->
+	<Map Number="69" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Imperial Fortress 1 -->
+	<Map Number="70" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Imperial Fortress 2 -->
+	<Map Number="71" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Imperial Fortress 3 -->
+	<Map Number="72" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Imperial Fortress 4 -->
+	<Map Number="79" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Loren Market -->
+	<Map Number="80" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Karutan 1 -->
+	<Map Number="81" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Karutan 2 -->
+	<Map Number="82" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 1 -->
+	<Map Number="83" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 2 -->
+	<Map Number="84" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 3 -->
+	<Map Number="85" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 4 -->
+	<Map Number="86" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 5 -->
+	<Map Number="87" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 6 -->
+	<Map Number="88" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 7 -->
+	<Map Number="89" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 8 -->
+	<Map Number="90" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Dopple Ganger Renewal 9 -->
+	<Map Number="91" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Acheron -->
+	<Map Number="92" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Acheron (Arca Battle) -->
+	<Map Number="95" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Debenter -->
+	<Map Number="96" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Debenter (ArcaBattle) -->
+	<Map Number="97" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- ChaosCastleSurvival -->
+	<Map Number="98" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- IllusionTempleLeague -->
+	<Map Number="99" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- IllusionTempleLeague -->
+	<Map Number="100" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Urk Mountain -->
+	<Map Number="101" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Urk Mountain Event -->
+	<Map Number="102" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Tormented Square Battle 1 -->
+	<Map Number="103" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Tormented Square Battle 2 -->
+	<Map Number="104" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Tormented Square Battle 3 -->
+	<Map Number="105" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Tormented Square Battle 4 -->
+	<Map Number="106" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Tormented Square Battle 5 -->
+	<Map Number="110" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Nars -->
+	<Map Number="112" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Ferea -->
+	<Map Number="113" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Nixie Lake -->
+	<Map Number="114" MinMoneyCount="100" MaxMoneyCount="100" Disable="1" /> <!-- Quest Zone (entrance) -->
+	<Map Number="115" MinMoneyCount="100" MaxMoneyCount="100" Disable="1" /> <!-- Labyrinth -->
+	<Map Number="116" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Deep Dungeon 1 -->
+	<Map Number="117" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Deep Dungeon 2 -->
+	<Map Number="118" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Deep Dungeon 3 -->
+	<Map Number="119" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Deep Dungeon 4 -->
+	<Map Number="120" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Deep Dungeon 5 -->
+	<Map Number="121" MinMoneyCount="100" MaxMoneyCount="100" Disable="1" /> <!-- Fourth Class Quest -->
+	<Map Number="122" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Swamp of Darkness -->
+	<Map Number="123" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kubera Mine -->
+	<Map Number="124" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kubera Mine -->
+	<Map Number="125" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kubera Mine -->
+	<Map Number="126" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kubera Mine -->
+	<Map Number="127" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Kubera Mine -->
+	<Map Number="128" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Abyss of Atlans 1 -->
+	<Map Number="129" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Abyss of Atlans 2 -->
+	<Map Number="130" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Abyss of Atlans 3 -->
+	<Map Number="131" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Scorched Canyon -->
+	<Map Number="132" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Red Smoke Icarus -->
+	<Map Number="133" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Arenil Temple -->
+	<Map Number="134" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Ashy Aida -->
+	<Map Number="135" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Old Kethotum -->
+	<Map Number="136" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /> <!-- Blaze Kethotum -->
+	<Map Number="137" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Kanturu Undergrounds -->
+	<Map Number="138" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Volcano Ignis -->
+	<Map Number="139" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Boss Zone (entrance) -->
+	<Map Number="140" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Bloody Tarkan -->
+	<Map Number="141" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Tormenta Island -->
+</ZenDropSystem>

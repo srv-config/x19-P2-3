@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### BattleMapObjects::Tag ###
+//	Id: Unique ID per MapNumber
+//	MapNumber: Number of a map
+//	NPCIndex: Index of NPC (Monster.xml)
+//	X - Coordinate X
+//	Y - Coordinate Y
+//	DisplayType:
+//		~ 1: Shield Icon
+//		~ 2: Conversation Icon (three dots in cloud)
+//		~ 3: Hammer Icon
+//		~ 4: Elixir Icon
+//		~ 5: Locker Icon
+//		~ 6: UNK
+//	SyncType:
+//		~ 0: Tag is not displayed
+//		~ 1: Tag displayed always
+//		~ 2: Tag displayed only if Monster/NPC present in-Game
+//	Name: Name of Tag to display on Mini Map
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MiniMapObjects>
+	<TypeOne>
+		<Tag Id="0"  MapNumber="79" NPCIndex="643" X="46" Y="52" DisplayType="2" SyncType="1" Name="Mait" />
+		<Tag Id="1"  MapNumber="79" NPCIndex="643" X="46" Y="58" DisplayType="2" SyncType="1" Name="Mait" />
+		<Tag Id="2"  MapNumber="79" NPCIndex="643" X="46" Y="63" DisplayType="2" SyncType="1" Name="Mait" />
+		<Tag Id="3"  MapNumber="79" NPCIndex="683" X="58" Y="51" DisplayType="4" SyncType="1" Name="Marce" />
+		<Tag Id="4"  MapNumber="79" NPCIndex="684" X="64" Y="57" DisplayType="4" SyncType="1" Name="Silvia" />
+		<Tag Id="5"  MapNumber="79" NPCIndex="685" X="68" Y="66" DisplayType="4" SyncType="1" Name="Izabel" />
+		<Tag Id="6"  MapNumber="79" NPCIndex="686" X="58" Y="63" DisplayType="3" SyncType="1" Name="Sophia (repair)" />
+		<Tag Id="7"  MapNumber="79" NPCIndex="687" X="62" Y="42" DisplayType="3" SyncType="1" Name="Bolo (repair)" />
+		<Tag Id="8"  MapNumber="79" NPCIndex="688" X="43" Y="46" DisplayType="4" SyncType="1" Name="Christine" />
+		<Tag Id="9"  MapNumber="79" NPCIndex="695" X="66" Y="46" DisplayType="2" SyncType="1" Name="Levine" />
+		<Tag Id="10" MapNumber="79" NPCIndex="695" X="67" Y="57" DisplayType="2" SyncType="1" Name="Levine" />
+		<Tag Id="11" MapNumber="79" NPCIndex="695" X="58" Y="68" DisplayType="2" SyncType="1" Name="Levine" />
+	</TypeOne>
+</MiniMapObjects>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### GuardianItemOption::OptionList::Option ###
+//	Index: 
+//	Name: 
+//
+// ### GuardianItemOption::OptionSettings::Guardian ###
+//	Number: 
+//	OptionNumber: 
+//	FormulaID: 
+//	LowerBound: 
+//	UpperBound: 
+//
+// ### GuardianItemOption::OptionRate ###
+//	One: 
+//	Two: 
+//	Three: 
+//	Four: 
+//
+// ### GuardianItemOption::EliteOptionList::Option ###
+//	Index: 
+//	Name: 
+//
+// ### GuardianItemOption::EliteOptionSettings::Guardian ###
+//	Number: 
+//	OptionSet: 
+//	OptionNumber1: 
+//	FormulaID1: 
+//	ValueType1: 
+//  OptionNumber2: 
+//	FormulaID2: 
+//	ValueType2: 
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->	
+
+<GuardianItemOption>
+	<OptionList>
+		<Option Index="0" Name="Elemental Damage Increase +%d" />
+		<Option Index="1" Name="Elemental Defense Increase +%d" />
+		<Option Index="2" Name="(up to %d Lvl) Defense increase by %0.1f every 20 Lv" />
+		<Option Index="3" Name="(up to %d Lvl) Attack/Wizardry/Curse damage increase by 0.1f every 20 Lv" />
+		<Option Index="4" Name="A 3%% chance of health recovery by %d" />
+	</OptionList>
+	
+	<OptionSettings HPRecoveryOptRate="3">
+	<!-- Ghost Horse -->
+		<Guardian Number="1" OptionNumber="0" FormulaID="0" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="1" OptionNumber="1" FormulaID="1" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="1" OptionNumber="2" FormulaID="2" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="1" OptionNumber="3" FormulaID="3" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="1" OptionNumber="4" FormulaID="4" LowerBound="0" UpperBound="-1" />
+	<!-- Ice Dragon -->
+		<Guardian Number="2" OptionNumber="0" FormulaID="10" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="2" OptionNumber="1" FormulaID="11" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="2" OptionNumber="2" FormulaID="12" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="2" OptionNumber="3" FormulaID="13" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="2" OptionNumber="4" FormulaID="14" LowerBound="0" UpperBound="-1" />	
+	<!-- Pierce Lion -->
+		<Guardian Number="3" OptionNumber="0" FormulaID="20" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="3" OptionNumber="1" FormulaID="21" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="3" OptionNumber="2" FormulaID="22" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="3" OptionNumber="3" FormulaID="23" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="3" OptionNumber="4" FormulaID="24" LowerBound="0" UpperBound="-1" />
+	<!-- Shining Tail -->
+		<Guardian Number="4" OptionNumber="0" FormulaID="31" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="4" OptionNumber="1" FormulaID="32" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="4" OptionNumber="2" FormulaID="33" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="4" OptionNumber="3" FormulaID="34" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="4" OptionNumber="4" FormulaID="35" LowerBound="0" UpperBound="-1" />
+	<!-- Ur -->
+		<Guardian Number="5" OptionNumber="0" FormulaID="41" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="5" OptionNumber="1" FormulaID="42" LowerBound="0" UpperBound="-1" />
+		<Guardian Number="5" OptionNumber="2" FormulaID="43" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="5" OptionNumber="3" FormulaID="44" LowerBound="0" UpperBound="1100" />
+		<Guardian Number="5" OptionNumber="4" FormulaID="45" LowerBound="0" UpperBound="-1" />
+	</OptionSettings>
+	
+	<OptionRate One="7000" Two="2000" Three="1000" Four="0" />
+	
+	<EliteOptionList>
+		<Option Index="0" Name="Bleeding Damage Resistance +%d" />
+		<Option Index="1" Name="Poison Damage Resistance +%d" />
+		<Option Index="2" Name="Attack Reduction Resistance +%d" />
+		<Option Index="3" Name="Attack Speed Reduction Resistance +%d" />
+		<Option Index="4" Name="Defense Reduction Resistance +%d" />
+	</EliteOptionList>
+	
+	<EliteOptionSettings>
+	<!-- Ghost Horse -->
+		<Guardian Number="1" OptionSet="0" OptionNumber1="0" FormulaID1="5" ValueType1="0" OptionNumber2="2" FormulaID2="7" ValueType2="0" />
+		<Guardian Number="1" OptionSet="1" OptionNumber1="1" FormulaID1="6" ValueType1="0" OptionNumber2="2" FormulaID2="7" ValueType2="0" />
+		<Guardian Number="1" OptionSet="2" OptionNumber1="0" FormulaID1="5" ValueType1="0" OptionNumber2="3" FormulaID2="8" ValueType2="0" />
+		<Guardian Number="1" OptionSet="3" OptionNumber1="1" FormulaID1="6" ValueType1="0" OptionNumber2="4" FormulaID2="9" ValueType2="0" />
+		<Guardian Number="1" OptionSet="4" OptionNumber1="0" FormulaID1="5" ValueType1="0" OptionNumber2="4" FormulaID2="9" ValueType2="0" />
+	<!-- Ice Dragon -->
+		<Guardian Number="2" OptionSet="0" OptionNumber1="0" FormulaID1="15" ValueType1="0" OptionNumber2="2" FormulaID2="17" ValueType2="0" />
+		<Guardian Number="2" OptionSet="1" OptionNumber1="1" FormulaID1="16" ValueType1="0" OptionNumber2="2" FormulaID2="17" ValueType2="0" />
+		<Guardian Number="2" OptionSet="2" OptionNumber1="0" FormulaID1="15" ValueType1="0" OptionNumber2="3" FormulaID2="18" ValueType2="0" />
+		<Guardian Number="2" OptionSet="3" OptionNumber1="1" FormulaID1="16" ValueType1="0" OptionNumber2="4" FormulaID2="19" ValueType2="0" />
+		<Guardian Number="2" OptionSet="4" OptionNumber1="0" FormulaID1="15" ValueType1="0" OptionNumber2="4" FormulaID2="19" ValueType2="0" />
+	<!-- Pierce Lion -->
+		<Guardian Number="3" OptionSet="0" OptionNumber1="0" FormulaID1="25" ValueType1="0" OptionNumber2="2" FormulaID2="27" ValueType2="0" />
+		<Guardian Number="3" OptionSet="1" OptionNumber1="1" FormulaID1="26" ValueType1="0" OptionNumber2="2" FormulaID2="27" ValueType2="0" />
+		<Guardian Number="3" OptionSet="2" OptionNumber1="0" FormulaID1="25" ValueType1="0" OptionNumber2="3" FormulaID2="28" ValueType2="0" />
+		<Guardian Number="3" OptionSet="3" OptionNumber1="1" FormulaID1="26" ValueType1="0" OptionNumber2="4" FormulaID2="29" ValueType2="0" />
+		<Guardian Number="3" OptionSet="4" OptionNumber1="0" FormulaID1="25" ValueType1="0" OptionNumber2="4" FormulaID2="29" ValueType2="0" />
+	<!-- Shining Tail -->
+		<Guardian Number="4" OptionSet="0" OptionNumber1="0" FormulaID1="36" ValueType1="0" OptionNumber2="2" FormulaID2="38" ValueType2="0" />
+		<Guardian Number="4" OptionSet="1" OptionNumber1="1" FormulaID1="37" ValueType1="0" OptionNumber2="2" FormulaID2="38" ValueType2="0" />
+		<Guardian Number="4" OptionSet="2" OptionNumber1="0" FormulaID1="36" ValueType1="0" OptionNumber2="3" FormulaID2="39" ValueType2="0" />
+		<Guardian Number="4" OptionSet="3" OptionNumber1="1" FormulaID1="37" ValueType1="0" OptionNumber2="4" FormulaID2="40" ValueType2="0" />
+		<Guardian Number="4" OptionSet="4" OptionNumber1="0" FormulaID1="36" ValueType1="0" OptionNumber2="4" FormulaID2="40" ValueType2="0" />
+	<!-- Ur -->
+		<Guardian Number="5" OptionSet="0" OptionNumber1="0" FormulaID1="46" ValueType1="0" OptionNumber2="2" FormulaID2="48" ValueType2="0" />
+		<Guardian Number="5" OptionSet="1" OptionNumber1="1" FormulaID1="47" ValueType1="0" OptionNumber2="2" FormulaID2="48" ValueType2="0" />
+		<Guardian Number="5" OptionSet="2" OptionNumber1="0" FormulaID1="46" ValueType1="0" OptionNumber2="3" FormulaID2="49" ValueType2="0" />
+		<Guardian Number="5" OptionSet="3" OptionNumber1="1" FormulaID1="47" ValueType1="0" OptionNumber2="4" FormulaID2="50" ValueType2="0" />
+		<Guardian Number="5" OptionSet="4" OptionNumber1="0" FormulaID1="46" ValueType1="0" OptionNumber2="4" FormulaID2="50" ValueType2="0" />
+	</EliteOptionSettings>
+</GuardianItemOption>

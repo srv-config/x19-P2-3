@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Updating values display requires editing MasteryItemBonusOption.txt on client side (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MasteryBonusOptions::OptionList::Option ###
+//	Number: Option number
+//		1: Damage Decrease
+//		2: Increase all stats
+//
+//	Index: Option index, unique per option number
+//	Operator: Operator of option effect behavior - operators are not in use at the moment
+//		1: Addition (+)
+//		2: Multiplication (*) by Percentage (%) 
+//		3: Division (/) by Level/20
+//		4: Division (/) by Life
+//		5: Division by Mana
+//		6: Increase per Level
+//		100: Use of formula, see FormulaID description for details
+//
+//	Value: Value of the option
+//	FormulaID: ID of formula from FormulaData.xml - formula is not in use at the moment
+//	ItemKindA_1: Item KindA the option applies to (ItemList.xml), -1 if not applies
+//	ItemKindA_2: Item KindA the option applies to (ItemList.xml), -1 if not applies
+//	ItemKindA_3: Item KindA the option applies to (ItemList.xml), -1 if not applies
+//	ItemKindA_4: Item KindA the option applies to (ItemList.xml), -1 if not applies
+//	ItemKindA_5: Item KindA the option applies to (ItemList.xml), -1 if not applies
+//	Name: Name of the option (used for in-file description purpose only)
+//
+// ### MasteryBonusOptions::OptionRate::Option ###
+//	Number: Option value number, refers to Number of option from OptionList section
+//	Index: Option value index, unique per option number
+//	Luck: Checks whether item has luck or not
+//		0: Rule will be applied if item has no luck
+//		1: Rule will be applied if item has luck
+//					 ~ AND ~
+//	SetOption: Checks option value
+//		0: Rule will be applies if item has no option
+//		1: Rule will be applied if item has +7 option
+//		2: Rule will be applied if item has +15 option
+//	Rate: Chance rate of getting specified option value, n/1000000
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<MasteryBonusOptions>
+	<OptionList>
+	<!-- Damage Decrease -->							
+		<Option Number="1" Index="1" Operator="1" Value="25" FormulaID="-1" ItemKindA_1="15" ItemKindA_2="18" ItemKindA_3="27" ItemKindA_4="33" ItemKindA_5="-1" Name="Damage Decrease %d" />
+		<Option Number="1" Index="2" Operator="1" Value="50" FormulaID="-1" ItemKindA_1="15" ItemKindA_2="18" ItemKindA_3="27" ItemKindA_4="33" ItemKindA_5="-1" Name="Damage Decrease %d" />
+		<Option Number="1" Index="3" Operator="1" Value="75" FormulaID="-1" ItemKindA_1="15" ItemKindA_2="18" ItemKindA_3="27" ItemKindA_4="33" ItemKindA_5="-1" Name="Damage Decrease %d" />
+	<!-- Increase all stats -->								
+		<Option Number="2" Index="1" Operator="1" Value="10" FormulaID="-1" ItemKindA_1="14" ItemKindA_2="-1" ItemKindA_3="-1" ItemKindA_4="-1" ItemKindA_5="-1" Name="Increase all stats +%d" />
+		<Option Number="2" Index="2" Operator="1" Value="25" FormulaID="-1" ItemKindA_1="14" ItemKindA_2="-1" ItemKindA_3="-1" ItemKindA_4="-1" ItemKindA_5="-1" Name="Increase all stats +%d" />
+		<Option Number="2" Index="3" Operator="1" Value="40" FormulaID="-1" ItemKindA_1="14" ItemKindA_2="-1" ItemKindA_3="-1" ItemKindA_4="-1" ItemKindA_5="-1" Name="Increase all stats +%d" />
+	</OptionList>
+	
+	<OptionRate>
+		<Armors>
+			<Option Number="1" Index="1" Luck="1" Set="1" Rate="10000" />
+			<Option Number="1" Index="2" Luck="0" Set="2" Rate="50000" />
+			<Option Number="1" Index="3" Luck="1" Set="2" Rate="850000" />
+		</Armors>
+		<Shields>
+			<Option Number="1" Index="1" Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="1" Exc1="10" Exc2="3" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="1" Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="10" Exc2="3" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+		</Shields>
+		<FairyShields>
+			<Option Number="1" Index="1" Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="1" Exc1="11" Exc2="3" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="1" Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="11" Exc2="3" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+		</FairyShields>
+		<LancerShields>
+			<Option Number="1" Index="1" Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="1" Exc1="10" Exc2="3" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="1" Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="2" Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="1" Index="3" Exc1="10" Exc2="3" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+		</LancerShields>
+		<Weapons>
+			<Option Number="2" Index="1" Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="2" Index="1" Exc1="0" Exc2="3" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="2" Index="1" Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="2" Index="2" Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="2" Index="2" Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="2" Index="2" Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="2" Index="3" Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" Rate="500000" />
+			<Option Number="2" Index="3" Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+			<Option Number="2" Index="3" Exc1="0" Exc2="3" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" Rate="500000" />
+		</Weapons>
+	</OptionRate>
+</MasteryBonusOptions>

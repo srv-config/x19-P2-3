@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file must be reflected in SkillRequire.txt (Lang.mpr) on client side
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<SkillRequire>
+	<Skill Index="723" ItemGroup="12" ItemIndex="289" ReqIndex="43" ReqMasterSkillIndex="339" ReqMasterPoint="10" />
+	<Skill Index="724" ItemGroup="12" ItemIndex="290" ReqIndex="2" ReqMasterSkillIndex="390" ReqMasterPoint="10" />
+	<Skill Index="725" ItemGroup="12" ItemIndex="291" ReqIndex="2" ReqMasterSkillIndex="390" ReqMasterPoint="10" />
+	<Skill Index="726" ItemGroup="12" ItemIndex="292" ReqIndex="9" ReqMasterSkillIndex="385" ReqMasterPoint="10" />
+	<Skill Index="727" ItemGroup="12" ItemIndex="293" ReqIndex="24" ReqMasterSkillIndex="418" ReqMasterPoint="10" />
+	<!-- <Skill Index="728" ItemGroup="12" ItemIndex="294" ReqIndex="24" ReqMasterSkillIndex="418" ReqMasterPoint="10" /> -->
+	<Skill Index="729" ItemGroup="12" ItemIndex="295" ReqIndex="215" ReqMasterSkillIndex="455" ReqMasterPoint="10" />
+	<Skill Index="730" ItemGroup="12" ItemIndex="296" ReqIndex="215" ReqMasterSkillIndex="455" ReqMasterPoint="10" />
+	<Skill Index="731" ItemGroup="12" ItemIndex="297" ReqIndex="55" ReqMasterSkillIndex="490" ReqMasterPoint="10" />
+	<Skill Index="732" ItemGroup="12" ItemIndex="298" ReqIndex="55" ReqMasterSkillIndex="490" ReqMasterPoint="10" />
+	<Skill Index="733" ItemGroup="12" ItemIndex="299" ReqIndex="13" ReqMasterSkillIndex="484" ReqMasterPoint="10" />
+	<Skill Index="734" ItemGroup="12" ItemIndex="300" ReqIndex="2" ReqMasterSkillIndex="484" ReqMasterPoint="10" />
+	<!-- <Skill Index="735" ItemGroup="12" ItemIndex="301" ReqIndex="61" ReqMasterSkillIndex="508" ReqMasterPoint="10" /> -->
+	<Skill Index="736" ItemGroup="12" ItemIndex="302" ReqIndex="61" ReqMasterSkillIndex="508" ReqMasterPoint="10" />
+	<Skill Index="737" ItemGroup="12" ItemIndex="303" ReqIndex="238" ReqMasterSkillIndex="523" ReqMasterPoint="10" />
+	<!-- <Skill Index="738" ItemGroup="12" ItemIndex="304" ReqIndex="264" ReqMasterSkillIndex="561" ReqMasterPoint="10" /> -->
+	<Skill Index="739" ItemGroup="12" ItemIndex="305" ReqIndex="263" ReqMasterSkillIndex="559" ReqMasterPoint="10" />
+	<!-- <Skill Index="741=" ItemGroup="12" ItemIndex="402=" ReqIndex="24" ReqMasterSkillIndex="431" ReqMasterPoint="10" /> -->
+	<!-- <Skill Index="742=" ItemGroup="12" ItemIndex="403=" ReqIndex="277" ReqMasterSkillIndex="699" ReqMasterPoint="10" /> -->
+	<Skill Index="282" ItemGroup="12" ItemIndex="413" ReqIndex="262" ReqMasterSkillIndex="558" ReqMasterPoint="10" />
+	<Skill Index="285" ItemGroup="15" ItemIndex="39" ReqIndex="284" ReqMasterSkillIndex="751" ReqMasterPoint="10" />
+	<Skill Index="288" ItemGroup="15" ItemIndex="45" ReqIndex="225" ReqMasterSkillIndex="778" ReqMasterPoint="10" />
+	<Skill Index="294" ItemGroup="12" ItemIndex="479" ReqIndex="293" ReqMasterSkillIndex="782" ReqMasterPoint="10" />
+	<Skill Index="1501" ItemGroup="12" ItemIndex="486" ReqIndex="43" ReqMasterSkillIndex="339" ReqMasterPoint="10" />
+	<Skill Index="2003" ItemGroup="12" ItemIndex="493" ReqIndex="2002" ReqMasterSkillIndex="824" ReqMasterPoint="10" />
+	<Skill Index="2005" ItemGroup="12" ItemIndex="495" ReqIndex="2004" ReqMasterSkillIndex="826" ReqMasterPoint="10" />
+	<Skill Index="2012" ItemGroup="12" ItemIndex="162" ReqIndex="55" ReqMasterSkillIndex="490" ReqMasterPoint="10" />
+	<Skill Index="2013" ItemGroup="12" ItemIndex="163" ReqIndex="13" ReqMasterSkillIndex="484" ReqMasterPoint="10" />
+	<Skill Index="243" ItemGroup="15" ItemIndex="49" ReqIndex="242" ReqMasterSkillIndex="847" ReqMasterPoint="10" />
+	<Skill Index="247" ItemGroup="15" ItemIndex="53" ReqIndex="246" ReqMasterSkillIndex="856" ReqMasterPoint="10" />
+	<Skill Index="2023" ItemGroup="12" ItemIndex="167" ReqIndex="24" ReqMasterSkillIndex="411" ReqMasterPoint="10" />
+	<Skill Index="2025" ItemGroup="12" ItemIndex="169" ReqIndex="28" ReqMasterSkillIndex="422" ReqMasterPoint="10" />
+	<Skill Index="2030" ItemGroup="12" ItemIndex="91" ReqIndex="2029" ReqMasterSkillIndex="880" ReqMasterPoint="10" />
+	<Skill Index="2036" ItemGroup="12" ItemIndex="95" ReqIndex="274" ReqMasterSkillIndex="695" ReqMasterPoint="10" />
+	<Skill Index="2085" ItemGroup="12" ItemIndex="98" ReqIndex="279" ReqMasterSkillIndex="698" ReqMasterPoint="10" />
+	<Skill Index="2095" ItemGroup="15" ItemIndex="67" ReqIndex="61" ReqMasterSkillIndex="508" ReqMasterPoint="10" />
+</SkillRequire>

@@ -1,0 +1,86 @@
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### ChaosCard::GeneralRateSettings::Section ###
+//	ID: ID of the section, range is 0-19 only
+//	DropRate: Weight of success of receiving reward from specified section, total is sum of all DropRate(s)
+//	SkillRate: Chance of receiving item with skill, n/1000000
+//	LuckRate: Chance of receiving item with luck, n/1000000
+//	OptionRate: Chance of receiving item with option, n/1000000
+//	ExcRate: Chance of receiving excellent item, n/1000000
+//
+// ### ChaosCard::OptionDrawSettings::Option ###
+//	Level: Level of option to apply on item
+//		~ 0: +0
+//		~ 1: +4
+//		~ 2: +8
+//		~ 3: +12
+//		~ 4: +16
+//		~ 5: +20
+//		~ 6: +24
+//		~ 7: +28
+//	SuccessRate: Chance for specified option, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of all SuccessRate(s) must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ChaosCard::Section ###
+//	ID: ID of section, the ID links to ID from GeneralRateSettings area
+//
+// ### ChaosCard::Section::Item ###
+//	Cat: Category of the item, see ItemLisr.xml
+//	Index: Index of the item, see ItemList.xml
+//	MinLevel: Minimum level of item to reward
+//	MaxLevel: Maximum level of item to reward
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Excellent items are always rewarded with level +0
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Durability: Item durability, 0-255, optional
+//	Skill: Determines if the item can be rewarded with skill, 0/1
+//	Luck: Determines if the item can be rewarded with luck, 0/1
+//	Option: Determines if the item can be rewarded with option, 0/1
+//	Exc:
+//		Excellent Options:
+//			-1: No exc option
+//			-2: Random count of random options (based on rates from ExcellentOptions.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
+//			-4: Random count of random options (based on ExcRate setting of this file - see GeneralRateSettings section)
+//			-5;X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on ExcRate of this file - see GeneralRateSettings section)
+//			X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//		Grade Options (4th Wings):
+//			-1: No grade option
+//			-2: Random count of random options (based on rates from ItemGradeOption.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of grade options, max 4 (options selection based on rates from ItemGradeOption.xml)
+//			ID1;LV1;ID2;LV2;ID3;LV3;ID4;LV4: Defines grade option index and option level, the 'IDX' is grade option index and LVX is grade option level based on Index and GradeXVal (0-9) from ItemGradeOption.xml, maximum 4 options can be defined
+//		Guardian Items:
+//			-1: No option
+//			-2;X: Random count of random options (based on rates from GuardianItemOption.xml), the 'X' takes value 0 or 1, determining whether to generate random elite option or not
+//			-3;X;Y: Specified count of random options, the 'X' defines count of options, max 4, the 'Y' takes value 0 or 1, determining whether to generate random elite option or not
+//			X;X;X;X;Y: Defines specific options, the 'X' is guardian regular option index from GuardianItemOption.xml::OptionList section, maximum 4 options can be defined, -1 if not applies, the Y is elite option index from GuardianItemOption.xml::EliteOptionList, must be defined as 5th argument, -1 if not applies
+//		Artifact Items:
+//			-1: No Option
+//			-2: Random options set (based on rates from ArtifactSystem.xml)
+//			X1;Y1;X2;Y2;X3;Y3: X is OptionType value from ArtifactOption.xml, -1 if not applies, Y is value index, 1~10, referring to ValueX of selected option, -1 if not applies
+//
+//	SetItem: 0 ~ no ancient, 1 ~ ancient (random Tier of specified item) - must be added as ancient, otherwise option will be ignored
+//	SocketCount:
+//		0: no Socket slots
+//		1: up to one slot
+//		2: up to two slots
+//		3: up to three slots
+//		4: up to four slots
+//		5: up to five slots
+//	   -2: random count of socket slots (Pentagrams and Socket Items)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Type attribute of the item must be set to 2 - refer to ItemList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	ElementalItem: 0 ~ no Elemental attribute, 1 ~ Fire, 2 ~ Water, 3 ~ Earth, 4 ~ Wind, 5 ~ Darkness, -1 ~ Random attribute
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->

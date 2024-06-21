@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MonsterSpawnEvent::Spot ###
+//	Enable: Activates or deactivates the spawn of the spot, 0/1
+//	StartDay: The start day of the month the spawn is activate, 1-31
+//	EndDay: The end day of the month the spawn is active, 1-31
+//	StartHour: The start hour the spawn is active during the day, 0-23
+//	StartMinute: The end minute the spawn is active during the day, 0-59
+//	EndHour: The end hour the spawn is active during the day, 0-23
+//	EndMinute: End minute the spawn is active during the day, 0-59
+//	DayOfWeek: Day of week to spawn the monsters on
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Day of week works within configured range of days, to leave full scope of month configure start/end day to 1~31
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//		-1: Any day
+//		0: Sunday
+//		1: Monday
+//		2: Tuesday
+//		3: Wednesday
+//		4: Thursday
+//		5: Friday
+//		6: Saturday
+//
+// ### MonsterSpawnEvent::Spot::Spawn ###
+//	Index: Index of a monster to spawn, refer to ItemList.xml
+//	MapNumber: The number of map to spawn the monster on, refer to MapList.xml
+//	Distance: Distance to spawn monster from start coordinates
+//	StartX: Start X coordinate to spawn the monsters, must be lower or equal to StartY
+//	StartY: Start Y coordinate to spawn the monsters, must be greater or equal to StartX
+//	EndX: End X coordinate to spawn the monsters, must be lower or equal to EndY
+//	EndY: End Y coordinate to spawn the monsters, must be greater or equal to EndX
+//	Dir: Direction the monster looks at after spawn
+//		~ 0: Central
+//		~ 1: South-West
+//		~ 2: South
+//		~ 3: South-East
+//		~ 4: East
+//		~ 5: North-East
+//		~ 6: North
+//		~ 7: North-West
+//		~ 8: West
+//		~ -1: Random
+//	Count: Count of monsters to spawn
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Multiple Spot section can be defined
+//~~ To activate banners for specified events refer to Common.ini
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<MonsterSpawnEvent>
+<!-- #######################################################################
+// (1) Power Chicken Event ~ Lorencia
+// (2) Power Chicken Event ~ Noria
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="11" StartMinute="0" EndHour="11" EndMinute="15" DayOfWeek="-1">
+		<Spawn Index="808" MapNumber="0" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+		<Spawn Index="808" MapNumber="3" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+	</Spot>
+	
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="14" StartMinute="0" EndHour="14" EndMinute="15" DayOfWeek="-1">
+		<Spawn Index="808" MapNumber="0" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+		<Spawn Index="808" MapNumber="3" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+	</Spot>
+	
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="18" StartMinute="0" EndHour="18" EndMinute="15" DayOfWeek="-1">
+		<Spawn Index="808" MapNumber="0" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+		<Spawn Index="808" MapNumber="3" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+	</Spot>
+	
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="19" StartMinute="0" EndHour="19" EndMinute="15" DayOfWeek="-1">
+		<Spawn Index="808" MapNumber="0" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+		<Spawn Index="808" MapNumber="3" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+	</Spot>
+	
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="21" StartMinute="0" EndHour="21" EndMinute="15" DayOfWeek="-1">
+		<Spawn Index="808" MapNumber="0" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+		<Spawn Index="808" MapNumber="3" Distance="15" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="15" /> <!-- Power Chicken, x15 -->
+	</Spot>
+	
+<!-- #######################################################################
+// (1) Fortune Pouch Event ~ Kanturu Ruins
+// (2) Fortune Pouch Event ~ Aida (1 ~ 2)
+// (3) Fortune Pouch Event ~ Tarkan (1 ~ 2)
+// (4) Fortune Pouch Event ~ Lost Tower (1 ~ 7)
+// (5) Fortune Pouch Event ~ Atlans (1 ~ 3)
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="365" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (1), x30 -->
+		<Spawn Index="365" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (1), x50 -->
+		<Spawn Index="365" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (2), x30 -->
+		<Spawn Index="365" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (2), x50 -->
+		<Spawn Index="365" MapNumber="8"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (3), x30 -->
+		<Spawn Index="365" MapNumber="8"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (3), x50 -->
+		<Spawn Index="365" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (4), x30 -->
+		<Spawn Index="365" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (4), x50 -->
+		<Spawn Index="365" MapNumber="7"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (5), x30 -->
+		<Spawn Index="365" MapNumber="7"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (5), x50 -->
+	</Spot>
+
+<!-- #######################################################################
+// (1) Pouch of Blessing ~ Lost Tower (1 ~ 7)
+// (2) Pouch of Blessing ~ Icarus
+// (3) Pouch of Blessing ~ Kalima 5
+// (4) Pouch of Blessing ~ Aida (1 ~ 2)
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="675" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Pouch of Blessing(1), x10 -->
+		<Spawn Index="675" MapNumber="10" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Pouch of Blessing(2), x10 -->
+		<Spawn Index="675" MapNumber="28" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Pouch of Blessing(3), x10 -->
+		<Spawn Index="675" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Pouch of Blessing(4), x10 -->
+	</Spot>
+	
+<!-- #######################################################################
+// (1) Fortune Pouch Event ~ Kanturu Ruins
+// (2) Fortune Pouch Event ~ Aida (1 ~ 2)
+// (3) Fortune Pouch Event ~ Tarkan (1 ~ 2)
+// (4) Fortune Pouch Event ~ Lost Tower (1 ~ 7)
+// (5) Fortune Pouch Event ~ Atlans (1 ~ 3)
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="365" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (1), x30 -->
+		<Spawn Index="365" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (1), x50 -->
+		<Spawn Index="365" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (2), x30 -->
+		<Spawn Index="365" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (2), x50 -->
+		<Spawn Index="365" MapNumber="8"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (3), x30 -->
+		<Spawn Index="365" MapNumber="8"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (3), x50 -->
+		<Spawn Index="365" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (4), x30 -->
+		<Spawn Index="365" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (4), x50 -->
+		<Spawn Index="365" MapNumber="7"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fortune Pouch (5), x30 -->
+		<Spawn Index="365" MapNumber="7"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fortune Pouch (5), x50 -->
+	</Spot>
+
+<!-- #######################################################################
+// (1) Pouch of Blessing - Lost Tower (1 ~ 7)
+// (2) Pouch of Blessing - Icarus
+// (3) Pouch of Blessing - Kalima 5
+// (4) Pouch of Blessing - Aida (1 ~ 2)
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="675" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Pouch of Blessing (1), x10 -->
+		<Spawn Index="675" MapNumber="10" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Pouch of Blessing (2), x10 -->
+		<Spawn Index="675" MapNumber="28" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Pouch of Blessing (3), x10 -->
+		<Spawn Index="675" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Pouch of Blessing (4), x10 -->
+	</Spot>
+
+<!-- ### Egg Event (turn 1) ##############################################
+// (1) Lunar Rabbit Event - Kanturu Ruins
+// (2) Lunar Rabbit Event - Aida (1 ~ 2)
+// (3) Lunar Rabbit Event - Tarkan (1 ~ 2)
+// (4) Lunar Rabbit Event - Lost Tower (1 ~ 7)
+// (5) Lunar Rabbit Event - Atlans (1 ~ 3)
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="13" StartMinute="0" EndHour="13" EndMinute="40" DayOfWeek="-1">
+		<Spawn Index="413" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (1), x50 -->
+		<Spawn Index="413" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (2), x50 -->
+		<Spawn Index="413" MapNumber="8"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (3), x50 -->
+		<Spawn Index="413" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (4), x50 -->
+		<Spawn Index="413" MapNumber="7"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (5), x50 -->
+	</Spot>
+
+<!-- ### Egg Event (turn 1) ##############################################
+// (1) Fire Flame Ghost Event - Kanturu Ruins
+// (2) Fire Flame Ghost Event - Aida (1 ~ 2)
+// (3) Fire Flame Ghost Event - Tarkan (1 ~ 2)
+// (4) Fire Flame Ghost Event - Lost Tower (1 ~ 7)
+// (5) Fire Flame Ghost Event - Atlans (1 ~ 3)
+// (6) Fire Flame Ghost Event - Raklion
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="13" StartMinute="0" EndHour="13" EndMinute="40" DayOfWeek="-1">
+		<Spawn Index="463" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fire Flame Ghost (1), x50 -->
+		<Spawn Index="463" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fire Flame Ghost (2), x50 -->
+		<Spawn Index="463" MapNumber="8"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fire Flame Ghost (3), x50 -->
+		<Spawn Index="463" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fire Flame Ghost (4), x50 -->
+		<Spawn Index="463" MapNumber="7"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fire Flame Ghost (5), x50 -->
+		<Spawn Index="463" MapNumber="57" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fire Flame Ghost (6), x50 -->
+	</Spot>
+
+<!-- ### Egg Event (turn 1) ##############################################
+// (1) Fire Flame Ghost Event - Raklion
+// (2) Fire Flame Ghost Event - Swamp of Calmness
+// (3) Fire Flame Ghost Event - Kanturu Ruins
+// (4) Fire Flame Ghost Event - Kalima 7 (Lost)
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="13" StartMinute="0" EndHour="13" EndMinute="40" DayOfWeek="-1">
+		<Spawn Index="676" MapNumber="57" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Fire Flame Ghost (1), x10 -->
+		<Spawn Index="676" MapNumber="56" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Fire Flame Ghost (2), x10 -->
+		<Spawn Index="676" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Fire Flame Ghost (3), x10 -->
+		<Spawn Index="676" MapNumber="36" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Fire Flame Ghost (4), x10 -->
+	</Spot>
+	
+<!-- ### Egg Event (turn 2) ##############################################
+// (1) Lunar Rabbit Event - Kanturu Ruins
+// (2) Lunar Rabbit Event - Aida (1 ~ 2)
+// (3) Lunar Rabbit Event - Tarkan (1 ~ 2)
+// (4) Lunar Rabbit Event - Lost Tower (1 ~ 7)
+// (5) Lunar Rabbit Event - Atlans (1 ~ 3)
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="21" StartMinute="0" EndHour="0" EndMinute="40" DayOfWeek="-1">
+		<Spawn Index="413" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (1), x50 -->
+		<Spawn Index="413" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (2), x50 -->
+		<Spawn Index="413" MapNumber="8"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (3), x50 -->
+		<Spawn Index="413" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (4), x50 -->
+		<Spawn Index="413" MapNumber="7"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Lunar Rabbit (5), x50 -->
+	</Spot>
+
+<!-- ### Egg Event (turn 2) ##############################################
+// (1) Fire Flame Ghost Event - Kanturu Ruins
+// (2) Fire Flame Ghost Event - Aida (1 ~ 2)
+// (3) Fire Flame Ghost Event - Tarkan (1 ~ 2)
+// (4) Fire Flame Ghost Event - Lost Tower (1 ~ 7)
+// (5) Fire Flame Ghost Event - Atlans (1 ~ 3)
+// (6) Fire Flame Ghost Event - Raklion
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="21" StartMinute="0" EndHour="0" EndMinute="40" DayOfWeek="-1">
+		<Spawn Index="463" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fire Flame Ghost (1), x50 -->
+		<Spawn Index="463" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fire Flame Ghost (2), x50 -->
+		<Spawn Index="463" MapNumber="8"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fire Flame Ghost (3), x50 -->
+		<Spawn Index="463" MapNumber="4"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="50" /> <!-- Fire Flame Ghost (4), x50 -->
+		<Spawn Index="463" MapNumber="7"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fire Flame Ghost (5), x50 -->
+		<Spawn Index="463" MapNumber="57" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="30" /> <!-- Fire Flame Ghost (6), x50 -->
+	</Spot>
+
+<!-- ### Egg Event (turn 2) ##############################################
+// (1) Fire Flame Ghost Event - Raklion
+// (2) Fire Flame Ghost Event - Swamp of Calmness
+// (3) Fire Flame Ghost Event - Kanturu Ruins
+// (4) Fire Flame Ghost Event - Kalima 7 (Lost)
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="21" StartMinute="0" EndHour="0" EndMinute="40" DayOfWeek="-1">
+		<Spawn Index="676" MapNumber="57" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Fire Flame Ghost (1), x10 -->
+		<Spawn Index="676" MapNumber="56" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Fire Flame Ghost (2), x10 -->
+		<Spawn Index="676" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Fire Flame Ghost (3), x10 -->
+		<Spawn Index="676" MapNumber="36" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Fire Flame Ghost (4), x10 -->
+	</Spot>
+
+<!-- #######################################################################
+// (1) Golden Goblin - Kanturu Ruins
+// (2) Golden Goblin - Aida (1 ~ 2)
+// (3) Golden Goblin - Tarkan (1 ~ 2)
+// (4) Golden Goblin - Acheron
+// (5) Golden Goblin - Karutan 1
+// (6) Golden Goblin - Karutan 2
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="652" MapNumber="37" Distance="30" StartX="1" StartY="1"   EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Golden Goblin (1), x10 -->
+		<Spawn Index="652" MapNumber="33" Distance="30" StartX="1" StartY="1"   EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Golden Goblin (2), x10 -->
+		<Spawn Index="652" MapNumber="8"  Distance="30" StartX="1" StartY="114" EndX="137" EndY="251" Dir="-1" Count="10" /> <!-- Golden Goblin (3), x10 -->
+		<Spawn Index="652" MapNumber="91" Distance="30" StartX="1" StartY="1"   EndX="255" EndY="255" Dir="-1" Count="10" /> <!-- Golden Goblin (4), x10 -->
+		<Spawn Index="652" MapNumber="80" Distance="30" StartX="1" StartY="1"   EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Golden Goblin (5), x5 -->
+		<Spawn Index="652" MapNumber="81" Distance="30" StartX="1" StartY="1"   EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Golden Goblin (6), x5 -->
+	</Spot>
+
+<!-- ### Moon Rabbit Event ###############################################
+// (1) Moon Rabbit - Atlans
+// (2) Moon Rabbit - Aida
+// (3) Moon Rabbit - Kanturu
+// (4) Moon Rabbit - Swamp of Calmness
+// (5) Moon Rabbit - Nars
+// (6) Moon Rabbit - Ferea
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="674" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Moon Rabbit (1), x5 -->
+		<Spawn Index="674" MapNumber="33" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Moon Rabbit (2), x5 -->
+		<Spawn Index="674" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Moon Rabbit (3), x5 -->
+		<Spawn Index="674" MapNumber="56" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Moon Rabbit (4), x5 -->
+		<Spawn Index="674" MapNumber="110" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Moon Rabbit (6), x5 -->
+		<Spawn Index="674" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Moon Rabbit (5), x5 -->
+	</Spot>
+	
+<!-- ### New Year Monster Event ##########################################
+// (1) Green, White, Purple, Red Snake - Kanturu Ruins
+// (2) Green, White, Purple, Red Snake - Karutan 1
+// (3) Green, White, Purple, Red Snake - Karutan 2
+// (4) Green, White, Purple, Red Snake - Ferea
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="647" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Snake (1), x5 -->
+		<Spawn Index="647" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Snake (2), x5 -->
+		<Spawn Index="647" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Snake (3), x5 -->
+		<Spawn Index="647" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Green Snake (4), x5 -->
+		<Spawn Index="648" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Snake (1), x5 -->
+		<Spawn Index="648" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Snake (2), x5 -->
+		<Spawn Index="648" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Snake (3), x5 -->
+		<Spawn Index="648" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- White Snake (4), x5 -->
+		<Spawn Index="649" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Snake (1), x5 -->
+		<Spawn Index="649" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Snake (2), x5 -->
+		<Spawn Index="649" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Snake (3), x5 -->
+		<Spawn Index="649" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Purple Snake (4), x5 -->
+		<Spawn Index="650" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Snake (1), x5 -->
+		<Spawn Index="650" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Snake (2), x5 -->
+		<Spawn Index="650" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Snake (3), x5 -->
+		<Spawn Index="650" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Red Snake (4), x5 -->
+	</Spot>	
+
+<!-- ### New Year Monster Event ##########################################
+// (1) Green, White, Purple, Red Horse - Kanturu Ruins
+// (2) Green, White, Purple, Red Horse - Karutan 1
+// (3) Green, White, Purple, Red Horse - Karutan 2
+// (4) Green, White, Purple, Red Horse - Ferea
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="691" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Horse (1), x5 -->
+		<Spawn Index="691" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Horse (2), x5 -->
+		<Spawn Index="691" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Horse (3), x5 -->
+		<Spawn Index="691" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Green Horse (4), x5 -->
+		<Spawn Index="692" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Horse (1), x5 -->
+		<Spawn Index="692" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Horse (2), x5 -->
+		<Spawn Index="692" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Horse (3), x5 -->
+		<Spawn Index="692" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- White Horse (4), x5 -->
+		<Spawn Index="693" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Horse (1), x5 -->
+		<Spawn Index="693" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Horse (2), x5 -->
+		<Spawn Index="693" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Horse (3), x5 -->
+		<Spawn Index="693" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Purple Horse (4), x5 -->
+		<Spawn Index="694" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Horse (1), x5 -->
+		<Spawn Index="694" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Horse (2), x5 -->
+		<Spawn Index="694" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Horse (3), x5 -->
+		<Spawn Index="694" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Red Horse (4), x5 -->
+	</Spot>	
+	
+<!-- ### New Year Monster Event ##########################################
+// (1) Green, White, Purple Red Sheep - Lorencia
+// (2) Green, White, Purple Red Sheep - Elbeland
+// (3) Green, White, Purple Red Sheep - Devias
+// (4) Green, White, Purple Red Sheep - Noria
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="726" MapNumber="0"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Green Sheep (1), x5 -->
+		<Spawn Index="726" MapNumber="51" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Green Sheep (2), x5 -->
+		<Spawn Index="726" MapNumber="2"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Green Sheep (3), x5 -->
+		<Spawn Index="726" MapNumber="3"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Green Sheep (4), x5 -->
+		<Spawn Index="727" MapNumber="0"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- White Sheep (1), x5 -->
+		<Spawn Index="727" MapNumber="51" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- White Sheep (2), x5 -->
+		<Spawn Index="727" MapNumber="2"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- White Sheep (3), x5 -->
+		<Spawn Index="727" MapNumber="3"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- White Sheep (4), x5 -->
+		<Spawn Index="728" MapNumber="0"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Purple Sheep (1), x5 -->
+		<Spawn Index="728" MapNumber="51" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Purple Sheep (2), x5 -->
+		<Spawn Index="728" MapNumber="2"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Purple Sheep (3), x5 -->
+		<Spawn Index="728" MapNumber="3"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Purple Sheep (4), x5 -->
+		<Spawn Index="729" MapNumber="0"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Red Sheep (1), x5 -->
+		<Spawn Index="729" MapNumber="51" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Red Sheep (2), x5 -->
+		<Spawn Index="729" MapNumber="2"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Red Sheep (3), x5 -->
+		<Spawn Index="729" MapNumber="3"  Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Red Sheep (4), x5 -->
+	</Spot>
+	
+<!-- ### New Year Monster Event ##########################################
+// (1) Green, White, Purple, Red Monkey - Kanturu Ruins
+// (2) Green, White, Purple, Red Monkey - Karutan 1
+// (3) Green, White, Purple, Red Monkey - Karutan 2
+// (4) Green, White, Purple, Red Monkey - Ferea
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="739" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Monkey (1), x5 -->
+		<Spawn Index="739" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Monkey (2), x5 -->
+		<Spawn Index="739" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Monkey (3), x5 -->
+		<Spawn Index="739" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Green Monkey (4), x5 -->
+		<Spawn Index="740" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Monkey (1), x5 -->
+		<Spawn Index="740" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Monkey (2), x5 -->
+		<Spawn Index="740" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Monkey (3), x5 -->
+		<Spawn Index="740" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- White Monkey (4), x5 -->
+		<Spawn Index="741" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Monkey (1), x5 -->
+		<Spawn Index="741" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Monkey (2), x5 -->
+		<Spawn Index="741" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Monkey (3), x5 -->
+		<Spawn Index="741" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Purple Monkey (4), x5 -->
+		<Spawn Index="742" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Monkey (1), x5 -->
+		<Spawn Index="742" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Monkey (2), x5 -->
+		<Spawn Index="742" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Monkey (3), x5 -->
+		<Spawn Index="742" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Red Monkey (4), x5 -->
+	</Spot>
+	
+<!-- ### New Year Monster Event ##########################################
+// (1) Green, White, Purple, Red Rooster - Kanturu Ruins
+// (2) Green, White, Purple, Red Rooster - Karutan 1
+// (3) Green, White, Purple, Red Rooster - Karutan 2
+// (4) Green, White, Purple, Red Rooster - Ferea
+// ####################################################################### -->
+	<Spot Enable="0" StartDay="1" EndDay="31" StartHour="0" StartMinute="0" EndHour="23" EndMinute="59" DayOfWeek="-1">
+		<Spawn Index="759" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Rooster (1), x5 -->
+		<Spawn Index="759" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Rooster (2), x5 -->
+		<Spawn Index="759" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Green Rooster (3), x5 -->
+		<Spawn Index="759" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Green Rooster (4), x5 -->
+		<Spawn Index="760" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Rooster (1), x5 -->
+		<Spawn Index="760" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Rooster (2), x5 -->
+		<Spawn Index="760" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  White Rooster (3), x5 -->
+		<Spawn Index="760" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- White Rooster (4), x5 -->
+		<Spawn Index="761" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Rooster (1), x5 -->
+		<Spawn Index="761" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Rooster (2), x5 -->
+		<Spawn Index="761" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Purple Rooster (3), x5 -->
+		<Spawn Index="761" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Purple Rooster (4), x5 -->
+		<Spawn Index="762" MapNumber="37" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Rooster (1), x5 -->
+		<Spawn Index="762" MapNumber="80" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Rooster (2), x5 -->
+		<Spawn Index="762" MapNumber="81" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!--  Red Rooster (3), x5 -->
+		<Spawn Index="762" MapNumber="112" Distance="30" StartX="1" StartY="1" EndX="255" EndY="255" Dir="-1" Count="5" /> <!-- Red Rooster (4), x5 -->
+	</Spot>
+</MonsterSpawnEvent>

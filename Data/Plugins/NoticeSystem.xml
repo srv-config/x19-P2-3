@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2020 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### NoticeSystem ###
+//	Enable: Deactivates or activates the system, 0/1
+//
+// ### NoticeSystem::PvPNotice ###
+//	Enable: Deactivates or activates middle screen message of duel results, lang id: 743, 0/1
+//	R: R value of RGB standard
+//	G: G value of RGB standard
+//	B: B value of RGB standard
+//-------------------------------------------------------------------------------------------------------------
+//~~ RGB values for the message color, https://www.w3schools.com/colors/colors_picker.asp
+//-------------------------------------------------------------------------------------------------------------
+//
+// ### NoticeSystem::Tags::Tag ###
+//	Id: Unique tag ID, starting from 0, not extendable
+//	Text: Tag text
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Tags are used for item pick up notice message
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### NoticeSystem::Messages:Msg ###
+//	ID: Unique text ID, startign from 0, not extendable
+//	Text: Message text, order and number of placeholders (%s and %d) must be maintained
+//		0: Item pick up notice
+//		1: Player kill notice
+//		2: Monster spawn notice
+//
+// ### NoticeSystem::ItemGetNotice ###
+//	Enable: Deactivates or activates the item pick up notice, 0/1
+//
+// ### NoticeSystem::ItemGetNotice::Item ###
+//	Cat: Group of item, see ItemList.xml
+//	Index: Index of item, see ItemList.xml
+//	Level: Minimum level of item, 0-15
+//	IsExc: Notice for excellent item, 0/1
+//	IsSet: Notice for set item, 0/1 
+//
+// ### NoticeSystem::MonsterKillNotice ###
+//	Enable: Deactivates or activates monster kill notice, 0/1
+//
+// ### NoticeSystem::MonsterKillNotice::Monster ###
+//	ID: Monster index to enable notice for, see MonsterList.xml
+//
+// ### NoticeSystem::MonsterSpawnNotice ###
+//	Enable: Deactivates or activates monster spawn notice, 0/1
+//
+// ### NoticeSystem::MonsterSpawnNotice::Monster ###
+//	ID: Monster index to enable spawn notice for, see MonsterList.xml
+//	MapNum: Map number for the monster spawn notice, useful in case same monster is used in multiple maps, -1 for any maps
+//	InvincibleBuffDuration: Time from notice appearance the monster cannot be killed, seconds
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<NoticeSystem Enabled="0">
+<PvPNotice Enable="1" R="255" G="105" B="180" />
+	<Tags>
+		<Tag Id="0" Text="" /> <!-- Normal item -->
+		<Tag Id="1" Text="Exc" />
+		<Tag Id="2" Text="Set" />
+	</Tags>
+	
+	<Messages>
+		<Msg ID="0" Text=" [%s] in %s Picked up %s %s" RGB="255,255,5" /> <!-- PlayerName, MapName, Tag, ItemName -->
+		<Msg ID="1" Text=" %s Killed %s in %s (%d,%d)" RGB="255,255,255" /> <!-- KillerName, VictimName, MapName, X, Y -->
+		<Msg ID="2" Text=" %s has respawned in %s (%d,%d)" RGB="255,255,5" /> <!-- MonsterName, MapName, X, Y -->
+	</Messages>
+	
+	<ItemGetNotice Enabled="1">
+		<Item Cat="0" Index="26" Level="0" IsExc="0" IsSet="0" />
+		<Item Cat="0" Index="5" Level="0" IsExc="0" IsSet="0" />
+		<Item Cat="12" Index="15" Level="0" IsExc="0" IsSet="0" />
+		<Item Cat="-1" Index="56" Level="0" IsExc="0" IsSet="0" />
+	</ItemGetNotice>
+	
+	<MonsterKillNotice Enabled="1">
+		<Monster ID="20" />
+	</MonsterKillNotice>
+	
+	<MonsterSpawnNotice Enabled="1">
+		<Monster ID="20" MapNum="-1" InvincibleBuffDuration="120" />
+	</MonsterSpawnNotice>
+</NoticeSystem>

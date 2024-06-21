@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~ System allows to define item types that are being treated as Chaos Card for Chaos Mix, changes to the file require modification of mix.bmd
+//
+// ### ChaosCardManager::ChaosCard ###
+//	ItemType: Group of an item, see ItemList.xml
+//	ItemIndex: Index of an item, see ItemList.xml
+//	Name: Name of the item, used internally for logging purpose
+//	FileName: Name of file the the the card draws reward from, file must be located in \Data\ChaosCards\
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ChaosCardManager>
+	<ChaosCard ItemType="14" ItemIndex="54" Name="Chaos Card" FileName="ChaosCard.xml" />
+	<ChaosCard ItemType="14" ItemIndex="92" Name="Chaos Card Gold" FileName="ChaosCard_Gold.xml" />
+	<ChaosCard ItemType="14" ItemIndex="95" Name="Chaos Card Mini" FileName="ChaosCard_Mini.xml" />
+	<ChaosCard ItemType="14" ItemIndex="93" Name="Chaos Card Rare" FileName="ChaosCard_Rare.xml" />
+</ChaosCardManager>

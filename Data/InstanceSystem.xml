@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================										
+//
+// ### InstanceSystem::Instance ###
+//	Type: Instance type
+//		~ 1: Labyrinth
+//		~ 2: 4th Quest
+//		~ 3: Gaion Event 1
+//		~ 4: Gaion Event 2
+//		~ 5: Gaion Event 3
+//		~ 6: Gaion Event 4
+//		~ 7: 5th Quest
+//
+//	Name: Name of instance
+//	MapNumber: Map number to instantiate (copy)
+//	AvailableUser: Max user per instance
+//	AvailableMonster: Max monsters per instance
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<InstanceSystem>
+	<Instance Type="1" Name="Labyrinth" MapNumber="115" AvailableUser="1" AvailableMonster="10" />
+	<Instance Type="2" Name="4th Quest" MapNumber="121" AvailableUser="5" AvailableMonster="10" />
+	<Instance Type="3" Name="Gaion Event 1" MapNumber="69" AvailableUser="1" AvailableMonster="60" />
+	<Instance Type="4" Name="Gaion Event 2" MapNumber="70" AvailableUser="1" AvailableMonster="60" />
+	<Instance Type="5" Name="Gaion Event 3" MapNumber="71" AvailableUser="1" AvailableMonster="60" />
+	<Instance Type="6" Name="Gaion Event 4" MapNumber="72" AvailableUser="1" AvailableMonster="60" />
+	<Instance Type="7" Name="5th Quest" MapNumber="121" AvailableUser="5" AvailableMonster="10" />
+</InstanceSystem>

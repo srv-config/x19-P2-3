@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2021 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### SkillUseTeleport::Skill ###
+//	Index: Index of a skill, see SkillList.xml
+//	Name: Name of skill, used for in-file description only
+//	Enable: Disables or enables the skill use during teleport skill cast, 0/1
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<SkillUseTeleport>
+	<Skill Index="1" Name="Poison" Enable="1" />
+	<Skill Index="2" Name="Meteorite" Enable="1" />
+	<Skill Index="3" Name="Lightning" Enable="1" />
+	<Skill Index="4" Name="Fire Ball" Enable="1" />
+	<Skill Index="5" Name="Flame" Enable="1" />
+	<Skill Index="6" Name="Teleport" Enable="1" />
+	<Skill Index="7" Name="Ice" Enable="1" />
+	<Skill Index="8" Name="Twister" Enable="0" />
+	<Skill Index="9" Name="Evil Spirit" Enable="0" />
+	<Skill Index="10" Name="Hellfire" Enable="0" />
+	<Skill Index="11" Name="Power Wave" Enable="1" />
+	<Skill Index="12" Name="Aqua Beam" Enable="1" />
+	<Skill Index="13" Name="Cometfall" Enable="0" />
+	<Skill Index="14" Name="Inferno" Enable="0" />
+	<Skill Index="15" Name="Teleport Ally" Enable="0" />
+	<Skill Index="16" Name="Soul Barrier" Enable="1" />
+	<Skill Index="17" Name="Energy Ball" Enable="1" />
+	<Skill Index="38" Name="Decay" Enable="1" />
+	<Skill Index="39" Name="Ice Storm" Enable="1" />
+	<Skill Index="40" Name="Nova" Enable="0" />
+	<Skill Index="240" Name="Magical Shot" Enable="0" />
+	<Skill Index="241" Name="Shining Bird" Enable="0" />
+	<Skill Index="242" Name="Dragon Violent" Enable="0" />
+	<Skill Index="243" Name="Spear Storm" Enable="0" />
+	<Skill Index="244" Name="Reflection Barrier" Enable="1" />
+	<Skill Index="740" Name="Archangel's will" Enable="1" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="378" Name="Flame Strengthener" Enable="1" />
+	<Skill Index="379" Name="Lightning Strengthener" Enable="1" />
+	<Skill Index="381" Name="Inferno Strengthener" Enable="0" />
+	<Skill Index="382" Name="Blast Strengthener" Enable="1" />
+	<Skill Index="384" Name="Poison Strengthener" Enable="1" />
+	<Skill Index="385" Name="Evil Spirit Strengthener" Enable="0" />
+	<Skill Index="387" Name="Decay Strengthener" Enable="1" />
+	<Skill Index="388" Name="Hellfire Strengthener" Enable="0" />
+	<Skill Index="389" Name="Ice Strengthener" Enable="1" />
+	<Skill Index="390" Name="Meteor Strengthener" Enable="1" />
+	<Skill Index="391" Name="Ice Storm Strengthener" Enable="1" />
+	<Skill Index="392" Name="Nova Strengthener" Enable="0" />
+	<Skill Index="393" Name="Ice Storm Mastery" Enable="1" />
+	<Skill Index="394" Name="Meteor Mastery" Enable="1" />
+	<Skill Index="395" Name="Nova Cast Strengthener" Enable="0" />
+	<Skill Index="403" Name="Soul Barrier Strengthener" Enable="1" />
+	<Skill Index="404" Name="Soul Barrier Proficiency" Enable="1" />
+	<Skill Index="406" Name="Soul Barrier Mastery" Enable="1" />
+	<Skill Index="495" Name="Earth Prison" Enable="1" />
+	<Skill Index="497" Name="Earth Prison Strengthener" Enable="1" />
+	<Skill Index="642" Name="Illusion" Enable="1" />
+	<Skill Index="724" Name="Meteor Strike" Enable="1" />
+	<Skill Index="725" Name="Meteor Storm" Enable="0" />
+	<Skill Index="726" Name="Soul Seeker" Enable="0" />
+	<Skill Index="843" Name="Shining Bird Strengthener" Enable="0" />
+	<Skill Index="844" Name="Shining Bird Mastery" Enable="0" />
+	<Skill Index="846" Name="Dragon Violent Strengthener" Enable="0" />
+	<Skill Index="847" Name="Dragon Violent Mastery" Enable="0" />
+	<Skill Index="861" Name="Reflection Barrier Strengthener" Enable="1" />
+	<Skill Index="863" Name="Reflection Barrier Mastery" Enable="1" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="1075" Name="Meteor Strike Enhancement Skill" Enable="1" />
+	<Skill Index="1076" Name="Meteor Storm Enhancement Skill" Enable="0" />
+	<Skill Index="1078" Name="Evil Spirit Enhancement Skill" Enable="0" />
+	<Skill Index="1220" Name="Shining Bird Enhancement Skill" Enable="0" />
+	<Skill Index="1221" Name="Dragon Violent Enhancement Skill" Enable="0" />
+	<Skill Index="1216" Name="Spear Storm Enhancement Skill" Enable="1" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<Skill Index="2037" Name="Meteor Storm of Gale" Enable="1" />
+	<Skill Index="2080" Name="Spear Storm of Saturation" Enable="1" />
+</SkillUseTeleport>

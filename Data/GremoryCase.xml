@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+// ### GremoryCase::RewardExpiryTime::General::Use ###
+//	Type: Type of event:
+//		~ 1: Chaos Castle
+//		~ 2: Blood Castle
+//		~ 3: Illusion Temple
+//		~ 4: Doppelganger
+//		~ 5: None
+//		~ 6: None
+//		~ 7: None
+//		~ 8: Chaos Castle Survival BattleCore
+//		~ 9: Tormented Square BattleCore
+//		~ 10: Chaos Castle (Battle) BattleCore
+//		~ 11: Tormented Square (Battle) BattleCore
+//		~ 12: EvoMon
+//		~ 13: Devil Square
+//		~ 14: Imperial Guardian
+//		~ 15: None
+//		~ 16: Inventory Mix
+//		~ 17: Event Items
+//		~ 18: Labyrinth
+//		~ 19: 4th Quest
+//		~ 20: Mu Mobile
+//		~ 22: Boss Battle Main (mission 0)
+//		~ 23: Boss Battle Bonus (mission 1~2)
+//		~ 24: SeasonPass Reward
+//		~ 100: GM Gift
+//
+//	Time: Time the reward is available to pick up from gremory case, seconds
+//	Name: Name of the event, used for logging and description purpose
+//
+// ### GremoryCase::RewardExpiryTime::PersonalShop::Use ###
+//	Type: Type of event:
+//		~ 0: Get Bought Item
+//		~ 1: Get Received Prize
+//		~ 2: Get Withdrawn items
+//
+//	Time: Time the reward is available to pick up from gremory case, seconds
+//	Name: Name of the event, used for logging and description purpose
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+//
+-->
+
+<GremoryCase>
+	<RewardExpiryTime>
+		<General>
+			<Use Type="1" Time="3600" Name="Chaos Castle" />
+			<Use Type="2" Time="3600" Name="Blood Castle" />
+			<Use Type="3" Time="3600" Name="Illusion Temple" />
+			<Use Type="4" Time="3600" Name="Doppelganger" />
+			<!-- <Use Type="5" Time="3600" Name="Empty" /> -->
+			<!-- <Use Type="6" Time="3600" Name="Empty" /> -->
+			<!-- <Use Type="7" Time="3600" Name="Empty" /> -->
+			<Use Type="8" Time="3600" Name="Chaos Castle Survival BattleCore" />
+			<Use Type="9" Time="3600" Name="Tormented Square BattleCore" />
+			<Use Type="10" Time="3600" Name="Chaos Castle (Battle) BattleCore" />
+			<Use Type="11" Time="3600" Name="Tormented Square (Battle) BattleCore" />
+			<Use Type="12" Time="3600" Name="EvoMon" />
+			<Use Type="13" Time="3600" Name="Devil Square" />
+			<Use Type="14" Time="604800" Name="Imperial Guardian" />
+			<!-- <Use Type="15" Time="3600" Name="Empty" /> -->
+			<Use Type="16" Time="86400" Name="Inventory Mix" />
+			<Use Type="17" Time="3600" Name="Event Items" />
+			<Use Type="18" Time="3600" Name="Labyrinth" />
+			<!-- <Use Type="19" Time="3600" Name="4th Quest" /> -->
+			<!-- <Use Type="20" Time="3600" Name="Mu Mobile" /> -->
+			<Use Type="22" Time="3600" Name="Boss Battle Main" />
+			<Use Type="23" Time="3600" Name="Boss Battle Bonus" />
+			<Use Type="24" Time="86400" Name="SeasonPass Reward" />
+			<Use Type="100" Time="86400" Name="GM Gift" />
+		</General>
+		<PersonalShop>
+			<Use Type="0" Time="604800" Name="Time to obtain purchased item" />
+			<Use Type="1" Time="604800" Name="Time to obtain prize for sold item" />
+			<Use Type="2" Time="604800" Name="Time to obtain items withdrawn from Personal Store" />
+		</PersonalShop>
+	</RewardExpiryTime>
+</GremoryCase>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ConsumeItemSystem lets you add in client custom jewels/other right-click type items (similar to fruits) to reward with level-up points upon use
+// Use provided examples as a base for adding new items
+//
+// ### ConsumeItemSystem ###
+//	Enabled: Disables or enables the system, 0/1
+//	MaxRewardPoint: Max points that can be added using defines in system items
+//	UseSuccessMsg: Message to display upon successful usage
+//	UseFailMessage: Message to display upon unsuccessful usage
+//
+// ### ConsumeItemSystem::Item ###
+//	Cat: Category of item
+//	Index: Index of item
+//	RewardPoints: points to add by the item
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ConsumeItemSystem Enabled="1" MaxRewardPoint="1000" UseSuccessMsg="You received %d Level Up Points" UseFailMessage="Max points exceeds upper limit %d">
+	<Item Cat="19" Index="200" RewardPoints="40" />
+	<Item Cat="19" Index="201" RewardPoints="59" />
+</ConsumeItemSystem>

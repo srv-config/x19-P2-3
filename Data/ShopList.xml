@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2023 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// How the Shop System works like?
+//	Extended Shops system allowing for creation of in-game shop with any NPC. It is allowed to configure single NPC type in multiple
+//	locations with different store content using configuration below. Shop NPC spawn location is controlled from this file.
+//	Shops NPC spawn has been disabled from MonsterSetBase file. Any Shop NPC added in MSB will appear in game but will not operate as Shop
+//
+// ### Shops::ShopList::Shop ###
+//	NPCIndex: Index of NPC, see MonsterList.xml
+//	PosX: X Coordinate of Shop NPC
+//	PosY: Y Coordinate of Shop NPC
+//	Dir: Position NPC looks at after spawn
+//		~ 0: Central
+//		~ 1: South-West
+//		~ 2: South
+//		~ 3: South-East
+//		~ 4: East
+//		~ 5: North-East
+//		~ 6: North
+//		~ 7: North-West
+//		~ 8: West
+//		~ -1: Random
+//
+//	VipType: Minimum VIP Level to use the shop
+// 		~ -1: Free and any VIP Type
+// 		~ 1: Player with Bronze, Silver, Gold, Platinum VIP can use the shop
+// 		~ 2: Silver, Gold, Platinum
+// 		~ 3: Gold, Platinum
+// 		~ 4: Platinum only 
+//		Or other defined VIP Type according to VipSettings.xml
+//
+//	GMShop: Enables Game Master access only, 0/1
+//	FileName: Name of Shop file located in \Data\Shops\
+//	SpeakTexts: Text to speak by NPC defined by text IDs, leave empty or -1 to ignore, texts are displayed in defined order, syntax: X;X;X where X is text ID from TextList section, maximum 3
+//	SpeakInterval: Interval on basis of which the NPC speaks, milliseconds
+//	RandomText: If set to 1 the NPC will speak random configured for him text, different that spoken as last, 0/1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Note: Selected NPCs, such as Potion Girl or Mirage will not work with the speak system
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	MossMerchant: Defines a Moss Merchant Lottery Shop, only for NPC 492, should always be 1
+//	GuildMaster: Defines Flags Shop, only for NPC 241, should always be 1 (requires Flags System plugin)
+//	BattleCore: Defines a shop located on Battle Core server, if so set to 1
+//
+// ### Shops::TextList::Text ###
+//	ID: Unique ID of text, 0-299
+//	Text: Text to speak by NPC, max 60 character
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<Shops>
+	<ShopList>
+	<!-- Lorencia -->
+		<Shop NPCIndex="230" MapNumber="0" PosX="114" PosY="120" Dir="3" VipType="-1" GMShop="0" FileName="NPC(230)_Wandering_Merchant_Alex.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="250" MapNumber="0" PosX="183" PosY="137" Dir="2" VipType="-1" GMShop="0" FileName="NPC(250)_Wandering_Merchant_Herald.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="251" MapNumber="0" PosX="116" PosY="141" Dir="3" VipType="-1" GMShop="0" FileName="NPC(251)_Hanzo_the_Blacksmith.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="253" MapNumber="0" PosX="127" PosY="86" Dir="2" VipType="-1" GMShop="0" FileName="NPC(253)_Potion_Girl_Amy.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="254" MapNumber="0" PosX="118" PosY="113" Dir="3" VipType="-1" GMShop="0" FileName="NPC(254)_Pasi_the_Mage.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="891" MapNumber="0" PosX="119" PosY="111" Dir="3" VipType="-1" GMShop="0" FileName="NPC(891)_Wizard_Gillard.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="0" PosX="123" PosY="135" Dir="1" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Devias -->
+		<Shop NPCIndex="231" MapNumber="2" PosX="8"  PosY="77" Dir="3" VipType="-1" GMShop="0" FileName="NPC(231)_Thompson_Kenel.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="244" MapNumber="2" PosX="226" PosY="25" Dir="3" VipType="-1" GMShop="0" FileName="NPC(244)_Caren_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="245" MapNumber="2" PosX="225" PosY="41" Dir="3" VipType="-1" GMShop="0" FileName="NPC(245)_Wizard_Izabel.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="246" MapNumber="2" PosX="186" PosY="47" Dir="3" VipType="-1" GMShop="0" FileName="NPC(246)_Weapons_Merchant_Zienna.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="379" MapNumber="2" PosX="32" PosY="31" Dir="3" VipType="-1" GMShop="0" FileName="NPC(379)_Natasha_Firecracker_Merchant.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="241" MapNumber="2" PosX="215" PosY="45" Dir="1" VipType="-1" GMShop="0" GuildMaster="1" FileName="NPC(241)_Royal_Guard_Captain_Lorence.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Noria -->
+		<Shop NPCIndex="242" MapNumber="3" PosX="173" PosY="125" Dir="1" VipType="-1" GMShop="0" FileName="NPC(242)_Elf_Lala.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="243" MapNumber="3" PosX="195" PosY="124" Dir="2" VipType="-1" GMShop="0" FileName="NPC(243)_Eo_the_Craftsman.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Arena -->
+		<Shop NPCIndex="239" MapNumber="6"	PosX="72" PosY="164" Dir="1" VipType="-1" GMShop="0" FileName="NPC(239)_Arena_Guard.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Kalima 1-7 -->
+		<Shop NPCIndex="259" MapNumber="24" PosX="7"  PosY="19" Dir="2" VipType="-1" GmShop="0" FileName="NPC(259)_Oracle_Layla.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="259" MapNumber="25" PosX="7"  PosY="19" Dir="2" VipType="-1" GmShop="0" FileName="NPC(259)_Oracle_Layla.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="259" MapNumber="26" PosX="7"  PosY="19" Dir="2" VipType="-1" GmShop="0" FileName="NPC(259)_Oracle_Layla.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="259" MapNumber="27" PosX="7"  PosY="19" Dir="2" VipType="-1" GmShop="0" FileName="NPC(259)_Oracle_Layla.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="259" MapNumber="28" PosX="7"  PosY="19" Dir="2" VipType="-1" GmShop="0" FileName="NPC(259)_Oracle_Layla.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="259" MapNumber="29" PosX="7"  PosY="19" Dir="2" VipType="-1" GmShop="0" FileName="NPC(259)_Oracle_Layla.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="259" MapNumber="36" PosX="7"  PosY="19" Dir="2" VipType="-1" GmShop="0" FileName="NPC(259)_Oracle_Layla.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Valley of Loren -->
+		<Shop NPCIndex="376" MapNumber="30" PosX="90" PosY="44" Dir="1" VipType="-1" GMShop="0" FileName="NPC(376)_Pamela_the_Supplier.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="377" MapNumber="30" PosX="89" PosY="218" Dir="3" VipType="-1" GMShop="0" FileName="NPC(377)_Angela_the_Supplier.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Crywolf -->
+		<Shop NPCIndex="251" MapNumber="34" PosX="145" PosY="14" Dir="1" VipType="-1" GMShop="0" FileName="NPC(251)_Hanzo_the_Blacksmith.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="248" MapNumber="34" PosX="99" PosY="40" Dir="2" VipType="-1" GMShop="0" FileName="NPC(248)_Wandering_Merchant_Martin.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Elbeland -->
+		<Shop NPCIndex="415" MapNumber="51" PosX="44" PosY="229" Dir="1" VipType="-1" GMShop="0" FileName="NPC(415)_Silvia.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="416" MapNumber="51" PosX="29" PosY="236" Dir="2" VipType="-1" GMShop="0" FileName="NPC(416)_Rhea.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="417" MapNumber="51" PosX="36" PosY="219" Dir="2" VipType="-1" GMShop="0" FileName="NPC(417)_Marce.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="492" MapNumber="51" PosX="22" PosY="225" Dir="2" VipType="-1" GmShop="0" MossMerchant="1" FileName="NPC(492)_Moss.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Loren Market -->
+		<Shop NPCIndex="545" MapNumber="79" PosX="43" PosY="46" Dir="3" VipType="-1" GMShop="0" FileName="NPC(545)_Christine_the_Merchant.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Event Square (Market) -->
+		<Shop NPCIndex="255" MapNumber="79" PosX="231" PosY="23" Dir="5" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="79" PosX="194" PosY="13" Dir="5" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="79" PosX="169" PosY="53" Dir="3" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="79" PosX="208" PosY="62" Dir="2" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="79" PosX="190" PosY="95" Dir="1" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="79" PosX="226" PosY="94" Dir="3" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Event Square (Instance) -->
+		<Shop NPCIndex="255" MapNumber="114" PosX="231" PosY="23" Dir="5" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="114" PosX="194" PosY="13" Dir="5" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="114" PosX="169" PosY="53" Dir="3" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="114" PosX="208" PosY="62" Dir="2" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="114" PosX="190" PosY="95" Dir="1" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="255" MapNumber="114" PosX="226" PosY="94" Dir="3" VipType="-1" GMShop="0" FileName="NPC(255)_Lumen_the_Barmaid.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Karutan -->
+		<Shop NPCIndex="577" MapNumber="80" PosX="121" PosY="102" Dir="3" VipType="-1" GMShop="0" FileName="NPC(577)_Leina_the_Merchant.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="578" MapNumber="80" PosX="117" PosY="126" Dir="3" VipType="-1" GMShop="0" FileName="NPC(578)_Weapons_Merchant_Bolo.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Acheron -->
+		<Shop NPCIndex="583" MapNumber="91" PosX="55" PosY="195" Dir="2" VipType="-1" GmShop="0" FileName="NPC(583)_Jin.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Arca Battle -->
+		<Shop NPCIndex="604" MapNumber="92" PosX="56" PosY="202" Dir="2" VipType="-1" GmShop="0" FileName="NPC(604)_Jin.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Boss Battle -->	
+		<Shop NPCIndex="583" MapNumber="139" PosX="119" PosY="115" Dir="2" VipType="-1" GmShop="0" FileName="NPC(583)_Jin.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	<!-- Battle Core -->
+		<Shop NPCIndex="683" MapNumber="79"	PosX="58" PosY="51" Dir="2" VipType="-1" GMShop="0" BattleCore="1" FileName="NPC(683)_Marce_B.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="684" MapNumber="79"	PosX="64" PosY="57" Dir="2" VipType="-1" GMShop="0" BattleCore="1" FileName="NPC(684)_Silvia_B.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="685" MapNumber="79"	PosX="68" PosY="66" Dir="2" VipType="-1" GMShop="0" BattleCore="1" FileName="NPC(685)_Izabel_B.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="686" MapNumber="79"	PosX="58" PosY="63" Dir="2" VipType="-1" GMShop="0" BattleCore="1" FileName="NPC(686)_Sophia_(repair)_B.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="687" MapNumber="79"	PosX="62" PosY="42" Dir="3" VipType="-1" GMShop="0" BattleCore="1" FileName="NPC(687)_Bolo_(repair)_B.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+		<Shop NPCIndex="688" MapNumber="79"	PosX="43" PosY="46" Dir="3" VipType="-1" GMShop="0" BattleCore="1" FileName="NPC(688)_Christine_B.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
+	</ShopList>
+	
+	<TextList>
+		<Text ID="0" Text="Potions and mixtures for everyone!" />
+		<Text ID="1" Text="Looking for a magician scroll? Check my store!" />
+		<Text ID="2" Text="Great armors, freshly from a hunt!" />
+		<Text ID="3" Text="Doing business with you will be a pleasure for me!" />
+		<Text ID="4" Text="You bloody bastard! Let me show you what I have for you." />
+		<Text ID="5" Text="Like my items? I like your money!" />
+	</TextList>
+</Shops>

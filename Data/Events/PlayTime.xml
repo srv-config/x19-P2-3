@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### PlayTime ###
+//	Enable: Deactivates or activates the event, 0/1
+//	MinLevel: Minimum (total) level to participate in the event
+//
+// ### PlayTime::RoundSettings::Round ###
+//	Number: Unique number of the round, starting from 1, max 255
+//	Time: Total play time to reach to complete specified round (play time accumulates), seconds
+//	ItemBagID: ID of item bag to issue a reward for completing specific round, see ItemBagsScript.lua
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<PlayTime Enable="0" MinLevel="220">
+	<RoundSettings>
+		<Round Number="1" Time="72000" ItemBagID="800" />
+		<Round Number="2" Time="144000" ItemBagID="801" />		
+		<Round Number="3" Time="216000" ItemBagID="802" />
+		<Round Number="4" Time="288000" ItemBagID="803" />	
+		<Round Number="5" Time="360000" ItemBagID="804" />		
+		<Round Number="6" Time="432000" ItemBagID="805" />		
+		<Round Number="7" Time="504000" ItemBagID="806" />	
+		<Round Number="8" Time="576000" ItemBagID="807" />		
+		<Round Number="9" Time="648000" ItemBagID="808" />		
+		<Round Number="10" Time="720000" ItemBagID="809" />	
+	</RoundSettings>
+</PlayTime>

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ System requires Starter Inventory plugin available from https://www.igcn.mu/store/?tab=plugins
+//~~ When [Character].[SIC] column is set to 1 the system will add configured starter items then sets back [SIC] to 0
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### StarterInventory ###
+//	Enable: Deactivates or activates the system, 0/1
+//
+// ### StarterInventory::ServerList::Server ###
+//	Code: Code of server the setting applies to, -1 is general use rule, if not defined then DefaultClassType table info is used
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Use hierarchy: Specific Server Code, Server Code -1, DefaultClassType table. System allows multiple "Server" sections
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### StarterInventory::ServerList::Server::Character ###
+//	Class: Class of character the setting applies to
+//		~ 0: Dark Wizard
+//		~ 1: Dark Knight
+//		~ 2: Fairy Elf
+//		~ 3: Magic Gladiator
+//		~ 4: Dark Lord
+//		~ 5: Summoner
+//		~ 6: Rage Fighter
+//		~ 7: Grow Lancer
+//		~ 8: Rune Wizard
+//		~ 9: Slayer
+//		~ 10: Gun Crusher
+//		~ 11: Light Wizard
+//		~ 12: Lemuria Mage
+//		~ 13: Illusion Knight
+//
+//	Evo: Character class Evo (job quest)
+//		~ 1: First Evo (base)
+//		~ 2: Second Evo
+//		~ 3: Third Evo
+//		~ 4: Fourth Evo
+//		~ 5: Fifth Evo
+//
+//	Level: Regular level of character to set, applies if set greater than 0
+//	MasterLevel: Master level of character to set, applies if set greater than 0
+//	Resets: Number of resets to set to the character, applies if set greater than 0
+//	MarlonFirstQuest: Defines whether to set first Marlon Quest as completed, may be required for selected characters, such as Dark Knight, 0/1
+//	MarlonSecondQuest: Defines whether to set second Marlon Quest as completed, may be required for selected characters, such as Dark Knight, 0/1
+//	GiantQuest: Defines whether to set Giant Quest as completed, can be set only for 5th class, 0/1
+//	GiantMountType: Giant type to set if GiantQuest is configured to 1
+//		~ 0: None, can be used only if GiantQuest is set to 0
+//		~ 1: Type 1 giant
+//		~ 2: Type 2 giant
+//		~ 3: Type 3 giant
+//
+//	Zen: Number of Zen to set to the character, max: 2147483647
+//	Ruud: Number of Ruud to set to the character, max: 2147483647
+//	InventoryExpansion: Apply expanded inventory
+//		~ 0: None
+//		~ 1: One
+//		~ 2: Two
+//
+// ### StarterInventory::ServerList::Server::Character::Stats ###
+//	Strength: Strength points to set, applied if set to greater than 0
+//	Dexterity: Dexterity points to set, applied if set to greater than 0
+//	Vitality: Vitality points to set, applied if set to greater than 0
+//	Energy: Energy points to set, applied if set to greater than 0
+//	Command: Command points to set, applied if set to greater than 0
+//	FreeStatPts: Free Stat Points, applied if set to greater than 0
+//	FreeMasterPts3rd: Third Master tree free points, applied if set to greater than 0
+//	FreeMasterPts4th: Fourth Master Tree free points, applied if set to greater than 0
+//
+// ### StarterInventory::ServerList::Server::Character::Equipment ###
+//	WeaponRight: ID value of right weapon
+//	WeaponLeft: ID value of left weapon
+//	Helm: ID value of Helm
+//	Armor: ID value of Armor
+//	Pants: ID value of Pants
+//	Boots: ID value of Boots
+//	Wings: ID value of Wings
+//	Helper: ID value of Helper
+//	Pendant: ID value of Pendant
+//	RingRight: ID value of right ring
+//	RingLeft: ID value of left ring
+//	Pentagram: ID value of pentagram
+//	EarringRight: ID value of right earring
+//	EarringLeft: ID value of left earring
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The ID value is configured within ID attribute in ### ItemList::Item ### section
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### StarterInventory::ServerList::Server::Character::Skills ###
+//	List: List of skills to add to the character, syntax: X;X;X;X;X;X;X etc; where X is skill index from SkillList.xml (third/fourth skill tree skills are not supported), skill must belong to specific character class/evo, maximum 40 skills
+//
+// ### StarterInventory::ServerList::Server::Character::Inventory ###
+//	List: List of items to insert to regular inventory, syntax: X;X;X;X;X;X;X etc; where X is ID value of item from ItemList::Item section of the file
+//
+// ### StarterInventory::ServerList::Server::Character::EventInventory ###
+//	List: List of items to insert to event inventory, syntax: X;X;X;X;X;X;X etc; where X is ID value of item from ItemList::Item section of the file
+//
+// ### StarterInventory::ServerList::Server::Character::Muun ###
+//	List: List of items to insert to Muun inventory, syntax: X;X;X;X;X;X;X etc; where X is ID value of item from ItemList::Item section of the file
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ System continues adding items on next free slots in Regular/Event/Muun inventory. Items that would overflow size of the inventory will not be added
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### StarterInventory::ServerList::Server::Character::Buffs ###
+//	List: List of buffs to apply to the character, syntax: X;X;X;X;X;X;X;X;X;X;X;X;X;X;X;X where X is ID value of item from BuffList::Buff section of the file, max 16
+//
+// ### StarterInventory::ServerList::Server::Character::Location ###
+//	MapNumber: Map number to spawn character on, -1 to disable
+//	StartX: Start X coordinate to spawn character on, 1-255
+//	EndX: End X coordinate to spawn character on, 1-255
+//	StartY: Start Y coordinate to spawn character on, 1-255
+//	EndY: EndY coordinate to spawn character on, 1-255
+//
+// ### StarterInventory::ItemList::Item ###
+//	ID: Unique ID of the item
+//	Cat: Group of the item, see ItemList.xml
+//	Index: Index of the item, see ItemList.xml
+//	Durability: Item durability, 1-255, if set to 0 the durability is being set automatically according to item defaults
+//	Level: Level of the item, 0-15
+//	Skill: Sets skill to the item
+//		~ -1: Random
+//		~ 0: No Skill
+//		~ 1: Skill
+//	Luck: Sets luck to the item
+//		~ -1: Random
+//		~ 0: No Luck
+//		~ 1: Luck
+//	Option: Sets luck to the item
+//		~ -1: Random
+//		~ 0: no option
+//		~ -1,2,3,4,5,6,7 (with specified option) +4,+8,+12,+16,+20,+24,+28
+//
+//	Exc:
+//		Excellent Options:
+//			-1: No exc option
+//			-2: Random count of random options (based on rates from ExcellentOptions.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
+//			-10: A draw of bonus and excellent options set from MasteryExcOptions.xml. If used, the skill and luck attributes from this file are ignored, see referred file for further details.
+//			X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//		Grade Options (4th Wings):
+//			-1: No grade option
+//			-2: Random count of random options (based on rates from ItemGradeOption.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of grade options, max 4 (options selection based on rates from ItemGradeOption.xml)
+//			ID1;LV1;ID2;LV2;ID3;LV3;ID4;LV4: Defines grade option index and option level, the 'IDX' is grade option index and LVX is grade option level based on Index and GradeXVal (0-9) from ItemGradeOption.xml, maximum 4 options can be defined
+//		Guardian Items:
+//			-1: No option
+//			-2;X: Random count of random options (based on rates from GuardianItemOption.xml), the 'X' takes value 0 or 1, determining whether to generate random elite option or not
+//			-3;X;Y: Specified count of random options, the 'X' defines count of options, max 4, the 'Y' takes value 0 or 1, determining whether to generate random elite option or not
+//			X;X;X;X;Y: Defines specific options, the 'X' is guardian regular option index from GuardianItemOption.xml::OptionList section, maximum 4 options can be defined, -1 if not applies, the Y is elite option index from GuardianItemOption.xml::EliteOptionList, must be defined as 5th argument, -1 if not applies
+//		Artifact Items:
+//			-1: No Option
+//			-2: Random options set (based on rates from ArtifactSystem.xml)
+//			X1;Y1;X2;Y2;X3;Y3: X is OptionType value from ArtifactOption.xml, -1 if not applies, Y is value index, 1~10, referring to ValueX of selected option, -1 if not applies
+//
+//	SetItem: To reward ancient item properly it must added as ancient in relevant systems, otherwise option will be ignored
+//		~ -1: Random tier based on defined item
+//		~ 0: no ancient
+//		~ 1: Tier I ancient
+//		~ 2: Tier I ancient
+//		~ 3: Tier I ancient
+//		~ 4: Tier I ancient
+//
+//	SocketCount:
+//		~ 0: no Socket slots
+//		~ 1: up to one slot
+//		~ 2: up to two slots
+//		~ 3: up to three slots
+//		~ 4: up to four slots
+//		~ 5: up to five slots
+//	    ~ -2: random count of socket slots (Pentagrams and Socket Items)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Type attribute of the item must be set to 2 - refer to ItemList.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	ElementalItem:
+//		~ 0: no Elemental attribute
+//		~ 1: Fire
+//		~ 2: Water
+//		~ 3: Earth
+//		~ 4: Wind
+//		~ 5: Darkness
+//		~ -1: Random attribute
+//	Duration: Allows to drop expirable item, seconds (not every item is suitable for period items system, please test before putting on live server)
+//	Name: Name of the item, used for in-file description purpose only
+//
+// ### StarterInventory::BuffList::Buff ###
+//	ID: Unique ID of the buff
+//	ItemType: Item group the item is assigned to, see BuffEffectManager.xml
+//	ItemIndex: Item index the item is assigned to, see BuffEffectManager.xml
+//	Duration: Duration of the buff, seconds
+//	Name: Name of the Buff, used for in-file description only
+//	Description: Description of the Buff, used for in-file description only
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Section is used only to define item based buffs that are not inventory activated buff items
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<StarterInventory Enable="0">
+	<ServerList>
+		<Server Code="-1">
+			<Character Class="0" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Wizard -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="0" WeaponLeft="1" Helm="41" Armor="52" Pants="63" Gloves="74" Boots="85" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+				<Location MapNumber="-1" StartX="1" EndX="255" StartY="1" EndY="255" />
+			</Character>
+			
+			<Character Class="1" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Knight -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="2" WeaponLeft="3" Helm="29" Armor="50" Pants="61" Gloves="72" Boots="83" Wings="96" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="2" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Elf -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="4" WeaponLeft="5" Helm="30" Armor="51" Pants="62" Gloves="73" Boots="84" Wings="94" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="3" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Magic Gladiator -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="6" WeaponLeft="7" Helm="-1" Armor="52" Pants="63" Gloves="74" Boots="85" Wings="96" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="4" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Dark Lord -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="8" WeaponLeft="-1" Helm="29" Armor="50" Pants="61" Gloves="72" Boots="83" Wings="97" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="10" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="5" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Summoner -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="11" WeaponLeft="12" Helm="42" Armor="53" Pants="64" Gloves="75" Boots="86" Wings="97" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="6" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Rage Fighter -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="13" WeaponLeft="13" Helm="29" Armor="50" Pants="61" Gloves="-1" Boots="83" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="7" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Grow Lancer -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Skills List="" />
+				<Equipment WeaponRight="15" WeaponLeft="16" Helm="43" Armor="54" Pants="65" Gloves="76" Boots="87" Wings="97" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="8" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Rune Wizard -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Skills List="" />
+				<Equipment WeaponRight="17" WeaponLeft="18" Helm="44" Armor="55" Pants="66" Gloves="77" Boots="88" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="9" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Slayer -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="19" WeaponLeft="19" Helm="45" Armor="56" Pants="67" Gloves="78" Boots="89" Wings="96" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="10" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Gun Crusher -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="21" WeaponLeft="21" Helm="46" Armor="57" Pants="68" Gloves="79" Boots="90" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="11" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Light Wizard -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="0" WeaponLeft="23" Helm="47" Armor="58" Pants="69" Gloves="80" Boots="91" Wings="98" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="12" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Lemuria Mage -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="25" WeaponLeft="7" Helm="48" Armor="59" Pants="70" Gloves="81" Boots="92" Wings="95" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+			
+			<Character Class="13" Evo="1" Level="0" MasterLevel="0" Resets="0" MarlonFirstQuest="0" MarlonSecondQuest="0" GiantQuest="0" GiantMountType="0" Zen="1000" Ruud="100" InventoryExpansion="0"> <!-- Illusion Knight -->
+				<Stats Strength="0" Dexterity="0" Vitality="0" Energy="0" Command="0" FreeStatPts="400" FreeMasterPts3rd="0" FreeMasterPts4th="0" />
+				<Equipment WeaponRight="28" WeaponLeft="-1" Helm="49" Armor="60" Pants="71" Gloves="82" Boots="93" Wings="99" Helper="170" Pendant="110" RingRight="126" RingLeft="127" Pentagram="-1" EarringRight="-1" EarringLeft="-1" />
+				<Skills List="" />
+				<Inventory List="" />
+				<EventInventory List="" />
+				<MuunInventory List="" />
+				<Buffs List="0;7" />
+			</Character>
+		</Server>
+	</ServerList>
+	
+	<ItemList>
+		<Item ID="0" Cat="5" Index="5" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Legendary Staff" />
+		<Item ID="1" Cat="6" Index="6" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Skull Shield" />
+		<Item ID="2" Cat="0" Index="14" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Lighting Sword" />
+		<Item ID="3" Cat="6" Index="13" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Dragon Shield" />
+		<Item ID="4" Cat="4" Index="13" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Bluewing Crossbow" />
+		<Item ID="5" Cat="4" Index="7" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Bolt" />
+		<Item ID="6" Cat="0" Index="16" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Sword of Destruction" />
+		<Item ID="7" Cat="6" Index="14" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Legendary Shield" />
+		<Item ID="8" Cat="2" Index="11" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Lord Scepter" />
+		<Item ID="9" Cat="13" Index="4" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Dark Horse" />
+		<Item ID="10" Cat="13" Index="5" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Dark Raven" />
+		<Item ID="11" Cat="5" Index="17" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Ancient Stick" />
+		<Item ID="12" Cat="5" Index="21" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Book of Shamut" />
+		<Item ID="13" Cat="0" Index="32" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Sacred Claws" />
+		<Item ID="14" Cat="0" Index="33" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Holy Storm Claws" />
+		<Item ID="15" Cat="3" Index="15" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Pluma Lance" />
+		<Item ID="16" Cat="6" Index="30" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Pluma Shield" />
+		<Item ID="17" Cat="2" Index="29" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="El Hazar Mace" />
+		<Item ID="18" Cat="6" Index="42" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="El Hazar Shield" />
+		<Item ID="19" Cat="0" Index="66" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Flat Short Sword" />
+		<Item ID="20" Cat="0" Index="68" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Cookery Short Sword" />
+		<Item ID="21" Cat="4" Index="42" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Entropy Gun" />
+		<Item ID="22" Cat="4" Index="43" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Fere Magic Gun" />
+		<Item ID="23" Cat="5" Index="68" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Basic Magic Book" />
+		<Item ID="24" Cat="5" Index="69" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Elemental Magic Book" />
+		<Item ID="25" Cat="5" Index="81" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Royal Orb" />
+		<Item ID="26" Cat="5" Index="82" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Mytois Orb" />
+		<Item ID="27" Cat="0" Index="101" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Silver Blade" />
+		<Item ID="28" Cat="0" Index="102" Durability="0" Level="9" Skill="1" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Xeno Blade" />
+		<!-- Helmets -->
+		<Item ID="29" Cat="7" Index="62" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Helm" />
+		<Item ID="30" Cat="7" Index="63" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Silk Helm" />
+		<Item ID="41" Cat="7" Index="64" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Sphinx Helm" />
+		<Item ID="42" Cat="7" Index="65" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Violent Wind Helm" />
+		<Item ID="43" Cat="7" Index="96" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Robust Helm" />
+		<Item ID="44" Cat="7" Index="124" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Rune Sphinx Mask" />
+		<Item ID="45" Cat="7" Index="186" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Slayer Helm (B)" />
+		<Item ID="46" Cat="7" Index="218" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Gunner Helm" />
+		<Item ID="47" Cat="7" Index="249" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Glimmer Helmet" />
+		<Item ID="48" Cat="7" Index="267" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Mage Sphinx Mask" />
+		<Item ID="49" Cat="7" Index="315" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Illusion Knight Iron Plate Helmet" />
+		<!-- Armors -->
+		<Item ID="50" Cat="8" Index="62" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Armor" />
+		<Item ID="51" Cat="8" Index="63" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Silk Armor" />
+		<Item ID="52" Cat="8" Index="64" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Sphinx Armor" />
+		<Item ID="53" Cat="8" Index="65" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Violent Wind Armor" />
+		<Item ID="54" Cat="8" Index="96" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Robust Armor" />
+		<Item ID="55" Cat="8" Index="124" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Rune Sphinx Armor" />
+		<Item ID="56" Cat="8" Index="186" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Slayer Armor (B)" />
+		<Item ID="57" Cat="8" Index="218" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Gunner Armor" />
+		<Item ID="58" Cat="8" Index="249" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Glimmer Armor" />
+		<Item ID="59" Cat="8" Index="267" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Mage Sphinx Armor" />
+		<Item ID="60" Cat="8" Index="315" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Illusion Knight Iron Plate Armor" />
+		<!-- Pants -->
+		<Item ID="61" Cat="9" Index="62" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Pants" />
+		<Item ID="62" Cat="9" Index="63" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Silk Pants" />
+		<Item ID="63" Cat="9" Index="64" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Sphinx Pants" />
+		<Item ID="64" Cat="9" Index="65" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Violent Wind Pants" />
+		<Item ID="65" Cat="9" Index="96" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Robust Pants" />
+		<Item ID="66" Cat="9" Index="124" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Rune Sphinx Pants" />
+		<Item ID="67" Cat="9" Index="186" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Slayer Pants (B)" />
+		<Item ID="68" Cat="9" Index="218" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Gunner Pants" />
+		<Item ID="69" Cat="9" Index="249" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Glimmer Pants" />
+		<Item ID="70" Cat="9" Index="267" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Mage Sphinx Pants" />
+		<Item ID="71" Cat="9" Index="315" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Illusion Knight Iron Plate Pants" />
+		<!-- Gloves -->
+		<Item ID="72" Cat="10" Index="62" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Gloves" />
+		<Item ID="73" Cat="10" Index="63" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Silk Gloves" />
+		<Item ID="74" Cat="10" Index="64" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Sphinx Gloves" />
+		<Item ID="75" Cat="10" Index="65" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Violent Wind Gloves" />
+		<Item ID="76" Cat="10" Index="96" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Robust Gloves" />
+		<Item ID="77" Cat="10" Index="124" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Rune Sphinx Gloves" />
+		<Item ID="78" Cat="10" Index="186" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Slayer Gloves (B)" />
+		<Item ID="79" Cat="10" Index="218" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Gunner Gloves" />
+		<Item ID="80" Cat="10" Index="249" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Glimmer Gloves" />
+		<Item ID="81" Cat="10" Index="267" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Mage Sphinx Gloves" />
+		<Item ID="82" Cat="10" Index="315" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Illusion Knight Iron Plate Gloves" />
+		<!-- Boots -->
+		<Item ID="83" Cat="11" Index="62" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Boots" />
+		<Item ID="84" Cat="11" Index="63" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Silk Boots" />
+		<Item ID="85" Cat="11" Index="64" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Sphinx Boots" />
+		<Item ID="86" Cat="11" Index="65" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Violent Wind Boots" />
+		<Item ID="87" Cat="11" Index="96" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Robust Boots" />
+		<Item ID="88" Cat="11" Index="124" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Rune Sphinx Boots" />
+		<Item ID="89" Cat="11" Index="186" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Slayer Boots (B)" />
+		<Item ID="90" Cat="11" Index="218" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Scale Gunner Boots" />
+		<Item ID="91" Cat="11" Index="249" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Glimmer Boots" />
+		<Item ID="92" Cat="11" Index="267" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Mage Sphinx Boots" />
+		<Item ID="93" Cat="11" Index="315" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="0" Name="Illusion Knight Iron Plate Boots" />
+		<!-- Wings -->
+		<Item ID="94" Cat="12" Index="0" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Wings of Elf" />
+		<Item ID="95" Cat="12" Index="1" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Wings of Heaven" />
+		<Item ID="96" Cat="12" Index="2" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Wings of Satan" />
+		<Item ID="97" Cat="12" Index="41" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Wings of Curse" />
+		<Item ID="98" Cat="12" Index="155" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Pure White Cloak" />
+		<Item ID="99" Cat="12" Index="173" Durability="0" Level="9" Skill="0" Luck="1" Option="3" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Iron Cloak" />
+		<!-- Earrings -->
+		<Item ID="100" Cat="12" Index="449" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Rage Earring (L)" />
+		<Item ID="101" Cat="12" Index="450" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ancestral Earring (L)" />
+		<Item ID="102" Cat="12" Index="451" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Earring of Honor (L)" />
+		<Item ID="103" Cat="12" Index="452" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Blood Earring (L)" />
+		<Item ID="104" Cat="12" Index="453" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Daze Earring (L)" />
+		<Item ID="105" Cat="12" Index="457" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Rage Earring (R)" />
+		<Item ID="106" Cat="12" Index="458" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ancestral Earring (R)" />
+		<Item ID="107" Cat="12" Index="459" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Earring of Honor (R)" /> 
+		<Item ID="108" Cat="12" Index="460" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Blood Earring (R)" />
+		<Item ID="109" Cat="12" Index="461" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Daze Earring (R)" />
+		<!-- Pendants -->
+		<Item ID="110" Cat="13" Index="12" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Pendant of Lighting" />
+		<Item ID="111" Cat="13" Index="13" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Pendant of Fire" />
+		<Item ID="112" Cat="13" Index="25" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Pendant of Ice" />
+		<Item ID="113" Cat="13" Index="26" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Pendant of Wind" />
+		<Item ID="114" Cat="13" Index="27" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Pendant of Water" />
+		<Item ID="115" Cat="13" Index="28" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Pendant of Ability" />
+		<Item ID="116" Cat="13" Index="113" Durability="255" Level="0" Skill="0" Luck="0" Option="3" Exc="0" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ruby Necklace" />
+		<Item ID="117" Cat="13" Index="114" Durability="255" Level="0" Skill="0" Luck="0" Option="3" Exc="3" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Emerald Necklace" />
+		<Item ID="118" Cat="13" Index="115" Durability="255" Level="0" Skill="0" Luck="0" Option="3" Exc="5" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Sapphire Necklace" />
+		<Item ID="119" Cat="13" Index="171" Durability="255" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Necklace of Agony" />
+		<Item ID="120" Cat="20" Index="39" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Jasper Necklace" />
+		<Item ID="121" Cat="20" Index="40" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Lapis Lazuli Necklace" />
+		<Item ID="122" Cat="20" Index="41" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Battle Jasper Necklace" />
+		<Item ID="123" Cat="20" Index="42" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Battle Lagoon Necklace" />
+		<!-- Rings -->
+		<Item ID="124" Cat="13" Index="8" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of Ice" />
+		<Item ID="125" Cat="13" Index="9" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of Poison" />
+		<Item ID="126" Cat="13" Index="21" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of Fire" />
+		<Item ID="127" Cat="13" Index="22" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of Earth" />
+		<Item ID="128" Cat="13" Index="23" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of Wind" />
+		<Item ID="129" Cat="13" Index="24" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of Magic" />
+		<Item ID="130" Cat="13" Index="42" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of GM" />
+		<Item ID="131" Cat="13" Index="173" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of Ultimatum" />
+		<Item ID="132" Cat="13" Index="174" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Name="Ring of Block" />
+		<Item ID="133" Cat="13" Index="111" Durability="0" Level="0" Skill="0" Luck="0" Option="3" Exc="5" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Description="Topaz Ring" />
+		<Item ID="134" Cat="13" Index="110" Durability="0" Level="0" Skill="0" Luck="0" Option="3" Exc="0" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Description="Ruby Ring" />
+		<Item ID="135" Cat="13" Index="109" Durability="0" Level="0" Skill="0" Luck="0" Option="3" Exc="1" SetItem="0" SocketCount="0" ElementalItem="0" Duration="604800" Description="Sapphire Ring" />
+		<!-- Pentagrams -->
+		<Item ID="146" Cat="12" Index="200" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Muren's Book of Magic" />
+		<Item ID="147" Cat="12" Index="201" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Scroll of Etramu" />
+		<Item ID="148" Cat="12" Index="202" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Lorencia Knights' Iron Shield" />
+		<Item ID="149" Cat="12" Index="203" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Iron Shield of the Magic" />
+		<Item ID="150" Cat="12" Index="204" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Hero Elixir" />
+		<Item ID="151" Cat="12" Index="205" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Brave Hero Elixir" />
+		<Item ID="152" Cat="12" Index="206" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Gladiator's Dagger" />
+		<Item ID="153" Cat="12" Index="207" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Merciless Gladiator's Dagger" />
+		<Item ID="154" Cat="12" Index="208" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Kundun's Madness Blade" />
+		<Item ID="155" Cat="12" Index="209" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Kundun's Magic Spell Scroll" />
+		<Item ID="156" Cat="12" Index="210" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Empire Guardians' Stronghold" />
+		<Item ID="157" Cat="12" Index="211" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Ancient Icarus Scroll" />
+		<Item ID="158" Cat="12" Index="212" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Arca's Prophecy" />
+		<Item ID="159" Cat="12" Index="213" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Antonia's Sword" />
+		<Item ID="160" Cat="12" Index="214" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Kundun's Seal Scroll" />
+		<Item ID="161" Cat="12" Index="215" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Pentagram for Beginners" />
+		<Item ID="162" Cat="12" Index="216" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="[Bound] Iron Shield" />
+		<Item ID="163" Cat="12" Index="217" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Thoughtful Sage's Jewel" />
+		<Item ID="164" Cat="12" Index="218" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Magic Scroll (Attributable)" />
+		<Item ID="165" Cat="12" Index="306" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Runedil's Goldentune Harp" />
+		<Item ID="166" Cat="12" Index="307" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Lemuria's Orb" />
+		<Item ID="167" Cat="12" Index="308" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Norrwen's Bloodstring Lyra" />
+		<Item ID="168" Cat="12" Index="500" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Brilliant Orb (I)" />
+		<Item ID="169" Cat="12" Index="503" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Duration="604800" Name="Antonias' Sword (I)" />
+		<!-- Helpers -->
+		<Item ID="170" Cat="13" Index="0" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Duration="0" Name="Guardian Angel" />
+		<Item ID="171" Cat="13" Index="1" Durability="0" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Duration="0" Name="Imp" />
+	</ItemList>
+	
+	<BuffList>
+		<Buff ID="0" ItemType="13" ItemIndex="43" Duration="604800" Name="Seal of Ascension" Description="EXP gain increase 50%" />
+		<Buff ID="1" ItemType="13" ItemIndex="44" Duration="604800" Name="Seal of Wealth" Description="EXP gain increase 100%/item gain increase 150%" />
+		<Buff ID="2" ItemType="13" ItemIndex="45" Duration="604800" Name="Seal of Sustenance" Description="EXP gain disabled" />
+		<Buff ID="3" ItemType="13" ItemIndex="43" Duration="604800" Name="Seal of Ascension" Description="EXP gain increase 50%" />
+		<Buff ID="4" ItemType="13" ItemIndex="44" Duration="604800" Name="Seal of Wealth" Description="EXP gain increase 100%/Item gain increase 150%" />
+		<Buff ID="5" ItemType="13" ItemIndex="45" Duration="604800" Name="Seal of Sustenance" Description="EXP gain disabled" />
+		<Buff ID="6" ItemType="13" ItemIndex="59" Duration="604800" Name="Seal of Mobility" Description="Mobility enabled" />
+		<Buff ID="7" ItemType="14" ItemIndex="72" Duration="604800" Name="Scroll of Quickness" Description="Attack speed increase +15" />
+		<Buff ID="8" ItemType="14" ItemIndex="73" Duration="604800" Name="Scroll of Defense" Description="Defensibility increase +60" />
+		<Buff ID="9" ItemType="14" ItemIndex="74" Duration="604800" Name="Scroll of Wrath" Description="Attack power increase +30" />
+		<Buff ID="10" ItemType="14" ItemIndex="75" Duration="604800" Name="Scroll of Wizardry" Description="Wizardry, Curse increase +30" />
+		<Buff ID="11" ItemType="14" ItemIndex="76" Duration="604800" Name="Scroll of Health" Description="HP increase +200" />
+		<Buff ID="12" ItemType="14" ItemIndex="77" Duration="604800" Name="Scroll of Mana" Description="Mana increase +300" />
+		<Buff ID="13" ItemType="13" ItemIndex="62" Duration="604800" Name="Seal of Healing" Description="EXP gain increase 50%/Automatic Life recovery at 5%" />
+		<Buff ID="14" ItemType="13" ItemIndex="63" Duration="604800" Name="Seal of Divinity" Description="Item gain increase at 150%/Automatic Mana recovery at 5%" />
+		<Buff ID="15" ItemType="14" ItemIndex="97" Duration="604800" Name="Scroll of Battle" Description="Critical damage increase at 20%" />
+		<Buff ID="16" ItemType="14" ItemIndex="98" Duration="604800" Name="Scroll of Strength" Description="Excellent damage increase at 20%" />
+		<Buff ID="17" ItemType="13" ItemIndex="81" Duration="604800" Name="Talisman of Protection" Description="You receive no penalties when dying../Cannot receive this effect when you are  in outlaw status." />
+		<Buff ID="18" ItemType="13" ItemIndex="82" Duration="604800" Name="Talisman of Item Protection" Description="Keeps item durable" />
+		<Buff ID="19" ItemType="13" ItemIndex="93" Duration="604800" Name="Master Seal of Ascension" Description="EXP gain increase 50%" />
+		<Buff ID="20" ItemType="13" ItemIndex="94" Duration="604800" Name="Master Seal of Wealth" Description="EXP gain increase 100%/Item gain increase 150%" />
+		<Buff ID="21" ItemType="13" ItemIndex="96" Duration="604800" Name="Seal of Strength" Description="Increases Attack Rate and Defense Rate" />
+		<Buff ID="22" ItemType="13" ItemIndex="104" Duration="604800" Name="Max AG Boost Aura" Description="Increases your max AG." />
+		<Buff ID="23" ItemType="13" ItemIndex="105" Duration="604800" Name="Max SD Boost Aura" Description="Increases your max SD." />
+		<Buff ID="24" ItemType="13" ItemIndex="116" Duration="604800" Name="Seal of Wealth" Description="Increases Item Drop Rate to 150%." />
+		<Buff ID="25" ItemType="14" ItemIndex="140" Duration="604800" Name="Scroll of Healing" Description="+3% HP Regen/+100 HP" />
+		<Buff ID="26" ItemType="13" ItemIndex="177" Duration="604800" Name="Talisman of Ascension I" Description="Earning additional 50% EXP" />
+		<Buff ID="27" ItemType="13" ItemIndex="178" Duration="604800" Name="Talisman of Ascension II" Description="Earning additional 100% EXP" />
+		<Buff ID="28" ItemType="13" ItemIndex="179" Duration="604800" Name="Talisman of Ascension III" Description="Earning additional 200% EXP" />
+		<Buff ID="29" ItemType="13" ItemIndex="180" Duration="604800" Name="Seal of Ascension II" Description="Earning additional 100% EXP" />
+		<Buff ID="30" ItemType="13" ItemIndex="181" Duration="604800" Name="Seal of Ascension II" Description="Earning additional 100% EXP (For Master Level)" />
+		<Buff ID="31" ItemType="14" ItemIndex="224" Duration="604800" Name="Bless of Light (Greater)" Description="Earning additional 200% EXP after quick blessing" />
+		<Buff ID="32" ItemType="14" ItemIndex="225" Duration="604800" Name="Scroll Master of Defense" Description="Defense +120" />
+		<Buff ID="33" ItemType="14" ItemIndex="226" Duration="604800" Name="Scroll Master of Wizardry" Description="Wizardry +60" />
+		<Buff ID="34" ItemType="14" ItemIndex="227" Duration="604800" Name="Scroll Master of Health" Description="HP +400" />
+		<Buff ID="35" ItemType="14" ItemIndex="228" Duration="604800" Name="Scroll Master of Mana" Description="MP +600" />
+		<Buff ID="36" ItemType="14" ItemIndex="229" Duration="604800" Name="Scroll Master of Wrath" Description="Attack Power +60" />
+		<Buff ID="37" ItemType="14" ItemIndex="230" Duration="604800" Name="Scroll Master of Recovery" Description="Automatic HP Recovery +4%, HP +200" />
+		<Buff ID="38" ItemType="14" ItemIndex="231" Duration="604800" Name="Scroll Master of Battle" Description="Critical Damage +25%" />
+		<Buff ID="39" ItemType="14" ItemIndex="232" Duration="604800" Name="Scroll Master of Strengthener" Description="Excellent Damage +25%" />
+		<Buff ID="40" ItemType="14" ItemIndex="235" Duration="604800" Name="Scroll Master of Quickness" Description="Attack speed increase +20" />
+	</BuffList>
+</StarterInventory>

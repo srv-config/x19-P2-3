@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file need to be reflected on game client side in WingCoreOption.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### WingCoreOption::OptionRandCount::Option ###
+//	Count: Number of options for wing core mix, 0-2
+//	Rate: Chance rate of getting specific number of additional options, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates in column must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### WingCoreOption::WingCoreList::Core ###
+//	Index: Unique index of wing core
+//	Type: Type of Wing Core options apply to
+//		~ 1: First Type
+//
+//	ItemCat: Category of Wing Core item
+//	ItemIndex: Index of Wing Core item
+//	OptionIndex: Index of static wing core option
+//		~ 23: Wing attack power/magic power/curse power increase
+//
+//	FormulaGroup: Formula group to read formulas from, FormulaData.xml::FormulaData::WingCore
+//	FormulaID: Formula ID of assigned core static option, refers to FormulaData.xml::FormulaData::WingCore
+//	TextID: Option Text ID from itemtooltiptext.bmd (client side)
+//	Name: Name of static option that applies to the wing core
+//
+// ### WingCoreOption::WingCoreOption::Option ###
+//	CoreType: Type of Wing Core options apply to
+//		~ 1: First Type
+//
+//	Index: Index of option that can apply to wing core
+//	Value: Static value for the option
+//	TextID: Option Text ID from itemtooltiptext.bmd (client side)
+//	Rate: Chance rate of getting specific option, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of Rates for all options must be equal to 1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Name: Name of option
+//
+// ### WingCoreOption::WingCoreLevelUp::Upgrade ###
+//	InitialLevel: Core item level required for upgrade, 0-14
+//	ReqMoney: Money required for upgrade, Zen
+//	ReqItemCat: Required item category
+//	ReqItemIndex: Required item index
+//	ReqItemCount: Required item count
+//	SuccessRate: Success rate for the upgrade, 0-100
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<WingCoreOption>
+	<OptionRandCount>
+		<Option Count="0" Rate="360000"/>
+		<Option Count="1" Rate="340000"/>
+		<Option Count="2" Rate="300000"/>
+	</OptionRandCount>
+	<WingCoreList>
+		<Core Index="0" Type="1" ItemCat="13" ItemIndex="182" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+		<Core Index="1" Type="1" ItemCat="13" ItemIndex="183" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+		<Core Index="2" Type="1" ItemCat="13" ItemIndex="184" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+		<Core Index="3" Type="1" ItemCat="13" ItemIndex="185" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+		<Core Index="4" Type="1" ItemCat="13" ItemIndex="186" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+		<Core Index="5" Type="1" ItemCat="13" ItemIndex="187" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+		<Core Index="6" Type="1" ItemCat="13" ItemIndex="188" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+		<Core Index="7" Type="1" ItemCat="13" ItemIndex="189" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+		<Core Index="8" Type="1" ItemCat="13" ItemIndex="190" OptionIndex="23" FormulaGroup="14" FormulaID="2" TextID="1386" Name="Wing attack power/magic power/curse power increase +%d"/>
+	</WingCoreList>
+	<WingCoreOption>
+		<Option CoreType="1" Index="11" Value="170" TextID="1390" Rate="100000" Name="Elemental attack power increased by %d" />
+		<Option CoreType="1" Index="12" Value="100" TextID="1391" Rate="50000" Name="Elemental defense increased by %d" />
+		<Option CoreType="1" Index="13" Value="125" TextID="1392" Rate="240000" Name="Elemental attack success rate increases by %d" />
+		<Option CoreType="1" Index="14" Value="125" TextID="1393" Rate="200000" Name="Elemental defense success rate increased by %d" />
+		<Option CoreType="1" Index="15" Value="240" TextID="1394" Rate="50000" Name="Elemental attack power (II) increases by %d" />
+		<Option CoreType="1" Index="16" Value="210" TextID="1395" Rate="30000" Name="Elemental defense (II) increases by %d" />
+		<Option CoreType="1" Index="17" Value="200" TextID="1396" Rate="120000" Name="Elemental attack success rate (II) increases by %d" />
+		<Option CoreType="1" Index="18" Value="200" TextID="1397" Rate="100000" Name="Elemental defense success rate (II) increases by %d" />
+		<Option CoreType="1" Index="19" Value="120" TextID="1398" Rate="40000" Name="Extra Nuke damage increased by %d" />
+		<Option CoreType="1" Index="20" Value="80" TextID="1399" Rate="30000" Name="Extra Bolt damage increased by %d" />
+		<Option CoreType="1" Index="21" Value="40" TextID="1400" Rate="20000" Name="Extra AoE damage increased by %d" />
+		<Option CoreType="1" Index="22" Value="50" TextID="1401" Rate="20000" Name="Extra damage reduced by %d" />
+	</WingCoreOption>
+	<WingCoreLevelUp>
+		<Upgrade InitialLevel="0" ReqMoney="1000000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="1" SuccessRate="90" />
+		<Upgrade InitialLevel="1" ReqMoney="1500000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="2" SuccessRate="90" />
+		<Upgrade InitialLevel="2" ReqMoney="2000000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="2" SuccessRate="90" />
+		<Upgrade InitialLevel="3" ReqMoney="2500000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="2" SuccessRate="90" />
+		<Upgrade InitialLevel="4" ReqMoney="3000000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="3" SuccessRate="90" />
+		<Upgrade InitialLevel="5" ReqMoney="3500000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="3" SuccessRate="90" />
+		<Upgrade InitialLevel="6" ReqMoney="4000000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="4" SuccessRate="90" />
+		<Upgrade InitialLevel="7" ReqMoney="4500000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="4" SuccessRate="80" />
+		<Upgrade InitialLevel="8" ReqMoney="5000000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="4" SuccessRate="80" />
+		<Upgrade InitialLevel="9" ReqMoney="5500000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="5" SuccessRate="75" />
+		<Upgrade InitialLevel="10" ReqMoney="6000000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="5" SuccessRate="75" />
+		<Upgrade InitialLevel="11" ReqMoney="6500000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="5" SuccessRate="70" />
+		<Upgrade InitialLevel="12" ReqMoney="7000000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="5" SuccessRate="70" />
+		<Upgrade InitialLevel="13" ReqMoney="7500000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="5" SuccessRate="65" />
+		<Upgrade InitialLevel="14" ReqMoney="8000000" ReqItemCat="20" ReqItemIndex="161" ReqItemCount="5" SuccessRate="65" />		
+	</WingCoreLevelUp>
+</WingCoreOption>

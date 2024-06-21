@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file need to be reflected on game client side in ParticleBook.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### AbilityCardBook::Item ###
+//	Cat: Category of card item
+//	Index: Index of card item
+//	OptionIndex: Index of option for specific card, refers to AbilityCardOption.xml::AbilityCardOptions::OptionList::Option::Index attribute, set -1 for skill cards
+//	AddOptionIndex: Index of add option for specific card, refers to AbilityCardAddOption.xml::AbilityCardAddOptions::OptionList::Option::Index, set -1 for option and elite cards
+//	DW: Can card be used by DW class, 0/1
+//	DK: Can card be used by DK class, 0/1
+//	ELF: Can card be used by ELF class, 0/1
+//	MG: Can card be used by MG class, 0/1
+//	DL: Can card be used by DL class, 0/1
+//	SU: Can card be used by SU class, 0/1
+//	RF: Can card be used by RF class, 0/1
+//	GL: Can card be used by GL class, 0/1
+//	RW: Can card be used by RW class, 0/1
+//	SLA: Can card be used by SLA class, 0/1
+//	GC: Can card be used by GC class, 0/1
+//	LW: Can card be used by LW class, 0/1
+//	LM: Can card be used by LM class, 0/1
+//	IK: Can card be used by IK class, 0/1
+//	OptionID: ID of card option setting, refers to AbilityCardOption.xml::AbilityCardOptions::CardOption::Option::ID attribute
+//	
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<AbilityCardBook>
+	<Item Cat="20" Index="235" OptionIndex="80" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="236" OptionIndex="81" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="237" OptionIndex="82" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="165" OptionIndex="-1" AddOptionIndex="65" DW="1" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="165" OptionIndex="-1" AddOptionIndex="66" DW="1" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="165" OptionIndex="-1" AddOptionIndex="67" DW="1" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="168" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="1" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="168" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="1" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="168" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="1" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="171" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="1" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="171" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="1" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="171" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="1" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="172" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="1" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="7" />
+	<Item Cat="20" Index="172" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="1" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="7" />
+	<Item Cat="20" Index="172" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="1" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="7" />
+	<Item Cat="20" Index="175" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="1" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="175" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="1" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="175" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="1" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="177" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="1" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="2" />
+	<Item Cat="20" Index="177" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="1" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="2" />
+	<Item Cat="20" Index="177" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="1" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="2" />
+	<Item Cat="20" Index="179" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="1" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="179" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="1" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="179" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="1" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="182" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="1" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="7" />
+	<Item Cat="20" Index="182" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="1" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="7" />
+	<Item Cat="20" Index="182" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="1" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="7" />
+	<Item Cat="20" Index="246" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="1" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="49" />
+	<Item Cat="20" Index="246" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="1" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="49" />
+	<Item Cat="20" Index="246" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="1" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="49" />
+	<Item Cat="20" Index="186" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="1" />
+	<Item Cat="20" Index="186" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="1" />
+	<Item Cat="20" Index="186" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="1" />
+	<Item Cat="20" Index="188" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="188" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="188" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="189" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="1" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="189" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="1" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="189" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="1" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="191" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="1" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="191" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="1" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="191" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="1" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="193" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="1" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="8" />
+	<Item Cat="20" Index="193" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="1" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="8" />
+	<Item Cat="20" Index="193" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="1" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="8" />
+	<Item Cat="20" Index="234" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="1" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="8" />
+	<Item Cat="20" Index="234" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="1" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="8" />
+	<Item Cat="20" Index="234" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="1" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="8" />
+	<Item Cat="20" Index="196" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="1" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="1" />
+	<Item Cat="20" Index="196" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="1" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="1" />
+	<Item Cat="20" Index="196" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="1" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="1" />
+	<Item Cat="20" Index="199" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="199" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="199" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="0" OptionID="4" />
+	<Item Cat="20" Index="201" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="1" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="201" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="1" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="201" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="1" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="208" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="1" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="208" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="1" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="208" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="1" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="204" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="1" IK="0" OptionID="9" />
+	<Item Cat="20" Index="204" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="1" IK="0" OptionID="9" />
+	<Item Cat="20" Index="204" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="1" IK="0" OptionID="9" />
+	<Item Cat="20" Index="210" OptionIndex="-1" AddOptionIndex="65" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="1" OptionID="5" />
+	<Item Cat="20" Index="210" OptionIndex="-1" AddOptionIndex="66" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="1" OptionID="5" />
+	<Item Cat="20" Index="210" OptionIndex="-1" AddOptionIndex="67" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="1" OptionID="5" />
+	<Item Cat="20" Index="213" OptionIndex="15" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="213" OptionIndex="42" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="213" OptionIndex="48" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="213" OptionIndex="5" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="213" OptionIndex="33" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="213" OptionIndex="35" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="213" OptionIndex="19" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="4" />
+	<Item Cat="20" Index="213" OptionIndex="20" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="5" />
+	<Item Cat="20" Index="213" OptionIndex="21" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="213" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="213" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="213" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="213" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="214" OptionIndex="16" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="214" OptionIndex="43" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="214" OptionIndex="13" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="214" OptionIndex="6" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="214" OptionIndex="11" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="214" OptionIndex="36" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="5" />
+	<Item Cat="20" Index="214" OptionIndex="83" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="5" />
+	<Item Cat="20" Index="214" OptionIndex="84" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="5" />
+	<Item Cat="20" Index="214" OptionIndex="51" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="214" OptionIndex="56" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="214" OptionIndex="61" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="214" OptionIndex="68" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="214" OptionIndex="69" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="214" OptionIndex="70" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="215" OptionIndex="17" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="215" OptionIndex="44" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="215" OptionIndex="47" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="215" OptionIndex="7" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="215" OptionIndex="34" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="215" OptionIndex="28" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="0" />
+	<Item Cat="20" Index="215" OptionIndex="85" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="0" />
+	<Item Cat="20" Index="215" OptionIndex="86" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="215" OptionIndex="22" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="1" />
+	<Item Cat="20" Index="215" OptionIndex="23" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="2" />
+	<Item Cat="20" Index="215" OptionIndex="24" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="215" OptionIndex="41" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="215" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="215" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="215" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="215" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="216" OptionIndex="18" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="216" OptionIndex="45" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="216" OptionIndex="4" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="216" OptionIndex="8" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="216" OptionIndex="12" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="216" OptionIndex="14" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="216" OptionIndex="2" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="216" OptionIndex="10" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="216" OptionIndex="0" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="216" OptionIndex="68" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="216" OptionIndex="69" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="216" OptionIndex="70" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="217" OptionIndex="64" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="217" OptionIndex="46" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="217" OptionIndex="9" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="217" OptionIndex="39" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="217" OptionIndex="40" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="217" OptionIndex="25" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="1" />
+	<Item Cat="20" Index="217" OptionIndex="26" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="2" />
+	<Item Cat="20" Index="217" OptionIndex="27" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="217" OptionIndex="37" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="217" OptionIndex="38" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="217" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="217" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="217" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="217" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="218" OptionIndex="15" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="218" OptionIndex="42" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="218" OptionIndex="48" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="218" OptionIndex="5" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="218" OptionIndex="33" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="218" OptionIndex="35" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="218" OptionIndex="19" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="4" />
+	<Item Cat="20" Index="218" OptionIndex="20" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="5" />
+	<Item Cat="20" Index="218" OptionIndex="21" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="218" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="218" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="218" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="218" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="219" OptionIndex="16" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="219" OptionIndex="43" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="219" OptionIndex="13" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="219" OptionIndex="6" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="219" OptionIndex="11" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="219" OptionIndex="36" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="5" />
+	<Item Cat="20" Index="219" OptionIndex="83" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="5" />
+	<Item Cat="20" Index="219" OptionIndex="84" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="5" />
+	<Item Cat="20" Index="219" OptionIndex="51" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="219" OptionIndex="56" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="219" OptionIndex="61" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="219" OptionIndex="68" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="219" OptionIndex="69" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="219" OptionIndex="70" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="220" OptionIndex="17" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="220" OptionIndex="44" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="220" OptionIndex="47" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="220" OptionIndex="7" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="220" OptionIndex="34" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="220" OptionIndex="28" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="0" />
+	<Item Cat="20" Index="220" OptionIndex="85" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="0" />
+	<Item Cat="20" Index="220" OptionIndex="86" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="220" OptionIndex="22" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="1" />
+	<Item Cat="20" Index="220" OptionIndex="23" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="2" />
+	<Item Cat="20" Index="220" OptionIndex="24" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="220" OptionIndex="41" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="220" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="220" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="220" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="220" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="221" OptionIndex="18" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="221" OptionIndex="45" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="221" OptionIndex="4" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="221" OptionIndex="8" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="221" OptionIndex="12" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="221" OptionIndex="14" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="221" OptionIndex="2" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="221" OptionIndex="10" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="221" OptionIndex="0" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="221" OptionIndex="68" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="221" OptionIndex="69" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="221" OptionIndex="70" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="222" OptionIndex="64" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="222" OptionIndex="46" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="222" OptionIndex="9" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="222" OptionIndex="39" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="222" OptionIndex="40" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="222" OptionIndex="25" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="1" />
+	<Item Cat="20" Index="222" OptionIndex="26" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="2" />
+	<Item Cat="20" Index="222" OptionIndex="27" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="222" OptionIndex="37" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="222" OptionIndex="38" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="222" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="222" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="222" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="222" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="223" OptionIndex="15" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="223" OptionIndex="42" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="223" OptionIndex="48" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="223" OptionIndex="5" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="223" OptionIndex="33" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="223" OptionIndex="35" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="223" OptionIndex="19" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="4" />
+	<Item Cat="20" Index="223" OptionIndex="20" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="5" />
+	<Item Cat="20" Index="223" OptionIndex="21" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="6" />
+	<Item Cat="20" Index="223" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="223" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="223" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="223" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="224" OptionIndex="16" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="224" OptionIndex="43" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="224" OptionIndex="13" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="224" OptionIndex="6" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="224" OptionIndex="11" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="224" OptionIndex="36" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="5" />
+	<Item Cat="20" Index="224" OptionIndex="83" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="5" />
+	<Item Cat="20" Index="224" OptionIndex="84" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="5" />
+	<Item Cat="20" Index="224" OptionIndex="51" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="224" OptionIndex="56" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="224" OptionIndex="61" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="224" OptionIndex="68" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="224" OptionIndex="69" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="224" OptionIndex="70" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="225" OptionIndex="17" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="225" OptionIndex="44" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="225" OptionIndex="47" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="225" OptionIndex="7" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="225" OptionIndex="34" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="225" OptionIndex="28" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="0" />
+	<Item Cat="20" Index="225" OptionIndex="85" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="0" />
+	<Item Cat="20" Index="225" OptionIndex="86" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="0" />
+	<Item Cat="20" Index="225" OptionIndex="22" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="1" />
+	<Item Cat="20" Index="225" OptionIndex="23" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="2" />
+	<Item Cat="20" Index="225" OptionIndex="24" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="225" OptionIndex="41" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="225" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="225" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="225" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="225" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="226" OptionIndex="18" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="226" OptionIndex="45" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="226" OptionIndex="4" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="226" OptionIndex="8" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="226" OptionIndex="12" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="226" OptionIndex="14" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="226" OptionIndex="2" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="226" OptionIndex="10" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="226" OptionIndex="0" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="226" OptionIndex="68" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="226" OptionIndex="69" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="226" OptionIndex="70" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="227" OptionIndex="64" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="227" OptionIndex="46" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="227" OptionIndex="9" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="227" OptionIndex="39" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="227" OptionIndex="40" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="227" OptionIndex="25" AddOptionIndex="-1" DW="0" DK="1" ELF="1" MG="1" DL="1" SU="0" RF="1" GL="1" RW="0" SLA="1" GC="0" LW="0" LM="0" IK="1" OptionID="1" />
+	<Item Cat="20" Index="227" OptionIndex="26" AddOptionIndex="-1" DW="1" DK="0" ELF="0" MG="1" DL="0" SU="1" RF="0" GL="0" RW="1" SLA="0" GC="1" LW="1" LM="1" IK="0" OptionID="2" />
+	<Item Cat="20" Index="227" OptionIndex="27" AddOptionIndex="-1" DW="0" DK="0" ELF="0" MG="0" DL="0" SU="1" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" OptionID="3" />
+	<Item Cat="20" Index="227" OptionIndex="37" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="227" OptionIndex="38" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="227" OptionIndex="29" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="227" OptionIndex="30" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="227" OptionIndex="31" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="227" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="228" OptionIndex="52" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="228" OptionIndex="51" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="228" OptionIndex="50" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="228" OptionIndex="53" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+	<Item Cat="20" Index="228" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="228" OptionIndex="71" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="228" OptionIndex="72" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="228" OptionIndex="73" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="9" />
+	<Item Cat="20" Index="229" OptionIndex="62" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="229" OptionIndex="56" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="229" OptionIndex="55" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="229" OptionIndex="58" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="8" />
+	<Item Cat="20" Index="229" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="229" OptionIndex="74" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="229" OptionIndex="75" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="1" />
+	<Item Cat="20" Index="229" OptionIndex="76" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="230" OptionIndex="57" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="6" />
+	<Item Cat="20" Index="230" OptionIndex="61" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="230" OptionIndex="63" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="7" />
+	<Item Cat="20" Index="230" OptionIndex="60" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="2" />
+	<Item Cat="20" Index="230" OptionIndex="3" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="0" />
+	<Item Cat="20" Index="230" OptionIndex="77" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="3" />
+	<Item Cat="20" Index="230" OptionIndex="78" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="4" />
+	<Item Cat="20" Index="230" OptionIndex="79" AddOptionIndex="-1" DW="1" DK="1" ELF="1" MG="1" DL="1" SU="1" RF="1" GL="1" RW="1" SLA="1" GC="1" LW="1" LM="1" IK="1" OptionID="5" />
+</AbilityCardBook>

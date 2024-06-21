@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### BuffEffectManager::General::Buff ###
+//	Index: Unique index of a buff
+//	EffectType: Defining which buffs cannot be used together. A character cannot have two or more buffs of same effect type value
+//	ItemType: Category of item the buff is achieved trough, see ItemList.xml
+//	ItemIndex: Index of item the buff is achieved trough, see ItemList.xml
+//	Type: Type of buff
+//		0: Positive buffs, all non-cash shop buffs that increase some ability
+//		1: Negative, all debuffs
+//		2: Premium Buffs
+//
+//	NoticeType: 
+//		0: 
+//		1: 
+//	ClearType: Type of buff clearance
+//		1: Upon die and regen
+//		2: Upon logout
+//		4: Upon entering Chaos Castle
+//	BuffOutputValue: used by game client only.
+//	Name: Name of buff
+//	Description: Description of buff
+//
+// ### BuffEffectManager::Period::Buff ###
+//	Index: 
+//	EffectType1: 
+//	EffectValue1: 
+//	EffectType2: 
+//	EffectValue2: 
+//	Duration: 
+//	Name: 
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+<BuffEffectManager>
+	<General>
+		<Buff Index="1" EffectType="1" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Increase Attack Power" Description="Attack power increases." />
+		<Buff Index="2" EffectType="2" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Increase Defense" Description="Defensibility increases." />
+		<Buff Index="3" EffectType="3" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Shadow Phantom effect" Description="Attack power and Defensibility increases" />
+		<Buff Index="4" EffectType="4" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Soul Barrier" Description="Manna absorbs the damage." />
+		<Buff Index="5" EffectType="5" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Lord Dignity" Description="Increases probability of critical and excellent damage for you and party members." />
+		<Buff Index="6" EffectType="6" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Infinity Arrow" Description="Arrows do not become consumed." />
+		<Buff Index="7" EffectType="7" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="AG recovery speed increase" Description="" />
+		<Buff Index="8" EffectType="8" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Swell Life" Description="Health stat increases to maximum." />
+		<Buff Index="9" EffectType="9" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Swell Mana" Description="Mana stat increases to maximum." />
+		<Buff Index="10" EffectType="10" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Potion of Blessing" Description="Attack power +20% increase" />
+		<Buff Index="11" EffectType="11" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Potion of Soul" Description="AG recovery speed increase +8/Lightning and Ice resistance increase/attack speed increase +20" />
+		<Buff Index="12" EffectType="12" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Abolish Magic" Description="" />
+		<Buff Index="13" EffectType="13" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Gate Open/Close Status" Description="" />
+		<Buff Index="14" EffectType="14" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Watchtower" Description="Watching over the castle." />
+		<Buff Index="15" EffectType="14" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Besiegement Guild 1" Description="In the process of attacking the castle" />
+		<Buff Index="16" EffectType="14" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Besiegement Guild 2" Description="In the process of attacking the castle" />
+		<Buff Index="17" EffectType="14" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Besiegement Guild 3" Description="In the process of attacking the castle" />
+		<Buff Index="18" EffectType="15" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Invisibility" Description="Transparency Status" />
+		<Buff Index="19" EffectType="16" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Dark Lord Battle Skill" Description="" />
+		<Buff Index="20" EffectType="17" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Crown Registration Status" Description="" />
+		<Buff Index="21" EffectType="18" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Altar of Wolf contract enabled" Description="" />
+		<Buff Index="22" EffectType="18" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Altar of Wolf contract disabled" Description="" />
+		<Buff Index="23" EffectType="18" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Altar of Wolf contract Status" Description="" />
+		<Buff Index="24" EffectType="18" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Altar of Wolf contract attempt" Description="" />
+		<Buff Index="25" EffectType="18" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Altar of Wolf Besiegement Status" Description="" />
+		<Buff Index="26" EffectType="18" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Altar of Wolf hero contract Status" Description="" />
+		<Buff Index="27" EffectType="19" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Cry Wolf NPC transparency" Description="" />
+		<Buff Index="28" EffectType="20" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="GM" Description="" />
+		<Buff Index="29" EffectType="60" ItemType="13" ItemIndex="43" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Ascension" Description="EXP gain increase 50%" />
+		<Buff Index="30" EffectType="61" ItemType="13" ItemIndex="44" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Wealth" Description="EXP gain increase 100%/item gain increase 150%" />
+		<Buff Index="31" EffectType="62" ItemType="13" ItemIndex="45" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Sustenance" Description="EXP gain disabled" />
+		<Buff Index="32" EffectType="22" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Temple - Spell of Quickness" Description="" />
+		<Buff Index="33" EffectType="22" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Temple - Spell of Sublimation" Description="" />
+		<Buff Index="34" EffectType="22" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Spell of Protection" Description="Damage absorbed at 100%." />
+		<Buff Index="35" EffectType="246" ItemType="14" ItemIndex="46" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Boost] Jack O'Lantern Blessings" Description="Attack Speed +10" />
+		<Buff Index="36" EffectType="247" ItemType="14" ItemIndex="47" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Reinforce] Jack O'Lantern Wrath" Description="Attack, Wizardry +40" />
+		<Buff Index="37" EffectType="247" ItemType="14" ItemIndex="48" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Reinforce] Jack O'Lantern Cry" Description="Defense +100" />
+		<Buff Index="38" EffectType="246" ItemType="14" ItemIndex="49" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Boost] Jack O'Lantern Food" Description="Max HP +700" />
+		<Buff Index="39" EffectType="246" ItemType="14" ItemIndex="50" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Boost] Jack O'Lantern Drink" Description="Max MP +700" />
+		<Buff Index="40" EffectType="60" ItemType="13" ItemIndex="43" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Seal of Ascension" Description="EXP gain increase 50%" />
+		<Buff Index="41" EffectType="61" ItemType="13" ItemIndex="44" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Seal of Wealth" Description="EXP gain increase 100%/Item gain increase 150%" />
+		<Buff Index="42" EffectType="65" ItemType="13" ItemIndex="45" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Seal of Sustenance" Description="EXP gain disabled" />
+		<Buff Index="43" EffectType="57" ItemType="13" ItemIndex="59" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Seal of Mobility" Description="Mobility enabled" />
+		<Buff Index="44" EffectType="67" ItemType="14" ItemIndex="72" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Quickness" Description="Attack speed increase +15" />
+		<Buff Index="45" EffectType="68" ItemType="14" ItemIndex="73" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Defense" Description="Defensibility increase +60" />
+		<Buff Index="46" EffectType="69" ItemType="14" ItemIndex="74" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Wrath" Description="Attack power increase +30" />
+		<Buff Index="47" EffectType="70" ItemType="14" ItemIndex="75" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Wizardry" Description="Wizardry, Curse increase +30" />
+		<Buff Index="48" EffectType="71" ItemType="14" ItemIndex="76" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Health" Description="HP increase +200" />
+		<Buff Index="49" EffectType="72" ItemType="14" ItemIndex="77" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Mana" Description="Mana increase +300" />
+		<Buff Index="50" EffectType="26" ItemType="14" ItemIndex="78" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elixir of Strength" Description="Strength Status +50" />
+		<Buff Index="51" EffectType="26" ItemType="14" ItemIndex="79" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elixir of Agility" Description="Agility Status +50" />
+		<Buff Index="52" EffectType="26" ItemType="14" ItemIndex="80" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elixir of Health" Description="Health Status +50" />
+		<Buff Index="53" EffectType="26" ItemType="14" ItemIndex="81" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elixir of Energy" Description="Energy Status +50" />
+		<Buff Index="54" EffectType="26" ItemType="14" ItemIndex="82" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elixir of Control" Description="Control Status +50" />
+		<Buff Index="55" EffectType="27" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Poison" Description="Poisoned status of condition" />
+		<Buff Index="56" EffectType="28" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Ice" Description="Mobility speed decreases" />
+		<Buff Index="57" EffectType="29" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Iced Arrow" Description="Mobility disabled" />
+		<Buff Index="58" EffectType="30" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Defensibility reduction" Description="Random defensibility decreases at 10%." />
+		<Buff Index="59" EffectType="31" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Attack power reduction" Description="" />
+		<Buff Index="60" EffectType="32" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wizardry increase reduction" Description="" />
+		<Buff Index="61" EffectType="33" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Stun" Description="Mobility disabled" />
+		<Buff Index="62" EffectType="34" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Magic Defense" Description="" />
+		<Buff Index="63" EffectType="35" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Monster Magic Attack Resistance" Description="" />
+		<Buff Index="64" EffectType="36" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Monster Chemistry Attack Resistance" Description="" />
+		<Buff Index="65" EffectType="37" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Spell of Restriction" Description="Mobility disabled" />
+		<Buff Index="66" EffectType="38" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Cry Wolf Divine Protection Status" Description="Cry Wolf Divine Protection Status" />
+		<Buff Index="67" EffectType="38" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Cry Wolf Divine Protection Status" Description="Cry Wolf Divine Protection Status" />
+		<Buff Index="68" EffectType="38" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Cry Wolf Divine Protection Status" Description="Cry Wolf Divine Protection Status" />
+		<Buff Index="69" EffectType="38" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Cry Wolf Divine Protection Status" Description="Cry Wolf Divine Protection Status" />
+		<Buff Index="70" EffectType="38" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Cry Wolf Divine Protection Status" Description="Cry Wolf Divine Protection Status" />
+		<Buff Index="71" EffectType="39" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Damage Reflection" Description="Partial damage reflected out." />
+		<Buff Index="72" EffectType="40" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Sleep" Description="Short period of nap" />
+		<Buff Index="73" EffectType="40" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Blind" Description="Shortened view and the attack accuracy decreases." />
+		<Buff Index="74" EffectType="41" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Requiem" Description="Summoner Neil attack" />
+		<Buff Index="75" EffectType="42" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Explosion" Description="Summoner Shamut attack" />
+		<Buff Index="76" EffectType="43" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Weakness" Description="Attack power reduction" />
+		<Buff Index="77" EffectType="43" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Innovation" Description="Defensibility reduction" />
+		<Buff Index="78" EffectType="246" ItemType="14" ItemIndex="85" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Boost] Cherry Blossom Wine" Description="Max MP +700" />
+		<Buff Index="79" EffectType="246" ItemType="14" ItemIndex="86" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Boost] Cherry Blossom Rice Cake" Description="Max HP +700" />
+		<Buff Index="80" EffectType="247" ItemType="14" ItemIndex="87" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Reinforce] Cherry Blossom Flower Petal" Description="Attack, Wizardry +40" />
+		<Buff Index="81" EffectType="288" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Berserker" Description="Increases magic/attack speed, lowers defense and reduces maximum health." />
+		<Buff Index="82" EffectType="45" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Expansion of Wizardry" Description="Minimum Wizardry increases." />
+		<Buff Index="83" EffectType="46" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Flame Strike" Description="" />
+		<Buff Index="84" EffectType="47" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Gigantic Storm" Description="" />
+		<Buff Index="85" EffectType="48" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Lightning Shock" Description="" />
+		<Buff Index="86" EffectType="49" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Cold" Description="Detrimental cold reduces /the mobility speed." />
+		<Buff Index="87" EffectType="13" ItemType="13" ItemIndex="62" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Healing" Description="EXP gain increase 50%/Automatic Life recovery at 5%" />
+		<Buff Index="88" EffectType="13" ItemType="13" ItemIndex="63" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Divinity" Description="Item gain increase at 150%/Automatic Mana recovery at 5%" />
+		<Buff Index="89" EffectType="73" ItemType="14" ItemIndex="97" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Battle" Description="Critical damage increase at 20%" />
+		<Buff Index="90" EffectType="74" ItemType="14" ItemIndex="98" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Strength" Description="Excellent damage increase at 20%" />
+		<Buff Index="91" EffectType="23" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Blessing of Christmas" Description="Attack power, Curse and defensibility increase" />
+		<Buff Index="92" EffectType="23" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Santa Healing" Description="Maximum Life increase +500" />
+		<Buff Index="93" EffectType="23" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Santa Protection" Description="Maximum Mana increase +500" />
+		<Buff Index="94" EffectType="23" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Santa Strengthener" Description="Attack power +30" />
+		<Buff Index="95" EffectType="23" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Santa Defense" Description="Defensibility +100" />
+		<Buff Index="96" EffectType="23" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Santa Quickness" Description="Attack speed +15" />
+		<Buff Index="97" EffectType="23" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Santa Fortune" Description="AG recovery speed increase +10" />
+		<Buff Index="98" EffectType="50" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Watch" Description="You may enter and watch a duel in Arena." />
+		<Buff Index="99" EffectType="52" ItemType="13" ItemIndex="81" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Talisman of Protection" Description="You receive no penalties when dying../Cannot receive this effect when you are  in outlaw status." />
+		<Buff Index="100" EffectType="53" ItemType="13" ItemIndex="82" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Talisman of Item Protection" Description="Keeps item durable" />
+		<Buff Index="101" EffectType="60" ItemType="13" ItemIndex="93" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Master Seal of Ascension" Description="EXP gain increase 50%" />
+		<Buff Index="102" EffectType="61" ItemType="13" ItemIndex="94" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Master Seal of Wealth" Description="EXP gain increase 100%/Item gain increase 150%" />
+		<Buff Index="103" EffectType="51" ItemType="13" ItemIndex="95" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Gladiator's Honor" Description="Increases EXP by 20% /Rare Item drop rate/can be used in Vulcanus only." />
+		<Buff Index="104" EffectType="21" ItemType="13" ItemIndex="96" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Strength" Description="Increases Attack Rate and Defense Rate" />
+		<Buff Index="105" EffectType="54" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Ascension" Description="" />
+		<Buff Index="106" EffectType="55" ItemType="63" ItemIndex="254" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="PK Penalty" Description="Warp Command Window access restricted for five minutes." />
+		<Buff Index="107" EffectType="56" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="You feel tired." Description="50% EXP Gain /50% Item Drop Rate" />
+		<Buff Index="108" EffectType="56" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="You feel exhausted." Description="50% EXP Gain /0% Item Drop Rate" />
+		<Buff Index="112" EffectType="24" ItemType="13" ItemIndex="103" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Party EXP Bonus Item" Description="Up to 30% EXP gain, depending on the number of members in the party." />
+		<Buff Index="113" EffectType="58" ItemType="13" ItemIndex="104" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Max AG Boost Aura" Description="Increases your max AG." />
+		<Buff Index="114" EffectType="58" ItemType="13" ItemIndex="105" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Max SD Boost Aura" Description="Increases your max SD." />
+		<Buff Index="115" EffectType="56" ItemType="13" ItemIndex="117" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Minimum Vitality" Description="100% EXP Gain/100% Item Drop Rate/Stops stamina from diminishing for a fixed duration of time." />
+		<Buff Index="116" EffectType="56" ItemType="13" ItemIndex="118" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Low Vitality" Description="100% EXP Gain/100% Item Drop Rate/Stops stamina from diminishing for a fixed duration of time." />
+		<Buff Index="117" EffectType="56" ItemType="13" ItemIndex="119" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Medium Vitality" Description="100% EXP Gain/100% Item Drop Rate/Stops stamina from diminishing for a fixed duration of time." />
+		<Buff Index="118" EffectType="56" ItemType="13" ItemIndex="120" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="High Vitality" Description="100% EXP Gain/100% Item Drop Rate/Stops stamina from diminishing for a fixed duration of time." />
+		<Buff Index="119" EffectType="61" ItemType="13" ItemIndex="116" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Wealth" Description="Increases Item Drop Rate to 150%." />
+		<Buff Index="120" EffectType="59" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Punishment for Illicit Software Use" Description="50% EXP Gain /0% Item Drop Rate" />
+		<Buff Index="121" EffectType="75" ItemType="14" ItemIndex="140" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll of Healing" Description="+3% HP Regen/+100 HP" />
+		<Buff Index="122" EffectType="76" ItemType="13" ItemIndex="128" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Hawk Figurine" Description="Critical Damage +10%" />
+		<Buff Index="123" EffectType="76" ItemType="13" ItemIndex="129" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Goat Figurine" Description="Excellent Damage +10%" />
+		<Buff Index="124" EffectType="77" ItemType="13" ItemIndex="130" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Oak Charm" Description="Maximum Life +50" />
+		<Buff Index="125" EffectType="77" ItemType="13" ItemIndex="131" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Maple Charm" Description="Maximum Mana +50" />
+		<Buff Index="126" EffectType="77" ItemType="13" ItemIndex="132" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Golden Oak Charm" Description="Maximum Life +150 / Maximum SD +500" />
+		<Buff Index="127" EffectType="77" ItemType="13" ItemIndex="133" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Golden Maple Charm" Description="Maximum Mana +150 / Maximum AG +50" />
+		<Buff Index="128" EffectType="78" ItemType="13" ItemIndex="134" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Worn Horseshoe" Description="Item Drop Rate increase" />
+		<Buff Index="129" EffectType="79" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Ignore Enemy's Defense" Description="Increases chance to ignore enemy's defense and inflict damage." />
+		<Buff Index="130" EffectType="80" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Increase Health" Description="Increases health stat." />
+		<Buff Index="131" EffectType="81" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Increase Defense Rate" Description="Increases maximum defend rate." />
+		<Buff Index="132" EffectType="82" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Defense success rate decrease" Description="Decreases defense success rate." />
+		<Buff Index="133" EffectType="83" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Invincibility" Description="Invincible" />
+		<Buff Index="134" EffectType="84" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Iron Defense" Description="Significantly increases defense and HP." />
+		<Buff Index="135" EffectType="8" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Swell Life" Description="Increases max life and Mana." />
+		<Buff Index="136" EffectType="8" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Swell Life" Description="Increases max life, Mana, and AG." />
+		<Buff Index="137" EffectType="85" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bleeding" Description="HP is reduced continually." />
+		<Buff Index="138" EffectType="45" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Expansion of Wizardry" Description="Increases min Wizardry and max Wizardry." />
+		<Buff Index="139" EffectType="45" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Expansion of Wizardry" Description="Increases min Wizardry, max Wizardry,/ and critical damage rate." />
+		<Buff Index="140" EffectType="4" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Soul Barrier" Description="Uses Mana to absorb damage,/ and increases max Mana." />
+		<Buff Index="141" EffectType="86" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Reduce attack speed" Description="Reduces Attack speed." />
+		<Buff Index="142" EffectType="87" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bless" Description="Increases all stats" />
+		<Buff Index="143" EffectType="6" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Infinity Arrow" Description="Arrows are not consumed,/ and increases your damage." />
+		<Buff Index="144" EffectType="88" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Blind" Description="You are blinded./Decreases attack success rate." />
+		<Buff Index="145" EffectType="89" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Vampiric" Description="HP is drained every second and transferred to the target." />
+		<Buff Index="146" EffectType="90" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Freeze" Description="Immobilized when you are frozen." />
+		<Buff Index="147" EffectType="91" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Earth Binds" Description="Earth Binds" />
+		<Buff Index="148" EffectType="5" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Lord Dignity Strengthener" Description="Increases probability of critical and excellent damage for you and party members." />
+		<Buff Index="149" EffectType="5" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Critical Damage Increase" Description="Increases critical damage and critical/excellent damage rate" />
+		<Buff Index="150" EffectType="288" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Berserker" Description="Increases magic/attack speed, lowers defense and reduces maximum health." />
+		<Buff Index="151" EffectType="288" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Berserker" Description="unused" />
+		<Buff Index="152" EffectType="288" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Berserker" Description="Increases Wizardry damage and attack speed." />
+		<Buff Index="153" EffectType="81" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Increase Defense Success Rate" Description="Increases defense success rate." />
+		<Buff Index="154" EffectType="81" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Increase Defense Success Rate" Description="Increases maximum defense and defense success rate." />
+		<Buff Index="155" EffectType="80" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Increase HP" Description="Increases HP." />
+		<Buff Index="156" EffectType="79" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Ignore Enemy's Defense" Description="Increases defense ignore rate. If successful, a chance to ignore defense increase." />
+		<Buff Index="157" EffectType="92" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Fire" Description="HP is reduced for every second of fire damage." />
+		<Buff Index="158" EffectType="93" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Frost" Description="HP is reduced for every second of frost damage." />
+		<Buff Index="159" EffectType="94" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Poison" Description="HP is reduced for every second of poison damage." />
+		<Buff Index="160" EffectType="94" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Poison" Description="HP is reduced for every second of poison damage." />
+		<Buff Index="161" EffectType="87" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bless" Description="Increases all stats by %d." />
+		<Buff Index="162" EffectType="43" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Weaken" Description="Decreases attack rate." />
+		<Buff Index="163" EffectType="44" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Innovate" Description="Decreases defense rate." />
+		<Buff Index="164" EffectType="30" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Decrease Defensibility" Description="Decreases Defensibility." />
+		<Buff Index="165" EffectType="84" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Iron Defense" Description="Significantly increases defense rate and HP." />
+		<Buff Index="166" EffectType="95" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Blood Howl" Description="HP is reduced every second." />
+		<Buff Index="167" EffectType="95" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Blood Howl" Description="HP is reduced every second." />
+		<Buff Index="169" EffectType="96" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Penetrate Armor" Description="Decreases defense and defense success rate." />
+		<Buff Index="170" EffectType="109" ItemType="14" ItemIndex="172" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Magic Backpack1" Description="Magic Backpack1" />
+		<Buff Index="171" EffectType="110" ItemType="14" ItemIndex="173" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Magic Backpack2" Description="Magic Backpack2" />
+		<Buff Index="172" EffectType="111" ItemType="14" ItemIndex="174" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Magic Backpack3" Description="Magic Backpack3" />
+		<Buff Index="173" EffectType="112" ItemType="14" ItemIndex="175" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Magic Backpack4" Description="Magic Backpack4" />
+		<Buff Index="174" EffectType="98" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Fire" Description="Total amount of SD is reduced to half." />
+		<Buff Index="175" EffectType="99" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Frost" Description="Total amount of MP is reduced to half." />
+		<Buff Index="176" EffectType="100" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Tornado" Description="Attack speed is reduced to half." />
+		<Buff Index="177" EffectType="101" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bind" Description="Total amount of HP is reduced to half." />
+		<Buff Index="178" EffectType="102" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Darkness" Description="You can't do anything while you're stunned." />
+		<Buff Index="179" EffectType="103" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Fire Tower" Description="ATK+25/EXP+20%/when fire equipped ATK&amp;DEF+5%/set item drop chance (except Debenter)" />
+		<Buff Index="180" EffectType="104" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Water Tower" Description="DEF +50/EXP +20%/when Water equipped, ATK &amp; DEF +5%/set item drop chance (except Debenter)" />
+		<Buff Index="181" EffectType="105" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Earth Tower" Description="CRIT+5%/EXP+20%/when Earth equipped ATK&amp;DEF+5%/set item drop chance (except Debenter)" />
+		<Buff Index="182" EffectType="106" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wind Tower" Description="ATK+30/EXP+20%/when Wind equipped, ATK&amp;DEF+5%/set item drop chance (except Debenter)" />
+		<Buff Index="183" EffectType="107" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Darkness Tower" Description="DMG Rec.-10%/EXP+20%/when Darkness equipped, ATK&amp;DEF+5%/set item drop chance (except Debenter)" />
+		<Buff Index="184" EffectType="108" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Resurrection Penalty" Description="Movement speed decreased for a certain period of time." />
+		<Buff Index="185" EffectType="97" ItemType="14" ItemIndex="163" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Vault Expansion" Description="Vault Expansion" />
+		<Buff Index="186" EffectType="109" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Confusion" Description="Movement speed decreased when hit by this." />
+		<Buff Index="187" EffectType="255" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="EXP Rewards" Description="EXP increase by 20%/ possible set item drops." />
+		<Buff Index="190" EffectType="115" ItemType="13" ItemIndex="177" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Talisman of Ascension I" Description="Earning additional 50% EXP" />
+		<Buff Index="191" EffectType="115" ItemType="13" ItemIndex="178" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Talisman of Ascension II" Description="Earning additional 100% EXP" />
+		<Buff Index="192" EffectType="115" ItemType="13" ItemIndex="179" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Talisman of Ascension III" Description="Earning additional 200% EXP" />
+		<Buff Index="193" EffectType="60" ItemType="13" ItemIndex="180" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Ascension II" Description="Earning additional 100% EXP" />
+		<Buff Index="194" EffectType="60" ItemType="13" ItemIndex="181" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Ascension II" Description="Earning additional 100% EXP (For Master Level)" />
+		<Buff Index="195" EffectType="116" ItemType="14" ItemIndex="224" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bless of Light (Greater)" Description="Earning additional 200% EXP after quick blessing" />
+		<Buff Index="196" EffectType="68" ItemType="14" ItemIndex="225" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Defense" Description="Defense +120" />
+		<Buff Index="197" EffectType="70" ItemType="14" ItemIndex="226" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Wizardry" Description="Wizardry +60" />
+		<Buff Index="198" EffectType="71" ItemType="14" ItemIndex="227" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Health" Description="HP +400" />
+		<Buff Index="199" EffectType="72" ItemType="14" ItemIndex="228" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Mana" Description="MP +600" />
+		<Buff Index="200" EffectType="69" ItemType="14" ItemIndex="229" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Wrath" Description="Attack Power +60" />
+		<Buff Index="201" EffectType="75" ItemType="14" ItemIndex="230" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Recovery" Description="Automatic HP Recovery +4%, HP +200" />
+		<Buff Index="202" EffectType="14" ItemType="14" ItemIndex="231" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Battle" Description="Critical Damage +25%" />
+		<Buff Index="203" EffectType="14" ItemType="14" ItemIndex="232" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Strengthener" Description="Excellent Damage +25%" />
+		<Buff Index="204" EffectType="67" ItemType="14" ItemIndex="235" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Quickness" Description="Attack speed increase +20" />
+		<Buff Index="205" EffectType="117" ItemType="13" ItemIndex="2" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Horn of Uniria" Description="Summons Uniria to mount." />
+		<Buff Index="206" EffectType="117" ItemType="13" ItemIndex="3" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Horn of Dinorant" Description="Summons Dinorant to mount." />
+		<Buff Index="207" EffectType="117" ItemType="13" ItemIndex="4" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Horn of Dark Horse" Description="Summons Dark Horse to mount." />
+		<Buff Index="208" EffectType="117" ItemType="13" ItemIndex="37" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Horn of Fenrir" Description="Summons Fenrir to mount." />
+		<Buff Index="209" EffectType="118" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Paralyze" Description="Reduces your Mvmt SP by 50% by paralyzing your legs." />
+		<Buff Index="210" EffectType="118" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Paralyze" Description="Reduces your Mvmt SP by 50% by paralyzing your legs, and gives continual DMG." />
+		<Buff Index="211" EffectType="119" ItemType="-1" ItemIndex="-1" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Internet Cafe" Description="Extra XP/Chaos Castle in PC Cafe/Access to Kalima/Accum. Gob. Pts." />
+		<Buff Index="212" EffectType="116" ItemType="14" ItemIndex="263" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bless of Light (Low Grade)" Description="Receiving the blessing for a short period of time, you acquire 50% of basic EXP additionally." />
+		<Buff Index="213" EffectType="116" ItemType="14" ItemIndex="264" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bless of Light (Middle Grade)" Description="Receiving the blessing for a short period of time, you acquire 100% of basic EXP additionally." />
+		<Buff Index="214" EffectType="120" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Evasion" Description="Increases your block chance and makes you immune to immobilizing effect" />
+		<Buff Index="215" EffectType="119" ItemType="-1" ItemIndex="-1" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Internet Cafe" Description="Extra XP/Chaos Castle in PC Cafe/Access to Kalima/Accum. Gob. Pts./Stam. Sys. Disabled" />
+		<Buff Index="216" EffectType="121" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Circle Shield" Description="Chance to decrease opponent's AG by 10" />
+		<Buff Index="217" EffectType="122" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Obsidian" Description="Increases skill attack power by %d" />
+		<Buff Index="218" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Wrath" Description="Decreases Defense by 30%, increases Damage by 50%" />
+		<Buff Index="219" EffectType="124" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Burst" Description="Increases chance of True Damage" />
+		<Buff Index="220" EffectType="122" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Obsidian PowUp" Description="Increases skill attack power by %d" />
+		<Buff Index="221" EffectType="121" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Circle Shield PowUp" Description="Chance to increase AG reduce effect by %d on hit." />
+		<Buff Index="222" EffectType="121" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Circle Shield Mastery" Description="Chance to increase AG reduce effect by %d on hit." />
+		<Buff Index="223" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Wrath PowUp" Description="Decreases Defense by 30%, increases Damage by 50%" />
+		<Buff Index="224" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Wrath Proficiency" Description="Decreases Defense by 30%, increases Damage by 50%" />
+		<Buff Index="225" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Wrath Mastery" Description="Increases damage by 50%" />
+		<Buff Index="226" EffectType="226" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Burst PowUp" Description="Increases chance of True Damage" />
+		<Buff Index="227" EffectType="125" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Awakening Success Effect" Description="This is EvoMon Awakening Success Effect." />
+		<Buff Index="228" EffectType="126" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Awakening Failure Effect" Description="This is EvoMon Awakening Failure Effect" />
+		<Buff Index="229" EffectType="227" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Berserker" Description="Increases Damage." />
+		<Buff Index="230" EffectType="228" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Clone" Description="Summons a clone." />
+		<Buff Index="231" EffectType="229" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Spin" Description="Spins the target." />
+		<Buff Index="232" EffectType="230" ItemType="13" ItemIndex="5" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Dark Raven" Description="Summoning Dark Raven." />
+		<Buff Index="237" EffectType="115" ItemType="13" ItemIndex="476" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[PC room] The talisman of rise I" Description="PC room only items, 50% of the basic experience to acquire additional." />
+		<Buff Index="238" EffectType="235" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bastion" Description="Elemental Damage -90%." />
+		<Buff Index="239" EffectType="236" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Hemorrhage" Description="Bleeding Damage for every second." />
+		<Buff Index="240" EffectType="237" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Paralysis" Description="Movement speed and regeneration effect will be reduced. / (reduced effectiveness of Potions)" />
+		<Buff Index="241" EffectType="238" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bondage" Description="Cannot move while Earth Power is holding the target's leg." />
+		<Buff Index="242" EffectType="239" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Blindness" Description="Blinds the target and reduces its Attack Success Rate by %d%." />
+		<Buff Index="243" EffectType="240" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Immune I" Description="Becomes immune to Elemental Damage." />
+		<Buff Index="244" EffectType="240" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Immune II" Description="Becomes immune to every Debuff Effect." />
+		<Buff Index="245" EffectType="241" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Widened I" Description="Greatly increases the Elemental Damage and Elemental Attack Rate temporarily." />
+		<Buff Index="246" EffectType="242" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Archangel's will" Description="Attack damage and skill damage is increased." />
+		<Buff Index="247" EffectType="243" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Ferea Party EXP buff" Description="Up to 10% EXP gain is added on basic EXP/5% additional EXP per party member." />
+		<Buff Index="248" EffectType="244" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Lunedil's Blessing" Description="EXP Increase Level 1: 5%" />
+		<Buff Index="249" EffectType="244" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Lunedil's Blessing" Description="EXP Increase Level 2: 10%" />
+		<Buff Index="250" EffectType="244" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Lunedil's Blessing" Description="EXP Increase Level 3: 15%" />
+		<Buff Index="251" EffectType="244" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Lunedil's Blessing" Description="EXP Increase Level 4: 25%" />
+		<Buff Index="252" EffectType="244" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Lunedil's Blessing" Description="EXP Increase Level 5: 35%" />
+		<Buff Index="253" EffectType="116" ItemType="14" ItemIndex="371" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bless of Light (Greater)" Description="Earning additional 200% EXP after quick blessing" />
+		<Buff Index="254" EffectType="116" ItemType="14" ItemIndex="372" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bless of Light (Middle Grade)" Description="Receiving the blessing for a short period of time, you acquire 100% of basic EXP additionally." />
+		<Buff Index="255" EffectType="116" ItemType="14" ItemIndex="373" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bless of Light (Low Grade)" Description="Receiving the blessing for a short period of time, you acquire 50% of basic EXP additionally." />
+		<Buff Index="256" EffectType="246" ItemType="14" ItemIndex="432" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Boost] Arcanum of Health" Description="Max HP +700" />
+		<Buff Index="257" EffectType="246" ItemType="14" ItemIndex="433" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Boost] Arcanum of Mana" Description="Max MP +700" />
+		<Buff Index="258" EffectType="246" ItemType="14" ItemIndex="434" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Boost] Arcanum of Speed" Description="Attack Speed +10" />
+		<Buff Index="259" EffectType="247" ItemType="14" ItemIndex="435" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Reinforce] Arcanum of Wrath" Description="Attack +40" />
+		<Buff Index="260" EffectType="247" ItemType="14" ItemIndex="436" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Reinforce] Arcanum of Wizardry" Description="Wizardry / Curse  +40" />
+		<Buff Index="261" EffectType="247" ItemType="14" ItemIndex="437" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Reinforce] Arcanum of Defense" Description="Defense +100" />
+		<Buff Index="262" EffectType="247" ItemType="14" ItemIndex="438" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Reinforce] Arcanum of Battle" Description="Critical DMG +85" />
+		<Buff Index="263" EffectType="247" ItemType="14" ItemIndex="439" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[Reinforce] Arcanum of Strength" Description="Excellent DMG +85" />
+		<Buff Index="264" EffectType="256" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Enhance Greater Fortitude HP Boost Effect" Description="Enhance Greater Fortitude HP Boost Effect" />
+		<Buff Index="265" EffectType="257" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase Soul Barrier DMG Reduction" Description="Increase Soul Barrier DMG Reduction" />
+		<Buff Index="266" EffectType="258" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Enhance Berserker DMG Increase" Description="Enhance Berserker DMG Increase" />
+		<Buff Index="267" EffectType="259" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Remove Berserker DEF Reduction Effect" Description="Remove Berserker DEF Reduction Effect" />
+		<Buff Index="268" EffectType="260" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Enhance Health Boost Skill Effect" Description="Enhance Health Boost Skill Effect" />
+		<Buff Index="269" EffectType="261" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Enhance Wrath" Description="Enhance Wrath" />
+		<Buff Index="270" EffectType="262" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Decrease Wrath DEF Reduction Effect" Description="Decrease Wrath DEF Reduction Effect" />
+		<Buff Index="271" EffectType="263" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Decrease SD Ratio" Description="Decrease SD Ratio" />
+		<Buff Index="272" EffectType="264" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase SD" Description="Increase SD" />
+		<Buff Index="273" EffectType="265" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Poisoning" Description="Poisoning" />
+		<Buff Index="274" EffectType="266" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Chilling" Description="Chilling" />
+		<Buff Index="275" EffectType="267" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bleeding" Description="Bleeding" />
+		<Buff Index="276" EffectType="268" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Shock" Description="Shock" />
+		<Buff Index="277" EffectType="269" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Deadly Poison" Description="Deadly Poison" />
+		<Buff Index="278" EffectType="270" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Freezing" Description="Freezing" />
+		<Buff Index="279" EffectType="271" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Hemorrhage" Description="Hemorrhage" />
+		<Buff Index="280" EffectType="272" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Stun" Description="Stun" />
+		<Buff Index="281" EffectType="273" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase SD Reduction" Description="Increase SD Reduction" />
+		<Buff Index="282" EffectType="274" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase Max HP" Description="Increase Max HP" />
+		<Buff Index="283" EffectType="275" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Fourth Stats" Description="Fourth Stats" />
+		<Buff Index="284" EffectType="276" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase Basic DEF" Description="Increase Basic DEF" />
+		<Buff Index="285" EffectType="277" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase Fourth Wings DMG" Description="Increase Fourth Wings DMG" />
+		<Buff Index="286" EffectType="278" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase DMG" Description="Increase DMG" />
+		<Buff Index="287" EffectType="279" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase Magic" Description="Increase Magic" />
+		<Buff Index="288" EffectType="280" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Fourth Stats" Description="Fourth Stats" />
+		<Buff Index="289" EffectType="281" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase Skill DMG" Description="Increase Skill DMG" />
+		<Buff Index="290" EffectType="282" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase Fourth Wings DMG" Description="Increase Fourth Wings DMG" />
+		<Buff Index="291" EffectType="283" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Increase DMG / Magic" Description="Increase DMG / Magic" />
+		<Buff Index="292" EffectType="284" ItemType="14" ItemIndex="453" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Switch Scroll" Description="Press CTRL+F to use Switch Mode." />
+		<Buff Index="293" EffectType="285" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Burst" Description="Increase Skill damage and MP cost." />
+		<Buff Index="294" EffectType="286" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Haste" Description="Increase Attack Speed and AG cost." />
+		<Buff Index="295" EffectType="285" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Burst Strengthener" Description="Increase Skill damage and MP cost." />
+		<Buff Index="296" EffectType="285" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Burst Mastery" Description="Increase Skill damage and MP cost." />
+		<Buff Index="298" EffectType="286" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Haste Strengthener" Description="Increase Attack Speed and AG cost." />
+		<Buff Index="299" EffectType="286" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Haste Mastery" Description="Increase Attack Speed and AG cost." />
+		<Buff Index="301" EffectType="288" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Darkness" Description="Curse Damage/Defense Increase/Maximum Life Decrease" />
+		<Buff Index="302" EffectType="288" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Darkness" Description="Curse Damage/Defense Increase/Maximum Life Decrease" />
+		<Buff Index="303" EffectType="288" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Darkness" Description="Minimum Damage/Defense Increase" />
+		<Buff Index="304" EffectType="43" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Weakness Mastery" Description="Weakness effect affects the target's attribute damage." />
+		<Buff Index="305" EffectType="43" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Innovation Mastery" Description="Weakness effect affects the target's attribute defense." />
+		<Buff Index="306" EffectType="289" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Death Scythe" Description="Death Scythe attacks enemy targets with your character." />
+		<Buff Index="307" EffectType="290" ItemType="12" ItemIndex="471" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Ghost Horse" Description="Guardian mount item" />
+		<Buff Index="308" EffectType="291" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Movement speed increase" Description="Guardian mount skill only" />
+		<Buff Index="309" EffectType="292" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Elite Monster - Bleeding" Description="Elite Monster - Bleeding" />
+		<Buff Index="310" EffectType="293" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Elite Monsters - Poison" Description="Elite Monsters - Poison" />
+		<Buff Index="311" EffectType="294" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Elite Monster - Damage Decrease" Description="Elite Monster - Damage Decrease" />
+		<Buff Index="312" EffectType="295" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Elite Monster - Attack Speed Decrease" Description="Elite Monster - Attack Speed Decrease" />
+		<Buff Index="313" EffectType="296" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Elite Monster - Defense Decrease" Description="Elite Monster - Defense Decrease" />
+		<Buff Index="314" EffectType="283" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wizardry/Curse Damage Increase" Description="Wizardry/Curse Damage Increase" />
+		<Buff Index="315" EffectType="297" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bat Flock" Description="Bat take a damage every second" />
+		<Buff Index="316" EffectType="298" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Detection" Description="Temporarily detects the location of nearby creatures. Rresult remain for 1 minute" />
+		<Buff Index="317" EffectType="299" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Demolish" Description="Ignores enemy's defense by %d when attacking." />
+		<Buff Index="318" EffectType="298" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Detection Strengthener" Description="Temporarily detects the location of nearby creatures. Rresult remain for 1 minute" />
+		<Buff Index="319" EffectType="299" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Demolish Strengthener" Description="Ignores enemy's defense by %d when attacking." />
+		<Buff Index="320" EffectType="299" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="1" Name="Demolish Mastery" Description="Ignores enemy's defense by %d when attacking." />
+		<Buff Index="321" EffectType="300" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="0" ClearType="1" BuffOutputValue="1" Name="Demolish - Reduces Attack Power" Description="" />
+		<Buff Index="322" EffectType="290" ItemType="12" ItemIndex="483" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Ice Dragon" Description="Guardian mount item" />
+		<Buff Index="323" EffectType="290" ItemType="12" ItemIndex="484" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Ice Dragon (Rare)" Description="Guardian mount item" />
+		<Buff Index="324" EffectType="301" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Sword's Fury" Description="Switch to Fury Knight. The range and damage range of blow-based attack skills are increased." />
+		<Buff Index="325" EffectType="302" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Strong Belief" Description="Switch to Belief Knight. Stat efficiency is changed and you can use solid protection skills." />
+		<Buff Index="326" EffectType="303" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Solid Protection" Description="Increases the party member's attack and magic powers, absorbs the party member's HP, and takes part of the damage instead." />
+		<Buff Index="327" EffectType="301" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Sword's Fury Strengthener" Description="Switch to Fury Knight. The range and damage range of blow-based attack skills are increased." />
+		<Buff Index="328" EffectType="301" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Sword's Fury Mastery" Description="Switch to Fury Knight. The range and damage range of blow-based attack skills are increased." />
+		<Buff Index="329" EffectType="303" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Solid Protection Strengthener" Description="Increases the party member's attack and magic powers, absorbs the party member's HP, and takes part of the damage instead." />
+		<Buff Index="330" EffectType="303" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Solid Protection Proficiency" Description="Increases the party member's attack and magic powers and absorbs the party member's HP and takes part of the damage instead.." />
+		<Buff Index="331" EffectType="303" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Solid Protection Mastery" Description="Increases the party member's attack and magic powers, absorbs the party member's HP, and takes part of the damage instead." />
+		<Buff Index="332" EffectType="303" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Solid Protection Mastery" Description="Increases the party member's attack and magic powers, absorbs the party member's HP, and takes part of the damage instead." />
+		<Buff Index="333" EffectType="304" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Solid Protection Effect" Description="Black Knight's Blessing Effect" />
+		<Buff Index="334" EffectType="302" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Strong Belief Strengthener" Description="Switch to Belief Knight. Stat efficiency is changed and you can use solid protection skills." />
+		<Buff Index="335" EffectType="303" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Solid Protection Enhancement" Description="Increases the party member's attack and magic powers, absorbs the party member's HP, and takes part of the damage instead." />
+		<Buff Index="336" EffectType="302" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Strong Belief Strengthener" Description="Switch to Belief Knight. Stat efficiency is changed and you can use solid protection skills." />
+		<Buff Index="339" EffectType="310" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bond - Inactive" Description="The bond buff is inactive./When Kundun and Lemuria form a party together, their bond activates the bond buff." />
+		<Buff Index="340" EffectType="310" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bond" Description="Damage increases due to the bond between Kundun and Lemuria." />
+		<Buff Index="341" EffectType="310" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bond - Party Member" Description="Damage increases due to the bond between Kundun and Lemuria./(Party members other than Kundun and Lemuria receive different damage.)" />
+		<Buff Index="342" EffectType="311" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Bond - Monsters" Description="The bond between Kundun and Lemuria creates a bond between them./(Monsters that touch the string take damage.)" />
+		<Buff Index="343" EffectType="39" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Reflection Barrier" Description="Creates a reflective barrier with a 50% chance to block damage and reflect some when receiving shock damage." />
+		<Buff Index="345" EffectType="39" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Reflection Barrier" Description="Creates a reflective barrier with a 50% chance to block damage and reflect some when receiving shock damage./Increases Maximum Mana." />
+		<Buff Index="346" EffectType="1" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Beginner's ATK Increase" Description="Attack Power Increase" />
+		<Buff Index="347" EffectType="2" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Beginner's DEF Increase" Description="Defense Increase" />
+		<Buff Index="348" EffectType="87" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Beginner's Bless" Description="All stats increase." />
+		<Buff Index="349" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 0" Description="Experience +5%" />
+		<Buff Index="350" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 1" Description="Experience +5%" />
+		<Buff Index="351" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 2" Description="Experience +5%" />
+		<Buff Index="352" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 3" Description="Experience +10%" />
+		<Buff Index="353" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 4" Description="Experience +10%" />
+		<Buff Index="354" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 5" Description="Experience +10%" />
+		<Buff Index="355" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 6" Description="Experience +15%" />
+		<Buff Index="356" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 7" Description="Experience +15%" />
+		<Buff Index="357" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 8" Description="Experience +15%" />
+		<Buff Index="358" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 9" Description="Experience +20%" />
+		<Buff Index="359" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 10" Description="Experience +20%" />
+		<Buff Index="360" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 11" Description="Experience +20%" />
+		<Buff Index="361" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 12" Description="Experience +20%" />
+		<Buff Index="362" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 13" Description="Experience +20%" />
+		<Buff Index="363" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 14" Description="Experience +20%" />
+		<Buff Index="364" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 15" Description="Experience +20%" />
+		<Buff Index="365" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Spiral Charge" Description="Switches to a two-handed Magic Gladiator. / Increases attack power and defense. / Increases the use distance of Chaos Blade and Fire Blood, and explodes a powerful sword when attacking 3 times." />
+		<Buff Index="366" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Crusher Charge" Description="Switches to one-handed Magic Gladiator. / Attack speed and defense are increased. / Chaos Blade and Ice Blood skill use distance increases, and when attacking 3 times, it explodes a powerful sword." />
+		<Buff Index="367" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elemental Charge" Description="Switches to a wizard type Magic Gladiator. / Increases wizardry and defense. / Increases Havok Spear skill use distance and explodes a powerful Nova when attacking 3 times." />
+		<Buff Index="368" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Spiral Charge Strengthener" Description="Switches to a two-handed Magic Gladiator. / Increases attack power and defense. / Increases the use distance of Chaos Blade and Fire Blood, and explodes a powerful sword when attacking 3 times." />
+		<Buff Index="369" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Spiral Charge Mastery" Description="Switches to a two-handed Magic Gladiator. / Increases attack power and defense. / Increases the use distance of Chaos Blade and Fire Blood, and explodes a powerful sword when attacking 3 times." />
+		<Buff Index="370" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Crusher Charge Strengthener" Description="Switches to one-handed Magic Gladiator. / Attack speed and defense are increased. / Chaos Blade and Ice Blood skill use distance increases, and when attacking 3 times, it explodes a powerful sword." />
+		<Buff Index="371" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Crusher Charge Mastery" Description="Switches to one-handed Magic Gladiator. / Attack speed and defense are increased. / Chaos Blade and Ice Blood skill use distance increases, and when attacking 3 times, it explodes a powerful sword." />
+		<Buff Index="372" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elemental Charge Strengthener" Description="Switches to a wizard type Magic Gladiator. / Increases wizardry and defense. / Increases Havok Spear skill use distance and explodes a powerful Nova when attacking 3 times." />
+		<Buff Index="373" EffectType="307" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elemental Charge Mastery" Description="Switches to a wizard type Magic Gladiator. / Increases wizardry and defense. / Increases Havok Spear skill use distance and explodes a powerful Nova when attacking 3 times." />
+		<Buff Index="374" EffectType="290" ItemType="12" ItemIndex="75" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Pierce Lion" Description="Guardian mount item" />
+		<Buff Index="375" EffectType="290" ItemType="12" ItemIndex="76" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Pierce Lion (Rare)" Description="Guardian mount item" />
+		<Buff Index="376" EffectType="313" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Exclusive Equipment Additional Effect - Pentagram" Description="The ability of the equipment is strengthened by wearing the character's exclusive equipment." />
+		<Buff Index="377" EffectType="316" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Blessing of Experience" Description="You are blessed with experience/acquire an additional 35% of the base experience." />
+		<Buff Index="378" EffectType="308" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Chaos Blade" Description="" />
+		<Buff Index="379" EffectType="308" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Havok Spear" Description="" />
+		<Buff Index="380" EffectType="309" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Fixed Fire" Description="The stat effects of wizardry, attack speed and defense are changed. (Right click to cancel buff)" />
+		<Buff Index="381" EffectType="309" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Fixed Fire Strengthener" Description="The stat effects of wizardry, attack speed and defense are changed. (Right click to cancel buff)" />
+		<Buff Index="382" EffectType="309" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Fixed Fire Mastery" Description="The stat effects of wizardry, attack speed and defense are changed. (Right click to cancel buff)" />
+		<Buff Index="383" EffectType="317" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Reflection Barrier" Description="Reflection Barrier Reflective Barrier Effect" />
+		<Buff Index="384" EffectType="318" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Exclusive Equipment Additional Effect - Weapon" Description="The ability of the equipment is strengthened by wearing the character's exclusive equipment." />
+		<Buff Index="385" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 16" Description="Experience +20%" />
+		<Buff Index="386" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 17" Description="Experience +20%" />
+		<Buff Index="387" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 18" Description="Experience +20%" />
+		<Buff Index="388" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 19" Description="Experience +20%" />
+		<Buff Index="389" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 20" Description="Experience +20%" />
+		<Buff Index="390" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 21" Description="Experience +20%" />
+		<Buff Index="391" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 22" Description="Experience +20%" />
+		<Buff Index="392" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 23" Description="Experience +20%" />
+		<Buff Index="393" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 24" Description="Experience +20%" />
+		<Buff Index="394" EffectType="306" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="20th Anniversary Event Level 25" Description="Experience +20%" />
+		<Buff Index="395" EffectType="319" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Dex Booster" Description="Movement speed, attack speed, and attack success rate increase" />
+		<Buff Index="396" EffectType="320" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elemental Attack Power Increase" Description="Increases elemental attack power./(Effect only applies when wearing a pentagram)." />
+		<Buff Index="397" EffectType="321" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elemental Defense Increase" Description="Increases elemental defense./(Effect only applies when wearing a pentagram)." />
+		<Buff Index="398" EffectType="320" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elemental Attack Power Enhancement Skill" Description="Increases elemental attack power./(Effect only applies when wearing a pentagram)." />
+		<Buff Index="399" EffectType="321" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Elemental Defense Enhancement Skill" Description="Increases elemental defense./(Effect only applies while wearing a pentagram)." />
+		<Buff Index="400" EffectType="1" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Attack Power Enhancement Skill" Description="Attack power increase" />
+		<Buff Index="401" EffectType="2" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Defense Enhancement Skill" Description="Defense increase" />
+		<Buff Index="402" EffectType="87" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="2" Name="Bless Enhancement Skill" Description="All stats increase" />
+		<Buff Index="403" EffectType="322" ItemType="12" ItemIndex="83" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wear Shining Tail" Description="Guardian mount item" />
+		<Buff Index="404" EffectType="322" ItemType="12" ItemIndex="84" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wear Shining Tail (Rare)" Description="Guardian mount item" />
+		<Buff Index="405" EffectType="323" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Illusion Blade" Description="Summons an Illusion Blade and increases the character's attack power." />
+		<Buff Index="406" EffectType="323" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Illusion Blade Strengthener" Description="Summons an Illusion Blade and increases the character's attack power and skill attack power." />
+		<Buff Index="407" EffectType="323" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Illusion Blade Mastery" Description="Summons an Illusion Blade and increases the character's attack power, skill attack power, and attack speed." />
+		<Buff Index="408" EffectType="323" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Illusion Blade Mastery" Description="Summons an Illusion Blade and increases the character's attack power, skill attack power, and attack speed. /Attacking an enemy increases damage taken by 5%." />
+		<Buff Index="409" EffectType="324" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Illusion Avatar" Description="Creates an illusion of an Illusion Knight and attacks nearby monsters." />
+		<Buff Index="410" EffectType="325" ItemType="-1" ItemIndex="-1" Type="1" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Damage Increase" Description="When Illusion Knight attacks a monster, all damage taken by the monster is increased by 5%." />
+		<Buff Index="411" EffectType="326" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="2" Name="Season Pass - Increase Max HP" Description="Increases Max HP by %d." />
+		<Buff Index="412" EffectType="327" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="2" Name="Season Pass - Increase base experience" Description="Your initial base experience is increased by %0.1f%%." />
+		<Buff Index="413" EffectType="328" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="2" Name="Season Pass - Tempest Muun multiplier increase" Description="The Tempest Muun multiplier effect is additionally increased by %d times." />
+		<Buff Index="414" EffectType="329" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="2" Name="Season Pass - [G] Master Lee Horn's Crystal" Description="When killing a monster, you can obtain the 'Mastery Spirit Crystal' item with a %0.3f%% chance." />
+		<Buff Index="415" EffectType="330" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="2" Name="Season Pass - [P] Master Lee Horn's Crystal" Description="When killing a monster, you can obtain the 'Mastery Spirit Crystal' item with a %0.3f%% chance." />
+		<Buff Index="418" EffectType="331" ItemType="12" ItemIndex="93" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wear Ur" Description="Guardian mount item" />
+		<Buff Index="419" EffectType="332" ItemType="12" ItemIndex="94" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wear Ur (Rare)" Description="Guardian mount item" />
+		<Buff Index="420" EffectType="333" ItemType="14" ItemIndex="366" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Piece of Pizza" Description="Gains an additional 50% of base EXP/Increases attack speed by 10." />
+		<Buff Index="421" EffectType="334" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Additional Nuke Damage" Description="Extra Nuke damage can be inflicted when attacking." />
+		<Buff Index="422" EffectType="335" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Additional Bolt Damage" Description="Extra Bolt damage can be inflicted when attacking." />
+		<Buff Index="423" EffectType="336" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Additional Wide Area Damage" Description="Extra Wide Area damage can be inflicted when attacking." />
+		<Buff Index="424" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wrath" Description="Attack and combat power increase. Defense decreases." />
+		<Buff Index="425" EffectType="123" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wrath Strengthener" Description="Attack and combat power increase. Defense decreases." />
+		<Buff Index="426" EffectType="116" ItemType="14" ItemIndex="69" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="[PC Room] Blessing of Light (Advanced)" Description="You are blessed with experience/acquire an additional 200% of the base experience." />
+		<Buff Index="427" EffectType="87" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Crown Force" Description="Increases all stats" />
+		<Buff Index="428" EffectType="337" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Divine Force" Description="The stats required for attack are greatly increased for 3 seconds." />
+		<Buff Index="429" EffectType="337" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Divine Aura" Description="Increases Defense greatly for 3 seconds." />
+		<Buff Index="430" EffectType="117" ItemType="20" ItemIndex="247" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Divine Horse" Description="Summons the Divine Horse." />
+		<Buff Index="431" EffectType="230" ItemType="20" ItemIndex="248" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="(General) Divine Spirit" Description="Summons the Divine Spirit." />
+		<Buff Index="432" EffectType="230" ItemType="20" ItemIndex="249" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="(Rare 1) Divine Spirit" Description="Summons the Divine Spirit." />
+		<Buff Index="433" EffectType="230" ItemType="20" ItemIndex="250" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="(Rare 2) Divine Spirit" Description="Summons the Divine Spirit." />
+		<Buff Index="436" EffectType="337" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Battle Glory" Description="Increases attack and combat power." />
+		<Buff Index="437" EffectType="337" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Battle Glory Enhancement" Description="Increases attack and combat power." />
+	</General>
+	<Period>
+		<Buff Index="179" EffectType1="0" EffectValue1="25" EffectType2="0" EffectValue2="0" Duration="604800" Name="Fire Tower" />
+		<Buff Index="180" EffectType1="0" EffectValue1="50" EffectType2="0" EffectValue2="0" Duration="604800" Name="Water Tower" />
+		<Buff Index="181" EffectType1="55" EffectValue1="5" EffectType2="0" EffectValue2="0" Duration="604800" Name="Earth Tower" />
+		<Buff Index="182" EffectType1="85" EffectValue1="30" EffectType2="0" EffectValue2="0" Duration="604800" Name="Wind Tower" />
+		<Buff Index="183" EffectType1="86" EffectValue1="10" EffectType2="0" EffectValue2="0" Duration="604800" Name="Darkness Tower" />
+		<Buff Index="184" EffectType1="20" EffectValue1="0" EffectType2="0" EffectValue2="0" Duration="90" Name="Resurrection Penalty" />
+		<Buff Index="246" EffectType1="101" EffectValue1="200" EffectType2="102" EffectValue2="50" Duration="1800" Name="Archangel's Absolute Weapon Skill" />
+		<Buff Index="247" EffectType1="0" EffectValue1="0" EffectType2="0" EffectValue2="5" Duration="0" Name="Ferea Party EXP Buff" />
+	</Period>
+</BuffEffectManager>

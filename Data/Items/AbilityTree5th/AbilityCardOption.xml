@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes to the file need to be reflected on game client side in ParticleOption.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### AbilityCardOptions::CardOption::Option ###
+//	ID: Unique ID of card setting, -1 for options statically assigned to specific cards
+//	ItemCat: Category of card item
+//	ItemIndex: Index of card item
+//	Index: Index of assigned card option, refers to AbilityCardOption.xml::AbilityCardOptions::OptionList::Option::Index attribute
+//	FormulaID: Formula ID used for assigned option, refers to FormulaData.xml::FormulaData::AbilityTree
+//
+//
+// ### AbilityCardOptions::OptionList::Option ###
+//	Index: Unique index of card option
+//	Name: Name of option
+//	Operator: 
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<AbilityCardOptions>
+	<CardOption>
+		<Option ID="-1" ItemCat="20" ItemIndex="235" Index="80" FormulaID="0" />
+		<Option ID="-1" ItemCat="20" ItemIndex="236" Index="81" FormulaID="0" />
+		<Option ID="-1" ItemCat="20" ItemIndex="237" Index="82" FormulaID="0" />
+		<Option ID="0" ItemCat="20" ItemIndex="213" Index="15" FormulaID="52" />
+		<Option ID="1" ItemCat="20" ItemIndex="213" Index="42" FormulaID="53" />
+		<Option ID="2" ItemCat="20" ItemIndex="213" Index="48" FormulaID="54" />
+		<Option ID="3" ItemCat="20" ItemIndex="213" Index="5" FormulaID="55" />
+		<Option ID="4" ItemCat="20" ItemIndex="213" Index="33" FormulaID="56" />
+		<Option ID="5" ItemCat="20" ItemIndex="213" Index="35" FormulaID="57" />
+		<Option ID="6" ItemCat="20" ItemIndex="213" Index="19" FormulaID="58" />
+		<Option ID="7" ItemCat="20" ItemIndex="213" Index="20" FormulaID="59" />
+		<Option ID="8" ItemCat="20" ItemIndex="213" Index="21" FormulaID="60" />
+		<Option ID="9" ItemCat="20" ItemIndex="213" Index="29" FormulaID="61" />
+		<Option ID="10" ItemCat="20" ItemIndex="213" Index="30" FormulaID="62" />
+		<Option ID="11" ItemCat="20" ItemIndex="213" Index="31" FormulaID="63" />
+		<Option ID="12" ItemCat="20" ItemIndex="213" Index="3" FormulaID="64" />
+		<Option ID="13" ItemCat="20" ItemIndex="214" Index="16" FormulaID="65" />
+		<Option ID="14" ItemCat="20" ItemIndex="214" Index="43" FormulaID="66" />
+		<Option ID="15" ItemCat="20" ItemIndex="214" Index="13" FormulaID="67" />
+		<Option ID="16" ItemCat="20" ItemIndex="214" Index="6" FormulaID="68" />
+		<Option ID="17" ItemCat="20" ItemIndex="214" Index="11" FormulaID="69" />
+		<Option ID="18" ItemCat="20" ItemIndex="214" Index="36" FormulaID="70" />
+		<Option ID="19" ItemCat="20" ItemIndex="214" Index="83" FormulaID="71" />
+		<Option ID="20" ItemCat="20" ItemIndex="214" Index="84" FormulaID="72" />
+		<Option ID="21" ItemCat="20" ItemIndex="214" Index="51" FormulaID="73" />
+		<Option ID="22" ItemCat="20" ItemIndex="214" Index="56" FormulaID="74" />
+		<Option ID="23" ItemCat="20" ItemIndex="214" Index="61" FormulaID="75" />
+		<Option ID="24" ItemCat="20" ItemIndex="214" Index="68" FormulaID="76" />
+		<Option ID="25" ItemCat="20" ItemIndex="214" Index="69" FormulaID="77" />
+		<Option ID="26" ItemCat="20" ItemIndex="214" Index="70" FormulaID="78" />
+		<Option ID="27" ItemCat="20" ItemIndex="215" Index="17" FormulaID="79" />
+		<Option ID="28" ItemCat="20" ItemIndex="215" Index="44" FormulaID="80" />
+		<Option ID="29" ItemCat="20" ItemIndex="215" Index="47" FormulaID="81" />
+		<Option ID="30" ItemCat="20" ItemIndex="215" Index="7" FormulaID="82" />
+		<Option ID="31" ItemCat="20" ItemIndex="215" Index="34" FormulaID="83" />
+		<Option ID="32" ItemCat="20" ItemIndex="215" Index="28" FormulaID="84" />
+		<Option ID="33" ItemCat="20" ItemIndex="215" Index="85" FormulaID="84" />
+		<Option ID="34" ItemCat="20" ItemIndex="215" Index="86" FormulaID="84" />
+		<Option ID="35" ItemCat="20" ItemIndex="215" Index="22" FormulaID="85" />
+		<Option ID="36" ItemCat="20" ItemIndex="215" Index="23" FormulaID="86" />
+		<Option ID="37" ItemCat="20" ItemIndex="215" Index="24" FormulaID="87" />
+		<Option ID="38" ItemCat="20" ItemIndex="215" Index="41" FormulaID="88" />
+		<Option ID="39" ItemCat="20" ItemIndex="215" Index="29" FormulaID="89" />
+		<Option ID="40" ItemCat="20" ItemIndex="215" Index="30" FormulaID="90" />
+		<Option ID="41" ItemCat="20" ItemIndex="215" Index="31" FormulaID="91" />
+		<Option ID="42" ItemCat="20" ItemIndex="215" Index="3" FormulaID="92" />
+		<Option ID="43" ItemCat="20" ItemIndex="216" Index="18" FormulaID="93" />
+		<Option ID="44" ItemCat="20" ItemIndex="216" Index="45" FormulaID="94" />
+		<Option ID="45" ItemCat="20" ItemIndex="216" Index="4" FormulaID="95" />
+		<Option ID="46" ItemCat="20" ItemIndex="216" Index="8" FormulaID="96" />
+		<Option ID="47" ItemCat="20" ItemIndex="216" Index="12" FormulaID="97" />
+		<Option ID="48" ItemCat="20" ItemIndex="216" Index="14" FormulaID="98" />
+		<Option ID="49" ItemCat="20" ItemIndex="216" Index="2" FormulaID="99" />
+		<Option ID="50" ItemCat="20" ItemIndex="216" Index="10" FormulaID="100" />
+		<Option ID="51" ItemCat="20" ItemIndex="216" Index="0" FormulaID="101" />
+		<Option ID="53" ItemCat="20" ItemIndex="216" Index="68" FormulaID="103" />
+		<Option ID="54" ItemCat="20" ItemIndex="216" Index="69" FormulaID="104" />
+		<Option ID="55" ItemCat="20" ItemIndex="216" Index="70" FormulaID="105" />
+		<Option ID="56" ItemCat="20" ItemIndex="217" Index="64" FormulaID="106" />
+		<Option ID="57" ItemCat="20" ItemIndex="217" Index="46" FormulaID="107" />
+		<Option ID="58" ItemCat="20" ItemIndex="217" Index="9" FormulaID="108" />
+		<Option ID="59" ItemCat="20" ItemIndex="217" Index="39" FormulaID="109" />
+		<Option ID="60" ItemCat="20" ItemIndex="217" Index="40" FormulaID="110" />
+		<Option ID="61" ItemCat="20" ItemIndex="217" Index="25" FormulaID="111" />
+		<Option ID="62" ItemCat="20" ItemIndex="217" Index="26" FormulaID="112" />
+		<Option ID="63" ItemCat="20" ItemIndex="217" Index="27" FormulaID="113" />
+		<Option ID="64" ItemCat="20" ItemIndex="217" Index="37" FormulaID="114" />
+		<Option ID="65" ItemCat="20" ItemIndex="217" Index="38" FormulaID="115" />
+		<Option ID="66" ItemCat="20" ItemIndex="217" Index="29" FormulaID="116" />
+		<Option ID="67" ItemCat="20" ItemIndex="217" Index="30" FormulaID="117" />
+		<Option ID="68" ItemCat="20" ItemIndex="217" Index="31" FormulaID="118" />
+		<Option ID="69" ItemCat="20" ItemIndex="217" Index="3" FormulaID="119" />
+		<Option ID="70" ItemCat="20" ItemIndex="218" Index="15" FormulaID="120" />
+		<Option ID="71" ItemCat="20" ItemIndex="218" Index="42" FormulaID="121" />
+		<Option ID="72" ItemCat="20" ItemIndex="218" Index="48" FormulaID="122" />
+		<Option ID="73" ItemCat="20" ItemIndex="218" Index="5" FormulaID="123" />
+		<Option ID="74" ItemCat="20" ItemIndex="218" Index="33" FormulaID="124" />
+		<Option ID="75" ItemCat="20" ItemIndex="218" Index="35" FormulaID="125" />
+		<Option ID="76" ItemCat="20" ItemIndex="218" Index="19" FormulaID="126" />
+		<Option ID="77" ItemCat="20" ItemIndex="218" Index="20" FormulaID="127" />
+		<Option ID="78" ItemCat="20" ItemIndex="218" Index="21" FormulaID="128" />
+		<Option ID="79" ItemCat="20" ItemIndex="218" Index="29" FormulaID="129" />
+		<Option ID="80" ItemCat="20" ItemIndex="218" Index="30" FormulaID="130" />
+		<Option ID="81" ItemCat="20" ItemIndex="218" Index="31" FormulaID="131" />
+		<Option ID="82" ItemCat="20" ItemIndex="218" Index="3" FormulaID="132" />
+		<Option ID="83" ItemCat="20" ItemIndex="219" Index="16" FormulaID="133" />
+		<Option ID="84" ItemCat="20" ItemIndex="219" Index="43" FormulaID="134" />
+		<Option ID="85" ItemCat="20" ItemIndex="219" Index="13" FormulaID="135" />
+		<Option ID="86" ItemCat="20" ItemIndex="219" Index="6" FormulaID="136" />
+		<Option ID="87" ItemCat="20" ItemIndex="219" Index="11" FormulaID="137" />
+		<Option ID="88" ItemCat="20" ItemIndex="219" Index="36" FormulaID="138" />
+		<Option ID="89" ItemCat="20" ItemIndex="219" Index="83" FormulaID="139" />
+		<Option ID="90" ItemCat="20" ItemIndex="219" Index="84" FormulaID="140" />
+		<Option ID="91" ItemCat="20" ItemIndex="219" Index="51" FormulaID="141" />
+		<Option ID="92" ItemCat="20" ItemIndex="219" Index="56" FormulaID="142" />
+		<Option ID="93" ItemCat="20" ItemIndex="219" Index="61" FormulaID="143" />
+		<Option ID="94" ItemCat="20" ItemIndex="219" Index="68" FormulaID="144" />
+		<Option ID="95" ItemCat="20" ItemIndex="219" Index="69" FormulaID="145" />
+		<Option ID="96" ItemCat="20" ItemIndex="219" Index="70" FormulaID="146" />
+		<Option ID="97" ItemCat="20" ItemIndex="220" Index="17" FormulaID="147" />
+		<Option ID="98" ItemCat="20" ItemIndex="220" Index="44" FormulaID="148" />
+		<Option ID="99" ItemCat="20" ItemIndex="220" Index="47" FormulaID="149" />
+		<Option ID="100" ItemCat="20" ItemIndex="220" Index="7" FormulaID="150" />
+		<Option ID="101" ItemCat="20" ItemIndex="220" Index="34" FormulaID="151" />
+		<Option ID="102" ItemCat="20" ItemIndex="220" Index="28" FormulaID="152" />
+		<Option ID="103" ItemCat="20" ItemIndex="220" Index="85" FormulaID="84" />
+		<Option ID="104" ItemCat="20" ItemIndex="220" Index="86" FormulaID="84" />
+		<Option ID="105" ItemCat="20" ItemIndex="220" Index="22" FormulaID="153" />
+		<Option ID="106" ItemCat="20" ItemIndex="220" Index="23" FormulaID="154" />
+		<Option ID="107" ItemCat="20" ItemIndex="220" Index="24" FormulaID="155" />
+		<Option ID="108" ItemCat="20" ItemIndex="220" Index="41" FormulaID="156" />
+		<Option ID="109" ItemCat="20" ItemIndex="220" Index="29" FormulaID="157" />
+		<Option ID="110" ItemCat="20" ItemIndex="220" Index="30" FormulaID="158" />
+		<Option ID="111" ItemCat="20" ItemIndex="220" Index="31" FormulaID="159" />
+		<Option ID="112" ItemCat="20" ItemIndex="220" Index="3" FormulaID="160" />
+		<Option ID="113" ItemCat="20" ItemIndex="221" Index="18" FormulaID="161" />
+		<Option ID="114" ItemCat="20" ItemIndex="221" Index="45" FormulaID="162" />
+		<Option ID="115" ItemCat="20" ItemIndex="221" Index="4" FormulaID="163" />
+		<Option ID="116" ItemCat="20" ItemIndex="221" Index="8" FormulaID="164" />
+		<Option ID="117" ItemCat="20" ItemIndex="221" Index="12" FormulaID="165" />
+		<Option ID="118" ItemCat="20" ItemIndex="221" Index="14" FormulaID="166" />
+		<Option ID="119" ItemCat="20" ItemIndex="221" Index="2" FormulaID="167" />
+		<Option ID="120" ItemCat="20" ItemIndex="221" Index="10" FormulaID="168" />
+		<Option ID="121" ItemCat="20" ItemIndex="221" Index="0" FormulaID="169" />
+		<Option ID="123" ItemCat="20" ItemIndex="221" Index="68" FormulaID="171" />
+		<Option ID="124" ItemCat="20" ItemIndex="221" Index="69" FormulaID="172" />
+		<Option ID="125" ItemCat="20" ItemIndex="221" Index="70" FormulaID="173" />
+		<Option ID="126" ItemCat="20" ItemIndex="222" Index="64" FormulaID="174" />
+		<Option ID="127" ItemCat="20" ItemIndex="222" Index="46" FormulaID="175" />
+		<Option ID="128" ItemCat="20" ItemIndex="222" Index="9" FormulaID="176" />
+		<Option ID="129" ItemCat="20" ItemIndex="222" Index="39" FormulaID="177" />
+		<Option ID="130" ItemCat="20" ItemIndex="222" Index="40" FormulaID="178" />
+		<Option ID="131" ItemCat="20" ItemIndex="222" Index="25" FormulaID="179" />
+		<Option ID="132" ItemCat="20" ItemIndex="222" Index="26" FormulaID="180" />
+		<Option ID="133" ItemCat="20" ItemIndex="222" Index="27" FormulaID="181" />
+		<Option ID="134" ItemCat="20" ItemIndex="222" Index="37" FormulaID="182" />
+		<Option ID="135" ItemCat="20" ItemIndex="222" Index="38" FormulaID="183" />
+		<Option ID="136" ItemCat="20" ItemIndex="222" Index="29" FormulaID="184" />
+		<Option ID="137" ItemCat="20" ItemIndex="222" Index="30" FormulaID="185" />
+		<Option ID="138" ItemCat="20" ItemIndex="222" Index="31" FormulaID="186" />
+		<Option ID="139" ItemCat="20" ItemIndex="222" Index="3" FormulaID="187" />
+		<Option ID="140" ItemCat="20" ItemIndex="223" Index="15" FormulaID="188" />
+		<Option ID="141" ItemCat="20" ItemIndex="223" Index="42" FormulaID="189" />
+		<Option ID="142" ItemCat="20" ItemIndex="223" Index="48" FormulaID="190" />
+		<Option ID="143" ItemCat="20" ItemIndex="223" Index="5" FormulaID="191" />
+		<Option ID="144" ItemCat="20" ItemIndex="223" Index="33" FormulaID="192" />
+		<Option ID="145" ItemCat="20" ItemIndex="223" Index="35" FormulaID="193" />
+		<Option ID="146" ItemCat="20" ItemIndex="223" Index="19" FormulaID="194" />
+		<Option ID="147" ItemCat="20" ItemIndex="223" Index="20" FormulaID="195" />
+		<Option ID="148" ItemCat="20" ItemIndex="223" Index="21" FormulaID="196" />
+		<Option ID="149" ItemCat="20" ItemIndex="223" Index="29" FormulaID="197" />
+		<Option ID="150" ItemCat="20" ItemIndex="223" Index="30" FormulaID="198" />
+		<Option ID="151" ItemCat="20" ItemIndex="223" Index="31" FormulaID="199" />
+		<Option ID="152" ItemCat="20" ItemIndex="223" Index="3" FormulaID="200" />
+		<Option ID="153" ItemCat="20" ItemIndex="224" Index="16" FormulaID="201" />
+		<Option ID="154" ItemCat="20" ItemIndex="224" Index="43" FormulaID="202" />
+		<Option ID="155" ItemCat="20" ItemIndex="224" Index="13" FormulaID="203" />
+		<Option ID="156" ItemCat="20" ItemIndex="224" Index="6" FormulaID="204" />
+		<Option ID="157" ItemCat="20" ItemIndex="224" Index="11" FormulaID="205" />
+		<Option ID="158" ItemCat="20" ItemIndex="224" Index="36" FormulaID="206" />
+		<Option ID="159" ItemCat="20" ItemIndex="224" Index="83" FormulaID="207" />
+		<Option ID="160" ItemCat="20" ItemIndex="224" Index="84" FormulaID="208" />
+		<Option ID="161" ItemCat="20" ItemIndex="224" Index="51" FormulaID="209" />
+		<Option ID="162" ItemCat="20" ItemIndex="224" Index="56" FormulaID="210" />
+		<Option ID="163" ItemCat="20" ItemIndex="224" Index="61" FormulaID="211" />
+		<Option ID="164" ItemCat="20" ItemIndex="224" Index="68" FormulaID="212" />
+		<Option ID="165" ItemCat="20" ItemIndex="224" Index="69" FormulaID="213" />
+		<Option ID="166" ItemCat="20" ItemIndex="224" Index="70" FormulaID="214" />
+		<Option ID="167" ItemCat="20" ItemIndex="225" Index="17" FormulaID="215" />
+		<Option ID="168" ItemCat="20" ItemIndex="225" Index="44" FormulaID="216" />
+		<Option ID="169" ItemCat="20" ItemIndex="225" Index="47" FormulaID="217" />
+		<Option ID="170" ItemCat="20" ItemIndex="225" Index="7" FormulaID="218" />
+		<Option ID="171" ItemCat="20" ItemIndex="225" Index="34" FormulaID="219" />
+		<Option ID="172" ItemCat="20" ItemIndex="225" Index="28" FormulaID="220" />
+		<Option ID="173" ItemCat="20" ItemIndex="225" Index="85" FormulaID="84" />
+		<Option ID="174" ItemCat="20" ItemIndex="225" Index="86" FormulaID="84" />
+		<Option ID="175" ItemCat="20" ItemIndex="225" Index="22" FormulaID="221" />
+		<Option ID="176" ItemCat="20" ItemIndex="225" Index="23" FormulaID="222" />
+		<Option ID="177" ItemCat="20" ItemIndex="225" Index="24" FormulaID="223" />
+		<Option ID="178" ItemCat="20" ItemIndex="225" Index="41" FormulaID="224" />
+		<Option ID="179" ItemCat="20" ItemIndex="225" Index="29" FormulaID="225" />
+		<Option ID="180" ItemCat="20" ItemIndex="225" Index="30" FormulaID="226" />
+		<Option ID="181" ItemCat="20" ItemIndex="225" Index="31" FormulaID="227" />
+		<Option ID="182" ItemCat="20" ItemIndex="225" Index="3" FormulaID="228" />
+		<Option ID="183" ItemCat="20" ItemIndex="226" Index="18" FormulaID="229" />
+		<Option ID="184" ItemCat="20" ItemIndex="226" Index="45" FormulaID="230" />
+		<Option ID="185" ItemCat="20" ItemIndex="226" Index="4" FormulaID="231" />
+		<Option ID="186" ItemCat="20" ItemIndex="226" Index="8" FormulaID="232" />
+		<Option ID="187" ItemCat="20" ItemIndex="226" Index="12" FormulaID="233" />
+		<Option ID="188" ItemCat="20" ItemIndex="226" Index="14" FormulaID="234" />
+		<Option ID="189" ItemCat="20" ItemIndex="226" Index="2" FormulaID="235" />
+		<Option ID="190" ItemCat="20" ItemIndex="226" Index="10" FormulaID="236" />
+		<Option ID="191" ItemCat="20" ItemIndex="226" Index="0" FormulaID="237" />
+		<Option ID="193" ItemCat="20" ItemIndex="226" Index="68" FormulaID="239" />
+		<Option ID="194" ItemCat="20" ItemIndex="226" Index="69" FormulaID="240" />
+		<Option ID="195" ItemCat="20" ItemIndex="226" Index="70" FormulaID="241" />
+		<Option ID="196" ItemCat="20" ItemIndex="227" Index="64" FormulaID="242" />
+		<Option ID="197" ItemCat="20" ItemIndex="227" Index="46" FormulaID="243" />
+		<Option ID="198" ItemCat="20" ItemIndex="227" Index="9" FormulaID="244" />
+		<Option ID="199" ItemCat="20" ItemIndex="227" Index="39" FormulaID="245" />
+		<Option ID="200" ItemCat="20" ItemIndex="227" Index="40" FormulaID="246" />
+		<Option ID="201" ItemCat="20" ItemIndex="227" Index="25" FormulaID="247" />
+		<Option ID="202" ItemCat="20" ItemIndex="227" Index="26" FormulaID="248" />
+		<Option ID="203" ItemCat="20" ItemIndex="227" Index="27" FormulaID="249" />
+		<Option ID="204" ItemCat="20" ItemIndex="227" Index="37" FormulaID="250" />
+		<Option ID="205" ItemCat="20" ItemIndex="227" Index="38" FormulaID="251" />
+		<Option ID="206" ItemCat="20" ItemIndex="227" Index="29" FormulaID="252" />
+		<Option ID="207" ItemCat="20" ItemIndex="227" Index="30" FormulaID="253" />
+		<Option ID="208" ItemCat="20" ItemIndex="227" Index="31" FormulaID="254" />
+		<Option ID="209" ItemCat="20" ItemIndex="227" Index="3" FormulaID="255" />
+		<Option ID="210" ItemCat="20" ItemIndex="228" Index="52" FormulaID="256" />
+		<Option ID="211" ItemCat="20" ItemIndex="228" Index="51" FormulaID="257" />
+		<Option ID="212" ItemCat="20" ItemIndex="228" Index="50" FormulaID="258" />
+		<Option ID="213" ItemCat="20" ItemIndex="228" Index="53" FormulaID="259" />
+		<Option ID="214" ItemCat="20" ItemIndex="228" Index="3" FormulaID="260" />
+		<Option ID="215" ItemCat="20" ItemIndex="228" Index="71" FormulaID="261" />
+		<Option ID="216" ItemCat="20" ItemIndex="228" Index="72" FormulaID="262" />
+		<Option ID="217" ItemCat="20" ItemIndex="228" Index="73" FormulaID="263" />
+		<Option ID="218" ItemCat="20" ItemIndex="229" Index="62" FormulaID="264" />
+		<Option ID="219" ItemCat="20" ItemIndex="229" Index="56" FormulaID="265" />
+		<Option ID="220" ItemCat="20" ItemIndex="229" Index="55" FormulaID="266" />
+		<Option ID="221" ItemCat="20" ItemIndex="229" Index="58" FormulaID="267" />
+		<Option ID="222" ItemCat="20" ItemIndex="229" Index="3" FormulaID="268" />
+		<Option ID="223" ItemCat="20" ItemIndex="229" Index="74" FormulaID="269" />
+		<Option ID="224" ItemCat="20" ItemIndex="229" Index="75" FormulaID="270" />
+		<Option ID="225" ItemCat="20" ItemIndex="229" Index="76" FormulaID="271" />
+		<Option ID="226" ItemCat="20" ItemIndex="230" Index="57" FormulaID="272" />
+		<Option ID="227" ItemCat="20" ItemIndex="230" Index="61" FormulaID="273" />
+		<Option ID="228" ItemCat="20" ItemIndex="230" Index="63" FormulaID="274" />
+		<Option ID="229" ItemCat="20" ItemIndex="230" Index="60" FormulaID="275" />
+		<Option ID="230" ItemCat="20" ItemIndex="230" Index="3" FormulaID="276" />
+		<Option ID="231" ItemCat="20" ItemIndex="230" Index="77" FormulaID="277" />
+		<Option ID="232" ItemCat="20" ItemIndex="230" Index="78" FormulaID="278" />
+		<Option ID="233" ItemCat="20" ItemIndex="230" Index="79" FormulaID="279" />
+	</CardOption>
+
+	<OptionList>
+		<Option Index="0" Name="Defense Increase" Operator="0" />
+		<Option Index="1" Name="Shield Defense Increase" Operator="0" />
+		<Option Index="2" Name="5th Wing Defense Increase" Operator="0" />
+		<Option Index="3" Name="Extra Defense Increase" Operator="0" />
+		<Option Index="4" Name="Elemental Defense Increase" Operator="0" />
+		<Option Index="5" Name="Fire Element Defense Increase" Operator="0" />
+		<Option Index="6" Name="Water Element Defense Increase" Operator="0" />
+		<Option Index="7" Name="Earth Element Defense Increase" Operator="0" />
+		<Option Index="8" Name="Wind Element Defense Increase" Operator="0" />
+		<Option Index="9" Name="Darkness Element Defense Increase" Operator="0" />
+		<Option Index="10" Name="Pentagram Defense Increase" Operator="0" />
+		<Option Index="11" Name="Attack Success Rate Increase" Operator="0" />
+		<Option Index="12" Name="Defense Success Rate Increase" Operator="0" />
+		<Option Index="13" Name="Elemental Attack Success Rate Increase" Operator="0" />
+		<Option Index="14" Name="Elemental Defense Success Rate Increase" Operator="0" />
+		<Option Index="15" Name="Strength Stat Increase (variable)" Operator="0" />
+		<Option Index="16" Name="Agility Stat Increase (variable)" Operator="0" />
+		<Option Index="17" Name="Vitality Stat Increase (variable)" Operator="0" />
+		<Option Index="18" Name="Energy Stat Increase (variable)" Operator="0" />
+		<Option Index="19" Name="Minimum Attack Power Increase" Operator="0" />
+		<Option Index="20" Name="Minimum Wizardry Power Increase" Operator="0" />
+		<Option Index="21" Name="Minimum Curse Power Increase" Operator="0" />
+		<Option Index="22" Name="Maximum Attack Power Increase" Operator="0" />
+		<Option Index="23" Name="Maximum Wizardry Power Increase" Operator="0" />
+		<Option Index="24" Name="Maximum Curse Power Increase" Operator="0" />
+		<Option Index="25" Name="Mastery Attack Power Increase" Operator="0" />
+		<Option Index="26" Name="Mastery Magic Power Increase" Operator="0" />
+		<Option Index="27" Name="Mastery Curse Power Increase" Operator="0" />
+		<Option Index="28" Name="Attack Power Increase every 20Lv" Operator="0" />
+		<Option Index="29" Name="Nuke Attack Power Increase" Operator="0" />
+		<Option Index="30" Name="Bolt Attack Power Increase" Operator="0" />
+		<Option Index="31" Name="Wide Area Attack Power Increase" Operator="0" />
+		<Option Index="32" Name="Extra Attack Power Increase" Operator="0" />
+		<Option Index="33" Name="Critical Damage Increase" Operator="0" />
+		<Option Index="34" Name="Excellent Damage Increase" Operator="0" />
+		<Option Index="35" Name="Double Damage Increase" Operator="0" />
+		<Option Index="36" Name="5th Wing Attack Power Increase" Operator="0" />
+		<Option Index="37" Name="Bleeding Damage Increase" Operator="0" />
+		<Option Index="38" Name="Excessive Bleeding Damage Increase" Operator="0" />
+		<Option Index="39" Name="Deadly Poison Damage Increase" Operator="0" />
+		<Option Index="40" Name="Poison Damage Increase" Operator="0" />
+		<Option Index="41" Name="Skill Attack Power Increase" Operator="0" />
+		<Option Index="42" Name="Fire Element Attack Power Increase" Operator="0" />
+		<Option Index="43" Name="Water Element Attack Power Increase" Operator="0" />
+		<Option Index="44" Name="Earth Element Attack Power Increase" Operator="0" />
+		<Option Index="45" Name="Wind Element Attack Power Increase" Operator="0" />
+		<Option Index="46" Name="Darkness Element Attack Power Increase" Operator="0" />
+		<Option Index="47" Name="Pentagram Attack Power Increase" Operator="0" />
+		<Option Index="48" Name="Elemental Attack Power Increase" Operator="0" />
+		<Option Index="49" Name="Extra Critical Damage Probability" Operator="1" />
+		<Option Index="50" Name="Critical Damage Probability" Operator="1" />
+		<Option Index="51" Name="1 Slot Skill Attack Power Increase" Operator="0" />
+		<Option Index="52" Name="Full Life Recovery Probability" Operator="1" />
+		<Option Index="53" Name="Double Damage Probability" Operator="1" />
+		<Option Index="54" Name="Extra Excellent Damage Probability" Operator="1" />
+		<Option Index="55" Name="Excellent Damage Probability" Operator="1" />
+		<Option Index="56" Name="2 Slot Skill Attack Power Increase" Operator="0" />
+		<Option Index="57" Name="Full Mana Recovery Probability" Operator="1" />
+		<Option Index="58" Name="Ignore Enemy's Defense Probability" Operator="1" />
+		<Option Index="59" Name="Extra Double Damage Probability" Operator="1" />
+		<Option Index="60" Name="Triple Damage Probability" Operator="1" />
+		<Option Index="61" Name="3 Slot Skill Attack Power Increase" Operator="0" />
+		<Option Index="62" Name="AG Recovery Amount Increase" Operator="0" />
+		<Option Index="63" Name="(Enhancement skill, ability skill) Additional Damage Probability" Operator="1" />
+		<Option Index="64" Name="Shock Defense Success Rate Increase (PvM)" Operator="0" />
+		<Option Index="65" Name="HP Increase" Operator="0" />
+		<Option Index="66" Name="MP Increase" Operator="0" />
+		<Option Index="67" Name="AG Increase" Operator="0" />
+		<Option Index="68" Name="Nuke Critical Damage Probability" Operator="1" />
+		<Option Index="69" Name="Bolt Critical Damage Probability" Operator="1" />
+		<Option Index="70" Name="Wide Area Critical Damage Probability" Operator="1" />
+		<Option Index="71" Name="Nuke Excellent Damage Probability" Operator="1" />
+		<Option Index="72" Name="Bolt Excellent Damage Probability" Operator="1" />
+		<Option Index="73" Name="Wide Area Excellent Damage Probability" Operator="1" />
+		<Option Index="74" Name="Nuke Double Damage Probability" Operator="1" />
+		<Option Index="75" Name="Bolt Double Damage Probability" Operator="1" />
+		<Option Index="76" Name="Wide Area Double Damage Probability" Operator="1" />
+		<Option Index="77" Name="Nuke Triple Damage Probability" Operator="1" />
+		<Option Index="78" Name="Bolt Triple Damage Probability" Operator="1" />
+		<Option Index="79" Name="Wide Area Triple Damage Probability" Operator="1" />
+		<Option Index="80" Name="[Extra Damage] Nuke" Operator="0" />
+		<Option Index="81" Name="[Extra Damage] Bolt" Operator="0" />
+		<Option Index="82" Name="[Extra Damage] Wide Area" Operator="0" />
+		<Option Index="83" Name="5th Wing Wizardry Increase" Operator="0" />
+		<Option Index="84" Name="5th Wing Curse Power Increase" Operator="0" />
+		<Option Index="85" Name="Wizardry Power Increase every 20Lv" Operator="0" />
+		<Option Index="86" Name="Curse Power Increase every 20Lv" Operator="0" />
+	</OptionList>
+</AbilityCardOptions>

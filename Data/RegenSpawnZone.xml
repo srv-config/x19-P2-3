@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2020 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ System allowing to define custom regen locations after death
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### RegenSpawnZone::Map ###
+//	Number: Map number to apply for the system
+//	DieLocationRate: Chance rate for spawning in the same location of death, n/10000
+//	DieLocationMsg: Message to display upon success spawn at the place of death (English.xml, 777), 0/1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Maps should be added in order, increasing way. To disable map from the system just remove its section.
+//~~ It is not recommended to use the system for event maps, unless you really know what you are doing.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### RegenSpawnZone::Map::Zone ###
+//	Id: Unique ID of respawn zone, 0-14
+//	TargetMapNumber: Target Map number for spawn, -1 to use current map
+//	StartX: Start X Coordinate of spawn area after warping
+//	StartY: Start Y Coordinate of spawn area after warping
+//	EndX: End X Coordinate of spawn area after warping
+//	EndY: End Y Coordinate of spawn area after warping
+//	AllowSafeZone: Determines whether to allow safe zone as selected spawn location from configured coordinates range, 0/1
+//	Rate: Chance rate to use selected zone, sum of all rates within specific map is total chance rate for that map, weight
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Maximum 10 zones per map. Total rate is sum of all rates per map
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<RegenSpawnZone>
+	<Map Number="40" DieLocationRate="500" DieLocationMsg="1">
+		<Zone Id="0" TargetMapNumber="-1" StartX="1" StartY="1" EndX="255" EndY="255" AllowSafeZone="1" Rate="2000" />
+		<Zone Id="1" TargetMapNumber="-1" StartX="1" StartY="1" EndX="255" EndY="255" AllowSafeZone="1" Rate="1000" />
+	</Map>
+</RegenSpawnZone>

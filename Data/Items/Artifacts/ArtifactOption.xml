@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2022 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Changes in this file must be reflected on game client side in ArtifactOption.txt (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### ArtifactSystem::OptionsList::Option ###
+//	Index: Unique index of artifact option
+//	Name: Name of option, used for logging and description purpose
+//	Operator: 
+//
+// ### ArtifactSystem::OptionBaseValue::OptionSet ###
+//	ID: Unique ID of option set
+//	OptionIndex: Index of artifact option assigned to set, check OptionsList section
+//	Name: Name of assigned option to the set, used for logging and description purpose
+//	ValueX (1-10): Value of option at specific level
+//	RateX (1-10): Chance rate to get specific option
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates per line mus sum up to 1000000. The system draws one option, based on rates, upon artifact creation
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Option that is used as FullSetOptionID in ArtifactSystem.xml must have only Value1 set to desired value,
+//~~ rest of attributes must be set to -1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Formula ID: ID of formula from FormulaData.xml :: ArtifactOption section
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<ArtifactSystem>
+	<OptionsList>  <!-- Section used by tools and game client -->																						
+		<Option Type="1" Name="Increase Defense" Operator="1" />
+		<Option Type="2" Name="Increase Defense Success Rate" Operator="1" />
+		<Option Type="3" Name="Increase Base Armor" Operator="1" />
+		<Option Type="4" Name="Damage Reduction" Operator="1" />
+		<Option Type="5" Name="Increase Strength" Operator="1" />
+		<Option Type="6" Name="Increase Agility" Operator="1" />
+		<Option Type="7" Name="Increase Stamina" Operator="1" />
+		<Option Type="8" Name="Increase Energy" Operator="1" />
+		<Option Type="9" Name="Increase Command" Operator="1" />
+		<Option Type="10" Name="Increase Max Life" Operator="1" />
+		<Option Type="11" Name="Increase Max Mana" Operator="1" />
+		<Option Type="12" Name="Increase Max AG" Operator="1" />
+		<Option Type="13" Name="Increase Max SD" Operator="1" />
+		<Option Type="14" Name="Excellent Damage Increase" Operator="1" />
+		<Option Type="15" Name="Critical Damage Increase" Operator="1" />
+		<Option Type="16" Name="Increase Attack Speed" Operator="1" />
+		<Option Type="17" Name="Increase Skill Attack Power" Operator="1" />
+		<Option Type="18" Name="Increase Elemental Defense" Operator="1" />
+		<Option Type="19" Name="Increase Elemental Attack Power" Operator="1" />
+		<Option Type="20" Name="Increase Elemental Defense Success Rate" Operator="1" />
+		<Option Type="21" Name="Increase Elemental Attack Success Rate" Operator="1" />
+		<Option Type="22" Name="Increase Max Attack Power/Wizardry" Operator="1" />
+		<Option Type="23" Name="Increase Min Attack Power/Wizardry" Operator="1" />
+		<Option Type="24" Name="Attack Power/Magic Increase" Operator="1" />
+		<Option Type="25" Name="Increase Maximum Curse Power" Operator="1" />
+		<Option Type="26" Name="Increase Minimum Curse Power" Operator="1" />
+		<Option Type="27" Name="Increase Curse Power" Operator="1" />
+		<Option Type="28" Name="Increase All Stats" Operator="1" />																					
+	</OptionsList>																																													
+	
+	<OptionBaseValue> <!-- Sum of rates per entry must be equal to 1000000 -->
+		<OptionSet Index="1" OptionType="1" Name="Increase Defense" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="1" />
+		<OptionSet Index="2" OptionType="2" Name="Increase Defense Success Rate" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="1" />
+		<OptionSet Index="3" OptionType="3" Name="Increase Base Armor" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="3" />
+		<OptionSet Index="4" OptionType="4" Name="Damage Reduction" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="3" />
+		<OptionSet Index="5" OptionType="5" Name="Increase Strength" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="6" OptionType="6" Name="Increase Agility" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="7" OptionType="7" Name="Increase Stamina" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="8" OptionType="8" Name="Increase Energy" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="9" OptionType="9" Name="Increase Command" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="10" OptionType="10" Name="Increase Max Life" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="2" />
+		<OptionSet Index="11" OptionType="11" Name="Increase Max Mana" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="2" />
+		<OptionSet Index="12" OptionType="12" Name="Increase Max AG" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="2" />
+		<OptionSet Index="13" OptionType="13" Name="Increase Max SD" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="2" />
+		<OptionSet Index="14" OptionType="14" Name="Excellent Damage Increase" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="3" />
+		<OptionSet Index="15" OptionType="15" Name="Critical Damage Increase" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="3" />
+		<OptionSet Index="16" OptionType="16" Name="Increase Attack Speed" Value1="1" Rate1="8000" Value2="2" Rate2="330000" Value3="3" Rate3="330000" Value4="4" Rate4="330000" Value5="5" Rate5="2000	" Value6="-1" Rate6="-1" Value7="-1" Rate7="-1" Value8="-1" Rate8="-1" Value9="-1" Rate9="-1" Value10="-1" Rate10="-1" FormulaID="4" />
+		<OptionSet Index="17" OptionType="17" Name="Increase Skill Attack Power" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="18" OptionType="18" Name="Increase Elemental Defense" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="19" OptionType="19" Name="Increase Elemental Attack Power" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="20" OptionType="20" Name="Increase Elemental Defense Success Rate" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="1" />
+		<OptionSet Index="21" OptionType="21" Name="Increase Elemental Attack Success Rate" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="1" />
+		<OptionSet Index="22" OptionType="22" Name="Increase Max Attack Power/Wizardry" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="23" OptionType="23" Name="Increase Min Attack Power/Wizardry" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="24" OptionType="24" Name="Attack Power/Magic Increase" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="25" OptionType="25" Name="Increase Maximum Curse Power" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="26" OptionType="26" Name="Increase Minimum Curse Power" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="27" OptionType="27" Name="Increase Curse Power" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="0" />
+		<OptionSet Index="28" OptionType="28" Name="Increase All Stats" Value1="100" Rate1="-1" Value2="-1" Rate2="-1" Value3="-1" Rate3="-1" Value4="-1" Rate4="-1" Value5="-1" Rate5="-1" Value6="-1" Rate6="-1" Value7="-1" Rate7="-1" Value8="-1" Rate8="-1" Value9="-1" Rate9="-1" Value10="-1" Rate10="-1" FormulaID="-1" />	
+		<OptionSet Index="29" OptionType="22" Name="Increase Max Attack Power/Wizardry" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="5" />
+		<OptionSet Index="30" OptionType="23" Name="Increase Min Attack Power/Wizardry" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="5" />
+		<OptionSet Index="31" OptionType="24" Name="Attack Power/Magic Increase" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="5" />
+		<OptionSet Index="32" OptionType="25" Name="Increase Maximum Curse Power" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="5" />
+		<OptionSet Index="33" OptionType="26" Name="Increase Minimum Curse Power" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="5" />
+		<OptionSet Index="34" OptionType="27" Name="Increase Curse Power" Value1="1" Rate1="18000" Value2="2" Rate2="60000" Value3="3" Rate3="100000" Value4="4" Rate4="150000" Value5="5" Rate5="170000" Value6="6" Rate6="200000" Value7="7" Rate7="150000" Value8="8" Rate8="100000" Value9="9" Rate9="50000" Value10="10" Rate10="2000" FormulaID="5" />
+	</OptionBaseValue>
+</ArtifactSystem>
