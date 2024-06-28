@@ -874,7 +874,41 @@
 		<Msg ID="848" Text="Your class is not allowed to use this flag." />
 		<Msg ID="849" Text="Adding the Luck option failed." />
 		<Msg ID="850" Text="The jewel cannot be used with this item." />
+		<Msg ID="851" Text="You cannot enter the Chaos Castle while having flag active." />
+		<Msg ID="852" Text="%H:%M:%S (%d-%m-%Y)" /> <!-- auto-reset display time format -->
+		<Msg ID="853" Text="Auto Reset is already active since %s" />
+		<Msg ID="854" Text="Auto Reset Activated." />
+		<Msg ID="855" Text="You do not minimum VIP level to use auto reset." />
+		<Msg ID="856" Text="Auto Reset deactivated." />
+		<Msg ID="857" Text="Auto Reset is not active." />
+		<Msg ID="858" Text="Manual reset is not available when auto-reset is active." />
 	</Message>
+	<AutoStat>
+		<Msg ID="0" Text="[AUTO-STAT] Usage Syntax 1: /autostat <option>" />
+		<Msg ID="1" Text="Available options: off|status" />
+		<Msg ID="2" Text="Usage Syntax 2: /autostat <MinPoint> <str_percent> <agi_percent> <vit_percent> <ene_percent> <cmd_percent>" />
+		<Msg ID="3" Text="MinPoint is free level up points to trigger auto stat" />
+		<Msg ID="4" Text="The xxx_percent is percent of free level up points to distribute to specific stat" />
+		<Msg ID="5" Text="[AUTOSTAT] Deactivated." />
+		<Msg ID="6" Text="[AUTOSTAT DISTRUBUTION STATUS]" />
+		<Msg ID="7" Text="Min Distribution Free Points: %d" />
+		<Msg ID="8" Text="Str/Agi/Vit/Ene/Cmd: [%d/%d/%d/%d/%d]%%]" />
+		<Msg ID="9" Text="Auto-Stat is disabled." />
+		<Msg ID="10" Text="[AUTO-STAT] Invalid Input." />
+		<Msg ID="11" Text="[AUTO-STAT] Invalid percentage input." />
+		<Msg ID="12" Text="[AUTO-STAT] Total percent must be equal or lower 100." />
+		<Msg ID="13" Text="[AUTO-STAT] Unable to charge." />
+		<Msg ID="14" Text="[AUTO-STAT DISTRUBUTION SET]" />
+		<Msg ID="15" Text="[STATS AUTO DISTRIBUTED]" />
+		<Msg ID="16" Text=" * Free Points (Before/After): [%d/%d]" />
+		<Msg ID="17" Text=" * Strength: +%d" />
+		<Msg ID="18" Text=" * Agility: +%d" />
+		<Msg ID="19" Text=" * Vitality: +%d" />
+		<Msg ID="20" Text=" * Energy: +%d" />
+		<Msg ID="21" Text=" * Command: +%d" />
+		<Msg ID="22" Text="[AUTO-STAT] You need at least %s VIP to use the command." />
+		<Msg ID="23" Text="[AUTO-STAT] You are short of money, the cost is %d %s." />
+	</AutoStat>
 	<Map>
 		<Msg ID="0" Text="Lorencia" />
 		<Msg ID="1" Text="Dungeon" /> <!-- 1 ~ 3 -->
@@ -1008,5 +1042,6 @@
 		<Msg ID="139" Text="Boss Zone (entrance)" />
 		<Msg ID="140" Text="Bloody Tarkan" />
 		<Msg ID="141" Text="Tormenta Island" />
+		<Msg ID="142" Text="Twisted Karutan" />
 	</Map>
 </Language>

@@ -3,19 +3,26 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
 //
 // ### ResetSystem ###
 //	Enable: Activates or deactivates the system, 0/1
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ If enabled the old reset system from Common.ini will be automatically disabled.
-//~~ To allow smooth switch to new system we will keep old reset system for next few updates
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
 //	MaxDailyResets: maximum number of resets player may achieve daily, 0 for no limit
+//
+// ### ResetSystem::AutoReset ###
+//	Enable: Whether or not, auto-reset is enabled, 0/1
+//	MaxReset: Maximum reset to use auto-reset, -1 if not applies
+//	MaxGrandReset: maximum grand reset to use auto-reset, -1 if not applies
+//	MinVipType: Minimum VIP level to activate auto-reset, -1 if not applies
+//	MaxTime: Maximum number the auto-reset can be used for, -1 if not applies, minutes
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Player is being disconnected after MaxTime has been reached
+//~~ Certain options of manual reset do not apply to auto-reset, follow file description for details
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	BlockManualReset: Whether or not, block possibility to perform manual reset when auto-reset is enabled, 0/1
 //
 // ### ResetSystem::Requirements ###
 //	MinLevelMode: Minimum level check mode:
@@ -29,18 +36,18 @@
 //	MaxWebResets: Maximum number of resets that can be achieved by character, not necessarily in-game but web module, must be equal or larger than MaxInGameResets
 //
 // ### ResetSystem::Settings ###
-//	RemoveEquipment: Determines whether equipment removal is required before performing reset, 0/1
+//	RemoveEquipment: Determines whether equipment removal is required before performing reset, does not apply to auto-reset, 0/1
 //	RemoveFromParty: Determines whether to remove from party after reset, 0/1
 //	EnableMuHelper: Determines whether enable the MuHelper back after reset, 0/1
 //	ClearBuffs: Determines whether to clear existing buffs after reset, 0/1
-//	ResetStats: Determines whether to reset character stats after reset, 0/1
+//	ResetStats: Determines whether to reset character stats after reset, does not apply to auto-reset, 0/1
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ Stat points for all passed milestones will be calculated and returned as free Level Up Points
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //	SaveOldStatPoint: Determines whether to preserve pre-reset free stat points, applies only if ResetStats is enabled, 0/1
-//	MoveToCharSelectWindow: Determines whether to force move to character selection screen after reset, 0/1
-//	StayOnPosition: Determines whether character should keep the same position after reset, 0/1
+//	MoveToCharSelectWindow: Determines whether to force move to character selection screen after reset, does not apply to auto-reset, 0/1
+//	StayOnPosition: Determines whether character should keep the same position after reset, for auto-reset player always stays on position,  0/1
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ For VIP players options from VipSettings.xml apply: ResetMoveToCharSelectWindow, ResetStayOnPosition
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,7 +56,7 @@
 //	LevelAfterReset: Regular level to set after reset, minimum value is 1, free stat points are calculated and added automatically
 //	ResetMasterLevel: Determines whether to reset master level, 0/1
 //	MasterLevelAfterReset: Master level to set after reset, applies if set to greater than 0
-//	ResetMasterSkillTree: Resets 3rd and 4th skill tree if enabled, character will be enforced to go to character select, 0/1
+//	ResetMasterSkillTree: Resets 3rd and 4th skill tree if enabled, character will be enforced to go to character select, does not apply to auto-reset, 0/1
 //	SkillTreePointsReturnMode: Method of returning points after skill tree reset, applies only if ResetMasterSkillTree is set to 1
 //		~ -1: Do not return any points
 //		~ 0: Returns all invested in skill tree points, including any points that players achieved from undefined sources and adds them to undistributed free points
@@ -67,13 +74,21 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ It is important to keep MaxReset higher than MinReset and make sure all ranges are unique and ordered increasing way
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//	CoinType: Type of coin to charge per reset
+//
+//	CoinType: Type of coin to charge per manual reset
 //		~ 0: Zen
 //		~ 1: WCoin
 //		~ 2: Goblin Point
 //		~ 3: Ruud
 //
-//	Cost: Cost of the single reset, max value: 200000000
+//	CoinType: Type of coin to charge per auto reset
+//		~ 0: Zen
+//		~ 1: WCoin
+//		~ 2: Goblin Point
+//		~ 3: Ruud
+//
+//	Cost: Cost of manual single reset, max value: 200000000
+//	CostAuto: Cost of auto single reset, max value: 200000000
 //	MultiplyCostPerResets: Multiply cost by number of resets, 0/1
 //	MaxCost: Maximum cost of reset, if MAX is used as value then attribute is set to 200000000
 //	MaxFruitPointReset:
@@ -124,21 +139,22 @@
 -->
 
 <ResetSystem Enable="0" MaxDailyResets="10">
+<AutoReset Enable="0" MaxReset="-1" MaxGrandReset="-1" MinVipType="-1" MaxTime="-1" BlockManualReset="1" />
 <Requirements MinLevelMode="0" MinLevel="400" MaxInGameResets="100" MaxWebResets="100" MinVipType="-1" />
 <Settings RemoveEquipment="1" RemoveFromParty="1" EnableMuHelper="0" ClearBuffs="1" ResetStats="0" SaveOldStatPoint="0" MoveToCharSelectWindow="0" StayOnPosition="0" MaxResetPoints="0" 
 	LevelAfterReset="1" ResetMasterLevel="0" MasterLevelAfterReset="0" ResetMasterSkillTree="1" SkillTreePointsReturnMode="1" SkillTreePointsReturnReductionPercent="100" />
 
 	<DynamicResetRangeList> <!-- First rule that matches player requirements will be applied, therefore order of entries matters -->
-		<Range MinReset="0" MaxReset="10" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="0" RewardSetID="0" />
-		<Range MinReset="11" MaxReset="20" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="1" RewardSetID="0" />
-		<Range MinReset="21" MaxReset="30" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="2" RewardSetID="1" />
-		<Range MinReset="31" MaxReset="40" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="3" RewardSetID="1" />
-		<Range MinReset="41" MaxReset="50" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="4" RewardSetID="2" />
-		<Range MinReset="51" MaxReset="60" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="5" RewardSetID="2" />
-		<Range MinReset="61" MaxReset="70" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="6" RewardSetID="3" />
-		<Range MinReset="71" MaxReset="80" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="7" RewardSetID="3" />
-		<Range MinReset="81" MaxReset="90" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="8" RewardSetID="4" />
-		<Range MinReset="91" MaxReset="MAX" CoinType="0" Cost="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="9" RewardSetID="4" />
+		<Range MinReset="0" MaxReset="10" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="0" RewardSetID="0" />
+		<Range MinReset="11" MaxReset="20" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="1" RewardSetID="0" />
+		<Range MinReset="21" MaxReset="30" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="2" RewardSetID="1" />
+		<Range MinReset="31" MaxReset="40" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="3" RewardSetID="1" />
+		<Range MinReset="41" MaxReset="50" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="4" RewardSetID="2" />
+		<Range MinReset="51" MaxReset="60" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="5" RewardSetID="2" />
+		<Range MinReset="61" MaxReset="70" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="6" RewardSetID="3" />
+		<Range MinReset="71" MaxReset="80" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="7" RewardSetID="3" />
+		<Range MinReset="81" MaxReset="90" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="8" RewardSetID="4" />
+		<Range MinReset="91" MaxReset="MAX" CoinType="0" CoinTypeAuto="0" Cost="5000000" CostAuto="5000000" MultiplyCostPerResets="1" MaxCost="MAX" MaxFruitPointReset="0" MilestoneID="9" RewardSetID="4" />
 	</DynamicResetRangeList>
 	
 	<RegResetsRewardList> <!-- Items issued to Gremory Case -->
