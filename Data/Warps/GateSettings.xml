@@ -122,13 +122,13 @@
 	<Gate Index="75" Flag="0" MapNumber="7" StartX="225" StartY="53" EndX="228" EndY="50" Target="0" Direction="0" MinLevel="80" GoToGate="-1" Name="" />
 	<Gate Index="76" Flag="0" MapNumber="7" StartX="62" StartY="163" EndX="68" EndY="157" Target="0" Direction="0" MinLevel="90" GoToGate="-1" Name="" />
 	<Gate Index="77" Flag="0" MapNumber="8" StartX="96" StartY="143" EndX="100" EndY="146" Target="0" Direction="0" MinLevel="160" GoToGate="-1" Name="" />
-	<Gate Index="88" Flag="0" MapNumber="24" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
-	<Gate Index="89" Flag="0" MapNumber="25" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
-	<Gate Index="90" Flag="0" MapNumber="26" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
-	<Gate Index="91" Flag="0" MapNumber="27" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
-	<Gate Index="92" Flag="0" MapNumber="28" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
-	<Gate Index="93" Flag="0" MapNumber="29" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
-	<Gate Index="116" Flag="0" MapNumber="36" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
+	<Gate Index="88" Flag="0" MapNumber="24" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="40" GoToGate="-2" Name="" />
+	<Gate Index="89" Flag="0" MapNumber="25" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="131" GoToGate="-2" Name="" />
+	<Gate Index="90" Flag="0" MapNumber="26" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="181" GoToGate="-2" Name="" />
+	<Gate Index="91" Flag="0" MapNumber="27" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="231" GoToGate="-2" Name="" />
+	<Gate Index="92" Flag="0" MapNumber="28" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="281" GoToGate="-2" Name="" />
+	<Gate Index="93" Flag="0" MapNumber="29" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="331" GoToGate="-2" Name="" />
+	<Gate Index="116" Flag="0" MapNumber="36" StartX="10" StartY="16" EndX="17" EndY="22" Target="0" Direction="0" MinLevel="350" GoToGate="-2" Name="" />
 	<Gate Index="94" Flag="0" MapNumber="30" StartX="88" StartY="31" EndX="102" EndY="46" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
 	<Gate Index="96" Flag="1" MapNumber="30" StartX="93" StartY="242" EndX="95" EndY="243" Target="97" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
 	<Gate Index="97" Flag="2" MapNumber="30" StartX="164" StartY="198" EndX="187" EndY="209" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
@@ -388,7 +388,7 @@
 	<Gate Index="448" Flag="0" MapNumber="98" StartX="194" StartY="124" EndX="198" EndY="127" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
 	<Gate Index="449" Flag="0" MapNumber="99" StartX="194" StartY="124" EndX="198" EndY="127" Target="0" Direction="0" MinLevel="0" GoToGate="-2" Name="" />
 	<Gate Index="450" Flag="1" MapNumber="91" StartX="65" StartY="218" EndX="67" EndY="219" Target="451" Direction="3" MinLevel="300" GoToGate="-1" Name="" />
-	<Gate Index="451" Flag="2" MapNumber="100" StartX="24" StartY="90" EndX="25" EndY="86" Target="0" Direction="5" MinLevel="300" GoToGate="417" Name="" />
+	<Gate Index="451" Flag="2" MapNumber="100" StartX="24" StartY="86" EndX="25" EndY="90" Target="0" Direction="5" MinLevel="300" GoToGate="417" Name="" />
 	<Gate Index="452" Flag="1" MapNumber="100" StartX="19" StartY="87" EndX="20" EndY="88" Target="453" Direction="5" MinLevel="300" GoToGate="-1" Name="" />
 	<Gate Index="453" Flag="2" MapNumber="91" StartX="62" StartY="213" EndX="64" EndY="214" Target="0" Direction="3" MinLevel="300" GoToGate="-1" Name="" />
 	<Gate Index="454" Flag="1" MapNumber="100" StartX="42" StartY="80" EndX="44" EndY="81" Target="455" Direction="0" MinLevel="300" GoToGate="-1" Name="" />
@@ -539,23 +539,23 @@
 	<Gate Index="614" Flag="1" MapNumber="123" StartX="232" StartY="86" EndX="234" EndY="89" Target="615" Direction="7" MinLevel="850" GoToGate="-1" Name="" />
 	<Gate Index="615" Flag="2" MapNumber="2" StartX="163" StartY="54" EndX="165" EndY="59" Target="0" Direction="3" MinLevel="850" GoToGate="615" Name="" />
 	<Gate Index="616" Flag="0" MapNumber="123" StartX="224" StartY="111" EndX="231" EndY="115" Target="0" Direction="0" MinLevel="850" GoToGate="-1" Name="" />
-	<Gate Index="617" Flag="0" MapNumber="128" StartX="129" StartY="126" EndX="132" EndY="129" Target="0" Direction="0" MinLevel="1000" GoToGate="617" Name="" />
-	<Gate Index="618" Flag="0" MapNumber="129" StartX="128" StartY="124" EndX="131" EndY="127" Target="0" Direction="0" MinLevel="1020" GoToGate="618" Name="" />
-	<Gate Index="619" Flag="0" MapNumber="130" StartX="128" StartY="122" EndX="131" EndY="126" Target="0" Direction="0" MinLevel="1030" GoToGate="619" Name="" />
-	<Gate Index="620" Flag="0" MapNumber="131" StartX="236" StartY="13" EndX="242" EndY="16" Target="0" Direction="0" MinLevel="1050" GoToGate="620" Name="" />
-	<Gate Index="621" Flag="1" MapNumber="131" StartX="196" StartY="25" EndX="198" EndY="27" Target="622" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="622" Flag="2" MapNumber="131" StartX="80" StartY="74" EndX="82" EndY="77" Target="0" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="623" Flag="1" MapNumber="131" StartX="75" StartY="74" EndX="77" EndY="76" Target="624" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="624" Flag="2" MapNumber="131" StartX="197" StartY="30" EndX="200" EndY="29" Target="0" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="625" Flag="1" MapNumber="131" StartX="206" StartY="42" EndX="211" EndY="43" Target="626" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="626" Flag="2" MapNumber="131" StartX="141" StartY="204" EndX="145" EndY="203" Target="0" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="627" Flag="1" MapNumber="131" StartX="143" StartY="208" EndX="144" EndY="210" Target="628" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="628" Flag="2" MapNumber="131" StartX="207" StartY="38" EndX="210" EndY="38" Target="0" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="629" Flag="1" MapNumber="8" StartX="188" StartY="74" EndX="190" EndY="76" Target="630" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="630" Flag="2" MapNumber="131" StartX="240" StartY="19" EndX="244" EndY="21" Target="0" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
-	<Gate Index="631" Flag="0" MapNumber="132" StartX="123" StartY="114" EndX="132" EndY="128" Target="0" Direction="0" MinLevel="1070" GoToGate="631" Name="" />
-	<Gate Index="632" Flag="1" MapNumber="4" StartX="3" StartY="238" EndX="4" EndY="242" Target="633" Direction="0" MinLevel="1070" GoToGate="-1" Name="" />
-	<Gate Index="633" Flag="2" MapNumber="132" StartX="123" StartY="114" EndX="132" EndY="128" Target="0" Direction="0" MinLevel="1070" GoToGate="-1" Name="" />
+	<Gate Index="617" Flag="0" MapNumber="128" StartX="129" StartY="126" EndX="132" EndY="129" Target="0" Direction="0" MinLevel="900" GoToGate="617" Name="" />
+	<Gate Index="618" Flag="0" MapNumber="129" StartX="128" StartY="124" EndX="131" EndY="127" Target="0" Direction="0" MinLevel="925" GoToGate="618" Name="" />
+	<Gate Index="619" Flag="0" MapNumber="130" StartX="128" StartY="122" EndX="131" EndY="126" Target="0" Direction="0" MinLevel="950" GoToGate="619" Name="" />
+	<Gate Index="620" Flag="0" MapNumber="131" StartX="236" StartY="13" EndX="242" EndY="16" Target="0" Direction="0" MinLevel="1000" GoToGate="620" Name="" />
+	<Gate Index="621" Flag="1" MapNumber="131" StartX="196" StartY="25" EndX="198" EndY="27" Target="622" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="622" Flag="2" MapNumber="131" StartX="80" StartY="74" EndX="82" EndY="77" Target="0" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="623" Flag="1" MapNumber="131" StartX="75" StartY="74" EndX="77" EndY="76" Target="624" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="624" Flag="2" MapNumber="131" StartX="197" StartY="29" EndX="200" EndY="30" Target="0" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="625" Flag="1" MapNumber="131" StartX="206" StartY="42" EndX="211" EndY="43" Target="626" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="626" Flag="2" MapNumber="131" StartX="141" StartY="203" EndX="145" EndY="204" Target="0" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="627" Flag="1" MapNumber="131" StartX="143" StartY="208" EndX="144" EndY="210" Target="628" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="628" Flag="2" MapNumber="131" StartX="207" StartY="38" EndX="210" EndY="38" Target="0" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="629" Flag="1" MapNumber="8" StartX="188" StartY="74" EndX="190" EndY="76" Target="630" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="630" Flag="2" MapNumber="131" StartX="240" StartY="19" EndX="244" EndY="21" Target="0" Direction="0" MinLevel="1000" GoToGate="-1" Name="" />
+	<Gate Index="631" Flag="0" MapNumber="132" StartX="123" StartY="114" EndX="132" EndY="128" Target="0" Direction="0" MinLevel="1050" GoToGate="631" Name="" />
+	<Gate Index="632" Flag="1" MapNumber="4" StartX="3" StartY="238" EndX="4" EndY="242" Target="633" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
+	<Gate Index="633" Flag="2" MapNumber="132" StartX="123" StartY="114" EndX="132" EndY="128" Target="0" Direction="0" MinLevel="1050" GoToGate="-1" Name="" />
 	<Gate Index="634" Flag="0" MapNumber="133" StartX="125" StartY="57" EndX="132" EndY="59" Target="0" Direction="0" MinLevel="1100" GoToGate="634" Name="" />
 	<Gate Index="635" Flag="1" MapNumber="51" StartX="219" StartY="123" EndX="222" EndY="125" Target="636" Direction="0" MinLevel="1100" GoToGate="-1" Name="" />
 	<Gate Index="636" Flag="2" MapNumber="133" StartX="125" StartY="57" EndX="132" EndY="59" Target="0" Direction="0" MinLevel="1100" GoToGate="636" Name="" />
@@ -565,14 +565,14 @@
 	<Gate Index="640" Flag="2" MapNumber="133" StartX="120" StartY="185" EndX="131" EndY="186" Target="0" Direction="0" MinLevel="1100" GoToGate="-1" Name="" />
 	<Gate Index="641" Flag="1" MapNumber="133" StartX="123" StartY="190" EndX="128" EndY="195" Target="642" Direction="0" MinLevel="1100" GoToGate="-1" Name="" />
 	<Gate Index="642" Flag="2" MapNumber="133" StartX="127" StartY="26" EndX="132" EndY="28" Target="0" Direction="0" MinLevel="1100" GoToGate="-1" Name="" />
-	<Gate Index="643" Flag="0" MapNumber="134" StartX="122" StartY="29" EndX="128" EndY="31" Target="0" Direction="0" MinLevel="1130" GoToGate="643" Name="" />
-	<Gate Index="644" Flag="1" MapNumber="33" StartX="115" StartY="112" EndX="119" EndY="113" Target="645" Direction="0" MinLevel="1130" GoToGate="-1" Name="" />
-	<Gate Index="645" Flag="2" MapNumber="134" StartX="122" StartY="29" EndX="128" EndY="31" Target="0" Direction="0" MinLevel="1130" GoToGate="-1" Name="" />
-	<Gate Index="646" Flag="1" MapNumber="134" StartX="124" StartY="25" EndX="127" EndY="26" Target="647" Direction="0" MinLevel="1130" GoToGate="-1" Name="" />
-	<Gate Index="647" Flag="2" MapNumber="33" StartX="115" StartY="108" EndX="120" EndY="109" Target="0" Direction="0" MinLevel="1130" GoToGate="647" Name="" />
-	<Gate Index="648" Flag="0" MapNumber="135" StartX="124" StartY="18" EndX="129" EndY="17" Target="0" Direction="0" MinLevel="700" GoToGate="648" Name="" />
+	<Gate Index="643" Flag="0" MapNumber="134" StartX="122" StartY="29" EndX="128" EndY="31" Target="0" Direction="0" MinLevel="1150" GoToGate="643" Name="" />
+	<Gate Index="644" Flag="1" MapNumber="33" StartX="115" StartY="112" EndX="119" EndY="113" Target="645" Direction="0" MinLevel="1150" GoToGate="-1" Name="" />
+	<Gate Index="645" Flag="2" MapNumber="134" StartX="122" StartY="29" EndX="128" EndY="31" Target="0" Direction="0" MinLevel="1150" GoToGate="-1" Name="" />
+	<Gate Index="646" Flag="1" MapNumber="134" StartX="124" StartY="25" EndX="127" EndY="26" Target="647" Direction="0" MinLevel="1150" GoToGate="-1" Name="" />
+	<Gate Index="647" Flag="2" MapNumber="33" StartX="115" StartY="108" EndX="120" EndY="109" Target="0" Direction="0" MinLevel="1150" GoToGate="647" Name="" />
+	<Gate Index="648" Flag="0" MapNumber="135" StartX="124" StartY="17" EndX="129" EndY="18" Target="0" Direction="0" MinLevel="700" GoToGate="648" Name="" />
 	<Gate Index="649" Flag="1" MapNumber="33" StartX="81" StartY="17" EndX="83" EndY="17" Target="650" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
-	<Gate Index="650" Flag="2" MapNumber="135" StartX="124" StartY="18" EndX="129" EndY="17" Target="0" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
+	<Gate Index="650" Flag="2" MapNumber="135" StartX="124" StartY="17" EndX="129" EndY="18" Target="0" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
 	<Gate Index="651" Flag="1" MapNumber="135" StartX="113" StartY="63" EndX="116" EndY="63" Target="652" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
 	<Gate Index="652" Flag="2" MapNumber="135" StartX="103" StartY="166" EndX="106" EndY="167" Target="0" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
 	<Gate Index="653" Flag="1" MapNumber="135" StartX="98" StartY="157" EndX="98" EndY="159" Target="654" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
@@ -580,10 +580,10 @@
 	<Gate Index="655" Flag="1" MapNumber="135" StartX="137" StartY="63" EndX="139" EndY="63" Target="656" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
 	<Gate Index="656" Flag="2" MapNumber="135" StartX="210" StartY="132" EndX="211" EndY="136" Target="0" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
 	<Gate Index="657" Flag="1" MapNumber="135" StartX="200" StartY="139" EndX="202" EndY="140" Target="658" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
-	<Gate Index="658" Flag="2" MapNumber="135" StartX="136" StartY="59" EndX="142" EndY="56" Target="0" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
-	<Gate Index="659" Flag="0" MapNumber="136" StartX="124" StartY="19" EndX="129" EndY="17" Target="0" Direction="0" MinLevel="1200" GoToGate="659" Name="" />
+	<Gate Index="658" Flag="2" MapNumber="135" StartX="136" StartY="56" EndX="142" EndY="59" Target="0" Direction="0" MinLevel="700" GoToGate="-1" Name="" />
+	<Gate Index="659" Flag="0" MapNumber="136" StartX="124" StartY="17" EndX="129" EndY="19" Target="0" Direction="0" MinLevel="1200" GoToGate="659" Name="" />
 	<Gate Index="660" Flag="1" MapNumber="33" StartX="211" StartY="237" EndX="213" EndY="241" Target="661" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
-	<Gate Index="661" Flag="2" MapNumber="136" StartX="124" StartY="19" EndX="129" EndY="17" Target="0" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
+	<Gate Index="661" Flag="2" MapNumber="136" StartX="124" StartY="17" EndX="129" EndY="19" Target="0" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
 	<Gate Index="662" Flag="1" MapNumber="136" StartX="113" StartY="63" EndX="116" EndY="63" Target="663" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
 	<Gate Index="663" Flag="2" MapNumber="136" StartX="103" StartY="166" EndX="106" EndY="167" Target="0" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
 	<Gate Index="664" Flag="1" MapNumber="136" StartX="98" StartY="157" EndX="98" EndY="159" Target="665" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
@@ -591,7 +591,7 @@
 	<Gate Index="666" Flag="1" MapNumber="136" StartX="137" StartY="63" EndX="139" EndY="63" Target="667" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
 	<Gate Index="667" Flag="2" MapNumber="136" StartX="210" StartY="132" EndX="211" EndY="136" Target="0" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
 	<Gate Index="668" Flag="1" MapNumber="136" StartX="200" StartY="139" EndX="202" EndY="140" Target="669" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
-	<Gate Index="669" Flag="2" MapNumber="136" StartX="136" StartY="59" EndX="140" EndY="58" Target="0" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
+	<Gate Index="669" Flag="2" MapNumber="136" StartX="136" StartY="58" EndX="140" EndY="59" Target="0" Direction="0" MinLevel="1200" GoToGate="-1" Name="" />
 	<Gate Index="670" Flag="0" MapNumber="137" StartX="129" StartY="120" EndX="130" EndY="130" Target="0" Direction="0" MinLevel="1250" GoToGate="670" Name="" />
 	<Gate Index="671" Flag="1" MapNumber="38" StartX="106" StartY="159" EndX="109" EndY="162" Target="672" Direction="0" MinLevel="1250" GoToGate="-1" Name="" />
 	<Gate Index="672" Flag="2" MapNumber="137" StartX="129" StartY="120" EndX="130" EndY="130" Target="0" Direction="0" MinLevel="1250" GoToGate="-1" Name="" />
@@ -619,4 +619,11 @@
 	<Gate Index="694" Flag="0" MapNumber="141" StartX="127" StartY="119" EndX="132" EndY="124" Target="0" Direction="0" MinLevel="1400" GoToGate="694" Name="" />
 	<Gate Index="695" Flag="1" MapNumber="51" StartX="178" StartY="201" EndX="183" EndY="201" Target="696" Direction="0" MinLevel="1400" GoToGate="-1" Name="" />
 	<Gate Index="696" Flag="2" MapNumber="141" StartX="127" StartY="119" EndX="132" EndY="124" Target="0" Direction="0" MinLevel="1400" GoToGate="-1" Name="" />
+	<Gate Index="697" Flag="0" MapNumber="79" StartX="59" StartY="232" EndX="65" EndY="234" Target="0" Direction="0" MinLevel="0" GoToGate="-1"	Name="" />
+	<Gate Index="698" Flag="0" MapNumber="79" StartX="23" StartY="233" EndX="27" EndY="235" Target="0" Direction="0" MinLevel="0" GoToGate="-1"	Name="" />
+	<Gate Index="699" Flag="0" MapNumber="142" StartX="119" StartY="120" EndX="128" EndY="121" Target="0" Direction="0" MinLevel="1450" GoToGate="699" Name="" />													
+	<Gate Index="700" Flag="1" MapNumber="81" StartX="73" StartY="65" EndX="78" EndY="65" Target="701" Direction="0" MinLevel="1450" GoToGate="-1" Name="" />	
+	<Gate Index="701" Flag="2" MapNumber="142" StartX="113" StartY="117" EndX="116" EndY="117" Target="0" Direction="0" MinLevel="1450" GoToGate="-1" Name="" />													
+	<Gate Index="702" Flag="1" MapNumber="142" StartX="109" StartY="114" EndX="109" EndY="117" Target="703" Direction="0" MinLevel="1450" GoToGate="-1"	Name="" />
+	<Gate Index="703" Flag="2" MapNumber="81" StartX="74" StartY="63" EndX="79" EndY="63" Target="0" Direction="0" MinLevel="1450" GoToGate="-1" Name="" />	
 </GateSettings>

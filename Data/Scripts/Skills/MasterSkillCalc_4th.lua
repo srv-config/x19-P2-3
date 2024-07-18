@@ -411,15 +411,20 @@ function IceBlast_4thEnchant_GunCrusher(InDamage, Strength, Dexterity, Vitality,
 end
 
 -- SkillID: 1213, Busting Flare Enhancement Skill
-function BurstingFlare_4thEnchant_GunCrusher(InDamage, Strength, Dexterity, Vitality, Energy, BarrageCount)
+function BurstingFlare_4thEnchant_GunCrusher(InDamage, Strength, Dexterity, Vitality, Energy, BarrageCount, IsShockwave)
 	local OutDamage = 0
 
+    if (IsShockwave == 1) then
+        OutDamage = (InDamage * 1.5) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
+        return OutDamage
+    end
+
 	if (BarrageCount == 1) then
-		OutDamage = (InDamage * 0.8) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
+		OutDamage = (InDamage * 1.0) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
 	elseif (BarrageCount == 2) then
 		OutDamage = (InDamage * 1.0) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
-	elseif (BarrageCount == 3) then -- Shockwave
-		OutDamage = (InDamage * 1.2) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
+	elseif (BarrageCount == 3) then
+		OutDamage = (InDamage * 1.0) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
 	end
 	
 	return OutDamage

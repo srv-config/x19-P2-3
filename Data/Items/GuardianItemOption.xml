@@ -82,6 +82,12 @@
 		<Guardian Number="5" OptionNumber="2" FormulaID="43" LowerBound="0" UpperBound="1100" />
 		<Guardian Number="5" OptionNumber="3" FormulaID="44" LowerBound="0" UpperBound="1100" />
 		<Guardian Number="5" OptionNumber="4" FormulaID="45" LowerBound="0" UpperBound="-1" />
+	<!-- Leviathan -->
+		<Guardian Number="6" OptionNumber="0" FormulaID="51" LowerBound="0" UpperBound="-1" />	
+		<Guardian Number="6" OptionNumber="1" FormulaID="52" LowerBound="0" UpperBound="-1"	/>
+		<Guardian Number="6" OptionNumber="2" FormulaID="53" LowerBound="0" UpperBound="1100" />			
+		<Guardian Number="6" OptionNumber="3" FormulaID="54" LowerBound="0" UpperBound="1100" />		
+		<Guardian Number="6" OptionNumber="4" FormulaID="55" LowerBound="0" UpperBound="-1" />
 	</OptionSettings>
 	
 	<OptionRate One="7000" Two="2000" Three="1000" Four="0" />
@@ -125,5 +131,11 @@
 		<Guardian Number="5" OptionSet="2" OptionNumber1="0" FormulaID1="46" ValueType1="0" OptionNumber2="3" FormulaID2="49" ValueType2="0" />
 		<Guardian Number="5" OptionSet="3" OptionNumber1="1" FormulaID1="47" ValueType1="0" OptionNumber2="4" FormulaID2="50" ValueType2="0" />
 		<Guardian Number="5" OptionSet="4" OptionNumber1="0" FormulaID1="46" ValueType1="0" OptionNumber2="4" FormulaID2="50" ValueType2="0" />
+	<!-- Leviathan -->
+		<Guardian Number="6" OptionSet="0" OptionNumber1="0" FormulaID1="56" ValueType1="0" OptionNumber2="2" FormulaID2="58" ValueType2="0" />
+		<Guardian Number="6" OptionSet="1" OptionNumber1="1" FormulaID1="57" ValueType1="0" OptionNumber2="2" FormulaID2="58" ValueType2="0" />
+		<Guardian Number="6" OptionSet="2" OptionNumber1="0" FormulaID1="56" ValueType1="0" OptionNumber2="3" FormulaID2="59" ValueType2="0" />
+		<Guardian Number="6" OptionSet="3" OptionNumber1="1" FormulaID1="57" ValueType1="0" OptionNumber2="4" FormulaID2="60" ValueType2="0" />
+		<Guardian Number="6" OptionSet="4" OptionNumber1="0" FormulaID1="56" ValueType1="0" OptionNumber2="4" FormulaID2="60" ValueType2="0" />
 	</EliteOptionSettings>
 </GuardianItemOption>

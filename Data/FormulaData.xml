@@ -836,9 +836,9 @@
 		<Formula ID="52" Data="(249+((15+%d)/2)^2)" /> <!-- ItemLevel -->
 		<Formula ID="53" Data="(6+((%d/10)*1.9)^1.5)" /> <!-- ItemLevel -->
 		<Formula ID="54" Data="(6+((%d/10)*1.6)^1.49)" /> <!-- ItemLevel -->
-		<Formula ID="55" Data="%d*0" /> <!-- ItemLevel -->
+		<Formula ID="55" Data="(2+((3.9+%d)/2)^1.5)" /> <!-- ItemLevel -->
 		<Formula ID="56" Data="((7+(%d/10))^3.9)" /> <!-- ItemLevel -->
-		<Formula ID="57" Data="((6.7+(%d/10))^4.2)" /> <!-- ItemLevel -->
+		<Formula ID="57" Data="((6.5+(%d/10))^4.2)" /> <!-- ItemLevel -->
 		<Formula ID="58" Data="((5.8+(%d/10))^4.2)" /> <!-- ItemLevel -->
 		<Formula ID="59" Data="((4.9+(0.5*%d))^1.72)" /> <!-- ItemLevel -->
 		<Formula ID="60" Data="((6.4+(%d/10))^4)" /> <!-- ItemLevel -->
@@ -857,6 +857,9 @@
 		<Formula ID="10" Data="(((%d*5)+198)/1.8)" /> <!-- ItemLevel -->
 		<Formula ID="11" Data="(((%d*5)+185)/1)" /> <!-- ItemLevel -->
 		<Formula ID="12" Data="(((%d*6)+80)/1)" /> <!-- ItemLevel -->
+		<Formula ID="13" Data="(((%d*5)+230)/1.8)" /> <!-- ItemLevel -->
+		<Formula ID="14" Data="(((%d*5)+215)/1)" /> <!-- ItemLevel -->
+		<Formula ID="15" Data="(((%d*6)+90)/1)" /> <!-- ItemLevel -->
 	</Earrings>
 	<Group11>
 		<Formula ID="0" Data="0" /> <!-- empty -->
@@ -888,7 +891,7 @@
 		<Formula ID="11" Data="12+(%d/100)+(%d/100)" /> <!-- Agility, Vitality -->
 		<Formula ID="12" Data="10+(%d/100)" /> <!-- Agility -->
 		<Formula ID="13" Data="10+(%d/120)+(%d/130)" /> <!-- Strength, Agility -->
-		<Formula ID="14" Data="15+(%d/100)+(%d/90)" /> <!-- Command, Agility -->
+		<Formula ID="14" Data="15+(%d/100)+(%d/90)" /> <!-- Strength, Command -->
 	</CombatPower>
 	<Wing5thDamage>
 		<Formula ID="0" Data="300+(%d^1.6*23)" /> <!-- WingsLevel -->
@@ -901,290 +904,292 @@
 		<Formula ID="3" Data="100+((%d^1.5)*1.8)" /> <!--  -->
 	</WingCore>
 	<AbilityTree>
-		<Formula ID="0" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="1" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="2" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="3" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.59+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="4" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="5" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="6" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.16+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="7" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="8" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="9" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.71+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="10" Data="(((15+(%d*15))+((%d+1)*%d*2))*3.04+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="11" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="12" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="13" Data="(((15+(%d*15))+((%d+1)*%d*2))*2.57+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="14" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="15" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.83+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="16" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="17" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.13+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="18" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="19" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="20" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.44+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="21" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="22" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="23" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="24" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.41+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="25" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="26" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.34+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="27" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.88+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="28" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="29" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.4+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="30" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="31" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.03+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="32" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="33" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.59+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="34" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="35" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.36+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="36" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="37" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="38" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.33+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="39" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="40" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.25+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="41" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="42" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="43" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.33+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="44" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="45" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="46" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="47" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.41+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="48" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="49" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.83+30)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="50" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="51" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="52" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="53" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="54" Data="(((85+(%d*92))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="55" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="56" Data="(((180+(%d*199))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="57" Data="(((190+(%d*197))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="58" Data="(((60+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="59" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="60" Data="(((40+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="61" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="62" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="63" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="64" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="65" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="66" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="67" Data="(((170+(%d*201))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="68" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="69" Data="(((300+(%d*435))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="70" Data="(((70+(%d*101))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="71" Data="(((60+(%d*99))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="72" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="73" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="74" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="75" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="76" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="77" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="78" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="79" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="80" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="81" Data="(((70+(%d*89))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="82" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="83" Data="(((180+(%d*199))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="84" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="85" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="86" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="87" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="88" Data="(((40+(%d*57))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="89" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="90" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="91" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="92" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="93" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="94" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="95" Data="(((35+(%d*68))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="96" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="97" Data="(((90+(%d*117))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="98" Data="(((25+(%d*32))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="99" Data="(((35+(%d*52))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="100" Data="(((60+(%d*67))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="101" Data="(((100+(%d*137))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="102" Data="" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="103" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="104" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="105" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="106" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="107" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="108" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="109" Data="(((475+(%d*500))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="110" Data="(((375+(%d*420))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="111" Data="(((80+(%d*91))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="112" Data="(((70+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="113" Data="(((60+(%d*83))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="114" Data="(((225+(%d*350))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="115" Data="(((150+(%d*265))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="116" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="117" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="118" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="119" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="120" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="121" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="122" Data="(((85+(%d*92))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="123" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="124" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="125" Data="(((190+(%d*197))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="126" Data="(((60+(%d*91))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="127" Data="(((50+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="128" Data="(((40+(%d*83))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="129" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="130" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="131" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="132" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="133" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="134" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="135" Data="(((170+(%d*201))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="136" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="137" Data="(((300+(%d*435))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="138" Data="(((70+(%d*101))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="139" Data="(((60+(%d*99))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="140" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="141" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="142" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="143" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="144" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="145" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="146" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="147" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="148" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="149" Data="(((70+(%d*89))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="150" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="151" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="152" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="153" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="154" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="155" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="156" Data="(((40+(%d*57))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="157" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="158" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="159" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="160" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="161" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="162" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="163" Data="(((35+(%d*68))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="164" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="165" Data="(((90+(%d*117))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="166" Data="(((25+(%d*32))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="167" Data="(((35+(%d*52))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="168" Data="(((60+(%d*67))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="169" Data="(((100+(%d*137))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="170" Data="" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="171" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="172" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="173" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="174" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="175" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="176" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="177" Data="(((475+(%d*500))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="178" Data="(((375+(%d*420))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="179" Data="(((80+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="180" Data="(((70+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="181" Data="(((60+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="182" Data="(((225+(%d*350))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="183" Data="(((150+(%d*265))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="184" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="185" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="186" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="187" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="188" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="189" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="190" Data="(((85+(%d*92))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="191" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="192" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="193" Data="(((190+(%d*197))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="194" Data="(((60+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="195" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="196" Data="(((40+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="197" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="198" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="199" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="200" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="201" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="202" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="203" Data="(((170+(%d*201))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="204" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="205" Data="(((300+(%d*435))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="206" Data="(((70+(%d*101))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="207" Data="(((60+(%d*99))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="208" Data="(((50+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="209" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="210" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="211" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="212" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="213" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="214" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="215" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="216" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="217" Data="(((70+(%d*89))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="218" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="219" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="220" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="221" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="222" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="223" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="224" Data="(((40+(%d*57))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="225" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="226" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="227" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="228" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="229" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="230" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="231" Data="(((35+(%d*68))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="232" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="233" Data="(((90+(%d*117))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="234" Data="(((25+(%d*32))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="235" Data="(((35+(%d*52))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="236" Data="(((60+(%d*67))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="237" Data="(((100+(%d*137))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="238" Data="" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="239" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="240" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="241" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="242" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="243" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="244" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="245" Data="(((475+(%d*500))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="246" Data="(((375+(%d*420))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="247" Data="(((80+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="248" Data="(((70+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="249" Data="(((60+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="250" Data="(((225+(%d*350))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="251" Data="(((150+(%d*265))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="252" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="253" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="254" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="255" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="256" Data="(0.1+%d*0.6)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="257" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="258" Data="(0.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="259" Data="(0.3+(((%d+1)*0.1)*7))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="260" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="261" Data="(1.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="262" Data="(0.5+(((%d+1)*0.1)*15))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="263" Data="(0.8+(((%d+1)*0.1)*12))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="264" Data="(3+(%d*3))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="265" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="266" Data="(0.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="267" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="268" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="269" Data="(1+(((%d+1)*0.1)*10))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="270" Data="(0.2+(((%d+1)*0.1)*8))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="271" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="272" Data="(0.1+%d*0.6)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="273" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="274" Data="(0.1+(((%d+1)*0.1)*9))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="275" Data="(0.6+(((%d+1)*0.1)*4))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="276" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="277" Data="(0.2+(((%d+1)*0.1)*8))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="278" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="279" Data="(0.6+(((%d+1)*0.1)*4))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="280" Data="(25+%d*25)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="281" Data="(25+%d*25)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="282" Data="(15+%d*15)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel -->
-		<Formula ID="283" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.59+100)" /> <!-- CardLevel, CardLevel -->
+		<Formula ID="0" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="1" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="2" Data="%d^2*90+100+(%d*10)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="3" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.59+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="4" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="5" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="6" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.16+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="7" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="8" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="9" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.71+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="10" Data="(((15+(%d*15))+((%d+1)*%d*2))*3.04+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="11" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="12" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="13" Data="(((15+(%d*15))+((%d+1)*%d*2))*2.57+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="14" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="15" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.83+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="16" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="17" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.13+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="18" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="19" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="20" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.44+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="21" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="22" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="23" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="24" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.41+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="25" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="26" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.34+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="27" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.88+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="28" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="29" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.4+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="30" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="31" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.03+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="32" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="33" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.59+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="34" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="35" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.36+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="36" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="37" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="38" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.33+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="39" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="40" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.25+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="41" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="42" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="43" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.33+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="44" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="45" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="46" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="47" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.41+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="48" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="49" Data="(((15+(%d*15))+((%d+1)*%d*2))*0.83+30)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="50" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="51" Data="(%d+%d+%d)*0" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="52" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="53" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="54" Data="(((85+(%d*92))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="55" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="56" Data="(((180+(%d*199))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="57" Data="(((190+(%d*197))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="58" Data="(((60+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="59" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="60" Data="(((40+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="61" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="62" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="63" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="64" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="65" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="66" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="67" Data="(((170+(%d*201))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="68" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="69" Data="(((300+(%d*435))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="70" Data="(((70+(%d*101))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="71" Data="(((60+(%d*99))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="72" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="73" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="74" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="75" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="76" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="77" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="78" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="79" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="80" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="81" Data="(((70+(%d*89))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="82" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="83" Data="(((180+(%d*199))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="84" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="85" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="86" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="87" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="88" Data="(((40+(%d*57))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="89" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="90" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="91" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="92" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="93" Data="(((30+(%d*31))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="94" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="95" Data="(((35+(%d*68))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="96" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="97" Data="(((90+(%d*117))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="98" Data="(((25+(%d*32))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="99" Data="(((35+(%d*52))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="100" Data="(((60+(%d*67))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="101" Data="(((100+(%d*137))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="102" Data="" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="103" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="104" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="105" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="106" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="107" Data="(((100+(%d*107))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="108" Data="(((60+(%d*73))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="109" Data="(((475+(%d*500))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="110" Data="(((375+(%d*420))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="111" Data="(((80+(%d*91))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="112" Data="(((70+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="113" Data="(((60+(%d*83))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="114" Data="(((225+(%d*350))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="115" Data="(((150+(%d*265))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="116" Data="((120+(%d*120)+((%d*%d)*15)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="117" Data="((80+(%d*80)+((%d*%d)*10)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="118" Data="((40+(%d*40)+((%d*%d)*5)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="119" Data="(((100+(%d*115))+(%d*%d)))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="120" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="121" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="122" Data="(((85+(%d*92))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="123" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="124" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="125" Data="(((190+(%d*197))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="126" Data="(((60+(%d*91))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="127" Data="(((50+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="128" Data="(((40+(%d*83))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="129" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="130" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="131" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="132" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="133" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="134" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="135" Data="(((170+(%d*201))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="136" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="137" Data="(((300+(%d*435))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="138" Data="(((70+(%d*101))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="139" Data="(((60+(%d*99))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="140" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="141" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="142" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="143" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="144" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="145" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="146" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="147" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="148" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="149" Data="(((70+(%d*89))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="150" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="151" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="152" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="153" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="154" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="155" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="156" Data="(((40+(%d*57))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="157" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="158" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="159" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="160" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="161" Data="(((30+(%d*31))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="162" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="163" Data="(((35+(%d*68))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="164" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="165" Data="(((90+(%d*117))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="166" Data="(((25+(%d*32))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="167" Data="(((35+(%d*52))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="168" Data="(((60+(%d*67))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="169" Data="(((100+(%d*137))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="170" Data="" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="171" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="172" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="173" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="174" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="175" Data="(((100+(%d*107))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="176" Data="(((60+(%d*73))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="177" Data="(((475+(%d*500))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="178" Data="(((375+(%d*420))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="179" Data="(((80+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="180" Data="(((70+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="181" Data="(((60+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="182" Data="(((225+(%d*350))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="183" Data="(((150+(%d*265))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="184" Data="((120+(%d*120)+((%d*%d)*15)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="185" Data="((80+(%d*80)+((%d*%d)*10)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="186" Data="((40+(%d*40)+((%d*%d)*5)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="187" Data="(((100+(%d*115))+(%d*%d)))*(0.3)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="188" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="189" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="190" Data="(((85+(%d*92))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="191" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="192" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="193" Data="(((190+(%d*197))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="194" Data="(((60+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="195" Data="(((50+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="196" Data="(((40+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="197" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="198" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="199" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="200" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="201" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="202" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="203" Data="(((170+(%d*201))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="204" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="205" Data="(((300+(%d*435))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="206" Data="(((70+(%d*101))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="207" Data="(((60+(%d*99))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="208" Data="(((50+(%d*89))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="209" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="210" Data="(((30+(%d*49))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="211" Data="(((30+(%d*49))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="212" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="213" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="214" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="215" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="216" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="217" Data="(((70+(%d*89))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="218" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="219" Data="(((180+(%d*199))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="220" Data="((0.3+%d/5.3))*(0.25)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="221" Data="(((80+(%d*95))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="222" Data="(((70+(%d*93))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="223" Data="(((60+(%d*87))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="224" Data="(((40+(%d*57))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="225" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="226" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="227" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="228" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="229" Data="(((30+(%d*31))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="230" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="231" Data="(((35+(%d*68))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="232" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="233" Data="(((90+(%d*117))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="234" Data="(((25+(%d*32))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="235" Data="(((35+(%d*52))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="236" Data="(((60+(%d*67))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="237" Data="(((100+(%d*137))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="238" Data="" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="239" Data="(((2.5+(((%d/5)*%d)/6))*3)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="240" Data="(((2.5+(((%d/5)*%d)/6))*2)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="241" Data="(((2.5+(((%d/5)*%d)/6))*1)+(%d*0))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="242" Data="(((50+(50*(%d*(%d/2)))+(%d*0))*3))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="243" Data="(((100+(%d*107))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="244" Data="(((60+(%d*73))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="245" Data="(((475+(%d*500))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="246" Data="(((375+(%d*420))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="247" Data="(((80+(%d*91))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="248" Data="(((70+(%d*89))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="249" Data="(((60+(%d*83))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="250" Data="(((225+(%d*350))+(%d*%d)))*(0.2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="251" Data="(((150+(%d*265))+(%d*%d)))*(0.6)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="252" Data="((120+(%d*120)+((%d*%d)*15)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="253" Data="((80+(%d*80)+((%d*%d)*10)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="254" Data="((40+(%d*40)+((%d*%d)*5)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="255" Data="(((100+(%d*115))+(%d*%d)))*(0.45)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="256" Data="(0.1+%d*0.6)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="257" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="258" Data="(0.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="259" Data="(0.3+(((%d+1)*0.1)*7))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="260" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="261" Data="(1.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="262" Data="(0.5+(((%d+1)*0.1)*15))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="263" Data="(0.8+(((%d+1)*0.1)*12))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="264" Data="(3+(%d*3))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="265" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="266" Data="(0.2+(((%d+1)*0.1)*18))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="267" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="268" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="269" Data="(1+(((%d+1)*0.1)*10))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="270" Data="(0.2+(((%d+1)*0.1)*8))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="271" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="272" Data="(0.1+%d*0.6)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="273" Data="((35+(%d*44))+(%d*%d))" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="274" Data="(0.1+(((%d+1)*0.1)*9))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="275" Data="(0.6+(((%d+1)*0.1)*4))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="276" Data="(((100+(%d*115))+(%d*%d))/2)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="277" Data="(0.2+(((%d+1)*0.1)*8))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="278" Data="(0.4+(((%d+1)*0.1)*6))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="279" Data="(0.6+(((%d+1)*0.1)*4))+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="280" Data="(25+%d*25)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="281" Data="(25+%d*25)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="282" Data="(15+%d*15)+((%d+%d)*0)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="283" Data="(((15+(%d*15))+((%d+1)*%d*2))*1.59+100)" /> <!-- CardLevel, CardLevel, CardLevel -->
+		<Formula ID="284" Data="%d*1" /> <!-- ReqCardCount -->
+		<Formula ID="285" Data="%d*1000000" /> <!-- ReqCardCount -->
 	</AbilityTree>
 	<PetItem>
 		<Formula ID="0" Data="50" /> <!-- None -->
@@ -1203,7 +1208,7 @@
 		<Formula ID="13" Data="(%d+%f+%f)*(((%d+%d)*0)+1)*(1+(%f/100))" /> <!--  -->
 		<Formula ID="14" Data="(%d+%f+%f)*(((%d+%d)*0)+1)*(1+(%f/100))" /> <!--  -->
 		<Formula ID="15" Data="1+((%d+%d)*0)" /> <!--  -->
-		<Formula ID="16" Data="%d*0+10" /> <!--  -->
+		<Formula ID="16" Data="(%d*0)+50" /> <!--  -->
 		<Formula ID="17" Data="0.5" /> <!--  -->
 		<Formula ID="18" Data="0.5" /> <!--  -->
 		<Formula ID="19" Data="(250+(%d/20)+(%d/20))/100" /> <!--  -->

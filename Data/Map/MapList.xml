@@ -169,6 +169,7 @@
 		<Map Number="139" File="139_BossBattle.att" />
 		<Map Number="140" File="140_BloodyTarkan.att" />
 		<Map Number="141" File="141_TormentaIsland.att" />
+		<Map Number="142" File="142_TwistedKarutan.att" />
 	</DefaultMaps>
 	
 	<CrywolfEventAttr>

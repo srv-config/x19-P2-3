@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2022 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -51,7 +51,7 @@
 //	EventID: ID of event item bag type defined in ItemBagScript.lua
 //	HP: Value of health to set for specified monster
 //	DamageMin: Value of minimum damage to set for specified monster
-//	DamageMax: Value of maxumum damage to set for specified monster
+//	DamageMax: Value of maximum damage to set for specified monster
 //	Defense: Value of defense to set for specified monster
 //	AttackRate: Value of Attack Rate to set for specified monster
 //	DefenseRate: Value of Defense Rate to set for specified monster

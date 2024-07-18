@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -11,10 +11,13 @@
 //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ The system gives additional chance of getting extra item drop if equipping required item.
-//~~ Whether it fails of suceeed the drop of an item it will process to next drop system in hierarchy.
-//~~ It means that monster may give a drop of two or more items.
+//~~ Whether it fails or succeed the drop of an item it will process to next drop system in hierarchy.
+//~~ In result a monster may drop more than one item.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
+// ### MonsterDropCondition::ConditionTable ###
+//	AllowPartyDrop: if enabled, required item will be checked for any party member within party view range, 0/1
+//	
 // ### MonsterDropCondition::ConditionTable ###
 //	Index: Index of a condition table
 //	ItemKindA: KindA of required item, -1 if not applies
@@ -28,6 +31,7 @@
 //		6: Absolute weapon
 //		7: Chaos weapon
 //		8: Blessed Absolute weapon
+//
 //	ItemCat: Category of required item, -1 if not applies
 //	ItemIndex: Index of required item, -1 if not applies
 //	ItemLevel: Level of required item, 0 if not applies
@@ -35,7 +39,7 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ Item attributes such as KindA, KindB, Type, Category and Index can be checked in ItemList.xml
 //~~ Usage explanation:
-//~~ Only one condition at a time. If e.g. table condition Item Cat, Index, Level are configured then "Kind" and "Type" checks must stay disabled
+//~~ Only one condition at a time. If e.g. table condition Item Cat, Index, Level are configured then "Kind" and "Type" checks must stay at -1
 //~~ System allows definition of multiple tables, however total count of Conditions per all tables is 100.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
@@ -53,7 +57,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
 
-<MonsterDropCondition>
+<MonsterDropCondition AllowPartyDrop="1">
 	<ConditionTable Index="0" ItemKindA="-1" ItemKindB="-1" ItemType="6" ItemCat="-1" ItemIndex="-1" ItemLevel="0">
 		<Condition MonsterIndex="275" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Kundun -->
 		<Condition MonsterIndex="459" ItemCat="14" ItemIndex="342" ItemLevel="0" DropRate="150000" /> <!-- Selupan -->

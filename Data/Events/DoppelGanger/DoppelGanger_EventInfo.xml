@@ -51,12 +51,12 @@
 
 	<EntryLevel>
 		<Room Number="0" MinLevel="50"  MaxLevel="399" />
-		<Room Number="1" MinLevel="400" MaxLevel="599" />
-		<Room Number="2" MinLevel="600" MaxLevel="699" />
-		<Room Number="3" MinLevel="700" MaxLevel="799" />
-		<Room Number="4" MinLevel="800" MaxLevel="899" />
-		<Room Number="5" MinLevel="900" MaxLevel="999" />
-		<Room Number="6" MinLevel="1000" MaxLevel="MAX" />
+		<Room Number="1" MinLevel="400" MaxLevel="799" />
+		<Room Number="2" MinLevel="800" MaxLevel="899" />
+		<Room Number="3" MinLevel="900" MaxLevel="1099" />
+		<Room Number="4" MinLevel="1100" MaxLevel="1299" />
+		<Room Number="5" MinLevel="1300" MaxLevel="1499" />
+		<Room Number="6" MinLevel="1500" MaxLevel="MAX" />
 	</EntryLevel>
 
 	<Room Number="0" RewardExp="60000">

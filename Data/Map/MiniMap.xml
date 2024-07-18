@@ -428,6 +428,7 @@
 		<Tag Id="1" MapNumber="80" X="187" Y="212" Name="Karutan North Entrance" />
 	<!-- Karutan 2 -->
 		<Tag Id="0" MapNumber="81" X="162" Y="9" Name="Karutan South Entrance" />
+		<Tag Id="1" MapNumber="81" X="76" Y="65" Name="Twisted Karutan Entrance" />
 	<!-- Acheron -->
 		<Tag Id="0" MapNumber="91" X="28" Y="169" Name="Alkmar Entrance" />
 		<Tag Id="1" MapNumber="91" X="80" Y="205" Name="Ubaid Entrance" />
@@ -585,5 +586,22 @@
 		<Tag Id="2" MapNumber="141" X="98" Y="128" Name="Earth Element Area" />
 		<Tag Id="3" MapNumber="141" X="114" Y="92" Name="Wind Element Area" />
 		<Tag Id="4" MapNumber="141" X="129" Y="153" Name="Darkness Element Area" />
+		<Tag Id="5" MapNumber="141" X="148" Y="233" Name="Fire Elite Zone" />
+		<Tag Id="6" MapNumber="141" X="25" Y="198" Name="Water Elite Zone" />
+		<Tag Id="7" MapNumber="141" X="188" Y="11" Name="Earth Elite Zone" />
+		<Tag Id="8" MapNumber="141" X="242" Y="158" Name="Wind Elite Zone" />
+		<Tag Id="9" MapNumber="141" X="55" Y="15" Name="Darkness Elite Zone" />
+	<!-- Twisted Karutan -->
+		<Tag Id="0" MapNumber="142" X="144" Y="131" Name="Fire Element Area" />
+		<Tag Id="1" MapNumber="142" X="124" Y="145" Name="Water Element Area" />
+		<Tag Id="2" MapNumber="142" X="137" Y="113" Name="Earth Element Area" />
+		<Tag Id="3" MapNumber="142" X="120" Y="107" Name="Wind Element Area" />
+		<Tag Id="4" MapNumber="142" X="108" Y="127" Name="Darkness Element Area" />
+		<Tag Id="5" MapNumber="142" X="226" Y="54" Name="Fire Elite Zone" />
+		<Tag Id="6" MapNumber="142" X="224" Y="197" Name="Water Elite Zone" />
+		<Tag Id="7" MapNumber="142" X="122" Y="23" Name="Earth Elite Zone" />
+		<Tag Id="8" MapNumber="142" X="25" Y="116" Name="Wind Elite Zone" />
+		<Tag Id="9" MapNumber="142" X="88" Y="231" Name="Darkness Elite Zone" />
+		<Tag Id="10" MapNumber="142" X="110" Y="115" Name="Karutan Entrance" />
 	</TypeTwo>
 </MiniMapObjects>

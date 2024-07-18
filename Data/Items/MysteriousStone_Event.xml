@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Mysterious stone rates can operate in two modes, normal and event, see Common.ini::MiscEvents::UseMysteriousStoneEventRate
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MysteriousStone::Armors::OptionRand::CommonItem|PeriodItem::Option ###
+//	Set: Set option to apply
+//		~ 1: All Stats +7
+//		~ 2: All Stats +15
+//
+//	Luck: Luck option to apply:
+//		0: Do not apply
+//		1: Apply
+//
+// MasteryBonusOption:
+//	-1: No option
+//	1, 2, 3: Index of option from MasteryBonusOption.xml::MasteryBonusOptions::OptionList::Option::Index
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Actual option type depends on configuration from MasteryBonusOption.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	Rate: Chance rate of specific rule, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates must be equal to 1000000, for best results rates should be configured from highest to lowest
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MysteriousStone::Armors::BonusOptionRand::CommonItem|PeriodItem::Option ###
+//	MasteryBonus: 
+//	-1: No option
+//	1, 2, 3: Index of option from MasteryBonusOption.xml::MasteryBonusOptions::OptionList::Option::Index
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Actual option type depends on configuration from MasteryBonusOption.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	Rate: Chance rate of specific rule, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates must be equal to 1000000, for best results rates should be configured from highest to lowest
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ BonusOptionRand section is used to draw mastery bonus option only when other item options that can be achieved by applying mysterious stone are maximum possible.
+//~~ As possible maximum options are considered items with "All Stats +15 +Luck" or "All Stats +15 +Luck +number of excellent options set within MaxExcOption attribute"
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MysteriousStone::Shields|FairyShields|LancerShields|Weapons ###
+//	MaxExcOption: Number of options to consider item as item that achieved maximum number of options coming from mysterious stone, Luck option must present as well
+//
+// ### MysteriousStone::Shields|FairyShields|LancerShields|Weapons::OptionRand::CommonItem|PeriodItem::Option ###
+//	ExcX: Where X is 1-9, excellent option to apply for upon selection of specific entry, see ExcellentOptions.xml::ExcellentOptions::Common::Number for available option values
+//
+// MasteryBonusOption:
+//	-1: No option
+//	1, 2, 3: Index of option from MasteryBonusOption.xml::MasteryBonusOptions::OptionList::Option::Index
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Actual option type depends on configuration from MasteryBonusOption.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	Rate: Chance rate of specific rule, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates must be equal to 1000000, for best results rates should be configured from highest to lowest
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MysteriousStone::Armors::BonusOptionRand::CommonItem|PeriodItem::Option ###
+//	MasteryBonus: 
+//	-1: No option
+//	1, 2, 3: Index of option from MasteryBonusOption.xml::MasteryBonusOptions::OptionList::Option::Index
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Actual option type depends on configuration from MasteryBonusOption.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	Rate: Chance rate of specific rule, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of rates must be equal to 1000000, for best results rates should be configured from highest to lowest
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ BonusOptionRand section is used to draw mastery bonus option only when other item options that can be achieved by applying mysterious stone are maximum possible.
+//~~ As possible maximum options are considered items with "All Stats +15 +Luck" or "All Stats +15 +number of excellent options set within MaxExcOption attribute"
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MysteriousStone>
+	<Armors>
+		<OptionRand>
+			<CommonItem> <!-- Maximum 50 entries -->
+				<Option Set="1" Luck="0" MasteryBonusOption="-1" Rate="579400" />
+				<Option Set="1" Luck="0" MasteryBonusOption="1" Rate="121000" />
+				<Option Set="1" Luck="0" MasteryBonusOption="2" Rate="80000" />
+				<Option Set="1" Luck="0" MasteryBonusOption="3" Rate="37000" />
+				<Option Set="2" Luck="0" MasteryBonusOption="-1" Rate="44000" />
+				<Option Set="2" Luck="0" MasteryBonusOption="1" Rate="9700" />
+				<Option Set="2" Luck="0" MasteryBonusOption="2" Rate="5900" />
+				<Option Set="2" Luck="0" MasteryBonusOption="3" Rate="3000" />
+				<Option Set="1" Luck="1" MasteryBonusOption="-1" Rate="63000" />
+				<Option Set="1" Luck="1" MasteryBonusOption="1" Rate="13500" />
+				<Option Set="1" Luck="1" MasteryBonusOption="2" Rate="9000" />
+				<Option Set="1" Luck="1" MasteryBonusOption="3" Rate="4500" />
+				<Option Set="2" Luck="1" MasteryBonusOption="-1" Rate="21000" />
+				<Option Set="2" Luck="1" MasteryBonusOption="1" Rate="4500" />
+				<Option Set="2" Luck="1" MasteryBonusOption="2" Rate="3000" />
+				<Option Set="2" Luck="1" MasteryBonusOption="3" Rate="1500" />
+			</CommonItem>
+			<PeriodItem> <!-- Maximum 50 entries -->
+				<Option Set="1" Luck="0" MasteryBonusOption="-1" Rate="497000" />
+				<Option Set="1" Luck="0" MasteryBonusOption="1" Rate="106500" />
+				<Option Set="1" Luck="0" MasteryBonusOption="2" Rate="71000" />
+				<Option Set="1" Luck="0" MasteryBonusOption="3" Rate="35500" />
+				<Option Set="2" Luck="0" MasteryBonusOption="-1" Rate="98000" />
+				<Option Set="2" Luck="0" MasteryBonusOption="1" Rate="21000" />
+				<Option Set="2" Luck="0" MasteryBonusOption="2" Rate="14000" />
+				<Option Set="2" Luck="0" MasteryBonusOption="3" Rate="7000" />
+				<Option Set="1" Luck="1" MasteryBonusOption="-1" Rate="84000" />
+				<Option Set="1" Luck="1" MasteryBonusOption="1" Rate="18000" />
+				<Option Set="1" Luck="1" MasteryBonusOption="2" Rate="12000" />
+				<Option Set="1" Luck="1" MasteryBonusOption="3" Rate="6000" />
+				<Option Set="2" Luck="1" MasteryBonusOption="-1" Rate="21000" />
+				<Option Set="2" Luck="1" MasteryBonusOption="1" Rate="4500" />
+				<Option Set="2" Luck="1" MasteryBonusOption="2" Rate="3000" />
+				<Option Set="2" Luck="1" MasteryBonusOption="3" Rate="1500" />
+			</PeriodItem>
+		</OptionRand>
+		<BonusOptionRand>
+			<CommonItem>
+				<Option MasteryBonus="-1" Rate="600000" />
+				<Option MasteryBonus="1" Rate="200000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="100000" />
+			</CommonItem>
+			<PeriodItem>
+				<Option MasteryBonus="-1" Rate="600000" />
+				<Option MasteryBonus="1" Rate="200000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="100000" />
+			</PeriodItem>
+		</BonusOptionRand>
+    </Armors>
+	<Shields MaxExcOption="3">
+		<OptionRand>
+			<CommonItem> <!-- Maximum 100 entries -->
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="73375" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="15438" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="9625" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="4913" />	
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="32950" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="6875" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="4550" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="2225" />	
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173225" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36763" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24175" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12088" />	
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173175" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="37538" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="25025" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="178175" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36838" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24025" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="100" />	
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="7875" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="1688" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1125" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="563" />		
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="3150" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="675" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="450" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="225" />	
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="17325" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="3713" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2475" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1238" />	
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />	
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />		
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="2100" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="450" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="300" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="150" />
+			</CommonItem>
+			<PeriodItem> <!-- Maximum 100 entries -->
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="73375" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="15438" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="9625" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="4913" />	
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="32950" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="6875" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="4550" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="2225" />	
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173225" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36763" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24175" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12088" />	
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173175" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="37538" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="25025" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="178175" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36838" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24025" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="100" />	
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="7875" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="1688" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1125" />
+				<Option Exc1="10" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="563" />		
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="3150" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="675" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="450" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="225" />	
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="17325" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="3713" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2475" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1238" />	
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />	
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />		
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="2100" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="450" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="300" />
+				<Option Exc1="10" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="150" />
+			</PeriodItem>
+		</OptionRand>
+		<BonusOptionRand>
+			<CommonItem>
+				<Option MasteryBonus="-1" Rate="675000" />
+				<Option MasteryBonus="1" Rate="175000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="50000" />
+			</CommonItem>
+			<PeriodItem>
+				<Option MasteryBonus="-1" Rate="675000" />
+				<Option MasteryBonus="1" Rate="175000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="50000" />		
+			</PeriodItem>
+		</BonusOptionRand>
+	</Shields>
+	<FairyShields MaxExcOption="3">
+		<OptionRand>
+			<CommonItem> <!-- Maximum 100 entries -->
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="73375" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="15438" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="9625" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="4913" />	
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="32950" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="6875" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="4550" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="2225" />	
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173225" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36763" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24175" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12088" />	
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173175" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="37538" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="25025" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="178175" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36838" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24025" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="100" />	
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="7875" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="1688" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1125" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="563" />		
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="3150" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="675" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="450" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="225" />	
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="17325" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="3713" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2475" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1238" />	
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />	
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />		
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="2100" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="450" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="300" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="150" />
+			</CommonItem>
+			<PeriodItem> <!-- Maximum 100 entries -->
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="73375" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="15438" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="9625" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="4913" />	
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="32950" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="6875" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="4550" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="2225" />	
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173225" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36763" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24175" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12088" />	
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173175" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="37538" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="25025" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="178175" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36838" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24025" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="100" />	
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="7875" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="1688" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1125" />
+				<Option Exc1="11" Exc2="8" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="563" />		
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="3150" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="675" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="450" />
+				<Option Exc1="11" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="225" />	
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="17325" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="3713" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2475" />
+				<Option Exc1="11" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1238" />	
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="11" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />	
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="11" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />		
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="2100" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="450" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="300" />
+				<Option Exc1="11" Exc2="8" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="150" />
+			</PeriodItem>
+		</OptionRand>
+		<BonusOptionRand>
+			<CommonItem>
+				<Option MasteryBonus="-1" Rate="675000" />
+				<Option MasteryBonus="1" Rate="175000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="50000" />
+			</CommonItem>
+			<PeriodItem>
+				<Option MasteryBonus="-1" Rate="675000" />
+				<Option MasteryBonus="1" Rate="175000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="50000" />		
+			</PeriodItem>
+		</BonusOptionRand>
+	</FairyShields>	
+	<LancerShields MaxExcOption="3">
+		<OptionRand>
+			<CommonItem> <!-- Maximum 100 entries -->
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="73375" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="15438" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="9625" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="4913" />	
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="32950" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="6875" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="4550" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="2225" />	
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173225" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36763" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24175" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12088" />	
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173175" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="37538" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="25025" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="178175" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36838" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24025" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="100" />	
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="7875" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="1688" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1125" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="563" />		
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="3150" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="675" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="450" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="225" />	
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="17325" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="3713" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2475" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1238" />	
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />	
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />		
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="2100" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="450" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="300" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="150" />
+			</CommonItem>
+			<PeriodItem> <!-- Maximum 100 entries -->
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="73375" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="15438" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="9625" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="4913" />	
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="32950" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="6875" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="4550" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="2225" />	
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173225" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36763" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24175" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12088" />	
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="173175" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="37538" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="25025" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="178175" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36838" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24025" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12513" />	
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="100" />	
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="7875" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="1688" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1125" />
+				<Option Exc1="10" Exc2="12" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="563" />		
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="3150" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="675" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="450" />
+				<Option Exc1="10" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="225" />	
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="17325" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="3713" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2475" />
+				<Option Exc1="10" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1238" />	
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="10" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />	
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="20475" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4388" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="2925" />
+				<Option Exc1="10" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1463" />		
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="2100" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="450" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="300" />
+				<Option Exc1="10" Exc2="12" Exc3="6" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="150" />
+			</PeriodItem>
+		</OptionRand>
+		<BonusOptionRand>
+			<CommonItem>
+				<Option MasteryBonus="-1" Rate="675000" />
+				<Option MasteryBonus="1" Rate="175000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="50000" />
+			</CommonItem>
+			<PeriodItem>
+				<Option MasteryBonus="-1" Rate="675000" />
+				<Option MasteryBonus="1" Rate="175000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="50000" />		
+			</PeriodItem>
+		</BonusOptionRand>
+	</LancerShields>
+	<Weapons MaxExcOption="3">
+		<OptionRand>
+			<CommonItem> <!-- Maximum 100 entries -->
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="77000" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="16000" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="10000" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="5100" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="34000" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="7100" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="4700" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="2300" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="180000" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="38000" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="25000" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12500" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="180000" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="39000" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="26000" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="13000" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="185000" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="38300" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="25000" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="13000" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="10" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="5250" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="1125" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="750" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="375" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="2100" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="450" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="300" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="150" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="11550" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="2475" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1650" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="825" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="13650" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="2925" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1950" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="975" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="13650" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="2925" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1950" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="975" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="100" />
+			</CommonItem>
+			<PeriodItem> <!-- Maximum 100 entries -->
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="76000" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="16500" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="11000" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="5500" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="34650" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="7425" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="4950" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="2475" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="154000" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="33000" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="22000" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="11000" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="169750" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36375" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24250" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12125" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="169400" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="36300" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="24200" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="12100" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="0" MasteryBonusOption="3" Rate="10" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="10500" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="2250" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="1500" />
+				<Option Exc1="0" Exc2="3" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="750" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="4200" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="900" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="600" />
+				<Option Exc1="0" Exc2="6" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="300" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="23100" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="4950" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="3300" />
+				<Option Exc1="0" Exc2="7" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1650" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="27300" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="5850" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="3900" />
+				<Option Exc1="0" Exc2="4" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1950" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="27300" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="5850" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="3900" />
+				<Option Exc1="0" Exc2="5" Exc3="-1" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="1950" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="-1" Rate="1400" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="1" Rate="300" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="2" Rate="200" />
+				<Option Exc1="0" Exc2="6" Exc3="3" Exc4="-1" Exc5="-1" Exc6="-1" Exc7="-1" Exc8="-1" Exc9="-1" Luck="1" MasteryBonusOption="3" Rate="100" />
+			</PeriodItem>
+		</OptionRand>
+		<BonusOptionRand>
+			<CommonItem>
+				<Option MasteryBonus="-1" Rate="675000" />
+				<Option MasteryBonus="1" Rate="175000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="50000" />
+			</CommonItem>
+			<PeriodItem>
+				<Option MasteryBonus="-1" Rate="675000" />
+				<Option MasteryBonus="1" Rate="175000" />
+				<Option MasteryBonus="2" Rate="100000" />
+				<Option MasteryBonus="3" Rate="50000" />		
+			</PeriodItem>
+		</BonusOptionRand>
+	</Weapons>
+</MysteriousStone>

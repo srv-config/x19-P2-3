@@ -68,12 +68,12 @@
 	
 	<EntryLevel>
 		<Castle Level="0" MinLevel="50" MaxLevel="399" /> <!-- Chaos Castle 1 -->
-		<Castle Level="1" MinLevel="400" MaxLevel="599" /> <!-- Chaos Castle 2 -->
-		<Castle Level="2" MinLevel="600" MaxLevel="699" /> <!-- Chaos Castle 3 -->
-		<Castle Level="3" MinLevel="700" MaxLevel="799" /> <!-- Chaos Castle 4 -->
-		<Castle Level="4" MinLevel="800" MaxLevel="899" /> <!-- Chaos Castle 5 -->
-		<Castle Level="5" MinLevel="900" MaxLevel="999" /> <!-- Chaos Castle 6 -->
-		<Castle Level="6" MinLevel="1000" MaxLevel="MAX" /> <!-- Chaos Castle 7 -->
+		<Castle Level="1" MinLevel="400" MaxLevel="799" /> <!-- Chaos Castle 2 -->
+		<Castle Level="2" MinLevel="800" MaxLevel="899" /> <!-- Chaos Castle 3 -->
+		<Castle Level="3" MinLevel="900" MaxLevel="1099" /> <!-- Chaos Castle 4 -->
+		<Castle Level="4" MinLevel="1100" MaxLevel="1299" /> <!-- Chaos Castle 5 -->
+		<Castle Level="5" MinLevel="1300" MaxLevel="1499" /> <!-- Chaos Castle 6 -->
+		<Castle Level="6" MinLevel="1500" MaxLevel="MAX" /> <!-- Chaos Castle 7 -->
 	</EntryLevel>
 
 	<RewardExpSettings>

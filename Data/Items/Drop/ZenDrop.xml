@@ -151,4 +151,5 @@
 	<Map Number="139" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Boss Zone (entrance) -->
 	<Map Number="140" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Bloody Tarkan -->
 	<Map Number="141" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Tormenta Island -->
+	<Map Number="142" MinMoneyCount="100" MaxMoneyCount="100" Disable="0" /><!-- Twisted Karutan-->
 </ZenDropSystem>

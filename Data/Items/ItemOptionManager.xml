@@ -406,6 +406,8 @@
 		<Item Cat="12" Index="76" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Pierce Lion (Rare) -->
 		<Item Cat="12" Index="83" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Shining Tail -->
 		<Item Cat="12" Index="84" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Shining Tail (Rare) -->
+		<Item Cat="12" Index="51" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Leviathan -->
+		<Item Cat="12" Index="52" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Leviathan (Rare) -->
 		<Item Cat="12" Index="93" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Ur -->
 		<Item Cat="12" Index="94" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Ur (Rare) -->
 		<Item Cat="12" Index="473" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Ghost Horse -->
@@ -426,5 +428,6 @@
 		<Item Cat="20" Index="248" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Fire Divine Spirit -->
 		<Item Cat="20" Index="249" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Ice Divine Spirit -->
 		<Item Cat="20" Index="250" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- Holy Divine Spirit -->
+		<Item Cat="20" Index="256" Option1="0" Value1="0" Option2="0" Value2="0" Time="-10" /> <!-- [Bound] Fire Divine Spirit -->
 	</Section>
 </ItemOptionManager>

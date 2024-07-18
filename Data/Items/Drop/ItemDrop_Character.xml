@@ -122,6 +122,12 @@
 			<Monster Index="945" Rate="650" />
 			<Monster Index="946" Rate="650" />
 			<Monster Index="947" Rate="650" />
+			<Monster Index="955" Rate="700" />
+			<Monster Index="956" Rate="700" />
+			<Monster Index="957" Rate="700" />
+			<Monster Index="958" Rate="750" />
+			<Monster Index="959" Rate="750" />
+			<Monster Index="960" Rate="750" />
 		</Item>
 		<Item DropID="2">
 			<Monster Index="892" Rate="400" />
@@ -155,6 +161,12 @@
 			<Monster Index="945" Rate="850" />
 			<Monster Index="946" Rate="850" />
 			<Monster Index="947" Rate="850" />
+			<Monster Index="955" Rate="900" />
+			<Monster Index="956" Rate="900" />
+			<Monster Index="957" Rate="900" />
+			<Monster Index="958" Rate="950" />
+			<Monster Index="959" Rate="950" />
+			<Monster Index="960" Rate="950" />
 		</Item>
 	</DropItem>
 </CharacterItemDrop>

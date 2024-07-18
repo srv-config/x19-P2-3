@@ -175,4 +175,5 @@
 	<Unit Number="162" TargetType="1" ScopeType="-1" ScopeAngle="-1" ScopeValue="0" Delay="300" ElementSlot0="165" ElementSlot1="-1" ElementSlot2="-1" ElementSlot3="-1" ElementSlot4="-1" Name="Eunice & Giant Normal Attack" />
 	<Unit Number="163" TargetType="1" ScopeType="1" ScopeAngle="-1" ScopeValue="6" Delay="300" ElementSlot0="166" ElementSlot1="-1" ElementSlot2="-1" ElementSlot3="-1" ElementSlot4="-1" Name="Eunice & Giant Aqua Beam" />
 	<Unit Number="164" TargetType="1" ScopeType="0" ScopeAngle="-1" ScopeValue="3" Delay="300" ElementSlot0="167" ElementSlot1="168" ElementSlot2="-1" ElementSlot3="-1" ElementSlot4="-1" Name="Storm Fiend AOE Skill" />
+	<Unit Number="165" TargetType="1" ScopeType="0" ScopeAngle="-1" ScopeValue="3" Delay="300" ElementSlot0="169" ElementSlot1="170" ElementSlot2="171" ElementSlot3="-1" ElementSlot4="-1" Name="Twisted Condra AOE Skill" />
 </MonsterSkill>

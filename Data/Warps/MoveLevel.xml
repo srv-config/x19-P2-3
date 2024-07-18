@@ -91,4 +91,5 @@
 	<Move Level="1300" MapNumber="138" StartX="1" StartY="1" EndX="255" EndY="255" Name="Ignis Volcano" />
 	<Move Level="1350" MapNumber="140" StartX="1" StartY="1" EndX="255" EndY="255" Name="Bloody Tarkan" />
 	<Move Level="1400" MapNumber="141" StartX="1" StartY="1" EndX="255" EndY="255" Name="Tormenta Island" />
+	<Move Level="1450" MapNumber="142" StartX="1" StartY="1" EndX="255" EndY="255" Name="Twisted Karutan" />
 </MoveSettings>

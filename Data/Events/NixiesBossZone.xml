@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -17,9 +17,17 @@
 //		~ 0: Reward will be issues to every user that survived in Nix boss zone. Number of items per user will depend from drawn "Drop" section of Nix item bag, it is not recommended to use item bag party drop when using this mode
 //		~ 1: Reward will be issued only one time, regardless number of players that survived in Nix boss zone, can be used in connection of item bags party drop
 //
+//
+// ### NixiesBossZone::RegenTime ###
+//	StartBaseHour: The base number of hours to restart the event after successful completion, minimum value is 1
+//	StartAddHour: The add hour is a random number from the set value, minimum value is 0
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ RegenTime = StartBaseHour + (RandomValue of StartAddHour)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
 
 <NixiesBossZone Enable="1" MaxBossZoneEnterTime="15" BossZoneKickAwayTime="30" RewardMode="0">
-	<!-- More options to come upon requirement -->
+<RegenTime StartBaseHour="18" StartAddHour="6" />
 </NixiesBossZone>

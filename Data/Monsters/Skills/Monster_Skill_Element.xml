@@ -179,4 +179,7 @@
 	<Element Number="166" Type="20" SuccessRate="100" ContinuanceTime="0" IncAndDecType="-1" IncAndDecValue="-1" NullifiedMagic="300" CharacterClass="0" CharacterLevel="0" Name="Eunice & Giant Aqua Beam" />
 	<Element Number="167" Type="20" SuccessRate="100" ContinuanceTime="0" IncAndDecType="-1" IncAndDecValue="-1" NullifiedMagic="300" CharacterClass="0" CharacterLevel="0" Name="Storm Fiend AOE Attack" />
 	<Element Number="168" Type="0" SuccessRate="3" ContinuanceTime="3" IncAndDecType="-1" IncAndDecValue="-1" NullifiedMagic="-1" CharacterClass="0" CharacterLevel="0" Name="Storm Fiend Stun" />
+	<Element Number="169" Type="20" SuccessRate="100" ContinuanceTime="0" IncAndDecType="-1" IncAndDecValue="-1" NullifiedMagic="300" CharacterClass="0" CharacterLevel="0" Name="Twisted Condra AOE Attack" />
+	<Element Number="170" Type="3" SuccessRate="100" ContinuanceTime="0" IncAndDecType="12" IncAndDecValue="350" NullifiedMagic="300" CharacterClass="0" CharacterLevel="0" Name="Twisted Condra Mana Reduction" />
+	<Element Number="171" Type="4" SuccessRate="100" ContinuanceTime="0" IncAndDecType="12" IncAndDecValue="20" NullifiedMagic="300" CharacterClass="0" CharacterLevel="0" Name="Twisted Condra AG Reduction" />
 </MonsterSkill>

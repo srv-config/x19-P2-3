@@ -2,21 +2,42 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
 //
-//	Appearance		- delay time in seconds in which Selupan will appear after killing all the eggs
-//	BossZoneClose	- delay time in seconds in which gates will be closed after Selupan appeared
-//	Event Start		- delay time in seconds to start the event after killing Selupan/server start
+// ### RaklionEvent ###
+//	Enable: Deactivates or activates the event, 0/1
+//
+// ### RaklionEvent::Time ###
+//	SelupanSkillHitDelay: Delay between Selupan's hit, milliseconds
+//	BossAppearance: Time in which Selupan will appear after killing Eggs, seconds
+//	BossZoneClose: Time in which the event entry will be closed after Selupan's appearance, seconds
+//	EventStartBaseHour: The base number of hours to restart the event after successful completion, minimum value is 1
+//	EventStartAddHour: The add hour is a random number from the set value, minimum value is 0
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ RegenTime = EventStartBaseHour + (RandomValue of EventStartAddHour)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### RaklionEvent::EggCount ###
+//	Half: 
+//	Max: 
+//
+// ### RaklionEvent::SkillPatterns ###
+//	Pattern1: 
+//	Pattern2: 
+//	Pattern3: 
+//	Pattern4: 
+//	Pattern5: 
+//	Pattern6: 
 //
 // STRICTLY NO COMMENTS INSIDE TAGS 
 -->
 
 <RaklionEvent Enable="1">
-	<Time SelupanSkillHitDelay="1500" BossAppearance="5" BossZoneClose="300" EventStart="43200" />
+	<Time SelupanSkillHitDelay="1500" BossAppearance="5" BossZoneClose="300" EventStartBaseHour="18" EventStartAddHour="6" />
 	<EggCount Half="5" Max="15" />
 	<SkillPatterns Pattern1="80" Pattern2="60" Pattern3="50" Pattern4="40" Pattern5="20" Pattern6="10" />
 </RaklionEvent>

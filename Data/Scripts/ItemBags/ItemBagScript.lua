@@ -395,7 +395,7 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 11,0, 'Event_BloodCastle(6)_Reward') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 12,0, 'Event_BloodCastle(7)_Reward') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 14,0, 'Event_ChaosCastle(1)_Reward') -- DropFunction /3/
-	AddItemBag(BAG_EVENT, 15,0, 'Event_LastManStanding_Reward') -- DropFunction /3/
+-- 15
 	AddItemBag(BAG_EVENT, 16,0, 'NPC_SantaClause(1)_Reward') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 17,0, 'NPC_SantaClause(2)_Reward') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 18,0, 'NPC_SantaClause(3)_Reward') -- DropFunction /3/
@@ -506,6 +506,10 @@ function LoadItemBag() -- Bags Load
 	
 -- Bags for purpose of Blessing Box event
 	AddItemBag(BAG_EVENT, 900,0, 'Event_BlessingBox_(899)_Kill')
+	
+-- Bags for purpose of Last Man Standing event
+	AddItemBag(BAG_EVENT, 1000,0, 'Event_LastManStanding_Looser_Reward') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1050,0, 'Event_LastManStanding_Winner_Reward') -- DropFunction /3/
 end
 
 -- ### /1/ Drop Item (using Item Bag Structure) ### --

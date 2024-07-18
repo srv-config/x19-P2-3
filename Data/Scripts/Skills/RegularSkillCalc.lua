@@ -70,6 +70,28 @@ function IceCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  return OutDamage
 end
 
+-- SkillID: 8, Twister
+function TwisterCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = InDamage
+ 
+ return OutDamage
+end
+
+-- SkillID: 9, Evil Spirit
+function EvilSpiritCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
+ local OutDamage = 0
+ 
+ 	if (Class == CLASS_WIZARD) then
+		OutDamage = InDamage
+	elseif (Class == CLASS_GLADIATOR) then
+		OutDamage = InDamage
+	elseif (Class == CLASS_RUNEWIZARD) then
+		OutDamage = InDamage
+	end
+ 
+ return OutDamage
+end
+
 -- SkillID: 10, Hell Fire
 function HellFireCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  local OutDamage = InDamage
@@ -122,21 +144,6 @@ end
 -- SkillID: 39, Ice Storm
 function IceStormCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  local OutDamage = InDamage
- 
- return OutDamage
-end
-
--- SkillID: 9, Evil Spirit
-function EvilSpiritCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
- local OutDamage = 0
- 
- 	if (Class == CLASS_WIZARD) then
-		OutDamage = InDamage
-	elseif (Class == CLASS_GLADIATOR) then
-		OutDamage = InDamage
-	elseif (Class == CLASS_RUNEWIZARD) then
-		OutDamage = InDamage
-	end
  
  return OutDamage
 end
@@ -1321,15 +1328,20 @@ function GunCrusherIceBlastCalc(InDamage, Strength, Dexterity, Vitality, Energy)
 end
 
 -- SkillID: 2005, Bursting Flare
-function GunCrusherBurstingFlareCalc(InDamage, Strength, Dexterity, Vitality, Energy, BarrageCount)
+function GunCrusherBurstingFlareCalc(InDamage, Strength, Dexterity, Vitality, Energy, BarrageCount, IsShockwave)
 	local OutDamage = 0
 
+    if (IsShockwave == 1) then
+        OutDamage = (InDamage * 1.5) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
+        return OutDamage
+    end
+
 	if (BarrageCount == 1) then
-		OutDamage = (InDamage * 0.8) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
+		OutDamage = (InDamage * 1.0) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
 	elseif (BarrageCount == 2) then
 		OutDamage = (InDamage * 1.0) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
-	elseif (BarrageCount == 3) then -- Shockwave
-		OutDamage = (InDamage * 1.2) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
+	elseif (BarrageCount == 3) then
+		OutDamage = (InDamage * 1.0) * ((Energy / 8) + (Dexterity / 28) + 120) / 100
 	end
 	
 	return OutDamage

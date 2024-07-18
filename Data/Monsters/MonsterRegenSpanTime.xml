@@ -28,9 +28,7 @@
 -->
 
 <MonsterRegenSpanTime>
-	<!-- 
 	<Monster Index="275" RegenMinHour="18" RegenMinMinute="0" RegenMinSecond="0" RegenMaxHour="24" RegenMaxMinute="0" RegenMaxSecond="0" />
 	<Monster Index="673" RegenMinHour="18" RegenMinMinute="0" RegenMinSecond="0" RegenMaxHour="24" RegenMaxMinute="0" RegenMaxSecond="0" />
 	<Monster Index="716" RegenMinHour="18" RegenMinMinute="0" RegenMinSecond="0" RegenMaxHour="24" RegenMaxMinute="0" RegenMaxSecond="0" />
-	-->
 </MonsterRegenSpanTime>

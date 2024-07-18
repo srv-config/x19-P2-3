@@ -442,8 +442,8 @@
 		<Buff Index="413" EffectType="328" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="2" Name="Season Pass - Tempest Muun multiplier increase" Description="The Tempest Muun multiplier effect is additionally increased by %d times." />
 		<Buff Index="414" EffectType="329" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="2" Name="Season Pass - [G] Master Lee Horn's Crystal" Description="When killing a monster, you can obtain the 'Mastery Spirit Crystal' item with a %0.3f%% chance." />
 		<Buff Index="415" EffectType="330" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="2" Name="Season Pass - [P] Master Lee Horn's Crystal" Description="When killing a monster, you can obtain the 'Mastery Spirit Crystal' item with a %0.3f%% chance." />
-		<Buff Index="418" EffectType="331" ItemType="12" ItemIndex="93" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wear Ur" Description="Guardian mount item" />
-		<Buff Index="419" EffectType="332" ItemType="12" ItemIndex="94" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Wear Ur (Rare)" Description="Guardian mount item" />
+		<Buff Index="418" EffectType="331" ItemType="12" ItemIndex="93" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Ur" Description="Guardian mount item" />
+		<Buff Index="419" EffectType="332" ItemType="12" ItemIndex="94" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Ur (Rare)" Description="Guardian mount item" />
 		<Buff Index="420" EffectType="333" ItemType="14" ItemIndex="366" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Piece of Pizza" Description="Gains an additional 50% of base EXP/Increases attack speed by 10." />
 		<Buff Index="421" EffectType="334" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Additional Nuke Damage" Description="Extra Nuke damage can be inflicted when attacking." />
 		<Buff Index="422" EffectType="335" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Additional Bolt Damage" Description="Extra Bolt damage can be inflicted when attacking." />
@@ -455,11 +455,14 @@
 		<Buff Index="428" EffectType="337" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Divine Force" Description="The stats required for attack are greatly increased for 3 seconds." />
 		<Buff Index="429" EffectType="337" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Divine Aura" Description="Increases Defense greatly for 3 seconds." />
 		<Buff Index="430" EffectType="117" ItemType="20" ItemIndex="247" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Divine Horse" Description="Summons the Divine Horse." />
-		<Buff Index="431" EffectType="230" ItemType="20" ItemIndex="248" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="(General) Divine Spirit" Description="Summons the Divine Spirit." />
-		<Buff Index="432" EffectType="230" ItemType="20" ItemIndex="249" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="(Rare 1) Divine Spirit" Description="Summons the Divine Spirit." />
-		<Buff Index="433" EffectType="230" ItemType="20" ItemIndex="250" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="(Rare 2) Divine Spirit" Description="Summons the Divine Spirit." />
+		<Buff Index="431" EffectType="230" ItemType="20" ItemIndex="248" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Fire Divine Spirit" Description="Summons the Divine Spirit." />
+		<Buff Index="432" EffectType="230" ItemType="20" ItemIndex="249" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Ice Divine Spirit" Description="Summons the Divine Spirit." />
+		<Buff Index="433" EffectType="230" ItemType="20" ItemIndex="250" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Holy Divine Spirit" Description="Summons the Divine Spirit." />
+		<Buff Index="434" EffectType="338" ItemType="12" ItemIndex="51" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Leviathan" Description="Guardian mount item" />
+		<Buff Index="435" EffectType="338" ItemType="12" ItemIndex="52" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Leviathan (Rare)" Description="Guardian mount item" />
 		<Buff Index="436" EffectType="337" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Battle Glory" Description="Increases attack and combat power." />
 		<Buff Index="437" EffectType="337" ItemType="-1" ItemIndex="-1" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Battle Glory Enhancement" Description="Increases attack and combat power." />
+		<Buff Index="442" EffectType="230" ItemType="20" ItemIndex="256" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="(Bound) Divine Spirit" Description="(Bound) Summons the Divine Spirit." />
 	</General>
 	<Period>
 		<Buff Index="179" EffectType1="0" EffectValue1="25" EffectType2="0" EffectValue2="0" Duration="604800" Name="Fire Tower" />

@@ -214,6 +214,7 @@
 	<Muun ID="375" ItemCat="16" ItemIndex="167" Grade="0" Type="5" Rank="4" OptionIndex="69" AddOptionIndex="2" SetPeriod="2" Duration="30" EvolutionItemCat="-1" EvolutionItemIndex="-1" SkillDelayTime="0" Name="Illusion Knight Jacquard" />
 	<Muun ID="388" ItemCat="16" ItemIndex="168" Grade="0" Type="5" Rank="4" OptionIndex="72" AddOptionIndex="2" SetPeriod="2" Duration="30" EvolutionItemCat="-1" EvolutionItemIndex="-1" SkillDelayTime="0" Name="Rage Fighter" />
 	<Muun ID="389" ItemCat="16" ItemIndex="169" Grade="0" Type="5" Rank="4" OptionIndex="69" AddOptionIndex="2" SetPeriod="2" Duration="30" EvolutionItemCat="-1" EvolutionItemIndex="-1" SkillDelayTime="0" Name="Grow Lancer" />
+	<Muun ID="376" ItemCat="16" ItemIndex="170" Grade="0" Type="5" Rank="4" OptionIndex="72" AddOptionIndex="2" SetPeriod="2" Duration="30" EvolutionItemCat="-1" EvolutionItemIndex="-1" SkillDelayTime="0" Name="Dark Lord" />
 	<Muun ID="0" ItemCat="16" ItemIndex="212" Grade="0" Type="1" Rank="3" OptionIndex="0" AddOptionIndex="0" SetPeriod="2" Duration="30" EvolutionItemCat="16" EvolutionItemIndex="213" SkillDelayTime="0" Name="Luki" />
 	<Muun ID="1" ItemCat="16" ItemIndex="213" Grade="0" Type="1" Rank="3" OptionIndex="0" AddOptionIndex="0" SetPeriod="2" Duration="30" EvolutionItemCat="-1" EvolutionItemIndex="-1" SkillDelayTime="0" Name="Luki (Evolved)" />
 	<Muun ID="28" ItemCat="16" ItemIndex="214" Grade="0" Type="1" Rank="3" OptionIndex="9" AddOptionIndex="1" SetPeriod="2" Duration="30" EvolutionItemCat="16" EvolutionItemIndex="215" SkillDelayTime="0" Name="Tony" />
