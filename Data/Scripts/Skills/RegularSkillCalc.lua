@@ -242,54 +242,39 @@ end
 
 -- SkillID: X, Combo Skill
 function ComboSkillDamage(Class, Strength, Dexterity, Vitality, Energy, Command, InDamage)
-	local Damage = 0
-	local OutDamage = 0
+	local ComboDamage = 0
  
  	if(Class == CLASS_WIZARD) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_KNIGHT) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_ELF) then 
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_GLADIATOR) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_DARKLORD) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_SUMMONER) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_RAGEFIGHTER) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_GROWLANCER) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_RUNEWIZARD) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_SLAYER) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_GUNCRUSHER) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_LIGHTWIZARD) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_LEMURIAMAGE) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	elseif(Class == CLASS_ILLUSIONKNIGHT) then
-		Damage = (Strength * 1.5) + Dexterity + Energy
-		OutDamage = InDamage
+		ComboDamage = (Strength * 1.5) + Dexterity + Energy
 	end
 
- return Damage, OutDamage
+ return ComboDamage
 end
 
 -- SkillID: 731, Ice Blood
@@ -1593,7 +1578,7 @@ function LemuriaMageAttack(Class, Index, TargetIndex, Energy)
 end
 
 -- SkillID: 2011, Beginner Bless
-function LemuriaMageBless(Energy)
+function LemuriaMageBless(Index, TargetIndex, TargetClass, Energy)
 	local SkillEffect = Energy / 150
 	
 	return SkillEffect

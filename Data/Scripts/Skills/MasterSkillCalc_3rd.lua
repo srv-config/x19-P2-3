@@ -1659,7 +1659,7 @@ function LemuriaMageUnleashMarvel_MasterLevel2_Calc(InDamage, Strength, Dexterit
 end
 
 -- SkillID: 857, Beginner Bless Strengthener
-function LemuriaMageBless_Level1(Energy)
+function LemuriaMageBless_Level1(Index, TargetIndex, TargetClass, Energy)
 	local SkillEffect = Energy / 150
 	
 	return SkillEffect

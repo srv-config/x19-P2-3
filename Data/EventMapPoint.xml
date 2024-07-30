@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -24,8 +24,8 @@
 // ### EventMapPoint::RewardCondition::Point ###
 //	Min: Minimum point for actual range rule to apply for the reward
 //	Max: Maximum point for actual range rule to apply for the reward
-//	ItemCat: Reward tem category, see ItemList.xml
-//	ItemIndex: Reward tem index, see ItemList.xml
+//	ItemCat: Reward item category, see ItemList.xml
+//	ItemIndex: Reward item index, see ItemList.xml
 //
 // ### EventMapPoint::RewardItemCount::Event ###
 //	Level: Level of event floor, 0-6
@@ -83,8 +83,7 @@
 		<Event Type="0" MonsterKill="13" PlayerKill="50" Winning="99" Name="Chaos Castle" />
 		<Event Type="1" CommonMonsterKill="5" BossMonsterKill="20" GateDestroy="100" StoneDestroy="200" Name="Blood Castle" />
 		<Event Type="2" MonsterKill="1" RankingPlace1="200" RankingPlace2="150" RankingPlace3="100" Name="Devil's Square" />
-		<Event Type="3" MonsterKill="45" BossKill="100" Name="Imperial Fort (Mon-Sat)" />
-		<Event Type="4" MonsterKill="22" BossKill="100" Name="Imperial Fort (Sun)" />
+		<!-- Imperial Guardian does not issue mastery reward -->
 		<Event Type="5" StatueNeutralize="50" StatueDestroy="30" PlayerKill="10" Winning="200" Name="Illusion Temple" />
 		<Event Type="6" MonsterKill="2" PlayerKill="10" IceWalkerKill="100" Winning="200" Name="Doppelganger" />
 	</PointsReward>
