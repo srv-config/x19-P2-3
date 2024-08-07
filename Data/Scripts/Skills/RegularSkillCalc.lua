@@ -690,7 +690,7 @@ function LordEarthShakeCalcDamage(InDamage, Strength, Dexterity, Vitality, Energ
 end
 
 -- SkillID: 64, Lord Dignity
-function LordLordDignity(Index, Command, Energy)
+function LordLordDignity(Strength, Dexterity, Vitality, Energy, Command)
 	local SkillEffect = (Command / 25 + Energy / 30) / 10
 	local SkillTime = Energy / 10 + 60
 	

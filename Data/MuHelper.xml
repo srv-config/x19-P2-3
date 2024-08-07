@@ -28,10 +28,6 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	ChargeInterval: Charge interval for MuHelper use, minutes
 //
-// ### MuHelper::Helper::Guardian ###
-//	RepairEnable: Enable or disable Guardian repair regardless user preferences, 0/1
-//	Durability: If guardian durability is lower than configured value the guardian will be repaired, 1-255
-//
 // ### MuHelper::Helper::Timing ###
 //	MaxUseTime: Maximum time MuHelper can be used for at a time, minutes
 //
@@ -129,7 +125,6 @@
 <MuHelper>
 	<Helper Enable="1" MinLevel="80" MinVipLevel="-1">
 		<Cost GeneralMultiplier="7.0" DiscountMultiplier="1.0" EventMultiplier="1.0" ChargeInterval="5" />
-		<Guardian RepairEnable="1" Durability="50" />
 		
 		<Timing MaxUseTime="1000">
 			<Range Min="0"  Max="200" ChargeRate="1.0"/>
