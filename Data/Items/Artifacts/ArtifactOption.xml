@@ -29,6 +29,10 @@
 //~~ Option that is used as FullSetOptionID in ArtifactSystem.xml must have only Value1 set to desired value,
 //~~ rest of attributes must be set to -1
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ IMPORTANT: Changing options base values will result in inability of upgrading artifact grade
+//~~ using grade upgrade mix for artifacts created before the change.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
 //	Formula ID: ID of formula from FormulaData.xml :: ArtifactOption section
 //
 // STRICTLY NO COMMENTS INSIDE TAGS

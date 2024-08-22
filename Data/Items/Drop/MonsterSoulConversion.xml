@@ -94,11 +94,11 @@
 			<Area ID="4" MapNumber="136" MonsterIndex="895" ReqSoulNumber="500" DropRate="450000" Name="Blaze Kethotum" />
 		</Converter>
 		<Converter Level="5">
-			<Area ID="0" MapNumber="123" MonsterIndex="810" ReqSoulNumber="500" DropRate="450000" Name="Kanturu Undergrounds" />
-			<Area ID="1" MapNumber="123" MonsterIndex="811" ReqSoulNumber="500" DropRate="450000" Name="Ignis Volcano" />
-			<Area ID="2" MapNumber="123" MonsterIndex="812" ReqSoulNumber="500" DropRate="450000" Name="Bloody Tarkan" />
-			<Area ID="3" MapNumber="123" MonsterIndex="813" ReqSoulNumber="500" DropRate="450000" Name="Tormenta Island" />
-			<Area ID="4" MapNumber="123" MonsterIndex="814" ReqSoulNumber="500" DropRate="450000" Name="Twisted Karutan" />
+			<Area ID="0" MapNumber="137" MonsterIndex="905" ReqSoulNumber="500" DropRate="450000" Name="Underground Persona" />
+			<Area ID="1" MapNumber="138" MonsterIndex="911" ReqSoulNumber="500" DropRate="450000" Name="Magma Gladiator" />
+			<Area ID="2" MapNumber="140" MonsterIndex="926" ReqSoulNumber="500" DropRate="450000" Name="Bloody Mutant" />
+			<Area ID="3" MapNumber="141" MonsterIndex="942" ReqSoulNumber="500" DropRate="450000" Name="Storm Guard" />
+			<Area ID="4" MapNumber="142" MonsterIndex="955" ReqSoulNumber="500" DropRate="450000" Name="Twisted Crypta" />
 		</Converter>
 	</MonsterSettings>
 </MonsterSoulConversion>

@@ -103,6 +103,7 @@
 //		~ 6: Darkness HP decrease
 //		~ 7: Weakness Attack Decrease
 //		~ 8: Innovation Defense Decrease
+//		~ 9: Bat Flock Damage over time (DOT)										 
 //		~ 17: Mastery Shield Damage Reduction Taken Instead
 //		~ 30: Spiral Charge Attack Damage Increase
 //		~ 31: Spiral Charge Defense Increase
@@ -731,7 +732,7 @@
 		<Formula ID="6" Data="(%d/300)*0.01" /> <!-- Energy -->
 		<Formula ID="7" Data="((%d/3)*0.15)" /> <!-- Energy -->
 		<Formula ID="8" Data="((%d/3)*0.15)" /> <!-- Energy -->
-		<Formula ID="9" Data="((((((%d*%d)*0.6/24)+(((%d-800)*(%d-500))/200))/24)+2000))" /> <!--  -->
+		<Formula ID="9" Data="((((((%d*%d)*0.6/24)+(((%d-800)*(%d-500))/200))/24)+2000))" /> <!-- Energy, Energy, Energy, Energy -->
 		<Formula ID="10" Data="%d*0+%d*0" /> <!--  -->
 		<Formula ID="11" Data="5+(%d/100)+(%d/100)" /> <!--  -->
 		<Formula ID="12" Data="5" /> <!--  -->
