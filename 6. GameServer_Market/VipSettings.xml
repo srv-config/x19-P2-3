@@ -104,6 +104,21 @@
 //
 //	Rate: Chance rate of getting specific giant, weight based, sum of all rates is total, rate/total
 //
+// ### VipSystem::VipTypes::EntryDailyLimit::Event ###
+//	Type: Event type
+//		~ 0: Chaos Castle
+//		~ 1: Blood Castle
+//		~ 2: Devil's Square
+//		~ 3: Imperial Fort
+//		~ 5: Illusion Temple
+//		~ 6: Doppelganger
+//		~ 7: Boss Battle Together
+//
+//	Count: Maximum daily entries count
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Entry limits for regular players are managed from EventMapPoint.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ NOTE: Below configuration is proposed example, system is allowing to define own VIP types and names.
 //~~ Modifying VIP types requires to apply the changes in Essential Tools -> VipSettings.xml file.
@@ -134,6 +149,15 @@
 				<Giant Type="2" Rate="3000" />
 				<Giant Type="3" Rate="2000" />
 			</GiantTypeAwardRate>
+			<EntryDailyLimit>
+				<Event Type="0" Count="6" Name="Chaos Castle" />
+				<Event Type="1" Count="6" Name="Blood Castle" />
+				<Event Type="2" Count="6" Name="Devil's Square" />
+				<Event Type="3" Count="6" Name="Imperial Fort" />
+				<Event Type="5" Count="3" Name="Illusion Temple" />
+				<Event Type="6" Count="6" Name="Doppelganger" />
+				<Event Type="7" Count="3" Name="Boss Battle Together" />
+			</EntryDailyLimit>
 		</Vip>
 		<Vip Type="2" Name="Silver" ML_MonsterMinLevel="95" MJ_MonsterMinLevel="160" PointPerResetBonus="100" ResetStayOnPosition="0" ResetMoveToCharSelectWindow="0" NightStartHour="22" NightStartMinute="0" NightEndHour="7" NightEndMinute="30">
 			<Day ExpBonus="0.0" DropBonus="0" MasterExpBonus="0.0" MasterDropBonus="0" MajesticExpBonus="0.0" MajesticDropBonus="0" OffLevelExp="1.0" />
@@ -151,6 +175,15 @@
 				<Giant Type="2" Rate="3000" />
 				<Giant Type="3" Rate="2000" />
 			</GiantTypeAwardRate>
+			<EntryDailyLimit>
+				<Event Type="0" Count="6" Name="Chaos Castle" />
+				<Event Type="1" Count="6" Name="Blood Castle" />
+				<Event Type="2" Count="6" Name="Devil's Square" />
+				<Event Type="3" Count="6" Name="Imperial Fort" />
+				<Event Type="5" Count="3" Name="Illusion Temple" />
+				<Event Type="6" Count="6" Name="Doppelganger" />
+				<Event Type="7" Count="3" Name="Boss Battle Together" />
+			</EntryDailyLimit>
 		</Vip>
 		<Vip Type="3" Name="Gold" ML_MonsterMinLevel="95" MJ_MonsterMinLevel="160" PointPerResetBonus="150" ResetStayOnPosition="0" ResetMoveToCharSelectWindow="0" NightStartHour="22" NightStartMinute="0" NightEndHour="7" NightEndMinute="30">
 			<Day ExpBonus="0.0" DropBonus="0" MasterExpBonus="0.0" MasterDropBonus="0" MajesticExpBonus="0.0" MajesticDropBonus="0" OffLevelExp="1.0" />
@@ -168,6 +201,15 @@
 				<Giant Type="2" Rate="3000" />
 				<Giant Type="3" Rate="2000" />
 			</GiantTypeAwardRate>
+			<EntryDailyLimit>
+				<Event Type="0" Count="6" Name="Chaos Castle" />
+				<Event Type="1" Count="6" Name="Blood Castle" />
+				<Event Type="2" Count="6" Name="Devil's Square" />
+				<Event Type="3" Count="6" Name="Imperial Fort" />
+				<Event Type="5" Count="3" Name="Illusion Temple" />
+				<Event Type="6" Count="6" Name="Doppelganger" />
+				<Event Type="7" Count="3" Name="Boss Battle Together" />
+			</EntryDailyLimit>
 		</Vip>
 		<Vip Type="4" Name="Platinum" ML_MonsterMinLevel="95" MJ_MonsterMinLevel="160" PointPerResetBonus="200" ResetStayOnPosition="0" ResetMoveToCharSelectWindow="0" NightStartHour="22" NightStartMinute="0" NightEndHour="7" NightEndMinute="30">
 			<Day ExpBonus="0.0" DropBonus="0" MasterExpBonus="0.0" MasterDropBonus="0" MajesticExpBonus="0.0" MajesticDropBonus="0" OffLevelExp="1.0" />
@@ -185,6 +227,15 @@
 				<Giant Type="2" Rate="3000" />
 				<Giant Type="3" Rate="2000" />
 			</GiantTypeAwardRate>
+			<EntryDailyLimit>
+				<Event Type="0" Count="6" Name="Chaos Castle" />
+				<Event Type="1" Count="6" Name="Blood Castle" />
+				<Event Type="2" Count="6" Name="Devil's Square" />
+				<Event Type="3" Count="6" Name="Imperial Fort" />
+				<Event Type="5" Count="3" Name="Illusion Temple" />
+				<Event Type="6" Count="6" Name="Doppelganger" />
+				<Event Type="7" Count="3" Name="Boss Battle Together" />
+			</EntryDailyLimit>
 		</Vip>
 	</VipTypes>
 </VipSystem>

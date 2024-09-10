@@ -9,6 +9,7 @@
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
 //
+//
 // ### EventMapPoint::EntryDailyLimit::Event ###
 //	Type: Event type
 //		~ 0: Chaos Castle
@@ -20,6 +21,9 @@
 //		~ 7: Boss Battle Together
 //
 //	Count: Maximum daily entries count
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Entry limits for VIPs are managed from VipSettings.xml
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // ### EventMapPoint::RewardCondition::Point ###
 //	Min: Minimum point for actual range rule to apply for the reward

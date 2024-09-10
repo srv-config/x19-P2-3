@@ -759,7 +759,7 @@ function ElementalDefense_4thEnchant_Elf(Class, Index, TargetIndex, Strength, De
 end
 
 -- SkillID: 1230, Bless Enhancement Skill
-function Bless_4thEnchant_Elf(Energy)
+function Bless_4thEnchant_Elf(Index, TargetIndex, TargetClass, Energy)
 	local SkillEffect = Energy / 100
 	
 	return SkillEffect
