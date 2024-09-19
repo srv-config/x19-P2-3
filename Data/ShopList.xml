@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -46,7 +46,6 @@
 //~~ Note: Selected NPCs, such as Potion Girl or Mirage will not work with the speak system
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-//	MossMerchant: Defines a Moss Merchant Lottery Shop, only for NPC 492, should always be 1
 //	GuildMaster: Defines Flags Shop, only for NPC 241, should always be 1 (requires Flags System plugin)
 //	BattleCore: Defines a shop located on Battle Core server, if so set to 1
 //
@@ -97,7 +96,6 @@
 		<Shop NPCIndex="415" MapNumber="51" PosX="44" PosY="229" Dir="1" VipType="-1" GMShop="0" FileName="NPC(415)_Silvia.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
 		<Shop NPCIndex="416" MapNumber="51" PosX="29" PosY="236" Dir="2" VipType="-1" GMShop="0" FileName="NPC(416)_Rhea.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
 		<Shop NPCIndex="417" MapNumber="51" PosX="36" PosY="219" Dir="2" VipType="-1" GMShop="0" FileName="NPC(417)_Marce.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
-		<Shop NPCIndex="492" MapNumber="51" PosX="22" PosY="225" Dir="2" VipType="-1" GmShop="0" MossMerchant="1" FileName="NPC(492)_Moss.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
 	<!-- Loren Market -->
 		<Shop NPCIndex="545" MapNumber="79" PosX="43" PosY="46" Dir="3" VipType="-1" GMShop="0" FileName="NPC(545)_Christine_the_Merchant.xml" SpeakTexts="-1" SpeakInterval="6400" RandomText="0" />
 	<!-- Event Square (Market) -->

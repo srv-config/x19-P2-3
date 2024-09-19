@@ -3654,7 +3654,7 @@
 			<Spawn Index="568" Distance="0" StartX="55" StartY="199" Dir="1" /> <!-- Wandering Merchant Zyro -->
 			<Spawn Index="725" Distance="0" StartX="32" StartY="239" Dir="1" /> <!-- Priest James -->
 			<Spawn Index="452" Distance="0" StartX="46" StartY="243" Dir="1" /> <!-- Seed Master -->
-			<!-- <Spawn Index="492" Distance="0" StartX="22" StartY="225" Dir="2" /> --> <!-- Moss ~ shop managed via ShopList.xml -->
+			<Spawn Index="492" Distance="0" StartX="22" StartY="225" Dir="2" /> <!-- Moss Merchant -->
 			<Spawn Index="682" Distance="0" StartX="24" StartY="229" Dir="2" /> <!-- Monica -->
 			<Spawn Index="582" Distance="0" StartX="37" StartY="215" Dir="3" /> <!-- Adniel -->
 		</Spot>
