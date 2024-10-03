@@ -275,7 +275,7 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_INVENTORY, MakeItemID(14,484),0, 'Item_(14,484,0)_[Lvl 5]_Soul_Converter_Box') -- DropFunction /4/
 	AddItemBag(BAG_INVENTORY, MakeItemID(14,485),0, 'Item_(14,485,0)_Ruud_Box_(500)') -- DropFunction /4/
 	AddItemBag(BAG_INVENTORY, MakeItemID(14,486),0, 'Item_(14,486,0)_Ruud_Box_(1500)') -- DropFunction /4/
-	AddItemBag(BAG_INVENTORY, MakeItemID(14,487),0, 'Item_(14,487,0)_Ruud_Box_(400)') -- DropFunction /4/
+	AddItemBag(BAG_INVENTORY, MakeItemID(14,489),0, 'Item_(14,489,0)_Ruud_Box_(400)') -- DropFunction /4/
 	-- AddItemBag(BAG_INVENTORY, MakeItemID(14,492),0, 'Item_(14,492,0)_Ghost_Horse_Capsule') -- DropFunction /4/
 	AddItemBag(BAG_INVENTORY, MakeItemID(20,68),0, 'Item_(20,68,0)_Limited_Time_Wing_Box') -- DropFunction /4/
 	AddItemBag(BAG_INVENTORY, MakeItemID(20,69),0, 'Item_(20,69,0)_Earring_Box_of_Fury_(Left)') -- DropFunction /4/

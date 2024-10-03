@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MonsterSoulReward::Converter ###
+//	Level: Level of converter, 1-5
+//
+// ### MonsterSoulReward::Converter::Category ###
+//	Number: Number of section to reward items from, 1-3
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Each converter level can have up to three reward categories. Category to reward item from is selected by player
+//~~ upon reward compensation procedure after collecting required number of souls.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MonsterSoulReward::Converter::Category::RewardKind ###
+//	Number: Section of items to reward items from, 1-2
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Each Category can have up to two RewardKind sections. If defined, every RewardKind section will issue one reward
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MonsterSoulReward::Converter::Category::RewardKind::Reward ###
+//	ItemCat: Category of item to reward, see ItemList.xml
+//	ItemIndex: Index of item to reward, see ItemList.xml
+//	ItemMinLevel: Minimum level of reward item, 0-15
+//	ItemMaxLevel: Maximum level of reward item, 0-15
+//	Durability: Durability of item to reward, if set to 0 system will use default durability from ItemList.xml
+//	Skill:
+//		~ -1: Random, 50/50% chance to get skill option
+//		~ 0: No Skill
+//		~ 1: Skill
+//
+//	Luck:
+//		~ -1: Random, 50/50% chance to get luck option
+//		~ 0: No Luck
+//		~ 1: Luck
+//	Option: 
+//		~ -1: Random, from +4 to +16/+28 depending on general server setting of max option
+//		~ 0: No Option
+//		~ 1-7: +4 to + 28
+//
 //	Exc:
 //		Excellent Options:
 //			-1: No exc option
 //			-2: Random count of random options (based on rates from ExcellentOptions.xml)
 //			-3;X: Specified count of random options, the 'X' defines count of excellent options, max 9 (options selection based on rates from ExcellentOptions.xml)
-//			X;X;X;X;X;X;X;X;X: Defines excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
-//		Grade Options (4th Wings):
+//			-10: A draw of bonus and excellent options set from MasteryExcOptions.xml. If used, the skill and luck attributes from this file are ignored, see referred file for further details.
+//			X;X;X;X;X;X;X;X;X: Defined excellent options, the 'X' is excellent option ID based on ExcellentOptions.xml, maximum 9 options can be defined
+//		Grade Options (4th and 5th Wings - 5th Wings can support up to two grade options of level 0 only):
 //			-1: No grade option
 //			-2: Random count of random options (based on rates from ItemGradeOption.xml)
 //			-3;X: Specified count of random options, the 'X' defines count of grade options, max 4 (options selection based on rates from ItemGradeOption.xml)
@@ -16,262 +61,317 @@
 //			-2;X: Random count of random options (based on rates from GuardianItemOption.xml), the 'X' takes value 0 or 1, determining whether to generate random elite option or not
 //			-3;X;Y: Specified count of random options, the 'X' defines count of options, max 4, the 'Y' takes value 0 or 1, determining whether to generate random elite option or not
 //			X;X;X;X;Y: Defines specific options, the 'X' is guardian regular option index from GuardianItemOption.xml::OptionList section, maximum 4 options can be defined, -1 if not applies, the Y is elite option index from GuardianItemOption.xml::EliteOptionList, must be defined as 5th argument, -1 if not applies
+//		Artifact Items:
+//			-1: No Option
+//			-2: Random options set (based on rates from ArtifactSystem.xml)
+//			X1;Y1;X2;Y2;X3;Y3: X is OptionType value from ArtifactOption.xml, -1 if not applies, Y is value index, 1~10, referring to ValueX of selected option, -1 if not applies
+//		WingCore:
+//			-1: No Option
+//			-2: Random count of random options (based on rates from WingCoreOption.xml)
 //
-// type reward 0 - item, 1 - money, 2 - ruud
-// ItemDurability is optional attribute
+//	SetItem:
+//		~ 0: no ancient,
+//		~ 1: ancient (random Tier of specified item) - must be added as ancient, otherwise option will be ignored
+//
+//	SocketCount:
+//		~ 0: no Socket slots
+//		~ 1: up to one slot
+//		~ 2: up to two slots
+//		~ 3: up to three slots
+//		~ 4: up to four slots
+//		~ 5: up to five slots
+//	    ~ -2: random count of socket slots (Pentagrams and Socket Items)
+//
+//	ElementalItem:
+//		~ -1: Random attribute
+//		~ 0: no element
+//		~ 1: Fire
+//		~ 2: Water
+//		~ 3: Earth
+//		~ 4: Wind
+//		~ 5: Darkness
+//
+//	Rate: Rate of getting specific reward, n/1000000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Sum of all items per RewardKind should be equal to 1000000, otherwise there is chance item will not be rewarded
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
 <MonsterSoulReward>
 	<Converter Level="1">
 		<Category Number="1">
 			<RewardKind Number="0">
-				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+				<Reward ItemCat="14" ItemIndex="489" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Ruud Box (400) -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="371" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward ItemCat="14" ItemIndex="480" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="570000" /> <!-- [Lvl 1] Soul Converter Box -->
+				<Reward ItemCat="14" ItemIndex="373" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="430000" /> <!-- [Bound] Bless of Light (Lower) -->
 			</RewardKind>
 		</Category>
 		<Category Number="2">
 			<RewardKind Number="0">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Elemental Rune -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="371" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward ItemCat="14" ItemIndex="373" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="427000" /> <!-- [Bound] Bless of Light (Lower) -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="153000" /> <!-- Elemental Rune -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="37500" /> <!-- Errtel of Anger +1 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="37500" /> <!-- Errtel of Blessing +1 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="37500" /> <!-- Errtel of Integrity +1 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="37500" /> <!-- Errtel of Divinity +1 -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="5" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="30000" /> <!-- Elemental Rune x5 -->
+				<Reward ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="21429" /> <!-- Lorencia Knights' Iron Shield -->
+				<Reward ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="21429" /> <!-- Iron Shield of the Magic -->
+				<Reward ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="21429" /> <!-- Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="21429" /> <!-- Brave Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="21428" /> <!-- Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="21428" /> <!-- Merciless Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="217" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="21428" /> <!-- Thoughtful Sage's Jewel -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="10" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="15000" /> <!-- Elemental Rune x10 -->
+				<Reward ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="11667" /> <!-- Kundun's Madness Blade -->
+				<Reward ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="11667" /> <!-- Kundun's Magic Spell Scroll -->
+				<Reward ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="11667" /> <!-- Empire Guardians' Stronghold -->
+				<Reward ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="11667" /> <!-- Ancient Icarus Scroll -->
+				<Reward ItemCat="12" ItemIndex="306" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="11666" /> <!-- Runedil's Goldentune Harp -->
+				<Reward ItemCat="12" ItemIndex="308" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="11666" /> <!-- Norrwen's Bloodstring Lyra -->
+				<Reward ItemCat="12" ItemIndex="307" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="2000" /> <!-- Lemuria's Orb -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="500" /> <!-- Errtel of Anger +7 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="500" /> <!-- Errtel of Blessing +7 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="500" /> <!-- Errtel of Integrity +7 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="500" /> <!-- Errtel of Divinity +7 -->
+				<Reward ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="334" /> <!-- Arca's Prophecy -->
+				<Reward ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="333" /> <!-- Antonia's Sword -->
+				<Reward ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="333" /> <!-- Kundun's Seal Scroll -->
 			</RewardKind>
 		</Category>
 	</Converter>
 	<Converter Level="2">
 		<Category Number="1">
 			<RewardKind Number="0">
-				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+				<Reward ItemCat="14" ItemIndex="489" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Ruud Box (400) -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="371" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward ItemCat="14" ItemIndex="481" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="700000" /> <!-- [Lvl 2] Soul Converter Box -->
+				<Reward ItemCat="14" ItemIndex="373" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="300000" /> <!-- [Bound] Bless of Light (Lower) -->
 			</RewardKind>
 		</Category>
 		<Category Number="2">
 			<RewardKind Number="0">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Elemental Rune -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="371" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward ItemCat="14" ItemIndex="373" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="300000" /> <!-- [Bound] Bless of Light (Lower) -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="295000" /> <!-- Elemental Rune -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" /> <!-- Errtel of Anger +1 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" /> <!-- Errtel of Blessing +1 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" /> <!-- Errtel of Integrity +1 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" /> <!-- Errtel of Divinity +1 -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="5" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="35000" /> <!-- Elemental Rune x5 -->
+				<Reward ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16286" /> <!-- Lorencia Knights' Iron Shield -->
+				<Reward ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16286" /> <!-- Iron Shield of the Magic -->
+				<Reward ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16286" /> <!-- Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16286" /> <!-- Brave Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16286" /> <!-- Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16285" /> <!-- Merciless Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="217" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16285" /> <!-- Thoughtful Sage's Jewel -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="10" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="20000" /> <!-- Elemental Rune x10 -->
+				<Reward ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18334" /> <!-- Kundun's Madness Blade -->
+				<Reward ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18334" /> <!-- Kundun's Magic Spell Scroll -->
+				<Reward ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18333" /> <!-- Empire Guardians' Stronghold -->
+				<Reward ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18333" /> <!-- Ancient Icarus Scroll -->
+				<Reward ItemCat="12" ItemIndex="306" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18333" /> <!-- Runedil's Goldentune Harp -->
+				<Reward ItemCat="12" ItemIndex="308" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18333" /> <!-- Norrwen's Bloodstring Lyra -->
+				<Reward ItemCat="12" ItemIndex="307" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="2000" /> <!-- Lemuria's Orb -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="750" /> <!-- Errtel of Anger +7 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="750" /> <!-- Errtel of Blessing +7 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="750" /> <!-- Errtel of Integrity +7 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="750" /> <!-- Errtel of Divinity +7 -->
+				<Reward ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="334" /> <!-- Arca's Prophecy -->
+				<Reward ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="333" /> <!-- Antonia's Sword -->
+				<Reward ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="333" /> <!-- Kundun's Seal Scroll -->
 			</RewardKind>
 		</Category>
 	</Converter>
 	<Converter Level="3">
 		<Category Number="1">
 			<RewardKind Number="0">
-				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+				<Reward ItemCat="14" ItemIndex="489" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Ruud Box (400) -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward ItemCat="14" ItemIndex="482" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="700000" /> <!-- [Lvl 3] Soul Converter Box -->
+				<Reward ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="300000" /> <!-- [Bound] Bless of Light (Middle) -->
 			</RewardKind>
 		</Category>
 		<Category Number="2">
 			<RewardKind Number="0">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Elemental Rune -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="300000" /> <!-- [Bound] Bless of Light (Middle) -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="280000" /> <!-- Elemental Rune -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="29500" /> <!-- Errtel of Anger +1 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="29500" /> <!-- Errtel of Blessing +1 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="29500" /> <!-- Errtel of Integrity +1 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="29500" /> <!-- Errtel of Divinity +1 -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="5" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="70000" /> <!-- Elemental Rune x5 -->
+				<Reward ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="14286" /> <!-- Lorencia Knights' Iron Shield -->
+				<Reward ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="14286" /> <!-- Iron Shield of the Magic -->
+				<Reward ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="14286" /> <!-- Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="14286" /> <!-- Brave Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="14286" /> <!-- Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="14285" /> <!-- Merciless Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="217" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="14285" /> <!-- Thoughtful Sage's Jewel -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="10" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="25000" /> <!-- Elemental Rune x10 -->
+				<Reward ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16667" /> <!-- Kundun's Madness Blade -->
+				<Reward ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16667" /> <!-- Kundun's Magic Spell Scroll -->
+				<Reward ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16667" /> <!-- Empire Guardians' Stronghold -->
+				<Reward ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16667" /> <!-- Ancient Icarus Scroll -->
+				<Reward ItemCat="12" ItemIndex="306" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16666" /> <!-- Runedil's Goldentune Harp -->
+				<Reward ItemCat="12" ItemIndex="308" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="16666" /> <!-- Norrwen's Bloodstring Lyra -->
+				<Reward ItemCat="12" ItemIndex="307" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="2000" /> <!-- Lemuria's Orb -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1000" /> <!-- Errtel of Anger +7 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1000" /> <!-- Errtel of Blessing +7 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1000" /> <!-- Errtel of Integrity +7 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1000" /> <!-- Errtel of Divinity +7 -->
+				<Reward ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="334" /> <!-- Arca's Prophecy -->
+				<Reward ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="333" /> <!-- Antonia's Sword -->
+				<Reward ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="333" /> <!-- Kundun's Seal Scroll -->
 			</RewardKind>
 		</Category>
 	</Converter>
 	<Converter Level="4">
 		<Category Number="1">
 			<RewardKind Number="0">
-				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+				<Reward ItemCat="14" ItemIndex="489" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Ruud Box (400) -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward ItemCat="14" ItemIndex="483" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="720000" /> <!-- [Lvl 4] Soul Converter Box -->
+				<Reward ItemCat="14" ItemIndex="373" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="280000" /> <!-- [Bound] Bless of Light (Lower) -->
 			</RewardKind>
 		</Category>
 		<Category Number="2">
 			<RewardKind Number="0">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Elemental Rune -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward ItemCat="14" ItemIndex="373" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="280000" /> <!-- [Bound] Bless of Light (Lower) -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="251000" /> <!-- Elemental Rune -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="27500" /> <!-- Errtel of Anger +1 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="27500" /> <!-- Errtel of Blessing +1 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="27500" /> <!-- Errtel of Integrity +1 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="27500" /> <!-- Errtel of Divinity +1 -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="5" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="150000" /> <!-- Elemental Rune x5 -->
+				<Reward ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="8572" /> <!-- Lorencia Knights' Iron Shield -->
+				<Reward ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="8572" /> <!-- Iron Shield of the Magic -->
+				<Reward ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="8572" /> <!-- Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="8571" /> <!-- Brave Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="8571" /> <!-- Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="8571" /> <!-- Merciless Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="217" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="8571" /> <!-- Thoughtful Sage's Jewel -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="10" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="30000" /> <!-- Elemental Rune x10 -->
+				<Reward ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18334" /> <!-- Kundun's Madness Blade -->
+				<Reward ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18334" /> <!-- Kundun's Magic Spell Scroll -->
+				<Reward ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18333" /> <!-- Empire Guardians' Stronghold -->
+				<Reward ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18333" /> <!-- Ancient Icarus Scroll -->
+				<Reward ItemCat="12" ItemIndex="306" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18333" /> <!-- Runedil's Goldentune Harp -->
+				<Reward ItemCat="12" ItemIndex="308" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="18333" /> <!-- Norrwen's Bloodstring Lyra -->
+				<Reward ItemCat="12" ItemIndex="307" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="3000" /> <!-- Lemuria's Orb -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1250" /> <!-- Errtel of Anger +7 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1250" /> <!-- Errtel of Blessing +7 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1250" /> <!-- Errtel of Integrity +7 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1250" /> <!-- Errtel of Divinity +7 -->
+				<Reward ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="334" /> <!-- Arca's Prophecy -->
+				<Reward ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="333" /> <!-- Antonia's Sword -->
+				<Reward ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="333" /> <!-- Kundun's Seal Scroll -->
 			</RewardKind>
 		</Category>
 	</Converter>
 	<Converter Level="5">
 		<Category Number="1">
 			<RewardKind Number="0">
-				<Reward Type="2" CountMin="400" CountMax="400" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" />
+				<Reward ItemCat="14" ItemIndex="489" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Ruud Box (400) -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="2" CountMin="200" CountMax="4000" ItemCat="-1" ItemIndex="-1" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="500000" />
+				<Reward ItemCat="14" ItemIndex="484" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="730000" /> <!-- [Lvl 5] Soul Converter Box -->
+				<Reward ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="270000" /> <!-- [Bound] Bless of Light (Middle) -->
 			</RewardKind>
 		</Category>
 		<Category Number="2">
 			<RewardKind Number="0">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000000" /> <!-- Elemental Rune -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="280000" /> <!-- [Bound] Bless of Light (Middle) -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" /> <!-- Elemental Rune -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="25000" /> <!-- Errtel of Anger +1 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="25000" /> <!-- Errtel of Blessing +1 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="25000" /> <!-- Errtel of Integrity +1 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="25000" /> <!-- Errtel of Divinity +1 -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="5" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="208000" /> <!-- Elemental Rune x5 -->
+				<Reward ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="7143" /> <!-- Lorencia Knights' Iron Shield -->
+				<Reward ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="7143" /> <!-- Iron Shield of the Magic -->
+				<Reward ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="7143" /> <!-- Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="7143" /> <!-- Brave Hero Elixir -->
+				<Reward ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="7143" /> <!-- Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="7143" /> <!-- Merciless Gladiator's Dagger -->
+				<Reward ItemCat="12" ItemIndex="217" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="7142" /> <!-- Thoughtful Sage's Jewel -->
+				<Reward ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Durability="10" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="50000" /> <!-- Elemental Rune x10 -->
+				<Reward ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="10167" /> <!-- Kundun's Madness Blade -->
+				<Reward ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="10167" /> <!-- Kundun's Magic Spell Scroll -->
+				<Reward ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="10167" /> <!-- Empire Guardians' Stronghold -->
+				<Reward ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="10167" /> <!-- Ancient Icarus Scroll -->
+				<Reward ItemCat="12" ItemIndex="306" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="10166" /> <!-- Runedil's Goldentune Harp -->
+				<Reward ItemCat="12" ItemIndex="308" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="10166" /> <!-- Norrwen's Bloodstring Lyra -->
+				<Reward ItemCat="12" ItemIndex="307" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="4000" /> <!-- Lemuria's Orb -->
+				<Reward ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1250" /> <!-- Errtel of Anger +7 -->
+				<Reward ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1250" /> <!-- Errtel of Blessing +7 -->
+				<Reward ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1250" /> <!-- Errtel of Integrity +7 -->
+				<Reward ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="1250" /> <!-- Errtel of Divinity +7 -->
+				<Reward ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="667" /> <!-- Arca's Prophecy -->
+				<Reward ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="667" /> <!-- Antonia's Sword -->
+				<Reward ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="666" /> <!-- Kundun's Seal Scroll -->
 			</RewardKind>
 		</Category>
 		<Category Number="3">
 			<RewardKind Number="0">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="288" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" />
+				<Reward ItemCat="13" ItemIndex="8" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="199960" /> <!-- Ring of Ice +1 exc -->
+				<Reward ItemCat="13" ItemIndex="9" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="199960" /> <!-- Ring of Poison +1 exc -->
+				<Reward ItemCat="13" ItemIndex="21" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="199960" /> <!-- Ring of Fire +1 exc -->
+				<Reward ItemCat="13" ItemIndex="22" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="199960" /> <!-- Ring of Earth +1 exc -->
+				<Reward ItemCat="13" ItemIndex="23" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="199960" /> <!-- Ring of Wind +1 exc -->
+				<Reward ItemCat="13" ItemIndex="8" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="40" /> <!-- Ring of Ice +1 exc -->
+				<Reward ItemCat="13" ItemIndex="9" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="40" /> <!-- Ring of Poison +2 exc -->
+				<Reward ItemCat="13" ItemIndex="21" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="40" /> <!-- Ring of Fire +2 exc -->
+				<Reward ItemCat="13" ItemIndex="22" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="40" /> <!-- Ring of Earth +2 exc -->
+				<Reward ItemCat="13" ItemIndex="23" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="40" /> <!-- Ring of Wind +2 exc -->
 			</RewardKind>
 			<RewardKind Number="1">
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="250000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="200" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="201" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="202" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="203" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="204" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="205" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="206" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="207" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="208" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="209" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="210" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="211" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="212" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="213" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="214" ItemMinLevel="0" ItemMaxLevel="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="-2" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="1" ItemMaxLevel="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="221" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="231" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="241" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="251" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
-				<Reward Type="0" CountMin="1" CountMax="1" ItemCat="12" ItemIndex="261" ItemMinLevel="7" ItemMaxLevel="7" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="-1" Rate="30000" />
+				<Reward ItemCat="13" ItemIndex="8" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="49800" /> <!-- Ring of Ice +1 exc -->
+				<Reward ItemCat="13" ItemIndex="9" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="49800" /> <!-- Ring of Poison +1 exc -->
+				<Reward ItemCat="13" ItemIndex="21" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="49800" /> <!-- Ring of Fire +1 exc -->
+				<Reward ItemCat="13" ItemIndex="22" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="49800" /> <!-- Ring of Earth +1 exc -->
+				<Reward ItemCat="13" ItemIndex="23" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="49800" /> <!-- Ring of Wind +1 exc -->
+				<Reward ItemCat="13" ItemIndex="8" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="200" /> <!-- Ring of Ice +1 exc -->
+				<Reward ItemCat="13" ItemIndex="9" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="200" /> <!-- Ring of Poison +2 exc -->
+				<Reward ItemCat="13" ItemIndex="21" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="200" /> <!-- Ring of Fire +2 exc -->
+				<Reward ItemCat="13" ItemIndex="22" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="200" /> <!-- Ring of Earth +2 exc -->
+				<Reward ItemCat="13" ItemIndex="23" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="200" /> <!-- Ring of Wind +2 exc -->
+				<Reward ItemCat="13" ItemIndex="175" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000" /> <!-- Protection Ring +2 exc -->
+				<Reward ItemCat="13" ItemIndex="176" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000" /> <!-- Protection Ring +2 exc -->
+				<Reward ItemCat="13" ItemIndex="173" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000" /> <!-- Ring of Ultimatum +2 exc -->
+				<Reward ItemCat="13" ItemIndex="12" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="50000" /> <!-- Pendant of Lighting +2 exc  -->
+				<Reward ItemCat="13" ItemIndex="13" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="50000" /> <!-- Pendant of Fire +2 exc  -->
+				<Reward ItemCat="13" ItemIndex="25" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="50000" /> <!-- Pendant of Ice +2 exc  -->
+				<Reward ItemCat="13" ItemIndex="26" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="50000" /> <!-- Pendant of Wind +2 exc  -->
+				<Reward ItemCat="13" ItemIndex="27" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="50000" /> <!-- Pendant of Water +2 exc  -->
+				<Reward ItemCat="13" ItemIndex="171" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000" /> <!-- Necklace of Agony +2 exc  -->
+				<Reward ItemCat="13" ItemIndex="172" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-3;2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="1000" /> <!-- Solid Symbol +2 exc  -->
+				<Reward ItemCat="12" ItemIndex="449" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="5000" /> <!-- Rage Earring (L) -->
+				<Reward ItemCat="12" ItemIndex="457" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-2" SetItem="0" SocketCount="0" ElementalItem="0" Rate="5000" /> <!-- Rage Earring (R) -->
+				<Reward ItemCat="14" ItemIndex="372" ItemMinLevel="0" ItemMaxLevel="0" Durability="1" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="170000" /> <!-- [Bound] Bless of Light (Middle) -->
+				<Reward ItemCat="13" ItemIndex="510" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="215000" /> <!-- Lapidary Stone -->
+				<Reward ItemCat="14" ItemIndex="84" ItemMinLevel="0" ItemMaxLevel="0" Durability="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" ElementalItem="0" Rate="100000" /> <!-- Cherry Blossom Play-Box -->
 			</RewardKind>
 		</Category>
 	</Converter>

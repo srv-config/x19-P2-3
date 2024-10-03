@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2023 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -885,6 +885,10 @@
 		<Msg ID="859" Text="%H:%M" /> <!-- bonus event start notice time format -->
 		<Msg ID="860" Text="[LMS] Event Preparation. You are moved out from event area." />
 		<Msg ID="861" Text="Disable auto reset before entering Offline Leveling mode." />
+		<Msg ID="862" Text="Combination failed!" />
+		<Msg ID="863" Text="This item cannot be upgraded." />
+		<Msg ID="864" Text="Private Store transaction processing, try again in a moment." />
+		<Msg ID="865" Text="Not enough Zen to purchase." />
 	</Message>
 	<AutoStat>
 		<Msg ID="0" Text="[AUTO-STAT] Usage Syntax 1: /autostat <option>" />

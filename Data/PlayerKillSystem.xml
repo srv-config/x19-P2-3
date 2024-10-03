@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2022 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -21,6 +21,12 @@
 
 // ### PlayerKillSystem ###
 //	MinLevelForPK: Minimum PK level to become an Outlaw
+//	AllowAllMapPKCtrlMode: If enabled, player will be able to use F12 key to auto-enable CTRL key push, 0/1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The AllowAllMapPKCtrlMode option is higher priority setting than per map configuration from MapAttribute.xml
+//~~ To enforce per map expected behavior keep AllowAllMapPKCtrlMode disabled and use MapAttribute.xml instead
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
 //	DisablePKLevelIncrease: Disables PK Level increase for murder, 0/1
 //	DisablePenalty: Disables any sort of penalties for Murderers, 0/1
 //	PKCanUseshops: Makes PK able to use shops, 0/1
@@ -74,7 +80,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
 
-<PlayerKillSystem MinLevelForPK="6" DisablePKLevelIncrease="0" DisablePenalty="0" PKCanUseShops="0" PKCanUseMapMove="0" DropExpensiveItems="0" MaxItemLevelDrop="8" PointDeductionDivisor="2" MurdererPointIncrease="3600" LimitPKCount="9999" LiftPKPartyRestriction="1">
+<PlayerKillSystem MinLevelForPK="6" AllowAllMapPKCtrlMode="0" DisablePKLevelIncrease="0" DisablePenalty="0" PKCanUseShops="0" PKCanUseMapMove="0" DropExpensiveItems="0" MaxItemLevelDrop="8" PointDeductionDivisor="2" MurdererPointIncrease="3600" LimitPKCount="9999" LiftPKPartyRestriction="1">
 <PKClearCommand Enable="1" Cost="1000000" CostMultiplyByKillCount="1" />
 <SelfDefenseActive CanWarp="1" />
 	<General>
