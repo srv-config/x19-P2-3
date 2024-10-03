@@ -14,7 +14,7 @@
 //
 // ### DevilSquare_Classic ###
 //	Enable: Allow to activate or disable the event, 0/1
-//	MaxPlayerPerRoom: Maximum players count that can participate each event level in a single cycle
+//	MaxPlayerPerRoom: Maximum players count that can participate each event level in a single cycle, max is 10
 //
 // ### DevilSquare_Classic::Time ###
 //	Close: Time to close the event after notification period, seconds
@@ -69,7 +69,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS 
 -->
 
-<DevilSquare_Classic Enable="1" MaxPlayerPerRoom="15">
+<DevilSquare_Classic Enable="1" MaxPlayerPerRoom="10">
 	<Time Close="35" ToOpen="1" PlayDuration="20" />
 
 	<Schedule>
