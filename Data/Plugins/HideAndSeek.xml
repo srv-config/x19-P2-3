@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2022 IGC-Network (R)
+// == (C) 2010-2024 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -70,10 +70,6 @@
 //	Text: Text to display as a hint
 //	DisplayTime: Time (minute) of the round to display the hint
 //
-// ### HideAndSeek::Strings ###
-//	ID: Unique String ID
-//	Text: Text to display
-//	
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
 
@@ -128,19 +124,4 @@
 			</Spawn>
 		</Map>
 	</Locations>
-	
-	<Strings>
-		<String ID="0" Text="Hide And Seek will start after %d minutes" />
-		<String ID="1" Text="Hide And Seek Round %d started!" />
-		<String ID="2" Text="Find a NPC in %s to get a reward! Time Limit: %d minutes" />
-		<String ID="3" Text="%s found hidden NPC and got reward!" />
-		<String ID="4" Text="Hide And Seek Round %d will end after %d minutes" />
-		<String ID="5" Text="Hide And Seek is over!" />	
-		<String ID="6" Text="No one found me in a proper time!" />
-		<String ID="7" Text="You are too late, %s found me first!" />
-		<String ID="8" Text="You got me! This is your reward!" />
-		<String ID="9" Text="You already got your reward." />
-		<String ID="10" Text="Round over - no one found hidded NPC" />
-		<String ID="11" Text="Next round will start after %d minutes" />
-	</Strings>
 </HideAndSeek>

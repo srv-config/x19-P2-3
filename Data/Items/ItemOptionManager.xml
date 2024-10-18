@@ -303,35 +303,35 @@
 	</Section>
 	
 	<Section ID="63">
-		<Item Cat="14" Index="225" Option1="3"  Value1="120" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Defense -->
+		<Item Cat="14" Index="225" Option1="3"  Value1="300" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Defense -->
 	</Section>
 
 	<Section ID="64">
-		<Item Cat="14" Index="226" Option1="15" Value1="60" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Wizardry -->
+		<Item Cat="14" Index="226" Option1="15" Value1="150" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Wizardry -->
 	</Section>
 
 	<Section ID="65">
-		<Item Cat="14" Index="227" Option1="4" Value1="400" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Health -->
+		<Item Cat="14" Index="227" Option1="4" Value1="1000" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Health -->
 	</Section>
 
 	<Section ID="66">
-		<Item Cat="14" Index="228" Option1="5" Value1="600" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Mana -->
+		<Item Cat="14" Index="228" Option1="5" Value1="1500" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Mana -->
 	</Section>
 
 	<Section ID="67">
-		<Item Cat="14" Index="229" Option1="14" Value1="60" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Wrath -->
+		<Item Cat="14" Index="229" Option1="14" Value1="100" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Wrath -->
 	</Section>
 
 	<Section ID="68">
-		<Item Cat="14" Index="230" Option1="53" Value1="4" Option2="4" Value2="200" Time="1800" /> <!-- Scroll Master of Recovery -->
+		<Item Cat="14" Index="230" Option1="53" Value1="4" Option2="4" Value2="500" Time="1800" /> <!-- Scroll Master of Recovery -->
 	</Section>
 
 	<Section ID="69">
-		<Item Cat="14" Index="231" Option1="0" Value1="25" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Battle -->
+		<Item Cat="14" Index="231" Option1="0" Value1="30" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Battle -->
 	</Section>
 
 	<Section ID="70">
-		<Item Cat="14" Index="232" Option1="0" Value1="25" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Strengthener -->
+		<Item Cat="14" Index="232" Option1="0" Value1="30" Option2="0" Value2="0" Time="1800" /> <!-- Scroll Master of Strengthener -->
 	</Section>
 
 	<!-- <Section ID="71"> -->

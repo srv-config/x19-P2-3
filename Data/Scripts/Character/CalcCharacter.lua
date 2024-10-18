@@ -63,7 +63,7 @@ function KnightDamageCalc(Strength, Dexterity, Vitality, Energy, IsSpecialBuff)
 	return AttackDamageMinLeft, AttackDamageMinRight, AttackDamageMaxLeft, AttackDamageMaxRight
 end
 
--- Character Damage without bow - Fist Fighting - (Fairy Elf, Muse Elf, Hight Elf)
+-- Character Damage without bow - Fist Fighting - (Fairy Elf, Muse Elf, High Elf)
 function ElfWithoutBowDamageCalc(Strength, Dexterity, Vitality, Energy)
 	local AttackDamageMinLeft = 0
 	local AttackDamageMaxLeft = 0
@@ -78,7 +78,7 @@ function ElfWithoutBowDamageCalc(Strength, Dexterity, Vitality, Energy)
 	return AttackDamageMinLeft, AttackDamageMinRight, AttackDamageMaxLeft, AttackDamageMaxRight
 end
 
--- Character Damage with Bow - (Fairy Elf, Muse Elf, Hight Elf)
+-- Character Damage with Bow - (Fairy Elf, Muse Elf, High Elf)
 function ElfWithBowDamageCalc(Strength, Dexterity, Vitality, Energy)
 	local AttackDamageMinLeft = 0
 	local AttackDamageMaxLeft = 0
@@ -435,8 +435,8 @@ function CalcAttackSpeed(Class, Dexterity)
 		AttackSpeed = Dexterity / 15
 		MagicSpeed = Dexterity / 20
 	elseif(Class == CLASS_ELF) then 
-		AttackSpeed = Dexterity / 50
-		MagicSpeed = Dexterity / 50
+		AttackSpeed = 40 + (Dexterity / 22)
+		MagicSpeed =  40 + (Dexterity / 22)
 	elseif(Class == CLASS_GLADIATOR) then
 		AttackSpeed = Dexterity / 15
 		MagicSpeed = Dexterity / 20

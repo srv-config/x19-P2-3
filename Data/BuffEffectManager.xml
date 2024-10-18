@@ -231,14 +231,14 @@
 		<Buff Index="193" EffectType="60" ItemType="13" ItemIndex="180" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Ascension II" Description="Earning additional 100% EXP" />
 		<Buff Index="194" EffectType="60" ItemType="13" ItemIndex="181" Type="2" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Seal of Ascension II" Description="Earning additional 100% EXP (For Master Level)" />
 		<Buff Index="195" EffectType="116" ItemType="14" ItemIndex="224" Type="0" NoticeType="0" ClearType="1" BuffOutputValue="0" Name="Bless of Light (Greater)" Description="Earning additional 200% EXP after quick blessing" />
-		<Buff Index="196" EffectType="68" ItemType="14" ItemIndex="225" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Defense" Description="Defense +120" />
-		<Buff Index="197" EffectType="70" ItemType="14" ItemIndex="226" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Wizardry" Description="Wizardry +60" />
-		<Buff Index="198" EffectType="71" ItemType="14" ItemIndex="227" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Health" Description="HP +400" />
-		<Buff Index="199" EffectType="72" ItemType="14" ItemIndex="228" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Mana" Description="MP +600" />
-		<Buff Index="200" EffectType="69" ItemType="14" ItemIndex="229" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Wrath" Description="Attack Power +60" />
-		<Buff Index="201" EffectType="75" ItemType="14" ItemIndex="230" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Recovery" Description="Automatic HP Recovery +4%, HP +200" />
-		<Buff Index="202" EffectType="14" ItemType="14" ItemIndex="231" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Battle" Description="Critical Damage +25%" />
-		<Buff Index="203" EffectType="14" ItemType="14" ItemIndex="232" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Strengthener" Description="Excellent Damage +25%" />
+		<Buff Index="196" EffectType="68" ItemType="14" ItemIndex="225" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Defense" Description="Defense +300" />
+		<Buff Index="197" EffectType="70" ItemType="14" ItemIndex="226" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Wizardry" Description="Wizardry +150" />
+		<Buff Index="198" EffectType="71" ItemType="14" ItemIndex="227" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Health" Description="HP +1000" />
+		<Buff Index="199" EffectType="72" ItemType="14" ItemIndex="228" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Mana" Description="MP +1500" />
+		<Buff Index="200" EffectType="69" ItemType="14" ItemIndex="229" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Wrath" Description="Attack Power +100" />
+		<Buff Index="201" EffectType="75" ItemType="14" ItemIndex="230" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Recovery" Description="Automatic HP Recovery +4%, HP +500" />
+		<Buff Index="202" EffectType="14" ItemType="14" ItemIndex="231" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Battle" Description="Critical Damage +30%" />
+		<Buff Index="203" EffectType="14" ItemType="14" ItemIndex="232" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Strengthener" Description="Excellent Damage +30%" />
 		<Buff Index="204" EffectType="67" ItemType="14" ItemIndex="235" Type="2" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Scroll Master of Quickness" Description="Attack speed increase +20" />
 		<Buff Index="205" EffectType="117" ItemType="13" ItemIndex="2" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Horn of Uniria" Description="Summons Uniria to mount." />
 		<Buff Index="206" EffectType="117" ItemType="13" ItemIndex="3" Type="0" NoticeType="1" ClearType="1" BuffOutputValue="0" Name="Horn of Dinorant" Description="Summons Dinorant to mount." />

@@ -890,6 +890,7 @@
 		<Msg ID="864" Text="Private Store transaction processing, try again in a moment." />
 		<Msg ID="865" Text="Not enough Zen to purchase." />
 	</Message>
+	
 	<AutoStat>
 		<Msg ID="0" Text="[AUTO-STAT] Usage Syntax 1: /autostat <option>" />
 		<Msg ID="1" Text="Available options: off|status" />
@@ -916,6 +917,56 @@
 		<Msg ID="22" Text="[AUTO-STAT] You need at least %s VIP to use the command." />
 		<Msg ID="23" Text="[AUTO-STAT] You are short of money, the cost is %d %s." />
 	</AutoStat>
+	
+	<HideAndSeek>
+		<Msg ID="0" Text="Hide And Seek will start after %d minutes" />
+		<Msg ID="1" Text="Hide And Seek Round %d started!" />
+		<Msg ID="2" Text="Find a NPC in %s to get a reward! Time Limit: %d minutes" />
+		<Msg ID="3" Text="%s found hidden NPC and got reward!" />
+		<Msg ID="4" Text="Hide And Seek Round %d will end after %d minutes" />
+		<Msg ID="5" Text="Hide And Seek is over!" />	
+		<Msg ID="6" Text="No one found me in a proper time!" />
+		<Msg ID="7" Text="You are too late, %s found me first!" />
+		<Msg ID="8" Text="You got me! This is your reward!" />
+		<Msg ID="9" Text="You already got your reward." />
+		<Msg ID="10" Text="Round over - no one found hidden NPC" />
+		<Msg ID="11" Text="Next round will start after %d minutes" />
+	</HideAndSeek>
+	
+	<RaffleEvent>
+		<Msg ID="0" Text="Raffle Event will start after %d minutes" />
+		<Msg ID="1" Text="Lotto Event will start after %d minutes" />
+		<Msg ID="2" Text="HitOrder Event will start after %d minutes" />
+		<Msg ID="3" Text="Raffle Event Coupon Sales will end after %d minutes" />
+		<Msg ID="4" Text="You can buy coupon by using /raffle command." />
+		<Msg ID="5" Text="Lotto Event Coupon Sales will end after %d minutes" />
+		<Msg ID="6" Text="You can buy coupon by using /lotto command and typing unique %d numbers separated by space [%d-%d]" />
+		<Msg ID="7" Text="Hit Order Coupon Sales will end after %d minutes" />
+		<Msg ID="8" Text="You can buy coupon by using /hitorder command and typing unique %d numbers in sequence separated by space [%d-%d]" />
+		<Msg ID="9" Text="There is no event ongoing, try again later" />
+		<Msg ID="10" Text="You are trying to buy invalid ticket for this lottery." />
+		<Msg ID="11" Text="All coupons for this lottery have been sold." />
+		<Msg ID="12" Text="You cannot buy more coupons for this lottery." />
+		<Msg ID="13" Text="You are short of Zen." />
+		<Msg ID="14" Text="You are short of %s." />
+		<Msg ID="15" Text="You are short of Ruud." />
+		<Msg ID="16" Text="Successfully bought a coupon for lottery. You have %d coupons." />
+		<Msg ID="17" Text="You need to type %d numbers for participate in Lotto." />
+		<Msg ID="18" Text="Numbers on coupon must be unique" />
+		<Msg ID="19" Text="A coupon with chosen numbers has been sold to another player." />
+		<Msg ID="20" Text="Successfully bought a coupon for Lotto. You have %d coupons." />
+		<Msg ID="21" Text="You need to type %d numbers for participate in HitOrder." />
+		<Msg ID="22" Text="Successfully bought a coupon for HitOrder. You have %d coupons." />
+		<Msg ID="23" Text="Lotto: Winning numbers are: %s" />
+		<Msg ID="24" Text="HitOrder: Winning sequence is: %s" />
+		<Msg ID="25" Text="[RAFFLE] No Winners" />
+		<Msg ID="26" Text="[LOTTO] No Winners" />
+		<Msg ID="27" Text="[HITORDER] No Winners" />
+		<Msg ID="28" Text="[RAFFLE] WINNER: %s [COUPON:%d]" />
+		<Msg ID="29" Text="[LOTTO] WINNER: %s [CORRECT NUMBERS:%d]" />
+		<Msg ID="30" Text="[HITORDER] WINNER: %s [CORRECT NUMBERS:%d]" />
+	</RaffleEvent>
+	
 	<Map>
 		<Msg ID="0" Text="Lorencia" />
 		<Msg ID="1" Text="Dungeon" /> <!-- 1 ~ 3 -->
